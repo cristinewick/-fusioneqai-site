@@ -58,21 +58,20 @@ a {
   text-decoration: none;
 }
 
-.brand-wordmark {
+.brand-logo {
+  width: clamp(214px, 18vw, 290px);
+  height: auto;
+}
+
+.hero-brand {
   display: inline-flex;
-  align-items: baseline;
-  font-size: clamp(1.45rem, 2.1vw, 2rem);
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  align-items: center;
+  margin-bottom: 28px;
 }
 
-.brand-fusion {
-  color: var(--white);
-}
-
-.brand-eq {
-  color: var(--green);
+.hero-logo {
+  width: min(560px, 100%);
+  height: auto;
 }
 
 nav {
@@ -160,13 +159,42 @@ nav a[aria-current="page"] {
 .hero {
   min-height: 86svh;
   padding-top: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+
+.hero::before {
+  top: 88px;
+  right: clamp(36px, 8vw, 120px);
+  width: clamp(180px, 24vw, 290px);
+  height: clamp(86px, 12vw, 138px);
+  border: 1px solid rgba(91, 108, 143, 0.68);
+  transform: rotate(34deg);
+}
+
+.hero::after {
+  top: 88px;
+  right: clamp(74px, 10vw, 164px);
+  width: clamp(180px, 24vw, 290px);
+  height: clamp(86px, 12vw, 138px);
+  border: 1px solid rgba(200, 169, 106, 0.72);
+  transform: rotate(-34deg);
 }
 
 .context {
   margin: 0 0 26px;
-  color: var(--soft);
+  color: var(--gold);
   font-size: clamp(0.76rem, 0.9vw, 0.88rem);
-  letter-spacing: 0;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -185,7 +213,7 @@ h2 {
 
 h1 {
   max-width: 980px;
-  font-size: clamp(3.25rem, 6vw, 4.4rem);
+  font-size: clamp(2.8rem, 5vw, 3.8rem);
   line-height: 1.04;
   letter-spacing: -0.03em;
 }
@@ -350,7 +378,7 @@ p {
 }
 
 .read-first span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.76rem;
   text-transform: uppercase;
 }
@@ -530,7 +558,7 @@ p {
 }
 
 .start-grid span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -560,7 +588,7 @@ p {
 .comparison-grid span,
 .home-fit-grid span,
 .mission-grid span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -701,7 +729,7 @@ p {
 .sample-input h3,
 .sample-action h3,
 .sample-callout span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.78rem;
   font-weight: 400;
   line-height: 1.35;
@@ -873,7 +901,7 @@ p {
 
 .case-grid span,
 .pilot-grid span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -1038,7 +1066,7 @@ p {
 }
 
 .lead-form label span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -1275,7 +1303,7 @@ p {
 }
 
 .brief-grid span {
-  color: var(--muted);
+  color: var(--gold);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -1312,8 +1340,8 @@ footer strong {
   font-weight: 500;
 }
 
-footer .brand-wordmark {
-  font-size: 1.2rem;
+footer .footer-logo {
+  width: clamp(190px, 16vw, 250px);
 }
 
 footer span {
