@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FusionEQ AI | Home V2</title>
+  <style>
+    :root {
+      --visual-bg: #0a0a0f;
+      --visual-panel: #101827;
+      --visual-panel-border: #243042;
+      --visual-text: #f5f7fa;
+      --visual-muted: #b3bccb;
+      --visual-muted-2: #8c98a8;
+      --visual-ai: #3b82f6;
+      --visual-human: #d4a64f;
+      --visual-fusion: #37c871;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0A0A0F;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 110px 24px;
+    }
+
+    .hero {
+      text-align: center;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      color: #d9d9d9;
+      background: linear-gradient(90deg, #ffffff 0%, #b8b8b8 58%, #8f8f8f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button.primary {
+      background: #37C871;
+      color: black;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a.secondary {
+      color: #37C871;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .problem h2,
+    .shift h2,
+    .visual-proof h2,
+    .reveal h2,
+    .differentiation h2,
+    .who h2,
+    .close h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #bbb;
+    }
+
+    .problem p,
+    .shift p,
+    .differentiation p,
+    .close p {
+      max-width: 650px;
+    }
+
+    .close p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .capabilities,
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .capabilities {
+      margin-top: 48px;
+    }
+
+    .capabilities div,
+    .roles div {
+      background: #111;
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .capabilities div {
+      border: 1px solid #1f1f1f;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .capabilities div:hover {
+      background: #171717;
+      border-color: #2a2a2a;
+      transform: translateY(-4px);
+    }
+
+    .differentiation h2 {
+      font-size: 48px;
+      line-height: 1.15;
+      font-weight: 800;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .differentiation {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    .roles {
+      gap: 34px;
+    }
+
+    .roles h3 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    .roles div {
+      border: 1px solid #1b1b1b;
+    }
+
+    .close {
+      text-align: center;
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+    .close h2 {
+      font-size: 40px;
+    }
+
+    .close button.primary {
+      padding: 16px 30px;
+      font-size: 17px;
+    }
+
+    .fusion-visual {
+      margin: 80px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 32%, rgba(55, 200, 113, 0.07) 0%, rgba(55, 200, 113, 0.02) 20%, rgba(10, 10, 15, 0) 38%),
+        linear-gradient(180deg, #060812 0%, var(--visual-bg) 100%);
+      color: var(--visual-text);
+    }
+
+    .fusion-visual .section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 72px 28px 92px;
+    }
+
+    .fusion-visual .headline {
+      max-width: 1040px;
+      margin: 0 auto 54px;
+      text-align: center;
+    }
+
+    .fusion-visual .headline h1 {
+      margin: 0;
+      font-size: clamp(3rem, 5.8vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .fusion-visual .headline .line-break {
+      display: block;
+      margin-top: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 22px rgba(55, 200, 113, 0.34);
+    }
+
+    .fusion-visual .stack-zone {
+      max-width: 1000px;
+      margin: 0 auto 34px;
+      position: relative;
+    }
+
+    .fusion-visual .fusion-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 52px;
+      position: relative;
+    }
+
+    .fusion-visual .fusion-wrap::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -20px;
+      transform: translateX(-50%);
+      width: min(62%, 540px);
+      height: 26px;
+      border-radius: 999px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.06) 0%, rgba(55, 200, 113, 0.05) 42%, rgba(10,10,15,0) 76%);
+      filter: blur(8px);
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    .fusion-visual .fusion-card {
+      width: min(780px, 92%);
+      background: linear-gradient(180deg, rgba(20, 28, 44, 0.97) 0%, rgba(13, 20, 33, 0.99) 100%);
+      border: 1px solid rgba(67, 214, 131, 0.24);
+      border-top: 4px solid var(--visual-fusion);
+      border-radius: 8px;
+      padding: 30px 30px 24px;
+      text-align: center;
+      box-shadow:
+        0 16px 28px rgba(0,0,0,0.22),
+        0 0 0 1px rgba(255,255,255,0.02) inset;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fusion-visual .fusion-card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(2.45rem, 3.5vw, 3.25rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .fusion-visual .fusion-card p {
+      margin: 0;
+      color: var(--visual-fusion);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+
+    .fusion-visual .stack {
+      max-width: 840px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .fusion-visual .card {
+      background: linear-gradient(180deg, rgba(18, 24, 37, 0.98) 0%, rgba(13, 20, 33, 1) 100%);
+      border: 1px solid var(--visual-panel-border);
+      border-radius: 8px;
+      text-align: center;
+      min-height: 112px;
+      padding: 18px 26px 16px;
+      position: relative;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    }
+
+    .fusion-visual .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      border-radius: 8px 8px 0 0;
+      background: var(--visual-accent);
+    }
+
+    .fusion-visual .card h3 {
+      margin: 0 0 7px;
+      font-size: clamp(1.62rem, 2.05vw, 2.02rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .fusion-visual .card p {
+      margin: 0 0 6px;
+      color: var(--visual-muted);
+      font-size: clamp(1.04rem, 1.25vw, 1.15rem);
+      line-height: 1.28;
+      font-weight: 500;
+    }
+
+    .fusion-visual .micro {
+      font-size: 0.96rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: var(--visual-muted-2);
+      font-weight: 500;
+    }
+
+    .fusion-visual .human {
+      --visual-accent: var(--visual-human);
+    }
+
+    .fusion-visual .ai {
+      --visual-accent: var(--visual-ai);
+    }
+
+    .fusion-visual .anchor {
+      max-width: 1020px;
+      margin: 28px auto 48px;
+      text-align: center;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      line-height: 1.42;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .fusion-visual .anchor strong {
+      font-weight: 700;
+    }
+
+    .fusion-visual .columns {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .fusion-visual .col h4 {
+      margin: 0 0 16px;
+      font-size: clamp(1.52rem, 1.95vw, 1.92rem);
+      line-height: 1.12;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .fusion-visual .col ul {
+      margin: 0;
+      padding-left: 1.22rem;
+      color: var(--visual-muted);
+      font-size: clamp(1.05rem, 1.22vw, 1.18rem);
+      line-height: 1.68;
+      font-weight: 400;
+    }
+
+    .fusion-visual .col li {
+      margin: 3px 0;
+    }
+
+    @media (max-width: 900px) {
+      .fusion-page > section {
+        padding: 86px 20px;
+      }
+
+      .hero {
+        min-height: 90vh;
+        padding-top: 88px;
+        padding-bottom: 88px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .capabilities,
+      .roles,
+      .fusion-visual .columns {
+        grid-template-columns: 1fr;
+      }
+
+      .fusion-visual .section {
+        padding: 56px 20px 72px;
+      }
+
+      .differentiation,
+      .close {
+        padding-top: 110px;
+        padding-bottom: 110px;
+      }
+
+      .differentiation h2 {
+        font-size: 38px;
+      }
+
+      .close h2 {
+        font-size: 34px;
+      }
+
+      .fusion-visual .headline {
+        margin-bottom: 40px;
+      }
+
+      .fusion-visual .fusion-wrap {
+        margin-bottom: 36px;
+      }
+
+      .fusion-visual .fusion-wrap::after {
+        width: 74%;
+      }
+
+      .fusion-visual .stack {
+        gap: 14px;
+      }
+
+      .fusion-visual .card {
+        min-height: 98px;
+        padding: 16px 18px 14px;
+      }
+
+      .fusion-visual .anchor {
+        margin: 22px auto 36px;
+      }
+
+      .fusion-visual .columns {
+        gap: 30px;
+      }
+
+      .fusion-visual .micro {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- NEW PAGE: home-v2.html -->
+<section class="fusion-page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Your revenue stack captures activity. It doesn’t interpret it.</h1>
+    <h2>FusionEQ is the interpretation layer.</h2>
+    <p>
+      Interpret presentations. De-risk deals. Drive execution with clarity—based on what’s actually happening, not just what’s visible.
+    </p>
+
+    <div class="cta-group">
+      <button class="primary">See How It Works</button>
+      <a class="secondary">Try it on a deal →</a>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <h2>You’re not missing data.</h2>
+    <p>You’re missing what it means.</p>
+
+    <p>Pipeline moves.<br>
+    Deals look qualified.<br>
+    Presentations land.</p>
+
+    <p>And still—outcomes don’t follow.</p>
+
+    <p><strong>Because what’s visible isn’t the problem.<br>
+    What’s missing is interpretation.</strong></p>
+  </section>
+
+  <!-- SHIFT -->
+  <section class="shift">
+    <h2>That’s the layer you don’t have.</h2>
+
+    <p>Your CRM tracks activity.<br>
+    Your tools analyze signals.<br>
+    Your methodology structures the process.</p>
+
+    <p>Each captures part of the picture.</p>
+
+    <p>None explain what’s actually driving the outcome.</p>
+
+    <p><strong>FusionEQ does.</strong></p>
+  </section>
+
+  <!-- VISUAL PROOF -->
+  <section class="visual-proof">
+    <h2>What your stack can’t fully explain.</h2>
+
+    <div class="fusion-visual">
+      <section class="section">
+        <div class="headline">
+          <h1>
+            <span>Your revenue stack has everything—</span>
+            <span class="line-break">except the layer that interprets it.</span>
+          </h1>
+        </div>
+
+        <div class="stack-zone">
+          <div class="fusion-wrap">
+            <div class="fusion-card">
+              <h2>FusionEQ AI™</h2>
+              <p>Interpretation Layer</p>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div class="card human">
+              <h3>Qualification Methodology</h3>
+              <p>Process &amp; Qualification</p>
+              <div class="micro">Defines what must be validated</div>
+            </div>
+
+            <div class="card ai">
+              <h3>Revenue Intelligence</h3>
+              <p>Conversations &amp; Signals</p>
+              <div class="micro">Captures what’s happening</div>
+            </div>
+
+            <div class="card ai">
+              <h3>CRM Systems</h3>
+              <p>Pipeline &amp; Structure</p>
+              <div class="micro">Stores deal and forecast context</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="anchor">
+          Your systems capture data, signals, and qualification. <strong>FusionEQ interprets them—so you get it right.</strong>
+        </div>
+
+        <div class="columns">
+          <div class="col">
+            <h4>What Your Current Systems Capture</h4>
+            <ul>
+              <li>Pipeline structure</li>
+              <li>Activity and engagement</li>
+              <li>Process and qualification signals</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h4>What FusionEQ Introduces</h4>
+            <ul>
+              <li>Interprets how decisions are actually forming</li>
+              <li>Identifies misalignment before it becomes visible risk</li>
+              <li>Distinguishes real momentum from perceived progress</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p>
+      Your CRM, revenue intelligence, and qualification systems capture signals, structure, and activity.
+    </p>
+
+    <p>
+      But they operate in isolation—and stop short of interpretation.
+    </p>
+
+    <p>
+      <strong>FusionEQ sits above the stack—reading patterns and forming a clear point of view on what’s actually driving the outcome.</strong>
+    </p>
+  </section>
+
+  <!-- REVEAL -->
+  <section class="reveal">
+    <h2>Reveal what determines outcomes.</h2>
+    <p>See what’s actually happening—then act on it.</p>
+
+    <div class="capabilities">
+      <div>
+        <h3>Presentation Analysis</h3>
+        <p>Understand how your message is received—and where it breaks before it drives a decision.</p>
+      </div>
+
+      <div>
+        <h3>Deal Interpretation</h3>
+        <p>Surface hidden risk, false momentum, and what hasn’t been proven.</p>
+      </div>
+
+      <div>
+        <h3>Execution Guidance</h3>
+        <p>Act on what the deal actually requires—before risk becomes visible.</p>
+      </div>
+    </div>
+
+    <p class="eq-line">
+      Powered by the combination of emotional intelligence and artificial intelligence.
+    </p>
+  </section>
+
+  <!-- DIFFERENTIATION -->
+  <section class="differentiation">
+    <h2>
+      Most tools analyze activity.<br>
+      FusionEQ reveals the patterns behind it.
+    </h2>
+
+    <p>
+      Your stack captures what’s happening—calls, pipeline, signals, and qualification.
+    </p>
+
+    <p>
+      But activity doesn’t explain results.
+    </p>
+
+    <p>
+      <strong>FusionEQ interprets the inputs—revealing the patterns that drive the outcome, where risk is forming, and what needs to change.</strong>
+    </p>
+  </section>
+
+  <!-- WHO -->
+  <section class="who">
+    <h2>For teams responsible for outcomes—not just activity.</h2>
+
+    <div class="roles">
+      <div>
+        <h3>CROs</h3>
+        <p>Improve forecast accuracy by understanding what’s actually driving deals.</p>
+      </div>
+
+      <div>
+        <h3>VP Sales</h3>
+        <p>Ensure consistent execution by seeing where deals break before it shows up in the numbers.</p>
+      </div>
+
+      <div>
+        <h3>Enterprise Reps</h3>
+        <p>Navigate complex deals with clarity—knowing what matters, what’s missing, and what to do next.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="close">
+    <h2>See the deal behind the deal.</h2>
+
+    <p>
+      Where emotional intelligence meets artificial intelligence—<br>
+      that’s where clarity happens.
+    </p>
+
+    <div class="cta-group">
+      <button class="primary">See How It Works</button>
+      <a class="secondary">Try it on a deal →</a>
+    </div>
+  </section>
+
+</section>
+</body>
+</html>
