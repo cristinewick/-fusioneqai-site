@@ -2,13 +2,13 @@
   --black: #0A0A0F;
   --white: #ffffff;
   --green: #4CAF50;
-  --gold: #D6B25E;
-  --blue: #4A8CFF;
-  --surface: rgba(255, 255, 255, 0.045);
-  --surface-strong: rgba(255, 255, 255, 0.075);
-  --soft: rgba(255, 255, 255, 0.7);
-  --muted: rgba(255, 255, 255, 0.42);
-  --line: rgba(255, 255, 255, 0.26);
+  --gold: #C8A96A;
+  --blue: #5B6C8F;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-strong: rgba(255, 255, 255, 0.05);
+  --soft: rgba(255, 255, 255, 0.78);
+  --muted: rgba(255, 255, 255, 0.56);
+  --line: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -22,10 +22,7 @@ html {
 body {
   margin: 0;
   color: var(--white);
-  background:
-    linear-gradient(180deg, rgba(214, 178, 94, 0.05) 0%, rgba(10, 10, 15, 0) 22rem),
-    linear-gradient(135deg, rgba(74, 140, 255, 0.045) 0%, rgba(10, 10, 15, 0) 34rem),
-    var(--black);
+  background: var(--black);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.35;
 }
@@ -50,22 +47,32 @@ a {
   justify-content: space-between;
   gap: 28px;
   padding: 14px clamp(24px, 5.5vw, 84px);
-  background: rgba(10, 10, 15, 0.88);
-  backdrop-filter: blur(16px);
+  background: rgba(10, 10, 15, 0.96);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
 }
 
-.brand-logo {
-  width: clamp(170px, 15vw, 240px);
-  height: 42px;
-  object-fit: contain;
-  object-position: left center;
+.brand-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.brand-fusion {
+  color: var(--white);
+}
+
+.brand-eq {
+  color: var(--green);
 }
 
 nav {
@@ -111,7 +118,6 @@ nav a[aria-current="page"] {
   background: rgba(10, 10, 15, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
 }
 
 .nav-menu::before {
@@ -152,8 +158,8 @@ nav a[aria-current="page"] {
 }
 
 .hero {
-  min-height: 72svh;
-  padding-top: 142px;
+  min-height: 86svh;
+  padding-top: 150px;
 }
 
 .context {
@@ -173,20 +179,22 @@ p {
 h1,
 h2 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0;
 }
 
 h1 {
   max-width: 980px;
-  font-size: 2.65rem;
-  line-height: 1.08;
+  font-size: clamp(3.25rem, 6vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   max-width: 980px;
-  font-size: 1.65rem;
-  line-height: 1.18;
+  font-size: 1.7rem;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -195,9 +203,10 @@ p {
 
 .subline {
   margin-top: 32px;
-  color: var(--white);
-  font-size: clamp(0.88rem, 0.95vw, 0.98rem);
-  line-height: 1.48;
+  max-width: 760px;
+  color: var(--soft);
+  font-size: clamp(1rem, 1.15vw, 1.12rem);
+  line-height: 1.5;
 }
 
 .hero-explainer {
@@ -209,11 +218,11 @@ p {
 }
 
 .hero-close {
-  max-width: 900px;
-  margin-top: 36px;
-  color: var(--white);
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  line-height: 1.42;
+  max-width: 760px;
+  margin-top: 24px;
+  color: var(--soft);
+  font-size: clamp(0.94rem, 1.02vw, 1.02rem);
+  line-height: 1.5;
 }
 
 .expectation-note {
@@ -237,8 +246,8 @@ p {
   min-height: 42px;
   padding: 11px 16px;
   color: var(--white);
-  background: rgba(76, 175, 80, 0.16);
-  border: 1px solid rgba(76, 175, 80, 0.72);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 6px;
   font-size: 0.92rem;
   font-weight: 500;
@@ -253,13 +262,19 @@ p {
   border-color: var(--line);
 }
 
+.cta-row a:first-child,
+.cta-row button:first-child {
+  color: var(--green);
+  border-color: rgba(76, 175, 80, 0.72);
+}
+
 .cta-row a:hover,
 .cta-row a:focus-visible,
 .cta-row button:hover,
 .cta-row button:focus-visible {
   color: var(--white);
-  border-color: var(--green);
-  background: rgba(76, 175, 80, 0.24);
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .cta-row button {
@@ -327,7 +342,7 @@ p {
   padding: 18px;
   color: var(--soft);
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
   font-size: clamp(0.82rem, 0.9vw, 0.92rem);
   line-height: 1.4;
@@ -335,7 +350,7 @@ p {
 }
 
 .read-first span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.76rem;
   text-transform: uppercase;
 }
@@ -510,12 +525,12 @@ p {
   min-height: 170px;
   padding: 22px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .start-grid span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -536,7 +551,7 @@ p {
   min-height: 170px;
   padding: 24px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -545,7 +560,7 @@ p {
 .comparison-grid span,
 .home-fit-grid span,
 .mission-grid span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -655,8 +670,8 @@ p {
   min-height: 112px;
   padding: 20px;
   color: var(--white);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 8px;
   font-size: clamp(0.88rem, 0.95vw, 0.98rem);
   line-height: 1.45;
@@ -669,8 +684,8 @@ p {
   gap: clamp(40px, 6vw, 88px);
   margin-top: 22px;
   padding: clamp(24px, 4vw, 42px);
-  background: linear-gradient(135deg, rgba(214, 178, 94, 0.06), rgba(74, 140, 255, 0.055) 48%, rgba(76, 175, 80, 0.04));
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -686,7 +701,7 @@ p {
 .sample-input h3,
 .sample-action h3,
 .sample-callout span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.78rem;
   font-weight: 400;
   line-height: 1.35;
@@ -774,8 +789,8 @@ p {
   gap: 10px;
   margin-top: 4px;
   padding: 18px 20px;
-  background: rgba(76, 175, 80, 0.08);
-  border: 1px solid rgba(76, 175, 80, 0.28);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--line);
   border-left: 3px solid var(--green);
   border-radius: 8px;
 }
@@ -852,13 +867,13 @@ p {
   min-height: 190px;
   padding: 24px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .case-grid span,
 .pilot-grid span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.88rem;
   text-transform: uppercase;
 }
@@ -893,7 +908,7 @@ p {
   padding: 16px 18px;
   color: var(--white);
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -929,7 +944,7 @@ p {
 }
 
 .method-list span {
-  color: var(--gold);
+  color: var(--green);
 }
 
 .roi p {
@@ -996,9 +1011,6 @@ p {
   min-height: 82svh;
   padding-top: 142px;
   align-items: center;
-  background:
-    linear-gradient(120deg, rgba(214, 178, 94, 0.08), rgba(10, 10, 15, 0) 35%),
-    linear-gradient(240deg, rgba(74, 140, 255, 0.08), rgba(10, 10, 15, 0) 38%);
 }
 
 .contact-hero {
@@ -1016,7 +1028,7 @@ p {
   width: min(680px, 100%);
   padding: 26px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -1026,7 +1038,7 @@ p {
 }
 
 .lead-form label span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -1036,7 +1048,7 @@ p {
   width: 100%;
   color: var(--white);
   background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 6px;
   padding: 12px 13px;
   font: inherit;
@@ -1079,7 +1091,7 @@ p {
 .lead-form button {
   justify-self: start;
   color: var(--white);
-  background: rgba(76, 175, 80, 0.16);
+  background: transparent;
   border: 1px solid rgba(76, 175, 80, 0.72);
   border-radius: 6px;
   padding: 11px 16px;
@@ -1091,7 +1103,7 @@ p {
 .lead-form button:hover,
 .lead-form button:focus-visible {
   color: var(--white);
-  background: rgba(76, 175, 80, 0.24);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .book-hero-copy {
@@ -1103,7 +1115,7 @@ p {
 .book-kicker {
   max-width: 720px;
   margin-top: 18px;
-  color: var(--gold);
+  color: var(--green);
   font-size: clamp(0.88rem, 0.95vw, 0.98rem);
   line-height: 1.45;
 }
@@ -1126,8 +1138,8 @@ p {
   width: min(380px, 100%);
   margin: 0;
   padding: 16px;
-  background: linear-gradient(135deg, rgba(214, 178, 94, 0.12), rgba(74, 140, 255, 0.1) 50%, rgba(76, 175, 80, 0.08));
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -1135,7 +1147,6 @@ p {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 4px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.52);
 }
 
 .book-insight,
@@ -1180,7 +1191,7 @@ p {
   padding: 18px;
   color: var(--white);
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
   font-size: clamp(0.86rem, 0.95vw, 0.95rem);
   line-height: 1.35;
@@ -1210,7 +1221,7 @@ p {
   min-height: 118px;
   padding: 18px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
@@ -1259,12 +1270,12 @@ p {
   min-height: 200px;
   padding: 24px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .brief-grid span {
-  color: var(--gold);
+  color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
@@ -1298,7 +1309,11 @@ footer div {
 
 footer strong {
   color: var(--soft);
-  font-weight: 400;
+  font-weight: 500;
+}
+
+footer .brand-wordmark {
+  font-size: 1.2rem;
 }
 
 footer span {
