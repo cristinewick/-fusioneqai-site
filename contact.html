@@ -11,11 +11,14 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <a aria-label='FusionEQ home' class='brand' href='/#top'>
-      <img class="brand-logo" src="assets/fusioneq-marketing-lockup.png" alt="FusionEQ">
-    </a>
+<body class="page-contact page-home-v2">
+  <header class="site-header home-v2-shell-header">
+    <div class="home-v2-brand-block">
+      <a aria-label='FusionEQ home' class='brand' href='/#top'>
+        <img class="brand-logo home-v2-header-logo" src="assets/header-fusioneqai-logo.png" alt="FusionEQ AI">
+      </a>
+      <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
+    </div>
     <nav class="primary-nav" aria-label="Primary navigation">
       <div class="nav-group">
         <a href='/#top'>Home</a>
@@ -57,7 +60,7 @@
           <a href='/book'>The Deal Behind the Deal</a>
         </div>
       </div>
-      <a aria-current='page' href='/contact'>Contact</a>
+      <a class="home-v2-header-cta" aria-current='page' href='/contact'>Book a Consultation</a>
     </nav>
   </header>
 
@@ -65,15 +68,15 @@
     <section class="slide contact-hero" aria-labelledby="contact-title">
       <div>
         <p class="context">Contact</p>
-        <h1 id="contact-title">Start with the right conversation.</h1>
+        <h1 id="contact-title">Start with the deal question you need to see clearly.</h1>
         <p class="subline">
-          Whether you are interested in the book, the Diagnostic Pilot, or bringing the FusionEQ lens into your team, the first step is a focused conversation.
+          Whether you want book updates, a Diagnostic Pilot, or a focused consultation, the first step is naming what your current sales systems cannot fully interpret.
         </p>
         <p class="hero-close">
           Primary contact: <a href="mailto:fusioneqai@gmail.com">Contact FusionEQ</a>
         </p>
         <p class="founder-note">
-          If your team keeps seeing deals slip even when the forecast looks sound, that is exactly the pattern FusionEQ was built to examine.
+          If your team keeps seeing deals stall, slip, or drift before the forecast catches up, that is exactly the pattern FusionEQ was built to examine.
         </p>
         <p class="pricing-note">
           Metrics describe the deal. Meaning explains it.
@@ -125,8 +128,8 @@
           <input type="text" name="primary_issue" placeholder="Example: forecast slippage">
         </label>
         <label class="full-field">
-          <span>What should FusionEQ help you understand?</span>
-          <textarea name="pipeline_challenge" rows="5" placeholder="Example: I want book updates, I want to discuss the Diagnostic Pilot, or I want help with late-stage deals slipping, weak champion signal, or internal alignment risk"></textarea>
+          <span>What should FusionEQ help you interpret?</span>
+          <textarea name="pipeline_challenge" rows="5" placeholder="Example: I want book updates, I want to discuss the Diagnostic Pilot, or I want help with late-stage deals stalling, slipping, weak champion signal, or internal alignment risk"></textarea>
         </label>
         <button type="submit">Send Request</button>
       </form>
