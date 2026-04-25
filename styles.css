@@ -4196,3 +4196,34 @@ h2,
     font-size: 0.72rem;
   }
 }
+
+.homepage-v2 .home-v2-hero h1 {
+  max-width: 660px;
+  font-size: clamp(1.85rem, 2.65vw, 2.55rem);
+  line-height: 1.13;
+  letter-spacing: -0.018em;
+  gap: 1px;
+}
+
+.homepage-v2 .home-v2-hero h1 span:nth-child(3) {
+  margin-top: 0.3em;
+}
+
+.homepage-v2 .home-v2-hero-context {
+  color: var(--gold) !important;
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .homepage-v2 .home-v2-hero h1 {
+    max-width: 620px;
+    font-size: clamp(1.85rem, 3vw, 2.15rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-v2 .home-v2-hero h1 {
+    max-width: 100%;
+    font-size: 1.68rem;
+    line-height: 1.14;
+  }
+}
