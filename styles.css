@@ -4543,6 +4543,10 @@ h2,
 }
 
 /* Homepage hero refinement: one clear executive narrative. */
+.page-home-v2 .homepage-v2 {
+  padding-top: clamp(146px, 13vh, 176px);
+}
+
 .homepage-v2 .home-v2-hero {
   padding-top: clamp(54px, 7vh, 76px);
   padding-bottom: clamp(74px, 9vh, 104px);
@@ -4596,6 +4600,12 @@ h2,
 .homepage-v2 .home-v2-hero-supporting {
   margin-top: 2px;
   color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 980px) {
+  .page-home-v2 .homepage-v2 {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 760px) {
