@@ -3439,6 +3439,8 @@ footer nav {
 }
 
 .book-author-photo {
+  display: grid;
+  gap: 12px;
   margin: 0;
 }
 
@@ -3449,6 +3451,17 @@ footer nav {
   object-fit: cover;
   object-position: center top;
   border-radius: 6px;
+}
+
+.book-author-photo figcaption {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.42;
+}
+
+.book-author-photo figcaption em {
+  color: rgba(255, 255, 255, 0.82);
+  font-style: italic;
 }
 
 .book-author-copy {
