@@ -11,11 +11,14 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <a aria-label='FusionEQ home' class='brand' href='/#top'>
-      <img class="brand-logo" src="assets/fusioneq-marketing-lockup.png" alt="FusionEQ">
-    </a>
+<body class="page-book page-home-v2">
+  <header class="site-header home-v2-shell-header">
+    <div class="home-v2-brand-block">
+      <a aria-label='FusionEQ home' class='brand' href='/#top'>
+        <img class="brand-logo home-v2-header-logo" src="assets/header-fusioneqai-logo.png" alt="FusionEQ AI">
+      </a>
+      <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
+    </div>
     <nav class="primary-nav" aria-label="Primary navigation">
       <div class="nav-group">
         <a href='/#top'>Home</a>
@@ -57,24 +60,28 @@
           <a href='/book'>The Deal Behind the Deal</a>
         </div>
       </div>
-      <a href='/contact'>Contact</a>
+      <a class="home-v2-header-cta" href='/pilot'>Analyze a Deal</a>
     </nav>
   </header>
 
   <main id="top" class="book-page">
     <section class="slide book-hero" aria-labelledby="book-title">
       <div class="book-hero-copy">
-        <p class="context">The Story Beneath the Pipeline</p>
+        <p class="context">The FusionEQ Book</p>
         <h1 id="book-title">The Deal Behind the Deal</h1>
         <p class="book-kicker">Beyond the Metrics: What Actually Drives Sales Outcomes</p>
         <p class="book-lede">
-          The pipeline tells a story. But it’s not the whole story.
+          A field guide for reading the hidden dynamics that decide whether complex deals stall, slip, or close.
         </p>
-        <p class="book-lede secondary">
-          This book introduces the hidden layer inside every opportunity: human dynamics, misalignment, unspoken risk, and incomplete understanding.
-        </p>
+        <div class="book-hero-signals" aria-label="Book themes">
+          <span>False momentum</span>
+          <span>Weak influence</span>
+          <span>Hidden misalignment</span>
+          <span>Decision risk</span>
+        </div>
         <div class="cta-row" aria-label="Book actions">
           <a href="mailto:fusioneqai@gmail.com?subject=The%20Deal%20Behind%20the%20Deal">Request Book Updates</a>
+          <a href='/pilot'>Explore Pilot</a>
         </div>
       </div>
       <figure class="book-cover-wrap">
@@ -82,98 +89,66 @@
       </figure>
     </section>
 
-    <section class="slide book-intro" aria-labelledby="book-intro-title">
-      <p class="context">From the Introduction</p>
-      <h2 id="book-intro-title">This book is for the deals that look qualified, active, and on track—until they aren’t.</h2>
-      <div class="book-copy">
-        <p>
-          It is for the seller who believed the deal was moving, and for the manager who trusted the update, forecasted it upward, and then had to watch it stall.
-        </p>
-        <p>
-          The stage was right. The activity was there. The next steps were defined.
-        </p>
-        <p>
-          Nothing looked broken.
-        </p>
-        <p>
-          And that was the problem.
-        </p>
-        <p>
-          Because the pipeline tells you what is happening. It does not tell you what it means.
-        </p>
-        <p>
-          That gap between what you can see and what is actually shaping the deal is where most opportunities are won or lost.
-        </p>
-        <p>
-          I call that the deal behind the deal.
-        </p>
+    <section class="slide book-thesis" aria-labelledby="book-thesis-title">
+      <p class="context">Core Idea</p>
+      <h2 id="book-thesis-title">The pipeline tells you what is happening. It does not tell you what it means.</h2>
+      <div class="book-compare" aria-label="Visible deal versus hidden deal">
+        <section>
+          <span>Visible Deal</span>
+          <ul>
+            <li>Stage is right</li>
+            <li>Activity is there</li>
+            <li>Next steps are defined</li>
+          </ul>
+        </section>
+        <section>
+          <span>Deal Behind the Deal</span>
+          <ul>
+            <li>Influence is assumed</li>
+            <li>Alignment is incomplete</li>
+            <li>Decision ownership is unclear</li>
+          </ul>
+        </section>
       </div>
     </section>
 
-    <section class="slide book-insight" aria-labelledby="book-insight-title">
-      <p class="context">Strategic Insight</p>
+    <section class="slide book-insight book-statement" aria-labelledby="book-insight-title">
+      <p class="context">Strategic Read</p>
       <h2 id="book-insight-title">
         The problem isn’t your methodology.<br>
         It’s what your methodology can’t see.
       </h2>
     </section>
 
-    <section class="slide book-story" aria-labelledby="book-story-title">
-      <p class="context">Chapter 1 Hook</p>
-      <h2 id="book-story-title">I respected the process. But I knew it wasn’t the whole story.</h2>
-      <div class="book-copy">
-        <p>
-          I’ve spent more than thirty years in sales. I have managed to the numbers, reported on them, been measured by them, and used them to make decisions.
-        </p>
-        <p>
-          Metrics matter. Process matters. Methodology matters.
-        </p>
-        <p>
-          But in a pipeline review, I remember looking at a deal where everything seemed right. The stage was right. The process had been followed. The CRM looked clean.
-        </p>
-        <p>
-          And still, I knew something was missing.
-        </p>
-        <p>
-          That was the beginning of the idea behind this book: the real deal is often hidden underneath the visible one.
-        </p>
-      </div>
-    </section>
-
-    <section class="slide book-philosophy" aria-labelledby="book-philosophy-title">
-      <p class="context">Why It Matters</p>
-      <h2 id="book-philosophy-title">Numbers measure outcomes. People create them.</h2>
-      <div class="book-copy">
-        <p>
-          Modern sales has become structured, data-driven, and metric-heavy. But qualified deals still stall. Forecasts still fail. Opportunities that look solid still fall apart.
-        </p>
-        <p>
-          Because data shows what is happening, but not always why.
-        </p>
-      </div>
-    </section>
-
-    <section class="slide book-layer" aria-labelledby="book-layer-title">
-      <p class="context">The Hidden Layer</p>
-      <h2 id="book-layer-title">There is always another layer.</h2>
-      <div class="book-copy">
-        <p>
-          A hidden dynamic shaping the decision. A conversation that didn’t happen. A signal that was missed. A misalignment no one fully named. A risk everyone felt, but no one captured in the CRM.
-        </p>
-        <p>
-          This is the <span>deal behind the deal.</span>
-        </p>
+    <section class="slide book-reader" aria-labelledby="book-reader-title">
+      <p class="context">Who It Is For</p>
+      <h2 id="book-reader-title">For sellers and leaders who have seen “good” deals drift.</h2>
+      <div class="book-reader-grid" aria-label="Book readers">
+        <p><span>Sellers</span> When a deal feels active but the room is not moving toward a real decision.</p>
+        <p><span>Managers</span> When the forecast update sounds clean, but the underlying evidence is thin.</p>
+        <p><span>Revenue teams</span> When CRM data explains the record, but not the risk shaping the outcome.</p>
       </div>
     </section>
 
     <section class="slide book-shows" aria-labelledby="book-shows-title">
       <p class="context">What the Book Shows You</p>
-      <h2 id="book-shows-title">How to see the risk before it becomes the miss.</h2>
-      <div class="book-pillars book-lessons" aria-label="What the book helps readers see">
-        <span>Recognize false momentum before it is too late</span>
-        <span>Identify the signals others miss</span>
-        <span>Understand the human dynamics shaping every deal</span>
-        <span>Use AI as a thinking partner, not just a tool</span>
+      <h2 id="book-shows-title">How to see deal risk before it becomes the miss.</h2>
+      <div class="book-outcome-grid" aria-label="What the book helps readers see">
+        <article>
+          <span>01</span>
+          <h3>False Momentum</h3>
+          <p>Activity can make a deal look alive when real commitment is still missing.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Influence Gaps</h3>
+          <p>Support is not influence, and a responsive contact is not always a champion.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Decision Risk</h3>
+          <p>The earlier a team names what is unstable, the more options it has.</p>
+        </article>
       </div>
     </section>
 
@@ -194,48 +169,31 @@
       </div>
     </section>
 
-    <section class="slide book-method" aria-labelledby="book-method-title">
-      <p class="context">FusionEQ Methodology</p>
-      <h2 id="book-method-title">FusionEQ is a system for interpreting what traditional sales systems cannot see.</h2>
-      <div class="book-pillars" aria-label="FusionEQ methodology pillars">
-        <span>Emotional intelligence</span>
-        <span>Artificial intelligence</span>
-        <span>Pattern recognition</span>
-        <span>Human behavior analysis</span>
+    <section class="slide book-fusioneq" aria-labelledby="book-method-title">
+      <div class="book-section-label">
+        <p class="context">FusionEQ Connection</p>
+        <h2 id="book-method-title">The book gives language to the layer FusionEQ interprets.</h2>
       </div>
-      <div class="book-pillars book-fusion" aria-label="FUSION framework">
-        <span>Focus</span>
-        <span>Understanding</span>
-        <span>Synergy</span>
-        <span>Integration</span>
-        <span>Optimization</span>
-        <span>Navigation</span>
-      </div>
-      <p>
-        It is not a replacement for methodology. It is not another qualification framework. It sits on top of the process as an interpretation layer, helping sellers and managers read the missing layer inside complex sales decisions.
+      <p class="book-side-copy">
+        FusionEQ sits above CRM, methodology, and forecast process as an interpretation layer. The book explains why that layer matters: metrics describe the deal, but meaning explains it.
       </p>
-    </section>
-
-    <section class="slide book-method" aria-labelledby="book-example-title">
-      <p class="context">Example Use Case</p>
-      <h2 id="book-example-title">A $1M utilities deal can look strong and still require a deeper read.</h2>
-      <div class="book-pillars book-lessons" aria-label="Example deal signals">
-        <span>Pipeline shows a late-stage, high-visibility opportunity with active engagement and defined next steps.</span>
-        <span>The hidden layer shows multiple stakeholders, technical concerns, operational risk, and unclear decision ownership.</span>
-        <span>The real work is aligning the buying group around execution confidence and risk.</span>
-        <span>FusionEQ helps read the pattern so the seller can guide the decision, not just push for close.</span>
+      <div class="book-fusion-strip" aria-label="FusionEQ pillars">
+        <span>Emotional Intelligence</span>
+        <span>Artificial Intelligence</span>
+        <span>Pattern Recognition</span>
+        <span>Decision Meaning</span>
       </div>
     </section>
 
-    <section class="slide book-method" aria-labelledby="book-author-title">
+    <section class="slide book-author" aria-labelledby="book-author-title">
       <p class="context">Author</p>
       <h2 id="book-author-title">Cristine Wick</h2>
-      <div class="book-copy">
+      <div class="book-author-layout">
         <p>
-          Cristine Wick is a 30-year enterprise sales professional and longtime individual contributor who has closed complex, high-stakes enterprise deals. Known for her ability to read what others miss, she developed the FusionEQ™ methodology to help sellers and sales leaders interpret the hidden dynamics that determine whether deals stall, slip, or close.
+          Cristine Wick is a 30-year enterprise sales professional who has worked inside complex, high-stakes sales environments where everything is tracked and the real story still often lives beneath the update.
         </p>
         <p>
-          Her work sits at the intersection of emotional intelligence and artificial intelligence, bringing a new lens to modern sales performance.
+          Her work sits at the intersection of emotional intelligence and artificial intelligence, giving sellers and leaders a practical way to read alignment, influence, resistance, urgency quality, and decision risk.
         </p>
       </div>
     </section>

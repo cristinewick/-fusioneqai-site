@@ -11,11 +11,14 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <a aria-label='FusionEQ home' class='brand' href='/#top'>
-      <img class="brand-logo" src="assets/fusioneq-marketing-lockup.png" alt="FusionEQ">
-    </a>
+<body class="page-about page-home-v2">
+  <header class="site-header home-v2-shell-header">
+    <div class="home-v2-brand-block">
+      <a aria-label='FusionEQ home' class='brand' href='/#top'>
+        <img class="brand-logo home-v2-header-logo" src="assets/header-fusioneqai-logo.png" alt="FusionEQ AI">
+      </a>
+      <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
+    </div>
     <nav class="primary-nav" aria-label="Primary navigation">
       <div class="nav-group">
         <a href='/#top'>Home</a>
@@ -57,186 +60,118 @@
           <a href='/book'>The Deal Behind the Deal</a>
         </div>
       </div>
-      <a href='/contact'>Contact</a>
+      <a class="home-v2-header-cta" href='/pilot'>Analyze a Deal</a>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="slide hero founder-hero" aria-labelledby="about-title">
-      <div>
+  <main id="top" class="about-page">
+    <section class="slide about-hero" aria-labelledby="about-title">
+      <div class="about-hero-copy">
         <p class="context">About Cristine Wick</p>
-        <h1 id="about-title">Deals stall.<br>Presentations miss.</h1>
-        <p class="subline">
-          Not because the process is wrong—because what’s actually happening is misread.
+        <h1 id="about-title">Cristine Wick built FusionEQ to read the deal behind the deal.</h1>
+        <p class="about-lede">
+          FusionEQ was built from thirty years inside enterprise sales, where every deal is tracked and the real reason it stalls often sits beneath the data.
         </p>
-        <p class="subline">
-          A stakeholder isn’t aligned.<br>
-          A champion doesn’t have influence.<br>
-          No one actually owns the decision.
-        </p>
-        <p class="subline">
-          These things don’t show up clearly in the pipeline.<br>
-          But they decide the outcome anyway.
-        </p>
-        <p class="subline">
-          This is the deal behind the deal.
-        </p>
-        <p class="subline">
-          And this is what FusionEQ helps you see.
-        </p>
+        <div class="about-hero-points" aria-label="FusionEQ signal reads">
+          <span>Alignment</span>
+          <span>Influence</span>
+          <span>Decision risk</span>
+          <span>Ownership</span>
+        </div>
         <div class="cta-row" aria-label="About page actions">
           <a href='/contact'>Book a Consultation</a>
-          <a href='/pilot'>Explore the Diagnostic Pilot</a>
+          <a href='/pilot'>Explore Pilot</a>
         </div>
       </div>
-      <figure class="founder-photo">
+      <figure class="about-founder-card">
         <img src="assets/cristine-wick.jpeg" alt="Cristine Wick">
-        <figcaption>Cristine Wick</figcaption>
+        <figcaption>
+          <span>Cristine Wick</span>
+          Founder of FusionEQ and author of The Deal Behind the Deal
+        </figcaption>
       </figure>
     </section>
 
-    <section class="slide insight" aria-labelledby="about-mission-title">
-      <p class="context">About FusionEQ</p>
-      <h2 id="about-mission-title">FusionEQ is not another sales methodology.</h2>
-      <p>
-        It doesn’t replace your CRM, your process, or your team’s experience.
-      </p>
-      <p>
-        It sits above your revenue stack as an interpretation layer.
-      </p>
-      <p>
-        Your systems show you what is happening.<br>
-        FusionEQ helps you understand what it means.
-      </p>
-      <p>
-        Because activity is not progress.<br>
-        Engagement is not commitment.<br>
-        And a next step is not always momentum.
-      </p>
-    </section>
-
-    <section class="slide diagnostic" aria-labelledby="about-problem-title">
-      <p class="context">Problem</p>
-      <h2 id="about-problem-title">Most deals don’t fail loudly. They drift.</h2>
-      <p>The pipeline looks clean.<br>The activity is there.</p>
-      <div class="diagnostic-list" aria-label="Misread deal signals">
-        <span>alignment is incomplete</span>
-        <span>influence is weaker than it appears</span>
-        <span>risk hasn’t been surfaced</span>
-        <span>ownership is unclear</span>
+    <section class="slide about-thesis" aria-labelledby="about-thesis-title">
+      <p class="context">FusionEQ Point of View</p>
+      <h2 id="about-thesis-title">Most systems show what happened. FusionEQ interprets what it means.</h2>
+      <div class="about-thesis-grid" aria-label="FusionEQ interpretation logic">
+        <article>
+          <span>01</span>
+          <h3>Activity is visible</h3>
+          <p>Meetings, stages, next steps, and forecast updates show motion. They do not always show commitment.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Meaning is hidden</h3>
+          <p>Influence, hesitation, misalignment, and decision ownership are harder to see, but they decide outcomes.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Action gets sharper</h3>
+          <p>FusionEQ turns the read into a clearer next move: align, validate, reframe, slow down, or move with confidence.</p>
+        </article>
       </div>
-      <p>The deal is active.<br>But it’s not advancing.</p>
     </section>
 
-    <section class="slide founder credibility" aria-labelledby="about-credibility-title">
-      <p class="context">Cristine Wick</p>
-      <h2 id="about-credibility-title">Thirty years in enterprise sales environments where everything is tracked, forecasted, and measured.</h2>
-      <div class="founder-copy">
+    <section class="slide about-origin" aria-labelledby="about-origin-title">
+      <div class="about-section-label">
+        <p class="context">Why FusionEQ Exists</p>
+        <h2 id="about-origin-title">It started as a pattern Cristine could not ignore.</h2>
+      </div>
+      <div class="about-copy">
         <p>
-          Cristine Wick has spent more than 30 years in enterprise sales environments where everything is tracked, forecasted, and measured.
+          Deals looked qualified. Pipelines looked strong. Teams followed the process. Then the opportunity slipped for reasons no dashboard had clearly named.
         </p>
         <p>
-          And where deals still fail for reasons no dashboard explains.
+          The visible story usually pointed to activity, pricing, competition, or timing. The real story was often incomplete alignment, assumed influence, weak urgency, or a decision process no one fully owned.
         </p>
         <p>
-          Her work focuses on reading what sits underneath the data—alignment, influence, risk, and decision ownership.
-        </p>
-        <p>
-          She combines human judgment with AI-supported pattern recognition to help sales teams interpret what their systems cannot fully explain.
-        </p>
-        <p>
-          Not to replace experience.<br>
-          To sharpen it.
+          FusionEQ gives that hidden layer a practical language. It combines human judgment with AI-supported pattern recognition so sellers and leaders can read the deal behind the deal before it becomes the forecast story.
         </p>
       </div>
     </section>
 
-    <section class="slide founder credibility" aria-labelledby="about-philosophy-title">
-      <p class="context">Sales Philosophy</p>
-      <h2 id="about-philosophy-title">Sales is not won or lost in the CRM.</h2>
-      <div class="founder-copy">
-        <p>
-          It is decided in the conversations that do not happen, the alignment that never fully forms, and the signals most teams do not know how to interpret.
-        </p>
-        <p>
-          For decades, Cristine watched deals that looked qualified stall and deals that looked uncertain close. The difference was not just activity, stage progression, or methodology. It was what was happening underneath.
-        </p>
-        <p>
-          Her philosophy is simple: metrics describe the deal, but meaning explains it. Methodologies matter. Data matters. FusionEQ is designed to sit on top of them, not replace them.
-        </p>
+    <section class="slide about-lens" aria-labelledby="about-lens-title">
+      <p class="context">The Fusion Lens</p>
+      <h2 id="about-lens-title">Emotional intelligence meets artificial intelligence.</h2>
+      <div class="about-lens-grid" aria-label="FusionEQ lens">
+        <p><span>F</span>Focus on what actually matters in the deal right now.</p>
+        <p><span>U</span>Understand the signals beneath the visible update.</p>
+        <p><span>S</span>Structure the difference between activity and progress.</p>
+        <p><span>I</span>Interpret influence, resistance, urgency, and confidence.</p>
+        <p><span>O</span>Own the decision path before it drifts.</p>
+        <p><span>N</span>Navigate the next move based on reality.</p>
       </div>
     </section>
 
-    <section class="slide founder credibility" aria-labelledby="about-journalism-title">
-      <p class="context">Journalism Foundation</p>
-      <h2 id="about-journalism-title">Cristine was trained to look for the story underneath the story.</h2>
-      <div class="founder-copy">
-        <p>
-          Before sales, Cristine studied broadcast journalism with an emphasis in radio and television news.
-        </p>
-        <p>
-          That training taught her to ask who, what, where, when, why, and how before accepting the first version of a story.
-        </p>
-        <p>
-          In enterprise sales, that same discipline became an advantage. She did not just listen for requirements. She listened for risk, hesitation, inconsistency, and what was not being said.
-        </p>
+    <section class="slide about-credibility-band" aria-labelledby="about-credibility-title">
+      <div>
+        <p class="context">Cristine Wick</p>
+        <h2 id="about-credibility-title">A sales operator trained to look for the story underneath the story.</h2>
+      </div>
+      <div class="about-proof-list" aria-label="Cristine Wick credibility">
+        <p><span>Enterprise sales</span> Thirty years in complex, high-stakes sales environments with multiple stakeholders and forecast pressure.</p>
+        <p><span>Journalism foundation</span> Broadcast journalism training shaped the habit of questioning the first version of the story.</p>
+        <p><span>Pattern recognition</span> A practical read on the difference between real momentum and confidence that is not yet supported by evidence.</p>
       </div>
     </section>
 
-    <section class="slide founder credibility" aria-labelledby="about-why-title">
-      <p class="context">Why FusionEQ Exists</p>
-      <h2 id="about-why-title">FusionEQ started as a pattern Cristine could not ignore.</h2>
-      <div class="founder-copy">
-        <p>
-          Deals looked fully qualified, pipelines looked strong, teams followed the process, and still the opportunity stalled.
-        </p>
-        <p>
-          The post-mortem often focused on what was visible: activity, pricing, competition, and timing. But the real story was usually misalignment that had not been surfaced, a champion who was not as strong as the team believed, or a decision process that was never fully understood.
-        </p>
-        <p>
-          Over time, Cristine stopped just managing deals and started reading them differently. FusionEQ is the result of that shift, and The Deal Behind the Deal gives that shift its language.
-        </p>
-      </div>
-    </section>
-
-    <section class="slide methodology" aria-labelledby="about-environments-title">
-      <p class="context">Sales Environments</p>
-      <h2 id="about-environments-title">Built for high-stakes, multi-stakeholder sales motion.</h2>
-      <div class="method-list" aria-label="Cristine Wick experience areas">
-        <p><span>Enterprise sales</span> Complex opportunities where influence, timing, and internal politics shape outcomes.</p>
-        <p><span>Forecast pressure</span> High-stakes conversations where the visible story needs pressure-testing.</p>
-        <p><span>Sales execution</span> Deal strategy, stakeholder alignment, enablement, and practical coaching.</p>
-        <p><span>Pattern recognition</span> Reading the difference between real momentum and confidence that is not yet supported by evidence.</p>
-      </div>
-    </section>
-
-    <section class="slide insight" aria-labelledby="about-read-title">
-      <p class="context">Why Her Read Is Different</p>
-      <h2 id="about-read-title">Cristine looks for the deal behind the deal.</h2>
-      <p>
-        Known for her ability to read what others miss, Cristine brings a structured way to examine the signals teams often miss: influence, resistance, hesitation, urgency quality, stakeholder alignment, and decision risk.
-      </p>
-      <p>
-        Her work sits at the intersection of emotional intelligence and artificial intelligence, bringing a new lens to modern sales performance.
-      </p>
-    </section>
-
-    <section class="slide diagnostic" aria-labelledby="about-beliefs-title">
-      <p class="context">What Cristine Believes</p>
-      <h2 id="about-beliefs-title">The problem isn’t your methodology. It’s what your methodology can’t see.</h2>
-      <div class="diagnostic-list" aria-label="Cristine Wick sales beliefs">
-        <span>The pipeline tells a story. But it is not the whole story.</span>
-        <span>Most deals do not fail suddenly. They were misaligned early.</span>
+    <section class="slide about-beliefs" aria-labelledby="about-beliefs-title">
+      <p class="context">What She Believes</p>
+      <h2 id="about-beliefs-title">The problem usually isn’t your methodology. It’s what your methodology can’t see.</h2>
+      <div class="about-belief-grid" aria-label="FusionEQ beliefs">
+        <span>The pipeline tells a story, but not the whole story.</span>
         <span>A qualified deal can still be fundamentally unstable.</span>
         <span>Support is not influence. A good contact is not always a champion.</span>
-        <span>Activity creates visibility, but not necessarily progress.</span>
         <span>Metrics describe the deal. Meaning explains it.</span>
       </div>
     </section>
 
-    <section class="slide action" aria-labelledby="about-contact-title">
-      <h2 id="about-contact-title">Cristine’s experience is the reason FusionEQ reads what standard pipeline reviews miss.</h2>
-      <p>Bring that lens to your active pipeline. Start with a focused consultation and determine whether the 5–10 deal diagnostic is the right next step.</p>
+    <section class="slide about-close" aria-labelledby="about-contact-title">
+      <p class="context">Next Step</p>
+      <h2 id="about-contact-title">Bring the FusionEQ read to your active pipeline.</h2>
+      <p>Start with a focused consultation, then decide whether the 5-10 deal Diagnostic Pilot is the right next move.</p>
       <div class="cta-row" aria-label="About contact actions">
         <a href='/contact'>Book a Consultation</a>
         <a href='/pilot'>Explore the Diagnostic Pilot</a>
