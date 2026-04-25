@@ -3803,9 +3803,11 @@ body {
 }
 
 .home-v2-brand-line {
-  max-width: 360px;
-  color: rgba(255, 255, 255, 0.52);
-  font-size: 0.7rem;
+  display: block;
+  max-width: 410px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: clamp(0.78rem, 0.9vw, 0.88rem);
+  line-height: 1.2;
   white-space: normal;
 }
 
@@ -3930,6 +3932,7 @@ h2,
 .about-proof-list p,
 .sample-readout,
 .home-v2-cta-card,
+.home-v2-journey-grid a,
 .home-v2-framework-shell,
 .book-author-layout,
 .book-fusion-strip span {
@@ -3956,6 +3959,61 @@ h2,
   width: min(320px, 100%);
 }
 
+.home-v2-journey {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-v2-journey > h2 {
+  margin-bottom: 28px;
+}
+
+.home-v2-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.home-v2-journey-grid a {
+  display: grid;
+  gap: 12px;
+  min-height: 190px;
+  padding: 22px;
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.home-v2-journey-grid a:hover,
+.home-v2-journey-grid a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(127, 255, 160, 0.45);
+  background: rgba(127, 255, 160, 0.04);
+  outline: none;
+}
+
+.home-v2-journey-grid span {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-v2-journey-grid strong {
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.home-v2-journey-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .lead-form {
   padding: 24px;
 }
@@ -3972,12 +4030,36 @@ h2,
     width: min(100%, calc(100% - 48px));
   }
 
+  .page-home-v2 .primary-nav {
+    gap: 14px;
+    margin-left: auto;
+  }
+
+  .page-home-v2 .primary-nav > a[href="/about"],
+  .page-home-v2 .primary-nav > a[href="/about.html"],
+  .page-home-v2 .primary-nav .nav-group:has(a[href="/about"]) {
+    display: none;
+  }
+
+  .page-home-v2 .home-v2-header-cta {
+    padding-inline: 18px;
+  }
+
   .home-v2-hero,
   .about-hero,
   .page-book .book-hero,
   .pilot-hero,
   .page-contact .contact-hero {
     padding-top: 56px;
+  }
+
+  .home-v2-hero-grid {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+
+  .home-v2-hero-side {
+    max-width: 620px;
   }
 
   .slide,
@@ -4007,6 +4089,10 @@ h2,
   .pilot-hero h1,
   .page-contact .contact-hero h1 {
     line-height: 1.14;
+  }
+
+  .home-v2-journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -4064,5 +4150,49 @@ h2,
   .book-close h2 {
     font-size: 1.45rem;
     line-height: 1.18;
+  }
+
+  .home-v2-journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-v2-journey-grid a {
+    min-height: auto;
+    padding: 18px;
+  }
+}
+
+.page-home-v2 .home-v2-brand-block {
+  min-width: min(430px, 46vw);
+  gap: 8px;
+}
+
+.page-home-v2 .home-v2-header-logo {
+  width: clamp(180px, 16vw, 240px);
+  height: auto;
+}
+
+.page-home-v2 .home-v2-brand-line {
+  display: block !important;
+  visibility: visible;
+  max-width: 410px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  line-height: 1.22;
+}
+
+@media (max-width: 760px) {
+  .page-home-v2 .home-v2-brand-block {
+    min-width: min(260px, 54vw);
+  }
+
+  .page-home-v2 .home-v2-header-logo {
+    width: 170px;
+    height: auto;
+  }
+
+  .page-home-v2 .home-v2-brand-line {
+    max-width: 260px;
+    font-size: 0.72rem;
   }
 }
