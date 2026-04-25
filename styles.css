@@ -3781,3 +3781,288 @@ footer nav {
     font-size: 2.18rem;
   }
 }
+
+/* Enterprise polish pass: calmer type, tighter rhythm, less theatrical layout. */
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0) 280px),
+    var(--black);
+}
+
+.site-header,
+.page-home-v2 .site-header {
+  width: min(1180px, calc(100% - 56px));
+  margin: 0 auto;
+  padding: 16px 0 14px;
+  background: rgba(10, 10, 15, 0.94);
+}
+
+.page-home-v2 .home-v2-header-logo {
+  height: 42px;
+  width: auto;
+}
+
+.home-v2-brand-line {
+  max-width: 360px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.7rem;
+  white-space: normal;
+}
+
+.primary-nav {
+  gap: 18px;
+}
+
+.page-home-v2 .nav-group > a,
+.page-home-v2 .primary-nav > a,
+nav {
+  font-size: 0.88rem;
+}
+
+.home-v2-header-cta,
+.cta-row a,
+.cta-row button,
+.lead-form button {
+  min-height: 40px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+.hero::before,
+.hero::after {
+  display: none;
+}
+
+.slide,
+.homepage-v2 .slide,
+.about-page .slide,
+.page-book .book-page .slide,
+.page-pilot .pilot-page .slide,
+.page-contact .contact-page .slide {
+  width: min(1080px, 100%);
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.hero,
+.home-v2-hero,
+.about-hero,
+.page-book .book-hero,
+.pilot-hero,
+.page-contact .contact-hero {
+  min-height: auto;
+  padding-top: 118px;
+  padding-bottom: 72px;
+}
+
+h1,
+.home-v2-hero h1,
+.about-hero h1,
+.page-book .book-hero h1,
+.pilot-hero h1,
+.page-contact .contact-hero h1 {
+  max-width: 720px;
+  font-size: clamp(2.15rem, 3.55vw, 3.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+}
+
+h2,
+.home-v2-insight h2,
+.home-v2-close h2,
+.about-thesis h2,
+.about-lens h2,
+.about-beliefs h2,
+.about-close h2,
+.book-thesis h2,
+.book-statement h2,
+.book-reader h2,
+.book-shows h2,
+.book-chapters h2,
+.book-author h2,
+.book-close h2 {
+  max-width: 820px;
+  font-size: clamp(1.55rem, 2.35vw, 2.45rem);
+  line-height: 1.14;
+  letter-spacing: -0.018em;
+}
+
+.subline,
+.book-lede,
+.pilot-lede,
+.about-lede,
+.home-v2-hero .subline,
+.home-v2-hero-support,
+.home-v2-hero-supporting {
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.context {
+  margin-bottom: 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+}
+
+.home-v2-hero-grid,
+.about-hero,
+.page-book .book-hero,
+.pilot-hero,
+.contact-hero {
+  gap: clamp(36px, 5vw, 72px);
+}
+
+.home-v2-hero-brand {
+  font-size: clamp(2.3rem, 3.4vw, 3.2rem);
+  letter-spacing: -0.035em;
+}
+
+.about-founder-card,
+.page-book .book-cover-wrap,
+.pilot-next-card,
+.lead-form,
+.book-compare,
+.book-reader-grid p,
+.book-outcome-grid article,
+.about-thesis-grid article,
+.about-belief-grid span,
+.about-proof-list p,
+.sample-readout,
+.home-v2-cta-card,
+.home-v2-framework-shell,
+.book-author-layout,
+.book-fusion-strip span {
+  background: rgba(255, 255, 255, 0.018);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.method-list p,
+.diagnostic-list span,
+.pilot-grid div,
+.comparison-grid div,
+.book-copy,
+.chapter-grid p {
+  background: rgba(255, 255, 255, 0.018);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.page-book .book-cover-wrap {
+  width: min(292px, 100%);
+}
+
+.about-founder-card {
+  width: min(320px, 100%);
+}
+
+.lead-form {
+  padding: 24px;
+}
+
+.lead-form input,
+.lead-form textarea {
+  min-height: 42px;
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .site-header,
+  .page-home-v2 .site-header {
+    position: static;
+    width: min(100%, calc(100% - 48px));
+  }
+
+  .home-v2-hero,
+  .about-hero,
+  .page-book .book-hero,
+  .pilot-hero,
+  .page-contact .contact-hero {
+    padding-top: 56px;
+  }
+
+  .slide,
+  .homepage-v2 .slide,
+  .about-page .slide,
+  .page-book .book-page .slide,
+  .page-pilot .pilot-page .slide,
+  .page-contact .contact-page .slide {
+    width: min(100%, calc(100% - 64px));
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  h1,
+  .home-v2-hero h1,
+  .about-hero h1,
+  .page-book .book-hero h1,
+  .pilot-hero h1,
+  .page-contact .contact-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.55rem);
+  }
+
+  h2,
+  .home-v2-insight h2,
+  .about-thesis h2,
+  .book-thesis h2,
+  .pilot-hero h1,
+  .page-contact .contact-hero h1 {
+    line-height: 1.14;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .page-home-v2 .site-header {
+    width: min(100%, calc(100% - 32px));
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
+
+  .slide,
+  .homepage-v2 .slide,
+  .about-page .slide,
+  .page-book .book-page .slide,
+  .page-pilot .pilot-page .slide,
+  .page-contact .contact-page .slide {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+
+  .hero,
+  .home-v2-hero,
+  .about-hero,
+  .page-book .book-hero,
+  .pilot-hero,
+  .page-contact .contact-hero {
+    padding-top: 48px;
+  }
+
+  h1,
+  .home-v2-hero h1,
+  .about-hero h1,
+  .page-book .book-hero h1,
+  .pilot-hero h1,
+  .page-contact .contact-hero h1 {
+    font-size: 2rem;
+    line-height: 1.08;
+    letter-spacing: -0.018em;
+  }
+
+  h2,
+  .home-v2-insight h2,
+  .home-v2-close h2,
+  .about-thesis h2,
+  .about-lens h2,
+  .about-beliefs h2,
+  .about-close h2,
+  .book-thesis h2,
+  .book-statement h2,
+  .book-reader h2,
+  .book-shows h2,
+  .book-chapters h2,
+  .book-author h2,
+  .book-close h2 {
+    font-size: 1.45rem;
+    line-height: 1.18;
+  }
+}
