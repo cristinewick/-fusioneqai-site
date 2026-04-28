@@ -3,9 +3,9 @@
   var gate = document.querySelector("[data-lead-gate]");
   var fallback = document.querySelector("[data-lead-gate-fallback]");
   var gateMessage = document.querySelector("[data-lead-gate-message]");
-  var coachCard = document.querySelector("[data-coach-link-card]");
-  var coachPlaceholder = document.querySelector("[data-coach-placeholder]");
-  var coachLink = document.querySelector("[data-coach-link]");
+  var analyzerCard = document.querySelector("[data-analyzer-link-card]");
+  var analyzerPlaceholder = document.querySelector("[data-analyzer-placeholder]");
+  var analyzerLink = document.querySelector("[data-analyzer-link]");
   var contentType = config.contentType || "sample";
   var storageKey = "fusioneqAccessGateUnlocked:v1:" + contentType;
 
@@ -20,21 +20,21 @@
       gate.setAttribute("hidden", "");
     }
 
-    if (config.coachUrl && config.coachUrl !== "YOUR_COACH_LINK") {
-      showCoachLink();
+    if (config.analyzerUrl && config.analyzerUrl !== "YOUR_ANALYZER_LINK") {
+      showAnalyzerLink();
     }
   }
 
-  function showCoachLink() {
-    if (!coachCard || !coachLink) {
+  function showAnalyzerLink() {
+    if (!analyzerCard || !analyzerLink) {
       return;
     }
 
-    coachLink.href = config.coachUrl;
-    coachCard.removeAttribute("hidden");
+    analyzerLink.href = config.analyzerUrl;
+    analyzerCard.removeAttribute("hidden");
 
-    if (coachPlaceholder) {
-      coachPlaceholder.setAttribute("hidden", "");
+    if (analyzerPlaceholder) {
+      analyzerPlaceholder.setAttribute("hidden", "");
     }
   }
 

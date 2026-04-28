@@ -4913,6 +4913,66 @@ h2,
   margin-top: 8px;
 }
 
+.homepage-primary .home-v2-private-steps {
+  display: grid;
+  gap: 14px;
+  align-self: end;
+  margin-top: 8px;
+}
+
+.homepage-primary .home-v2-private-steps div {
+  display: grid;
+  gap: 8px;
+}
+
+.homepage-primary .home-v2-private-steps span {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.homepage-primary .home-v2-private-steps a {
+  width: fit-content;
+}
+
+.homepage-primary .home-v2-evaluation-lane .sample-action {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.homepage-primary .home-v2-evaluation-lane .sample-action:hover,
+.homepage-primary .home-v2-evaluation-lane .sample-action:focus-visible {
+  color: #080b10;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.92);
+}
+
+.homepage-primary .home-v2-evaluation-lane .fusion-action {
+  color: var(--green);
+  border-color: rgba(84, 192, 138, 0.58);
+}
+
+.homepage-primary .home-v2-evaluation-lane .fusion-action:hover,
+.homepage-primary .home-v2-evaluation-lane .fusion-action:focus-visible {
+  color: #08110d;
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.homepage-primary .home-v2-evaluation-lane .consult-action {
+  color: var(--gold);
+  border-color: rgba(214, 183, 110, 0.68);
+}
+
+.homepage-primary .home-v2-evaluation-lane .consult-action:hover,
+.homepage-primary .home-v2-evaluation-lane .consult-action:focus-visible {
+  color: #0b1016;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
 .lead-gate {
   position: fixed;
   inset: 0;
