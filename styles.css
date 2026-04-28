@@ -892,8 +892,8 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.case-grid div,
-.pilot-grid div {
+.case-grid > div,
+.pilot-grid > div {
   display: grid;
   align-content: start;
   gap: 16px;
@@ -902,6 +902,21 @@ p {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.page-sample-analyses .pilot-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-sample-analyses .pilot-grid > div:last-child {
+  grid-column: 1 / -1;
+  min-height: auto;
+}
+
+.page-sample-analyses .inline-cta a {
+  width: 100%;
+  max-width: 290px;
+  text-align: center;
 }
 
 .case-grid span,
@@ -1277,6 +1292,10 @@ p {
   padding-top: clamp(230px, 18vw, 292px);
 }
 
+.page-brief .brief-memo {
+  gap: 34px;
+}
+
 .brief-heading {
   display: grid;
   gap: 14px;
@@ -1311,6 +1330,11 @@ p {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.page-brief .brief-grid section {
+  min-height: 178px;
+  padding: 22px;
 }
 
 .brief-grid span {
@@ -4179,7 +4203,7 @@ h2,
 
 .method-list p,
 .diagnostic-list span,
-.pilot-grid div,
+.pilot-grid > div,
 .comparison-grid div,
 .book-copy,
 .chapter-grid p {
