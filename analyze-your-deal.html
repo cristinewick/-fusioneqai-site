@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyze Your Deal | FusionEQ</title>
+  <meta
+    name="description"
+    content="Start a FusionEQ guided deal read to analyze opportunity risk, stakeholder alignment, decision ownership, and the next best move."
+  >
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.FUSIONEQ_LEAD_GATE = {
+      contentType: "analyze-your-deal",
+      gateType: "access-code",
+      accessCode: "READTHEDEAL",
+      coachUrl: ""
+    };
+  </script>
+</head>
+<body class="page-home-v2 is-lead-gated">
+  <div class="lead-gate" data-lead-gate role="dialog" aria-modal="true" aria-labelledby="lead-gate-title" aria-describedby="lead-gate-copy">
+    <div class="lead-gate-card">
+      <p class="context lead-gate-context">Private Access</p>
+      <h2 id="lead-gate-title">Enter your access code to use Fusion Deal Analyzer.</h2>
+      <p id="lead-gate-copy">
+        Access is provided after consultation for teams using FusionEQ on a live opportunity.
+      </p>
+      <div class="lead-gate-form">
+        <form class="lead-gate-fallback" data-lead-gate-fallback>
+          <label for="lead-gate-code">Access code</label>
+          <div>
+            <input id="lead-gate-code" type="password" name="access-code" autocomplete="off" placeholder="Enter access code" required>
+            <button type="submit">Continue</button>
+          </div>
+          <small data-lead-gate-message>Preview mode only. Add a secure access system before using this for live customer deals.</small>
+        </form>
+      </div>
+      <p class="lead-gate-privacy">
+        Need access? Book a consultation so FusionEQ can confirm fit, scope, and the right analyzer path.
+      </p>
+    </div>
+  </div>
+
+  <header class="site-header home-v2-shell-header">
+    <div class="home-v2-brand-block">
+      <a aria-label='FusionEQ home' class='brand' href='/#top'>
+        <img class="brand-logo home-v2-header-logo" src="assets/header-fusioneqai-logo.png" alt="FusionEQ AI">
+      </a>
+      <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
+    </div>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <div class="nav-group"><a href='/#top'>Home</a></div>
+      <div class="nav-group"><a href='/pilot'>Pilot</a></div>
+      <div class="nav-group"><a href='/sample-analyses.html'>Analyses</a></div>
+      <div class="nav-group"><a href='/courses'>Training</a></div>
+      <div class="nav-group"><a href='/book'>Book</a></div>
+      <a class="home-v2-header-cta" href='/contact'>Book a Consultation</a>
+    </nav>
+  </header>
+
+  <main id="top" class="homepage-v2">
+    <section class="slide home-v2-sample gated-action-page" aria-labelledby="analyze-deal-title">
+      <p class="context">Fusion Deal Analyzer</p>
+      <h1 id="analyze-deal-title">Analyze your live deal with a guided FusionEQ read.</h1>
+      <p class="sample-subhead">Pressure-test what looks aligned before the quarter tells the story for you.</p>
+      <div class="gated-action-panel" data-coach-link-card hidden>
+        <h2>Continue with Fusion Deal Coach.</h2>
+        <p>After the deal analysis, use Fusion Deal Coach to work through hidden risk, stakeholder alignment, decision ownership, and the next customer-facing move.</p>
+        <div class="cta-row" aria-label="FusionEQ deal coach action">
+          <a data-coach-link href="#" target="_blank" rel="noopener">Continue with Fusion Deal Coach</a>
+        </div>
+      </div>
+      <div class="gated-action-panel" data-coach-placeholder>
+        <h2>Fusion Deal Coach will appear after private access is configured.</h2>
+        <p>Once the secure access layer and private coach link are connected, this page becomes the gated entry point for live deal analysis and the follow-on coaching step.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <img class="brand-logo footer-logo" src="assets/fusioneq-marketing-lockup.png" alt="FusionEQ">
+      <span>Decision intelligence for revenue teams</span>
+      <small>© 2026 Cristine Wick. All rights reserved. FusionEQ™ is a trademark of Cristine Wick.</small>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href='/#top'>Home</a>
+      <a href='/sample-analyses.html'>Analyses</a>
+      <a href='/sample-deal-read.html'>Sample Deal Analysis</a>
+      <a href='/pilot'>Pilot</a>
+      <a href='/contact'>Contact</a>
+    </nav>
+  </footer>
+  <script src="lead-gate.js"></script>
+</body>
+</html>
