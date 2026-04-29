@@ -4822,6 +4822,15 @@ h2,
   line-height: 1.18;
 }
 
+.homepage-primary .home-v2-hero-punch {
+  max-width: 620px;
+  margin: -6px 0 2px;
+  color: var(--gold);
+  font-size: 1.02rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
 .homepage-primary .home-v2-hero-support {
   max-width: 640px;
   font-size: clamp(0.98rem, 1.05vw, 1.08rem);
