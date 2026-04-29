@@ -4410,6 +4410,7 @@ h2,
   .about-hero,
   .page-book .book-hero,
   .pilot-hero,
+  .deal-coach-hero,
   .page-contact .contact-hero {
     padding-top: 56px;
   }
@@ -4433,11 +4434,26 @@ h2,
     width: 100%;
   }
 
+  .home-v2-coach-bridge,
+  .page-deal-coach .deal-coach-hero,
+  .page-presentation-coach .deal-coach-hero {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    gap: 30px;
+  }
+
+  .page-deal-coach .deal-coach-control-card,
+  .page-presentation-coach .deal-coach-control-card {
+    width: 100%;
+  }
+
   .slide,
   .homepage-v2 .slide,
   .about-page .slide,
   .page-book .book-page .slide,
   .page-pilot .pilot-page .slide,
+  .page-deal-coach .deal-coach-page .slide,
+  .page-presentation-coach .coach-workflow-page .slide,
   .page-contact .contact-page .slide {
     width: min(100%, calc(100% - 64px));
     padding-top: 56px;
@@ -4449,6 +4465,7 @@ h2,
   .about-hero h1,
   .page-book .book-hero h1,
   .pilot-hero h1,
+  .deal-coach-hero h1,
   .page-contact .contact-hero h1 {
     font-size: clamp(2rem, 4vw, 2.55rem);
   }
@@ -4463,6 +4480,11 @@ h2,
   }
 
   .home-v2-journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coach-execution-grid,
+  .coach-preview-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -4480,6 +4502,8 @@ h2,
   .about-page .slide,
   .page-book .book-page .slide,
   .page-pilot .pilot-page .slide,
+  .page-deal-coach .deal-coach-page .slide,
+  .page-presentation-coach .coach-workflow-page .slide,
   .page-contact .contact-page .slide {
     padding-top: 48px;
     padding-bottom: 52px;
@@ -4490,6 +4514,7 @@ h2,
   .about-hero,
   .page-book .book-hero,
   .pilot-hero,
+  .deal-coach-hero,
   .page-contact .contact-hero {
     padding-top: 48px;
   }
@@ -4499,6 +4524,7 @@ h2,
   .about-hero h1,
   .page-book .book-hero h1,
   .pilot-hero h1,
+  .deal-coach-hero h1,
   .page-contact .contact-hero h1 {
     font-size: 2rem;
     line-height: 1.08;
@@ -4518,9 +4544,31 @@ h2,
   .book-shows h2,
   .book-chapters h2,
   .book-author h2,
-  .book-close h2 {
+  .book-close h2,
+  .coach-difference h2,
+  .coach-execution h2,
+  .coach-plan h2,
+  .coach-bottom-line h2 {
     font-size: 1.45rem;
     line-height: 1.18;
+  }
+
+  .home-v2-coach-bridge,
+  .page-deal-coach .deal-coach-hero,
+  .page-presentation-coach .deal-coach-hero {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .coach-execution-grid,
+  .coach-preview-grid,
+  .homepage-primary .home-v2-outcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-execution-grid article,
+  .coach-preview-grid div {
+    min-height: auto;
   }
 
   .home-v2-journey-grid {
@@ -4843,6 +4891,102 @@ h2,
   line-height: 1.1;
 }
 
+.home-v2-coach-bridge {
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 390px);
+  align-items: center;
+  gap: clamp(30px, 6vw, 78px);
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding-top: 72px;
+  padding-bottom: 78px;
+}
+
+.home-v2-coach-copy {
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+}
+
+.home-v2-coach-copy h2 {
+  font-size: clamp(1.72rem, 3vw, 2.46rem);
+}
+
+.home-v2-coach-copy p:not(.context) {
+  max-width: 670px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.home-v2-coach-moves {
+  display: grid;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid rgba(84, 192, 138, 0.28);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(84, 192, 138, 0.055), rgba(255, 255, 255, 0.014)),
+    rgba(255, 255, 255, 0.018);
+}
+
+.home-v2-coach-moves span {
+  display: block;
+  padding: 11px 14px;
+  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.12);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.home-v2-workflow-cards {
+  display: grid;
+  gap: 14px;
+}
+
+.home-v2-workflow-cards a {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  color: var(--white);
+  text-decoration: none;
+  border: 1px solid rgba(84, 192, 138, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.018);
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.home-v2-workflow-cards a:hover,
+.home-v2-workflow-cards a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(127, 255, 160, 0.45);
+  background: rgba(127, 255, 160, 0.04);
+  outline: none;
+}
+
+.home-v2-workflow-cards span {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-v2-workflow-cards strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+.home-v2-workflow-cards p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .homepage-primary .home-v2-outcomes {
   padding-top: 70px;
   padding-bottom: 78px;
@@ -4995,6 +5139,150 @@ h2,
   color: #0b1016;
   background: var(--gold);
   border-color: var(--gold);
+}
+
+.page-deal-coach .deal-coach-page,
+.page-presentation-coach .coach-workflow-page {
+  padding-top: 52px;
+}
+
+.page-deal-coach .deal-coach-page .slide,
+.page-presentation-coach .coach-workflow-page .slide {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  border-bottom: 0;
+}
+
+.deal-coach-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+  min-height: 66svh;
+  align-items: center;
+  gap: clamp(42px, 7vw, 92px);
+  padding-top: 88px;
+  padding-bottom: 72px;
+}
+
+.deal-coach-hero-copy {
+  display: grid;
+  gap: 22px;
+  max-width: 760px;
+}
+
+.deal-coach-hero h1 {
+  max-width: 790px;
+  font-size: clamp(2.2rem, 3.65vw, 3.35rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.deal-coach-control-card {
+  display: grid;
+  gap: 18px;
+  width: min(410px, 100%);
+  padding: 26px;
+  border: 1px solid rgba(84, 192, 138, 0.32);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(84, 192, 138, 0.055), rgba(255, 255, 255, 0.014)),
+    rgba(255, 255, 255, 0.018);
+}
+
+.deal-coach-control-card span,
+.coach-execution-grid span,
+.coach-preview-grid span {
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.deal-coach-control-card ol {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.deal-coach-control-card li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.deal-coach-control-card li::marker {
+  color: var(--green);
+}
+
+.coach-comparison {
+  margin-top: 24px;
+}
+
+.coach-execution-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.coach-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.coach-execution-grid article,
+.coach-preview-grid div {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  min-height: 198px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.coach-execution-grid h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.coach-execution-grid p,
+.coach-preview-grid p,
+.coach-bottom-line p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.94rem;
+  line-height: 1.52;
+}
+
+.coach-plan .method-list {
+  margin-top: 24px;
+}
+
+.coach-bottom-line {
+  gap: 22px;
+  min-height: 54svh;
+}
+
+.coach-bottom-line p {
+  max-width: 720px;
+  font-size: 1.02rem;
+}
+
+.deal-coach-preview {
+  align-items: start;
+}
+
+.deal-coach-preview .pilot-section-lede {
+  margin-top: 20px;
 }
 
 .lead-gate {
