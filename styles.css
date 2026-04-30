@@ -5010,6 +5010,52 @@ h2,
   line-height: 1.45;
 }
 
+@media (max-width: 760px) {
+  .homepage-v2 .home-v2-coach-bridge {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+    width: min(100%, calc(100% - 32px));
+    padding: 48px 0 56px;
+  }
+
+  .home-v2-coach-copy,
+  .home-v2-workflow-cards,
+  .home-v2-workflow-cards a {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-v2-coach-copy {
+    gap: 16px;
+  }
+
+  .home-v2-coach-copy h2 {
+    font-size: 1.58rem;
+    line-height: 1.14;
+  }
+
+  .home-v2-coach-copy p:not(.context) {
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .home-v2-coach-copy .cta-row {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .home-v2-coach-copy .cta-row a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-v2-workflow-cards a {
+    padding: 20px;
+  }
+}
+
 .homepage-primary .home-v2-outcomes {
   padding-top: 70px;
   padding-bottom: 78px;
