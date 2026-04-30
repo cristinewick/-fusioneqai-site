@@ -5572,3 +5572,41 @@ h2,
     display: none !important;
   }
 }
+
+@media (max-width: 760px) {
+  .page-pilot .pilot-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    width: min(100%, calc(100% - 32px));
+    padding-top: 48px;
+  }
+
+  .page-pilot .pilot-hero-copy,
+  .page-pilot .pilot-next-card {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .page-pilot .pilot-hero-copy {
+    gap: 16px;
+  }
+
+  .page-pilot .pilot-next-card {
+    margin-top: 4px;
+    padding: 20px;
+  }
+
+  .page-pilot .pilot-next-card ol {
+    gap: 12px;
+  }
+
+  .page-pilot .pilot-next-card li {
+    font-size: 0.92rem;
+    line-height: 1.42;
+  }
+}
