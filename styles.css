@@ -3811,6 +3811,10 @@ footer nav {
   line-height: 1.55;
 }
 
+.pilot-judgment-line {
+  color: var(--green);
+}
+
 .pilot-next-card {
   display: grid;
   gap: 18px;
