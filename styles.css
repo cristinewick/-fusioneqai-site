@@ -1776,6 +1776,14 @@ footer nav {
   margin: 0;
 }
 
+.home-v2-insight-note {
+  max-width: 760px;
+  margin: 28px 0 0;
+  color: var(--soft);
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
+  line-height: 1.5;
+}
+
 .home-v2-cta-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5244,6 +5252,10 @@ h2,
   letter-spacing: -0.035em;
 }
 
+.deal-coach-evidence-line {
+  color: var(--soft);
+}
+
 .deal-coach-control-card {
   display: grid;
   gap: 18px;
@@ -5303,8 +5315,17 @@ h2,
   margin-top: 24px;
 }
 
+.coach-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 24px;
+}
+
 .coach-execution-grid article,
-.coach-preview-grid div {
+.coach-preview-grid div,
+.coach-pattern-grid p {
   display: grid;
   align-content: start;
   gap: 12px;
@@ -5313,6 +5334,11 @@ h2,
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.018);
+}
+
+.coach-pattern-grid p {
+  min-height: 150px;
+  margin: 0;
 }
 
 .coach-execution-grid h3 {
@@ -5325,11 +5351,20 @@ h2,
 
 .coach-execution-grid p,
 .coach-preview-grid p,
+.coach-pattern-grid p,
 .coach-bottom-line p {
   margin: 0;
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.94rem;
   line-height: 1.52;
+}
+
+.coach-pattern-grid span {
+  display: block;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 
 .coach-plan .method-list {
