@@ -3964,6 +3964,7 @@ footer nav {
 
 .page-contact .lead-form {
   background: rgba(255, 255, 255, 0.015);
+  margin-top: 68px;
 }
 
 @media (min-width: 761px) and (max-width: 900px) {
@@ -4024,6 +4025,7 @@ footer nav {
 
   .page-contact .lead-form {
     width: 100%;
+    margin-top: 0;
   }
 }
 
@@ -4043,6 +4045,10 @@ footer nav {
 
   .page-contact .contact-hero h1 {
     font-size: 2.18rem;
+  }
+
+  .page-contact .lead-form {
+    margin-top: 0;
   }
 }
 
