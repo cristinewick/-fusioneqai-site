@@ -5877,7 +5877,7 @@ h2,
 }
 
 .page-lens .lens-page .slide {
-  width: min(1100px, 100%);
+  width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
   border-bottom: 0;
 }
@@ -5912,9 +5912,10 @@ h2,
 
 .lens-entry-shell {
   display: grid;
-  grid-template-columns: minmax(180px, 0.62fr) minmax(320px, 1.25fr) minmax(180px, 0.62fr);
-  gap: clamp(22px, 5vw, 76px);
+  grid-template-columns: minmax(210px, 240px) auto minmax(210px, 240px);
+  gap: clamp(28px, 4vw, 58px);
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -5923,7 +5924,8 @@ h2,
   display: grid;
   justify-items: center;
   gap: 22px;
-  min-height: clamp(420px, 42vw, 560px);
+  width: clamp(420px, 36vw, 540px);
+  min-height: 0;
   aspect-ratio: 1 / 1;
   padding: clamp(46px, 6vw, 84px);
   text-align: center;
@@ -6003,6 +6005,7 @@ h2,
 .lens-outcome-side {
   display: grid;
   gap: 22px;
+  min-width: 0;
 }
 
 .lens-system-side span,
@@ -6390,11 +6393,14 @@ h2,
 
 @media (min-width: 761px) and (max-width: 980px) {
   .lens-entry-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .lens-orb {
+    grid-column: 1 / -1;
+    justify-self: center;
     order: 1;
+    width: min(560px, 100%);
   }
 
   .lens-system-side {
@@ -6432,6 +6438,7 @@ h2,
 
   .lens-orb {
     order: 1;
+    width: min(100%, 460px);
     padding: 30px;
   }
 
