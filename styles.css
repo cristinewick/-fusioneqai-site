@@ -6529,6 +6529,15 @@ h2,
     padding-top: 12px;
   }
 
+  .lens-room {
+    left: 0;
+    right: auto;
+    width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+    padding: 14px;
+    overflow-x: hidden;
+  }
+
   .page-lens .lens-page .slide {
     width: min(100%, calc(100% - 32px));
     padding-top: 48px;
@@ -6563,22 +6572,64 @@ h2,
   }
 
   .lens-room-stage {
-    padding: 22px;
+    max-width: 100%;
+    min-width: 0;
+    padding: 22px 14px;
+    overflow: hidden;
+  }
+
+  .lens-room h2 {
+    max-width: 310px;
+    font-size: 1.45rem;
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .lens-room-intro {
+    max-width: 310px;
+  }
+
+  .lens-room-intro p {
+    max-width: 310px;
+  }
+
+  .lens-room-exit {
+    position: static;
+    justify-self: start;
+    width: fit-content;
+    margin-bottom: 4px;
   }
 
   .lens-room-visual {
     display: grid;
-    justify-items: center;
-    gap: 16px;
+    justify-items: stretch;
+    gap: 22px;
+    width: 100%;
+    min-width: 0;
     min-height: auto;
-    padding: 34px 18px;
+    padding: 24px 10px;
+    overflow: visible;
+    perspective: none;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+      rgba(7, 8, 11, 0.72);
   }
 
   .lens-room-group,
   .lens-room-group-learn {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     width: 100%;
-    gap: 14px;
+    min-width: 0;
+    gap: 10px;
+    justify-items: stretch;
+    padding: 0;
+  }
+
+  .lens-room-group p {
+    margin: 0 0 4px;
+    text-align: left;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
   }
 
   .lens-room-portal,
@@ -6594,22 +6645,75 @@ h2,
     right: auto;
     top: auto;
     bottom: auto;
-    width: min(100%, 142px);
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: auto;
     transform: none;
+  }
+
+  .lens-room-portal-brief,
+  .lens-room-portal-use {
+    display: none;
+  }
+
+  .lens-room-visual::before,
+  .lens-room-visual::after,
+  .lens-room-back-wall,
+  .lens-room-floor {
+    display: none;
+  }
+
+  .lens-room-portal a {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "copy"
+      "cta";
+    place-items: start;
+    align-content: start;
+    gap: 7px;
+    min-height: 0;
+    height: auto;
+    padding: 15px;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .lens-room-portal a::before,
+  .lens-room-portal a::after {
+    display: none;
   }
 
   .lens-room-portal span,
   .lens-room-portal small {
-    font-size: 0.56rem;
+    font-size: 0.62rem;
+    line-height: 1.25;
+  }
+
+  .lens-room-portal span {
+    grid-area: label;
+  }
+
+  .lens-room-portal small {
+    grid-area: cta;
+    align-self: start;
+    justify-self: start;
+    max-width: none;
+    text-align: left;
   }
 
   .lens-room-portal strong {
-    max-width: 112px;
-    font-size: 0.7rem;
+    grid-area: copy;
+    max-width: none;
+    font-size: 0.9rem;
+    line-height: 1.28;
+    overflow-wrap: anywhere;
   }
 
-  .lens-room-portal a,
-  .lens-choice-grid a {
-    min-height: 0;
+  .lens-room-group-understand,
+  .lens-room-group-learn {
+    margin-top: 2px;
   }
 }
