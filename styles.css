@@ -4864,6 +4864,7 @@ h2,
 .homepage-primary .home-v2-hero-support {
   max-width: 640px;
   font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  font-weight: 600;
   line-height: 1.6;
 }
 
@@ -4928,6 +4929,83 @@ h2,
   background: rgba(255, 255, 255, 0.018);
   font-size: 0.78rem;
   line-height: 1.1;
+}
+
+.home-v2-lens-preview {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  gap: 28px;
+  padding-top: clamp(48px, 7vh, 72px);
+  padding-bottom: clamp(56px, 8vh, 86px);
+}
+
+.home-v2-lens-preview-copy {
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+}
+
+.home-v2-lens-preview-copy h2 {
+  max-width: 720px;
+}
+
+.home-v2-lens-preview-copy p:not(.context) {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.home-v2-lens-preview-image {
+  width: min(100%, 1040px);
+  border: 1px solid rgba(84, 192, 138, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.014);
+}
+
+.home-v2-lens-preview-actions {
+  margin-top: 6px;
+}
+
+.homepage-primary .home-v2-journey-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(860px, 100%);
+}
+
+.preview-compact .homepage-v2 {
+  padding-top: 0;
+}
+
+.preview-compact .homepage-v2 .home-v2-hero {
+  padding-top: 46px;
+  padding-bottom: 40px;
+}
+
+.preview-compact .homepage-primary .home-v2-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.preview-compact .homepage-primary .home-v2-hero-copy {
+  max-width: 760px;
+}
+
+.preview-compact .homepage-primary .home-v2-hero-side {
+  width: min(760px, 100%);
+  padding: 20px 22px;
+}
+
+.preview-compact .homepage-primary .home-v2-hero h1 {
+  font-size: clamp(1.5rem, 2vw, 1.95rem);
+}
+
+.preview-compact .home-v2-lens-preview {
+  padding-top: 38px;
+  padding-bottom: 46px;
+}
+
+.preview-compact .home-v2-lens-preview-image {
+  width: min(100%, 920px);
 }
 
 .home-v2-coach-bridge {
