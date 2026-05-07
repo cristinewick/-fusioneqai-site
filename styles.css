@@ -4659,6 +4659,23 @@ h2,
   padding-bottom: 56px;
 }
 
+.page-courses {
+  padding-top: 0;
+}
+
+.page-courses .site-header {
+  position: sticky;
+}
+
+.page-courses .hero {
+  min-height: auto;
+  padding-top: clamp(72px, 10vh, 104px);
+}
+
+.page-courses .home-v2-header-logo {
+  width: clamp(180px, 14vw, 220px);
+}
+
 .homepage-v2 .home-v2-hero h1 {
   max-width: 610px;
   font-size: clamp(1.58rem, 2.12vw, 2.08rem);
@@ -4880,6 +4897,14 @@ h2,
   max-width: 600px;
   margin: -4px 0 0;
   color: var(--green);
+  font-size: clamp(0.94rem, 1vw, 1.02rem);
+  line-height: 1.48;
+}
+
+.homepage-primary .home-v2-category-line {
+  max-width: 560px;
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.72);
   font-size: clamp(0.94rem, 1vw, 1.02rem);
   line-height: 1.48;
 }
@@ -5973,7 +5998,7 @@ h2,
 }
 
 .lens-page {
-  padding-top: 52px;
+  padding-top: 136px;
 }
 
 .page-lens .lens-page .slide {
@@ -6495,6 +6520,14 @@ h2,
 }
 
 @media (min-width: 761px) and (max-width: 980px) {
+  .lens-page {
+    padding-top: 42px;
+  }
+
+  .lens-entry {
+    padding-top: 18px;
+  }
+
   .lens-entry-shell {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
@@ -6715,5 +6748,33 @@ h2,
   .lens-room-group-understand,
   .lens-room-group-learn {
     margin-top: 2px;
+  }
+}
+
+/* Keep first-page labels clear of the fixed header when pages open at #top. */
+.about-page,
+.page-book .book-page,
+.page-pilot .pilot-page {
+  padding-top: 104px;
+}
+
+.page-brief .brief-memo {
+  padding-top: 176px;
+}
+
+body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
+  padding-top: 52px;
+}
+
+@media (max-width: 760px) {
+  .about-page,
+  .page-book .book-page,
+  .page-pilot .pilot-page,
+  body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
+    padding-top: 0;
+  }
+
+  .page-brief .brief-memo {
+    padding-top: 72px;
   }
 }
