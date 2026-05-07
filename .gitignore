@@ -1,0 +1,18 @@
+.DS_Store
+
+# Local archive and generated deployment bundles
+_archive/
+*.zip
+
+# Book/manuscript working files kept outside the deployable website
+book-chapters/
+book-manuscript*.md
+book-manuscript*.txt
+book-planning-notes.md
+book-proposal-summary.md
+chapter-review-checklist.md
+chapter-review-checklist.txt
+The Deal Behind the Deal - Manuscript.pdf
+
+# Local scratch/preview pages
+hero-lens-preview.html
