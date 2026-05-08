@@ -415,6 +415,31 @@ p {
   line-height: 1.48;
 }
 
+.module-objective {
+  gap: 18px;
+}
+
+.module-objective .context {
+  margin-bottom: 0;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.module-objective h2 {
+  max-width: 860px;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  line-height: 1.18;
+}
+
+.module-objective p:not(.context) {
+  max-width: 760px;
+  color: var(--soft);
+  font-size: clamp(0.88rem, 0.96vw, 0.98rem);
+  line-height: 1.5;
+}
+
 .iceberg-section {
   gap: 34px;
 }
