@@ -1305,6 +1305,10 @@ p {
   gap: 14px;
 }
 
+.brief-print-logo {
+  display: none;
+}
+
 .brief-heading h1 {
   font-size: clamp(2.35rem, 3.8vw, 3.15rem);
   line-height: 1;
@@ -7014,5 +7018,128 @@ body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-
 
   .page-brief .brief-memo {
     padding-top: 72px;
+  }
+}
+
+@media print {
+  @page brief {
+    margin: 0.58in 0.62in;
+  }
+
+  body.page-brief .site-header,
+  body.page-brief footer,
+  body.page-brief .brief-actions {
+    display: none !important;
+  }
+
+  body.page-brief {
+    background: #ffffff;
+    page: brief;
+  }
+
+  body.page-brief .brief-page {
+    padding: 0;
+  }
+
+  body.page-brief .brief-memo {
+    gap: 14px;
+    min-height: auto;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  body.page-brief .brief-heading {
+    gap: 7px;
+    margin: 0 0 12px;
+    padding: 0 0 14px;
+    border-bottom: 1px solid #d8d8d8;
+    break-after: avoid;
+  }
+
+  body.page-brief .brief-print-logo {
+    display: block;
+    width: 1.75in;
+    max-width: 1.75in;
+    height: auto;
+    margin: 0 0 9px;
+    object-fit: contain;
+  }
+
+  body.page-brief .brief-heading h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 24pt;
+    line-height: 1.05;
+  }
+
+  body.page-brief .brief-subtitle {
+    max-width: 6.85in;
+    margin: 0;
+    color: #222222;
+    font-size: 9.2pt;
+    line-height: 1.36;
+  }
+
+  body.page-brief .context {
+    margin: 0;
+    color: #315f49;
+    font-size: 8pt;
+    letter-spacing: 0.12em;
+  }
+
+  body.page-brief .brief-lens-bridge,
+  body.page-brief .brief-grid section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  body.page-brief .brief-lens-bridge {
+    gap: 10px;
+    margin-top: 8px;
+    padding: 12px 0 14px;
+  }
+
+  body.page-brief .brief-lens-copy {
+    gap: 6px;
+  }
+
+  body.page-brief .brief-lens-copy h2 {
+    margin: 0;
+    font-size: 20pt;
+    line-height: 1.05;
+  }
+
+  body.page-brief .brief-lens-diagram {
+    grid-template-columns: minmax(0, 1fr) 1.35in minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  body.page-brief .brief-lens-stack p,
+  body.page-brief .brief-lens-stack-actual p {
+    padding: 7px 9px;
+    font-size: 8.4pt;
+  }
+
+  body.page-brief .brief-lens-core {
+    min-height: 1.35in;
+    padding: 13px 9px;
+  }
+
+  body.page-brief .brief-lens-line {
+    padding: 10px 12px;
+    font-size: 12pt;
+  }
+
+  body.page-brief .brief-grid {
+    gap: 0 22px;
+  }
+
+  body.page-brief .brief-grid section {
+    min-height: auto;
+    padding: 10px 0;
+    background: transparent;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
   }
 }
