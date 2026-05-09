@@ -1339,6 +1339,14 @@ p {
   line-height: 1;
 }
 
+.brief-cover-image {
+  display: block;
+  width: min(100%, 1040px);
+  height: auto;
+  margin: clamp(20px, 3vw, 34px) 0 clamp(18px, 3vw, 30px);
+  border-radius: 8px;
+}
+
 .brief-subtitle {
   max-width: 680px;
   color: var(--soft);
@@ -7230,6 +7238,10 @@ body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-
     height: auto;
     margin: 0 0 9px;
     object-fit: contain;
+  }
+
+  body.page-brief .brief-cover-image {
+    display: none;
   }
 
   body.page-brief .brief-heading h1 {
