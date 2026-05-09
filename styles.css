@@ -1804,6 +1804,14 @@ footer nav {
   padding-bottom: clamp(102px, 12vh, 144px);
 }
 
+.home-core-difference-image {
+  display: block;
+  width: min(100%, 1080px);
+  height: auto;
+  margin: clamp(32px, 5vw, 56px) 0 clamp(42px, 6vw, 68px);
+  border-radius: 8px;
+}
+
 .home-v2-stack,
 .home-v2-insight,
 .home-v2-close {
