@@ -7291,19 +7291,38 @@ body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-
   }
 
   body.page-brief .brief-lens-diagram {
-    grid-template-columns: minmax(0, 1fr) 1.35in minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: minmax(0, 2.45in) 1.05in minmax(0, 2.45in);
+    align-items: stretch;
+    gap: 0.18in;
   }
 
   body.page-brief .brief-lens-stack p,
   body.page-brief .brief-lens-stack-actual p {
-    padding: 7px 9px;
-    font-size: 8.4pt;
+    padding: 6px 8px;
+    font-size: 8pt;
   }
 
   body.page-brief .brief-lens-core {
-    min-height: 1.35in;
-    padding: 13px 9px;
+    min-height: auto;
+    padding: 9px 7px;
+    border-radius: 8px;
+  }
+
+  body.page-brief .brief-lens-core span {
+    font-size: 6.3pt;
+    letter-spacing: 0.13em;
+  }
+
+  body.page-brief .brief-lens-core strong {
+    font-size: 11pt;
+    line-height: 1.08;
+  }
+
+  body.page-brief .brief-lens-core small {
+    max-width: 0.92in;
+    font-size: 5.8pt;
+    letter-spacing: 0.1em;
+    line-height: 1.28;
   }
 
   body.page-brief .brief-lens-line {
