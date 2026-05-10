@@ -2006,6 +2006,11 @@ footer nav {
   line-height: 1.5;
 }
 
+.home-v2-insight-question {
+  color: var(--green);
+  font-weight: 650;
+}
+
 .home-v2-cta-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -5285,6 +5290,15 @@ h2,
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.92rem;
   line-height: 1.45;
+}
+
+.homepage-primary .home-v2-hero-video-insight {
+  max-width: 430px;
+  margin: -2px 0 2px;
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.42;
 }
 
 .homepage-primary .home-v2-hero-video {
