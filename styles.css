@@ -1766,6 +1766,12 @@ footer nav {
   color: var(--green);
 }
 
+.slide .green-emphasis-line,
+.page-home-v2 .green-emphasis-line {
+  color: var(--green) !important;
+  font-weight: 650;
+}
+
 .home-v2-gold {
   color: var(--gold);
 }
@@ -5352,6 +5358,31 @@ h2,
   border: 1px solid rgba(84, 192, 138, 0.24);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.014);
+}
+
+.series-overview-visual {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding-top: clamp(56px, 8vh, 88px);
+  padding-bottom: clamp(56px, 8vh, 88px);
+}
+
+.series-overview-visual img {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  border: 1px solid rgba(88, 204, 80, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32), 0 0 38px rgba(53, 153, 214, 0.08);
+}
+
+.series-overview-visual p:not(.context) {
+  max-width: 820px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.55;
+  text-align: center;
 }
 
 .home-v2-lens-preview-actions {
