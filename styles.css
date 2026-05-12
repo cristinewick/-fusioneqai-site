@@ -1912,6 +1912,25 @@ footer nav {
   letter-spacing: 0.01em;
 }
 
+.home-v2-hero-orientation {
+  margin: -8px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.home-v2-hero-orientation a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.44);
+}
+
+.home-v2-hero-orientation a:hover,
+.home-v2-hero-orientation a:focus-visible {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 .home-v2-emphasis,
 .home-v2-green {
   color: var(--green);
@@ -2508,6 +2527,208 @@ footer nav {
   line-height: 1.55;
 }
 
+.how-page {
+  padding-top: 72px;
+}
+
+.how-page .slide {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  gap: 22px;
+  border-bottom: 0;
+  padding-top: clamp(76px, 9vh, 108px);
+  padding-bottom: clamp(76px, 9vh, 108px);
+}
+
+.how-hero {
+  min-height: 66svh;
+  align-content: center;
+  justify-items: start;
+  padding-top: clamp(96px, 12vh, 136px);
+  margin-top: 96px;
+}
+
+.how-hero h1,
+.how-orientation h2,
+.how-gap h2,
+.how-use h2,
+.how-next h2 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2.05rem, 3.35vw, 3.35rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.032em;
+}
+
+.how-hero .subline {
+  max-width: 790px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 1.32vw, 1.22rem);
+}
+
+.how-category-line {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--green);
+  font-size: clamp(1rem, 1.12vw, 1.12rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.how-hero .home-v2-visual-context {
+  margin-top: 42px;
+}
+
+.how-card-grid,
+.how-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 18px;
+}
+
+.how-card-grid article,
+.how-gap-panel,
+.how-use-list p {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.how-card-grid article {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 28px;
+  min-height: 250px;
+}
+
+.how-card-grid span,
+.how-use-list span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.how-card-grid h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.35rem, 1.85vw, 1.72rem);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.how-card-grid p,
+.how-gap-panel p,
+.how-use-list p,
+.how-next-grid p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.how-gap {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  column-gap: clamp(36px, 7vw, 92px);
+  align-items: start;
+}
+
+.how-workflow h2,
+.how-gap h2,
+.how-use h2,
+.how-next h2 {
+  font-size: clamp(1.82rem, 2.75vw, 2.65rem);
+}
+
+.how-workflow {
+  padding-top: clamp(72px, 8vh, 96px);
+}
+
+.how-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 18px;
+}
+
+.how-workflow-grid article {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 290px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.how-workflow-grid span {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.how-workflow-grid h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.28rem, 1.65vw, 1.58rem);
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.how-workflow-grid p,
+.how-workflow-note {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.how-workflow-note {
+  max-width: 760px;
+  margin: 6px 0 0;
+  color: var(--green);
+  font-weight: 650;
+}
+
+.how-workflow-actions {
+  margin-top: 10px;
+}
+
+.how-gap-panel {
+  display: grid;
+  gap: 18px;
+  padding: 30px;
+}
+
+.how-gap-panel .green-emphasis-line {
+  margin: 0;
+}
+
+.how-use-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 18px;
+}
+
+.how-use-list p {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 24px 26px;
+}
+
+.how-next-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .about-page {
   padding-top: 52px;
 }
@@ -2938,6 +3159,41 @@ footer nav {
   .home-v2-hero-grid,
   .home-v2-sample-shell {
     grid-template-columns: 1fr;
+  }
+
+  .how-card-grid,
+  .how-workflow-grid,
+  .how-gap,
+  .how-use-list,
+  .how-page .how-next-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-page .slide {
+    padding-top: 58px;
+    padding-bottom: 62px;
+  }
+
+  .how-hero {
+    min-height: auto;
+    padding-top: 58px;
+  }
+
+  .how-hero h1,
+  .how-orientation h2,
+  .how-workflow h2,
+  .how-gap h2,
+  .how-use h2,
+  .how-next h2 {
+    font-size: 2rem;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .how-card-grid article,
+  .how-workflow-grid article {
+    min-height: auto;
+    padding: 22px;
   }
 
   .about-hero,
@@ -5605,6 +5861,11 @@ h2,
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.how-page .how-next-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+}
+
 .module-briefing-hero {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
   align-items: center;
@@ -7603,6 +7864,10 @@ h2,
 
 body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
   padding-top: 52px;
+}
+
+body.page-how-it-works > main#top.how-page {
+  padding-top: 128px;
 }
 
 @media (max-width: 760px) {
