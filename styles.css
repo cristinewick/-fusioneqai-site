@@ -5402,6 +5402,10 @@ h2,
     grid-template-columns: 1fr;
   }
 
+  .fusioneq-signal-grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-v2-journey-grid a {
     min-height: auto;
     padding: 18px;
@@ -5739,11 +5743,13 @@ h2,
 
 .homepage-primary .home-v2-hero-video-insight {
   max-width: 430px;
-  margin: -2px 0 2px;
+  margin: 2px 0 4px;
+  padding-left: 14px;
   color: var(--green);
-  font-size: 0.9rem;
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
   font-weight: 650;
-  line-height: 1.42;
+  line-height: 1.46;
+  border-left: 2px solid rgba(79, 143, 58, 0.62);
 }
 
 .homepage-primary .home-v2-hero-video {
@@ -5979,6 +5985,56 @@ h2,
   color: rgba(255, 255, 255, 0.74);
   font-size: clamp(0.94rem, 1vw, 1.02rem);
   line-height: 1.52;
+}
+
+.fusioneq-page .hero h1 {
+  max-width: 980px;
+}
+
+.fusioneq-not-section h2,
+.fusioneq-signals-section h2,
+.fusioneq-ai-eq-section h2,
+.fusioneq-next-section h2 {
+  max-width: 900px;
+}
+
+.fusioneq-future-line {
+  color: var(--green);
+  font-weight: 650;
+}
+
+.fusioneq-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.fusioneq-signal-grid p {
+  display: grid;
+  gap: 10px;
+  min-height: 176px;
+  margin: 0;
+  padding: 22px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.fusioneq-signal-grid span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fusioneq-next-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .preview-compact .homepage-v2 {
