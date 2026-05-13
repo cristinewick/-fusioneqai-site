@@ -310,8 +310,8 @@ p {
 .cta-row button:hover,
 .cta-row button:focus-visible {
   color: var(--white);
-  border-color: var(--white);
-  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(79, 143, 58, 0.68);
+  background: rgba(79, 143, 58, 0.055);
 }
 
 .cta-row button {
@@ -1327,7 +1327,8 @@ p {
 .lead-form button:hover,
 .lead-form button:focus-visible {
   color: var(--white);
-  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(79, 143, 58, 0.68);
+  background: rgba(79, 143, 58, 0.055);
 }
 
 .book-hero-copy {
@@ -1794,7 +1795,9 @@ footer nav {
 
 .home-v2-header-cta:hover,
 .home-v2-header-cta:focus-visible {
-  border-color: rgba(255, 255, 255, 0.34);
+  color: var(--white);
+  border-color: rgba(79, 143, 58, 0.78);
+  background: rgba(79, 143, 58, 0.055);
 }
 
 .mobile-menu-toggle {
@@ -1913,22 +1916,31 @@ footer nav {
 }
 
 .home-v2-hero-orientation {
-  margin: -8px 0 0;
-  color: rgba(255, 255, 255, 0.62);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 4px 0 2px;
+  padding: 9px 12px;
+  color: rgba(252, 252, 252, 0.82);
   font-size: 0.95rem;
-  line-height: 1.45;
+  line-height: 1.35;
+  border: 1px solid rgba(102, 123, 155, 0.28);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.018);
 }
 
 .home-v2-hero-orientation a {
-  color: var(--green);
+  color: var(--white);
   text-decoration: none;
-  border-bottom: 1px solid rgba(76, 175, 80, 0.44);
+  border-bottom: 1px solid rgba(79, 143, 58, 0.54);
+  font-weight: 650;
 }
 
 .home-v2-hero-orientation a:hover,
 .home-v2-hero-orientation a:focus-visible {
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--green);
+  border-color: rgba(79, 143, 58, 0.78);
 }
 
 .home-v2-emphasis,
@@ -2199,6 +2211,18 @@ strong .home-v2-green,
 .home-v2-layer .home-v2-stack-grid p {
   font-size: clamp(1rem, 1.16vw, 1.12rem);
   line-height: 1.5;
+}
+
+.home-v2-layer-visual {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(1180px, 100%);
+  margin-top: clamp(20px, 3vw, 34px);
+}
+
+.home-v2-layer-visual .lens-layer-visual-frame,
+.home-v2-layer-visual .lens-layer-visual-image {
+  width: 100%;
 }
 
 .home-v2-closing-line {
@@ -6434,9 +6458,9 @@ h2,
 
 .homepage-primary .home-v2-evaluation-lane .sample-action:hover,
 .homepage-primary .home-v2-evaluation-lane .sample-action:focus-visible {
-  color: #080b10;
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(255, 255, 255, 0.92);
+  color: var(--white);
+  background: rgba(79, 143, 58, 0.055);
+  border-color: rgba(79, 143, 58, 0.68);
 }
 
 .homepage-primary .home-v2-evaluation-lane .fusion-action {
@@ -6446,9 +6470,9 @@ h2,
 
 .homepage-primary .home-v2-evaluation-lane .fusion-action:hover,
 .homepage-primary .home-v2-evaluation-lane .fusion-action:focus-visible {
-  color: #08110d;
-  background: var(--green);
-  border-color: var(--green);
+  color: var(--white);
+  background: rgba(79, 143, 58, 0.055);
+  border-color: rgba(79, 143, 58, 0.72);
 }
 
 .homepage-primary .home-v2-evaluation-lane .consult-action {
@@ -6458,9 +6482,9 @@ h2,
 
 .homepage-primary .home-v2-evaluation-lane .consult-action:hover,
 .homepage-primary .home-v2-evaluation-lane .consult-action:focus-visible {
-  color: #0b1016;
-  background: var(--gold);
-  border-color: var(--gold);
+  color: var(--white);
+  background: rgba(79, 143, 58, 0.055);
+  border-color: rgba(79, 143, 58, 0.68);
 }
 
 .page-deal-coach .deal-coach-page,
