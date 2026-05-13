@@ -1936,6 +1936,21 @@ footer nav {
   color: var(--green);
 }
 
+h1 .home-v2-green,
+h2 .home-v2-green,
+h3 .home-v2-green,
+strong .home-v2-green,
+.how-card-grid .home-v2-green,
+.how-workflow-grid .home-v2-green,
+.home-v2-journey-grid .home-v2-green {
+  color: var(--green) !important;
+  font-size: inherit !important;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  vertical-align: baseline;
+}
+
 .slide .green-emphasis-line,
 .page-home-v2 .green-emphasis-line {
   color: var(--green) !important;
@@ -2538,6 +2553,7 @@ footer nav {
   border-bottom: 0;
   padding-top: clamp(76px, 9vh, 108px);
   padding-bottom: clamp(76px, 9vh, 108px);
+  scroll-margin-top: 150px;
 }
 
 .how-hero {
@@ -2559,6 +2575,7 @@ footer nav {
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.032em;
+  scroll-margin-top: 180px;
 }
 
 .how-hero .subline {
@@ -2566,6 +2583,13 @@ footer nav {
   margin-top: 18px;
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(1.05rem, 1.32vw, 1.22rem);
+}
+
+.how-hero h1 {
+  max-width: 840px;
+  font-size: clamp(2rem, 2.55vw, 2.72rem);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
 }
 
 .how-category-line {
@@ -2638,11 +2662,15 @@ footer nav {
   align-items: start;
 }
 
+.how-orientation h2,
 .how-workflow h2,
 .how-gap h2,
 .how-use h2,
 .how-next h2 {
-  font-size: clamp(1.82rem, 2.75vw, 2.65rem);
+  max-width: 860px;
+  font-size: clamp(1.78rem, 2.35vw, 2.42rem);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
 }
 
 .how-workflow {
