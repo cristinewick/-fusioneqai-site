@@ -6739,6 +6739,12 @@ h2,
   color: var(--green) !important;
 }
 
+.homepage-primary .home-v2-sharpens {
+  display: inline-block;
+  font-size: 1.14em;
+  font-weight: 720;
+}
+
 .homepage-primary .home-v2-hero-punch,
 .homepage-primary .home-v2-hero-support.home-v2-gold,
 .homepage-primary #insight .home-v2-visual-context {
