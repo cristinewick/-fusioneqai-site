@@ -2156,10 +2156,10 @@ strong .home-v2-green,
 }
 
 .home-v2-layer .home-v2-stack-intro h2 {
-  max-width: 330px;
+  max-width: 380px;
   margin: 0;
-  font-size: clamp(1.72rem, 2.5vw, 2.28rem);
-  line-height: 1.12;
+  font-size: clamp(1.56rem, 2.12vw, 1.98rem);
+  line-height: 1.16;
   letter-spacing: -0.03em;
 }
 
