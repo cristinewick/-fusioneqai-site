@@ -1915,34 +1915,6 @@ footer nav {
   letter-spacing: 0.01em;
 }
 
-.home-v2-hero-orientation {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  margin: 4px 0 2px;
-  padding: 9px 12px;
-  color: rgba(252, 252, 252, 0.82);
-  font-size: 0.95rem;
-  line-height: 1.35;
-  border: 1px solid rgba(102, 123, 155, 0.28);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.018);
-}
-
-.home-v2-hero-orientation a {
-  color: var(--white);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(79, 143, 58, 0.54);
-  font-weight: 650;
-}
-
-.home-v2-hero-orientation a:hover,
-.home-v2-hero-orientation a:focus-visible {
-  color: var(--green);
-  border-color: rgba(79, 143, 58, 0.78);
-}
-
 .home-v2-emphasis,
 .home-v2-green {
   color: var(--green);
@@ -6810,10 +6782,28 @@ h2,
   color: var(--green);
 }
 
-.homepage-primary .home-v2-hero-actions a:first-child {
+.homepage-primary .home-v2-hero-actions a {
   color: var(--white);
-  border-color: rgba(79, 143, 58, 0.46);
-  background: rgba(79, 143, 58, 0.025);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.homepage-primary .home-v2-hero-actions .hero-action-insight:hover,
+.homepage-primary .home-v2-hero-actions .hero-action-insight:focus-visible {
+  border-color: rgba(79, 143, 58, 0.72);
+  background: rgba(79, 143, 58, 0.055);
+}
+
+.homepage-primary .home-v2-hero-actions .hero-action-data:hover,
+.homepage-primary .home-v2-hero-actions .hero-action-data:focus-visible {
+  border-color: rgba(102, 123, 155, 0.78);
+  background: rgba(102, 123, 155, 0.075);
+}
+
+.homepage-primary .home-v2-hero-actions .hero-action-human:hover,
+.homepage-primary .home-v2-hero-actions .hero-action-human:focus-visible {
+  border-color: rgba(200, 169, 106, 0.78);
+  background: rgba(200, 169, 106, 0.075);
 }
 
 .page-deal-coach .coach-pattern-grid,
