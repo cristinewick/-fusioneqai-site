@@ -5715,8 +5715,7 @@ h2,
 }
 
 .homepage-primary .home-v2-hero-insight {
-  display: grid;
-  gap: 2px;
+  display: block;
   max-width: 600px;
   margin: -4px 0 0;
   color: var(--white);
@@ -5724,11 +5723,21 @@ h2,
   line-height: 1.48;
 }
 
+.homepage-primary .home-v2-brand-word {
+  white-space: nowrap;
+}
+
 .homepage-primary .home-v2-hero-insight .home-v2-green {
   color: var(--green) !important;
   font-size: clamp(1.05rem, 1.12vw, 1.14rem);
   font-weight: 700;
   line-height: 1.28;
+}
+
+.homepage-primary .home-v2-hero-insight .home-v2-brand-eq {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 .homepage-primary .home-v2-category-line {
