@@ -5715,11 +5715,20 @@ h2,
 }
 
 .homepage-primary .home-v2-hero-insight {
+  display: grid;
+  gap: 2px;
   max-width: 600px;
   margin: -4px 0 0;
-  color: var(--green);
+  color: var(--white);
   font-size: clamp(0.94rem, 1vw, 1.02rem);
   line-height: 1.48;
+}
+
+.homepage-primary .home-v2-hero-insight .home-v2-green {
+  color: var(--green) !important;
+  font-size: clamp(1.05rem, 1.12vw, 1.14rem);
+  font-weight: 700;
+  line-height: 1.28;
 }
 
 .homepage-primary .home-v2-category-line {
