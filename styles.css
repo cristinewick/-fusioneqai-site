@@ -45,6 +45,214 @@ a {
   scroll-margin-top: 150px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-front-door {
+  min-height: 100svh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at center 36%, rgba(102, 123, 155, 0.08), transparent 34%),
+    #020407;
+}
+
+.front-door {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.front-door-stage {
+  position: relative;
+  width: 100vw;
+  min-height: 100svh;
+  background: #020407;
+  background-image: url("assets/fusioneq-lens-front-door-landscape.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.front-door-stage::before,
+.front-door-stage::after {
+  display: none;
+}
+
+.front-door-stage::before {
+  top: 0;
+  left: 0;
+  width: 38%;
+  height: 12%;
+}
+
+.front-door-stage::after {
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 8.5%;
+}
+
+.front-door-composition {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.front-door-stage picture {
+  display: none;
+}
+
+.front-door-brand {
+  display: none;
+}
+
+.front-door-brand img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.front-door-brand p {
+  margin: 0;
+  color: rgba(252, 252, 252, 0.66);
+  font-size: clamp(0.46rem, 0.88vw, 0.74rem);
+  line-height: 1.75;
+  text-transform: uppercase;
+}
+
+.front-door-contact {
+  position: absolute;
+  z-index: 3;
+  top: 7.2%;
+  right: 5.8%;
+  color: rgba(200, 169, 106, 0.88);
+  font-size: clamp(0.72rem, 1.05vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200, 169, 106, 0.62);
+  padding-bottom: 10px;
+  transition: color 0.22s ease, border-color 0.22s ease, opacity 0.22s ease;
+}
+
+.front-door-contact:hover,
+.front-door-contact:focus-visible {
+  color: rgba(200, 169, 106, 1);
+  border-color: rgba(200, 169, 106, 0.95);
+}
+
+.front-door-enter {
+  position: absolute;
+  z-index: 3;
+  top: 75.8%;
+  left: 69.5%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(206px, 22vw, 302px);
+  min-height: clamp(42px, 4.5vw, 56px);
+  padding: 12px 24px;
+  color: rgba(252, 252, 252, 0.9);
+  background: rgba(3, 5, 7, 0.54);
+  border: 1px solid rgba(79, 143, 58, 0.52);
+  border-radius: 999px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: clamp(0.72rem, 1vw, 0.9rem);
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.035), 0 18px 44px rgba(0, 0, 0, 0.32);
+  transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+}
+
+.front-door-enter::after {
+  content: "→";
+  margin-left: 10px;
+  color: rgba(79, 143, 58, 0.86);
+}
+
+.front-door-enter:hover,
+.front-door-enter:focus-visible {
+  color: var(--white);
+  background: rgba(8, 12, 10, 0.66);
+  border-color: rgba(79, 143, 58, 0.82);
+  transform: translateX(-50%) translateY(-1px);
+}
+
+@media (max-width: 980px) {
+  .front-door-stage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .front-door {
+    place-items: center;
+    padding: 0;
+  }
+
+  .front-door-stage {
+    width: 100vw;
+    min-height: 100svh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: none;
+    background-color: #020407;
+  }
+
+  .front-door-contact {
+    position: fixed;
+    z-index: 6;
+    top: 18px;
+    right: 18px;
+    font-size: 0.54rem;
+    padding-bottom: 6px;
+  }
+
+  .front-door-stage::after {
+    display: none;
+  }
+
+  .front-door-composition {
+    width: 100%;
+    height: auto;
+    object-position: center center;
+  }
+
+  .front-door-stage picture {
+    display: block;
+    width: 100vw;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .front-door-enter {
+    position: fixed;
+    z-index: 6;
+    top: auto;
+    bottom: 22px;
+    left: 50%;
+    min-width: 224px;
+    min-height: 42px;
+    font-size: 0.68rem;
+  }
+}
+
 .site-header {
   position: fixed;
   top: 0;
