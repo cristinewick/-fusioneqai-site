@@ -6976,6 +6976,13 @@ h2,
   box-shadow: 0 0 18px rgba(200, 169, 106, 0.08);
 }
 
+.homepage-primary #insight.home-v2-insight h2 {
+  max-width: 980px;
+  font-size: clamp(1.14rem, 1.55vw, 1.5rem);
+  line-height: 1.34;
+  letter-spacing: -0.006em;
+}
+
 .homepage-primary .home-v2-hero-side {
   border-color: rgba(102, 123, 155, 0.22);
   box-shadow: 0 0 0 1px rgba(102, 123, 155, 0.16), 0 24px 70px rgba(0, 0, 0, 0.32);
