@@ -75,10 +75,10 @@ a {
   width: 100vw;
   min-height: 100svh;
   background: #020407;
-  background-image: url("assets/fusioneq-lens-front-door-landscape.webp");
-  background-position: center;
+  background-image: url("assets/fusioneq-lens-entry-desktop.png");
+  background-position: left top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 100%;
   overflow: hidden;
 }
 
@@ -115,20 +115,30 @@ a {
 }
 
 .front-door-brand {
-  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 2.6%;
+  left: 5.2%;
+  display: grid;
+  gap: clamp(2px, 0.45vw, 7px);
+  width: max-content;
+  color: rgba(252, 252, 252, 0.62);
+  text-decoration: none;
 }
 
 .front-door-brand img {
-  width: 100%;
-  max-width: none;
-  height: auto;
+  width: clamp(118px, 11vw, 210px);
+  height: clamp(22px, 2.3vw, 44px);
+  object-fit: cover;
+  object-position: center;
 }
 
-.front-door-brand p {
-  margin: 0;
-  color: rgba(252, 252, 252, 0.66);
-  font-size: clamp(0.46rem, 0.88vw, 0.74rem);
-  line-height: 1.75;
+.front-door-brand span {
+  max-width: 100%;
+  font-size: clamp(0.36rem, 0.54vw, 0.68rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.42;
   text-transform: uppercase;
 }
 
@@ -157,45 +167,55 @@ a {
 .front-door-enter {
   position: absolute;
   z-index: 3;
-  top: 75.8%;
-  left: 69.5%;
-  transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(206px, 22vw, 302px);
-  min-height: clamp(42px, 4.5vw, 56px);
-  padding: 12px 24px;
-  color: rgba(252, 252, 252, 0.9);
-  background: rgba(3, 5, 7, 0.54);
-  border: 1px solid rgba(79, 143, 58, 0.52);
+  gap: 0.34em;
+  top: 78%;
+  left: 66.5%;
+  transform: translateX(-50%);
+  min-width: clamp(250px, 28vw, 420px);
+  min-height: clamp(52px, 5vw, 72px);
+  padding: 15px 34px;
+  color: rgba(252, 252, 252, 0.94);
+  background: rgba(3, 5, 7, 0.62);
+  border: 1px solid rgba(79, 143, 58, 0.62);
   border-radius: 999px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: clamp(0.72rem, 1vw, 0.9rem);
+  font-size: clamp(0.78rem, 1.1vw, 1rem);
   font-weight: 700;
+  letter-spacing: 0.02em;
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.035), 0 18px 44px rgba(0, 0, 0, 0.32);
-  transition: color 0.22s ease, border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.035), 0 20px 50px rgba(0, 0, 0, 0.36);
+  transition: color 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
 }
 
 .front-door-enter::after {
   content: "→";
-  margin-left: 10px;
-  color: rgba(79, 143, 58, 0.86);
+  margin-left: 8px;
+  color: rgba(120, 188, 54, 0.92);
 }
 
 .front-door-enter:hover,
 .front-door-enter:focus-visible {
   color: var(--white);
-  background: rgba(8, 12, 10, 0.66);
-  border-color: rgba(79, 143, 58, 0.82);
+  background: rgba(8, 12, 10, 0.72);
+  border-color: rgba(120, 188, 54, 0.58);
+  box-shadow: 0 0 24px rgba(120, 188, 54, 0.18);
   transform: translateX(-50%) translateY(-1px);
 }
 
 @media (max-width: 980px) {
   .front-door-stage {
     width: 100%;
+  }
+}
+
+@media (min-aspect-ratio: 3 / 2) {
+  .front-door-stage {
+    background-position: center top;
+    background-size: 100% auto;
   }
 }
 
@@ -210,9 +230,10 @@ a {
     min-height: 100svh;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     background-image: none;
     background-color: #020407;
+    overflow-y: auto;
   }
 
   .front-door-contact {
@@ -222,6 +243,10 @@ a {
     right: 18px;
     font-size: 0.54rem;
     padding-bottom: 6px;
+  }
+
+  .front-door-brand {
+    display: none;
   }
 
   .front-door-stage::after {
@@ -237,19 +262,46 @@ a {
   .front-door-stage picture {
     display: block;
     width: 100vw;
-    max-width: 430px;
+    max-width: 480px;
     margin: 0 auto;
   }
 
   .front-door-enter {
-    position: fixed;
+    position: absolute;
     z-index: 6;
-    top: auto;
-    bottom: 22px;
-    left: 50%;
-    min-width: 224px;
-    min-height: 42px;
+    top: 50%;
+    left: 64%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 1px;
+    min-width: 104px;
+    min-height: 118px;
+    padding: 13px 16px 11px;
+    color: rgba(252, 252, 252, 0.92);
+    background: rgba(3, 5, 7, 0.58);
+    border: 1px solid rgba(79, 143, 58, 0.58);
+    border-radius: 28px;
     font-size: 0.68rem;
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.34);
+  }
+
+  .front-door-enter::after {
+    content: "→";
+    margin-top: 4px;
+    margin-left: 0;
+    color: rgba(120, 188, 54, 0.92);
+  }
+
+  .front-door-enter:hover,
+  .front-door-enter:focus-visible {
+    background: rgba(8, 12, 10, 0.72);
+    border-color: rgba(79, 143, 58, 0.82);
+    transform: translateX(-50%) translateY(-1px);
   }
 }
 
