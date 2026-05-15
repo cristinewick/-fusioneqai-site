@@ -76,7 +76,7 @@ a {
   min-height: 100svh;
   background: #020407;
   background-image: url("assets/fusioneq-lens-entry-desktop.png");
-  background-position: left top;
+  background-position: left 0 top 48px;
   background-repeat: no-repeat;
   background-size: auto 100%;
   overflow: hidden;
@@ -120,25 +120,26 @@ a {
   top: 2.6%;
   left: 5.2%;
   display: grid;
-  gap: clamp(2px, 0.45vw, 7px);
+  gap: 8px;
   width: max-content;
   color: rgba(252, 252, 252, 0.62);
   text-decoration: none;
 }
 
 .front-door-brand img {
-  width: clamp(118px, 11vw, 210px);
-  height: clamp(22px, 2.3vw, 44px);
+  width: clamp(180px, 16vw, 240px);
+  height: clamp(36px, 3.6vw, 58px);
   object-fit: cover;
   object-position: center;
 }
 
 .front-door-brand span {
   max-width: 100%;
-  font-size: clamp(0.36rem, 0.54vw, 0.68rem);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
   font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1.42;
+  letter-spacing: 0.12em;
+  line-height: 1.22;
   text-transform: uppercase;
 }
 
