@@ -212,13 +212,6 @@ a {
   }
 }
 
-@media (min-aspect-ratio: 3 / 2) {
-  .front-door-stage {
-    background-position: center top;
-    background-size: 100% auto;
-  }
-}
-
 @media (max-width: 760px) {
   .front-door {
     place-items: center;
@@ -269,22 +262,22 @@ a {
   .front-door-enter {
     position: absolute;
     z-index: 6;
-    top: 50%;
-    left: 64%;
+    top: 57%;
+    left: 76%;
     transform: translateX(-50%);
     flex-direction: column;
     gap: 1px;
-    min-width: 104px;
-    min-height: 118px;
-    padding: 13px 16px 11px;
+    min-width: 94px;
+    min-height: 108px;
+    padding: 12px 13px 10px;
     color: rgba(252, 252, 252, 0.92);
     background: rgba(3, 5, 7, 0.58);
     border: 1px solid rgba(79, 143, 58, 0.58);
-    border-radius: 28px;
-    font-size: 0.68rem;
+    border-radius: 24px;
+    font-size: 0.58rem;
     line-height: 1.12;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     backdrop-filter: blur(6px);
     box-shadow: 0 14px 38px rgba(0, 0, 0, 0.34);
