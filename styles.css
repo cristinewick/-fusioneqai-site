@@ -11700,6 +11700,22 @@ body.page-how-it-works > main#top.how-page {
 
 /* Mobile concept journey: keep the experience closer to an executive briefing than stacked SaaS cards. */
 @media (max-width: 760px) {
+  .book-author-layout {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+  }
+
+  .book-author-copy {
+    min-width: 0;
+  }
+
+  .book-author-photo {
+    width: min(220px, 100%);
+  }
+
   .page-concept-entry .front-door-stage {
     min-height: 100svh;
     background-image: url("assets/fusioneq-sales-context-four-layer-hero.png");
