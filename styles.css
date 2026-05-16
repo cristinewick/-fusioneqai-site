@@ -109,6 +109,12 @@
   padding: 9px 12px;
 }
 
+@media (max-width: 1180px) {
+  body.page-home-v2:not(.page-post-entry-concept):not(.page-concept-lens):not(.page-concept-patterns) .home-v2-header-cta {
+    display: none;
+  }
+}
+
 @media (min-width: 761px) and (max-width: 980px) {
   .page-post-entry-concept .home-v2-brand-line,
   .page-concept-lens .home-v2-brand-line,
@@ -735,11 +741,16 @@
 }
 
 .concept-pattern-read dt {
-  color: var(--green);
+  color: var(--gold);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.concept-pattern-read dl > div:nth-child(2) dt,
+.concept-pattern-read dl > div:nth-child(3) dt {
+  color: var(--green);
 }
 
 .concept-pattern-read dd {
@@ -1670,8 +1681,9 @@
 
 .post-entry-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.84fr) minmax(420px, 1fr);
-  gap: clamp(42px, 6.5vw, 86px);
+  width: min(1260px, calc(100% - 56px)) !important;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(560px, 1.2fr);
+  gap: clamp(38px, 5.4vw, 76px);
   align-items: center;
   min-height: 76svh;
   padding-top: clamp(92px, 10vh, 132px) !important;
@@ -1680,6 +1692,7 @@
 .post-entry-hero-copy,
 .post-entry-section-copy {
   display: grid;
+  width: 100%;
   gap: 18px;
   justify-items: start;
 }
@@ -1689,7 +1702,7 @@
   max-width: 760px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(2.05rem, 3.2vw, 3.18rem);
+  font-size: clamp(2rem, 2.8vw, 2.86rem);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: 0;
@@ -1728,9 +1741,13 @@
 .post-entry-layer-visual {
   display: grid;
   gap: 14px;
-  max-width: 900px;
+  max-width: 980px;
   min-width: 0;
   margin: 0 auto;
+}
+
+.post-entry-hero-visual {
+  max-width: 1040px;
 }
 
 .post-entry-hero-visual img,
@@ -1808,6 +1825,11 @@
   border-top-color: rgba(79, 143, 58, 0.3);
 }
 
+.post-entry-layer-map article:nth-child(3),
+.post-entry-read-grid article:nth-child(3) {
+  border-top-color: rgba(79, 143, 58, 0.26);
+}
+
 .post-entry-layer-map span,
 .post-entry-read-grid span {
   color: var(--gold);
@@ -1817,8 +1839,13 @@
   text-transform: uppercase;
 }
 
-.post-entry-layer-map article:nth-child(2) span,
-.post-entry-read-grid article:nth-child(2) span {
+.post-entry-layer-map article:nth-child(2) span {
+  color: var(--blue);
+}
+
+.post-entry-layer-map article:nth-child(3) span,
+.post-entry-read-grid article:nth-child(2) span,
+.post-entry-read-grid article:nth-child(3) span {
   color: var(--green);
 }
 
@@ -2715,9 +2742,9 @@ a {
 
 .page-concept-entry .front-door-stage {
   background-image: url("assets/fusioneq-sales-context-four-layer-hero.png");
-  background-position: center center;
+  background-position: 78% center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: min(78vw, 1220px) auto;
 }
 
 .page-concept-entry .front-door-stage::after {
@@ -2805,14 +2832,17 @@ a {
 .concept-entry-map-label-lens {
   top: clamp(320px, 49vh, 430px);
   right: clamp(96px, 12vw, 196px);
-  color: rgba(200, 169, 106, 0.86);
+  color: rgba(102, 123, 155, 0.96);
+  border-color: rgba(102, 123, 155, 0.26);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28), 0 0 24px rgba(102, 123, 155, 0.1);
 }
 
 .concept-entry-map-label-stack {
   right: clamp(58px, 5.5vw, 92px);
   bottom: clamp(78px, 12.2vh, 122px);
-  color: rgba(143, 178, 205, 0.86);
+  color: rgba(200, 169, 106, 0.9);
   max-width: min(460px, 39vw);
+  border-color: rgba(200, 169, 106, 0.22);
   border-radius: 18px;
 }
 
@@ -2946,7 +2976,7 @@ a {
 
 .page-concept-entry .front-door-enter {
   top: auto;
-  bottom: clamp(42px, 7.2vh, 76px);
+  bottom: clamp(88px, 15vh, 132px);
   left: clamp(52px, 7.6vw, 112px);
   transform: none;
   min-width: clamp(236px, 23vw, 350px);
@@ -11735,6 +11765,11 @@ h2,
 
 body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
   padding-top: 52px;
+}
+
+body.page-home-v2.page-post-entry-concept > main#top.post-entry-home,
+body.page-home-v2.page-concept-patterns > main#top.concept-patterns-page {
+  padding-top: clamp(148px, 15vh, 196px) !important;
 }
 
 body.page-how-it-works > main#top.how-page {
