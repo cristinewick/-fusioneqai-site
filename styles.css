@@ -11716,6 +11716,23 @@ body.page-how-it-works > main#top.how-page {
     width: min(220px, 100%);
   }
 
+  .brief-lens-diagram {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .brief-lens-stack,
+  .brief-lens-stack-actual,
+  .brief-lens-core {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .brief-lens-core {
+    min-height: 180px;
+    border-radius: 18px;
+  }
+
   .page-concept-entry .front-door-stage {
     min-height: 100svh;
     background-image: url("assets/fusioneq-sales-context-four-layer-hero.png");
