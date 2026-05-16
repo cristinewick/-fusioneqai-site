@@ -7770,6 +7770,49 @@ strong .home-v2-green,
   border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
 }
 
+.diagnostic-same-deal {
+  display: grid;
+  gap: clamp(30px, 5vw, 58px);
+  padding-top: clamp(92px, 12vh, 142px) !important;
+  padding-bottom: clamp(102px, 13vh, 156px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.055) !important;
+}
+
+.diagnostic-same-deal-copy {
+  display: grid;
+  gap: 16px;
+  max-width: 780px;
+}
+
+.diagnostic-same-deal-copy h2 {
+  max-width: 760px;
+  margin: 0;
+  color: var(--white);
+}
+
+.diagnostic-same-deal-copy p:not(.context) {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(1rem, 1.12vw, 1.1rem);
+  line-height: 1.58;
+}
+
+.diagnostic-same-deal-visual {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.diagnostic-same-deal-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.36);
+}
+
 .briefing-scope {
   display: grid;
   gap: clamp(32px, 5vw, 58px);
@@ -8787,6 +8830,19 @@ h2,
 
 .page-courses .home-v2-header-logo {
   width: clamp(180px, 14vw, 220px);
+}
+
+.page-courses .education-video-section {
+  margin-top: clamp(28px, 5vw, 58px);
+  margin-bottom: clamp(34px, 6vw, 72px);
+}
+
+.page-courses .education-video-section .guided-video-card {
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.page-courses .education-video-section .guided-video-note {
+  color: var(--green);
 }
 
 .homepage-v2 .home-v2-hero h1 {
@@ -11893,6 +11949,7 @@ body.page-how-it-works > main#top.how-page {
   .concept-pattern-feature-copy h2,
   .concept-pattern-section-copy h2,
   .concept-pattern-next h2,
+  .diagnostic-same-deal-copy h2,
   .briefing-scope h2,
   .page-pilot .methodology h2,
   .page-pilot .scorecard h2,
@@ -11948,6 +12005,11 @@ body.page-how-it-works > main#top.how-page {
     border-top: 1px solid rgba(255, 255, 255, 0.075);
     background: transparent;
     box-shadow: none;
+  }
+
+  .diagnostic-same-deal-visual img {
+    width: 760px;
+    max-width: none;
   }
 
   .concept-lens-readout,
