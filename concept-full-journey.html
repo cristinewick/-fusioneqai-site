@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FusionEQ Concept Journey Review</title>
+  <meta
+    name="description"
+    content="A single-page review view of the protected FusionEQ guided intelligence concept journey."
+  >
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    :root {
+      --black: #050608;
+      --white: #fcfcfc;
+      --green: #4f8f3a;
+      --gold: #c8a96a;
+      --line: rgba(255, 255, 255, 0.12);
+      --soft: rgba(255, 255, 255, 0.74);
+      --muted: rgba(255, 255, 255, 0.54);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 72% 8%, rgba(79, 143, 58, 0.09), transparent 28%),
+        radial-gradient(circle at 18% 22%, rgba(102, 123, 155, 0.08), transparent 24%),
+        var(--black);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .review-shell {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .review-hero {
+      display: grid;
+      align-content: center;
+      min-height: 72svh;
+      padding: 120px 0 96px;
+    }
+
+    .review-kicker,
+    .journey-step span,
+    .page-preview-kicker,
+    .review-note span {
+      margin: 0;
+      color: var(--gold);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin-top: 18px;
+      font-size: clamp(2.6rem, 6vw, 5.9rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 0.96;
+    }
+
+    .review-lede {
+      max-width: 720px;
+      margin-top: 28px;
+      color: var(--soft);
+      font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+      line-height: 1.62;
+    }
+
+    .review-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 38px;
+    }
+
+    .review-actions a,
+    .page-preview-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 18px;
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(79, 143, 58, 0.34);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.018);
+      font-size: 0.8rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .review-actions a:first-child,
+    .page-preview-actions a:first-child {
+      color: var(--white);
+      border-color: rgba(79, 143, 58, 0.56);
+      background: rgba(79, 143, 58, 0.12);
+    }
+
+    .journey-map {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      margin: 0 0 88px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .journey-step {
+      display: grid;
+      gap: 10px;
+      min-height: 180px;
+      padding: 24px;
+      background: #06080b;
+      text-decoration: none;
+    }
+
+    .journey-step strong {
+      color: var(--white);
+      font-size: clamp(1.1rem, 1.5vw, 1.38rem);
+      font-weight: 500;
+      line-height: 1.14;
+    }
+
+    .journey-step p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .review-note {
+      display: grid;
+      gap: 16px;
+      width: min(860px, 100%);
+      margin: 0 0 96px;
+      padding-left: 18px;
+      border-left: 2px solid rgba(79, 143, 58, 0.56);
+    }
+
+    .review-note p {
+      color: rgba(255, 255, 255, 0.82);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.3rem, 2.15vw, 2.08rem);
+      line-height: 1.28;
+    }
+
+    .page-preview {
+      display: grid;
+      gap: 28px;
+      padding: 96px 0 116px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .page-preview-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .page-preview h2 {
+      max-width: 860px;
+      margin-top: 12px;
+      color: var(--white);
+      font-size: clamp(2rem, 3.6vw, 3.45rem);
+      font-weight: 500;
+      line-height: 1.02;
+    }
+
+    .page-preview-copy {
+      max-width: 720px;
+      color: var(--soft);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .page-preview-frame {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(79, 143, 58, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.018);
+      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
+    }
+
+    .page-preview-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .review-close {
+      display: grid;
+      gap: 20px;
+      min-height: 48svh;
+      align-content: center;
+      padding: 90px 0 120px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .review-close h2 {
+      max-width: 860px;
+      font-size: clamp(2rem, 3.8vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1.04;
+    }
+
+    .review-close p {
+      max-width: 720px;
+      color: var(--soft);
+      font-size: 1.04rem;
+      line-height: 1.62;
+    }
+
+    @media (max-width: 900px) {
+      .journey-map {
+        grid-template-columns: 1fr;
+      }
+
+      .journey-step {
+        min-height: auto;
+      }
+
+      .page-preview-head {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .review-shell {
+        width: min(100%, calc(100% - 32px));
+      }
+
+      .review-hero {
+        min-height: 64svh;
+        padding: 104px 0 78px;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      .page-preview {
+        padding: 76px 0 92px;
+      }
+
+      .page-preview h2,
+      .review-close h2 {
+        font-size: 2rem;
+      }
+
+      .page-preview-actions {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="review-shell">
+    <section class="review-hero" aria-labelledby="review-title">
+      <p class="review-kicker">FusionEQ Concept Review</p>
+      <h1 id="review-title">A guided enterprise intelligence journey.</h1>
+      <p class="review-lede">
+        This is a separate full-page review view of the protected FusionEQ concept direction. It keeps the cinematic entry as the emotional front door, then shows the cognitive choreography around the Lens, Patterns, and Diagnostic Briefing path.
+      </p>
+      <div class="review-actions" aria-label="Review actions">
+        <a href="concept-entry.html">Open Interactive Journey</a>
+        <a href="#page-entry">Review Full Page</a>
+      </div>
+    </section>
+
+    <nav class="journey-map" aria-label="Concept journey map">
+      <a class="journey-step" href="#page-entry">
+        <span>01</span>
+        <strong>Cinematic Entry</strong>
+        <p>The emotional front door. Intrigue first, explanation later.</p>
+      </a>
+      <a class="journey-step" href="#page-home">
+        <span>02</span>
+        <strong>Post-Entry Orientation</strong>
+        <p>The first executive read after entering the Lens.</p>
+      </a>
+      <a class="journey-step" href="#page-lens">
+        <span>03</span>
+        <strong>Lens</strong>
+        <p>Visible Signal to Hidden Pattern to Better Move.</p>
+      </a>
+      <a class="journey-step" href="#page-patterns">
+        <span>04</span>
+        <strong>Patterns</strong>
+        <p>Recognition becomes belief through recurring deal dynamics.</p>
+      </a>
+      <a class="journey-step" href="#page-briefing">
+        <span>05</span>
+        <strong>Diagnostic Briefing</strong>
+        <p>Application, proof, and guided interpretation of live work.</p>
+      </a>
+    </nav>
+
+    <section class="review-note" aria-label="Strategic note">
+      <span>Strategic Rule</span>
+      <p>
+        The experience should feel like guided enterprise intelligence, not product onboarding.
+      </p>
+    </section>
+
+    <section id="page-entry" class="page-preview" aria-labelledby="entry-preview-title">
+      <div class="page-preview-head">
+        <div>
+          <p class="page-preview-kicker">Cinematic Entry</p>
+          <h2 id="entry-preview-title">The emotional front door stays cinematic.</h2>
+        </div>
+        <div class="page-preview-actions">
+          <a href="concept-entry.html">Open Page</a>
+        </div>
+      </div>
+      <p class="page-preview-copy">
+        The entry page should remain the threshold: premium, quiet, and emotionally intriguing.
+      </p>
+      <a class="page-preview-frame" href="concept-entry.html" aria-label="Open cinematic entry page">
+        <img src="concept-review/screenshots/concept-entry.png" alt="FusionEQ cinematic entry page preview.">
+      </a>
+    </section>
+
+    <section id="page-home" class="page-preview" aria-labelledby="home-preview-title">
+      <div class="page-preview-head">
+        <div>
+          <p class="page-preview-kicker">Post-Entry Orientation</p>
+          <h2 id="home-preview-title">The first read after the Lens.</h2>
+        </div>
+        <div class="page-preview-actions">
+          <a href="concept-post-entry-home.html">Open Page</a>
+        </div>
+      </div>
+      <p class="page-preview-copy">
+        This page begins the guided intelligence experience: the buyer moves from intrigue into interpretation.
+      </p>
+      <a class="page-preview-frame" href="concept-post-entry-home.html" aria-label="Open post-entry orientation page">
+        <img src="concept-review/screenshots/post-entry-home.png" alt="FusionEQ post-entry orientation page preview.">
+      </a>
+    </section>
+
+    <section id="page-lens" class="page-preview" aria-labelledby="lens-preview-title">
+      <div class="page-preview-head">
+        <div>
+          <p class="page-preview-kicker">Lens</p>
+          <h2 id="lens-preview-title">The interpretation system becomes visible.</h2>
+        </div>
+        <div class="page-preview-actions">
+          <a href="concept-lens.html">Open Page</a>
+        </div>
+      </div>
+      <p class="page-preview-copy">
+        The Lens page explains the canonical model without turning it into methodology theater.
+      </p>
+      <a class="page-preview-frame" href="concept-lens.html" aria-label="Open Lens page">
+        <img src="concept-review/screenshots/concept-lens.png" alt="FusionEQ Lens page preview.">
+      </a>
+    </section>
+
+    <section id="page-patterns" class="page-preview" aria-labelledby="patterns-preview-title">
+      <div class="page-preview-head">
+        <div>
+          <p class="page-preview-kicker">Patterns</p>
+          <h2 id="patterns-preview-title">Recognition turns into belief.</h2>
+        </div>
+        <div class="page-preview-actions">
+          <a href="concept-patterns.html">Open Page</a>
+        </div>
+      </div>
+      <p class="page-preview-copy">
+        False Momentum, Forecast Mirage, Friendly Stall, and Consensus Gap make the idea operationally recognizable.
+      </p>
+      <a class="page-preview-frame" href="concept-patterns.html" aria-label="Open Patterns page">
+        <img src="concept-review/screenshots/concept-patterns.png" alt="FusionEQ Patterns page preview.">
+      </a>
+    </section>
+
+    <section id="page-briefing" class="page-preview" aria-labelledby="briefing-preview-title">
+      <div class="page-preview-head">
+        <div>
+          <p class="page-preview-kicker">Diagnostic Briefing</p>
+          <h2 id="briefing-preview-title">The Lens meets live work through guided interpretation.</h2>
+        </div>
+        <div class="page-preview-actions">
+          <a href="pilot.html">Open Page</a>
+        </div>
+      </div>
+      <p class="page-preview-copy">
+        Diagnostic Briefing now carries the application layer: one focused proof moment, live-work interpretation, executive readout, and the guided engagement path.
+      </p>
+      <a class="page-preview-frame" href="pilot.html" aria-label="Open Diagnostic Briefing page">
+        <img src="concept-review/screenshots/diagnostic-briefing.png" alt="FusionEQ Diagnostic Briefing page preview.">
+      </a>
+    </section>
+
+    <section class="review-close" aria-labelledby="review-close-title">
+      <p class="page-preview-kicker">Review Focus</p>
+      <h2 id="review-close-title">Does this feel like guided enterprise intelligence?</h2>
+      <p>
+        The next review should focus on restraint, mobile pacing, the strength of the False Momentum proof moment, and whether Diagnostic Briefing feels premium, consultative, and enterprise-grade.
+      </p>
+      <div class="review-actions">
+        <a href="concept-entry.html">Walk Interactive Journey</a>
+        <a href="pilot.html">Open Diagnostic Briefing</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
