@@ -517,7 +517,7 @@
   display: grid;
   place-items: center;
   min-height: 54px;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--gold);
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 0;
@@ -530,6 +530,11 @@
 }
 
 .concept-lens-field-model span:nth-child(2) {
+  color: var(--blue);
+  border-color: rgba(102, 123, 155, 0.34);
+}
+
+.concept-lens-field-model span:nth-child(3) {
   color: var(--green);
   border-color: rgba(79, 143, 58, 0.34);
 }
@@ -584,6 +589,19 @@
 .concept-lens-comparison article:nth-child(2),
 .concept-pattern-board article:nth-child(1) {
   border-top-color: rgba(79, 143, 58, 0.3);
+}
+
+.concept-lens-flow article:nth-child(2) {
+  border-top-color: rgba(102, 123, 155, 0.3);
+}
+
+.concept-lens-flow article:nth-child(2) span {
+  color: var(--blue);
+}
+
+.concept-lens-flow article:nth-child(3) span,
+.concept-lens-comparison article:nth-child(2) span {
+  color: var(--green);
 }
 
 .concept-lens-flow strong,
@@ -4723,6 +4741,10 @@ p {
   text-transform: uppercase;
 }
 
+.brief-lens-stack-visible span {
+  color: rgba(210, 164, 74, 0.94);
+}
+
 .brief-lens-stack-actual span {
   color: rgba(79, 143, 58, 0.94);
 }
@@ -6782,6 +6804,10 @@ strong .home-v2-green,
     color: #10213a;
   }
 
+  .brief-lens-stack-visible span {
+    color: #9b6c20;
+  }
+
   .brief-lens-stack-actual span {
     color: #3d8b36;
   }
@@ -7840,7 +7866,7 @@ strong .home-v2-green,
 }
 
 .briefing-scope-grid > div:nth-child(2) {
-  border-top-color: rgba(79, 143, 58, 0.32);
+  border-top-color: rgba(102, 123, 155, 0.32);
 }
 
 .briefing-scope-grid span {
@@ -7852,6 +7878,10 @@ strong .home-v2-green,
 }
 
 .briefing-scope-grid > div:nth-child(2) span {
+  color: var(--blue);
+}
+
+.briefing-scope-grid > div:nth-child(3) span {
   color: var(--green);
 }
 
@@ -7878,10 +7908,18 @@ strong .home-v2-green,
 }
 
 .diagnostic-proof-grid > div:nth-child(2) {
-  border-top-color: rgba(79, 143, 58, 0.32);
+  border-top-color: rgba(102, 123, 155, 0.3);
 }
 
 .diagnostic-proof-grid > div:nth-child(2) span {
+  color: var(--blue);
+}
+
+.diagnostic-proof-grid > div:nth-child(3) {
+  border-top-color: rgba(79, 143, 58, 0.32);
+}
+
+.diagnostic-proof-grid > div:nth-child(3) span {
   color: var(--green);
 }
 
@@ -7907,14 +7945,6 @@ strong .home-v2-green,
   border-left: 0;
   border-radius: 0;
   background: transparent;
-}
-
-.page-pilot .pilot-grid > div:first-child {
-  border-top-color: rgba(79, 143, 58, 0.3);
-}
-
-.page-pilot .pilot-grid > div:first-child span {
-  color: var(--green);
 }
 
 .briefing-paths,
