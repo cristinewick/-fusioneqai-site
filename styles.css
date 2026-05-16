@@ -4578,6 +4578,62 @@ p {
   border-radius: 8px;
 }
 
+.brief-executive-card {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  width: min(100%, 940px);
+  margin: clamp(18px, 2.4vw, 28px) 0 clamp(16px, 2.4vw, 24px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), rgba(79, 143, 58, 0.03)),
+    rgba(255, 255, 255, 0.012);
+  overflow: hidden;
+}
+
+.brief-executive-card > div {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 176px;
+  padding: clamp(20px, 2.4vw, 28px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brief-executive-card > div:last-child {
+  border-right: 0;
+}
+
+.brief-executive-card span {
+  color: rgba(210, 164, 74, 0.92);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.brief-executive-card strong {
+  color: var(--white);
+  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
+  line-height: 1.15;
+}
+
+.brief-executive-card p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 0.9rem;
+  line-height: 1.46;
+}
+
+.brief-executive-card > div:nth-child(2) {
+  background: rgba(79, 143, 58, 0.045);
+}
+
+.brief-executive-card > div:nth-child(2) span {
+  color: rgba(93, 184, 77, 0.95);
+}
+
 .brief-subtitle {
   max-width: 680px;
   color: var(--soft);
@@ -11733,6 +11789,22 @@ body.page-how-it-works > main#top.how-page {
     border-radius: 18px;
   }
 
+  .brief-executive-card {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .brief-executive-card > div {
+    min-height: auto;
+    padding: 20px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .brief-executive-card > div:last-child {
+    border-bottom: 0;
+  }
+
   .page-concept-entry .front-door-stage {
     min-height: 100svh;
     background-image: url("assets/fusioneq-sales-context-four-layer-hero.png");
@@ -11953,6 +12025,49 @@ body.page-how-it-works > main#top.how-page {
 
   body.page-brief .brief-cover-image {
     display: none;
+  }
+
+  body.page-brief .brief-executive-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: 6.85in;
+    max-width: 6.85in;
+    margin: 8px 0 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 0;
+    background: #ffffff;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  body.page-brief .brief-executive-card > div {
+    min-height: 0;
+    padding: 10px 12px;
+    border-right: 1px solid #d8d8d8;
+    background: #ffffff;
+  }
+
+  body.page-brief .brief-executive-card > div:last-child {
+    border-right: 0;
+  }
+
+  body.page-brief .brief-executive-card span,
+  body.page-brief .brief-executive-card > div:nth-child(2) span {
+    color: #315f49;
+    font-size: 7pt;
+    letter-spacing: 0.1em;
+  }
+
+  body.page-brief .brief-executive-card strong {
+    color: #000000;
+    font-size: 10pt;
+  }
+
+  body.page-brief .brief-executive-card p {
+    color: #333333;
+    font-size: 8pt;
+    line-height: 1.28;
   }
 
   body.page-brief .brief-heading h1 {
