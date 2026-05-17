@@ -13160,6 +13160,23 @@ body.page-how-it-works > main#top.how-page {
   }
 }
 
+@media (max-width: 760px) {
+  body.page-home-v2.page-post-entry-concept > main#top.post-entry-home,
+  body.page-home-v2.page-concept-patterns > main#top.concept-patterns-page {
+    padding-top: 64px !important;
+  }
+
+  .page-post-entry-concept .post-entry-home > .slide:first-child,
+  .page-concept-patterns .concept-patterns-page > .slide:first-child {
+    padding-top: 38px !important;
+  }
+
+  .page-concept-patterns .concept-patterns-hero {
+    min-height: auto;
+    align-content: start;
+  }
+}
+
 @media print {
   @page brief {
     margin: 0.58in 0.62in;
