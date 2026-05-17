@@ -12055,8 +12055,8 @@ body.page-how-it-works > main#top.how-page {
   }
 
   .diagnostic-same-deal-visual img {
-    width: 760px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
 
   .concept-lens-readout,
