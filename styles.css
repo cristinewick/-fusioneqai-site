@@ -11962,7 +11962,24 @@ body.page-how-it-works > main#top.how-page {
   .concept-lens-hero,
   .concept-patterns-hero,
   .pilot-hero {
+    width: min(100%, calc(100% - 34px)) !important;
+    max-width: 100%;
+    box-sizing: border-box;
     padding-top: 46px !important;
+  }
+
+  .post-entry-hero-copy,
+  .post-entry-section-copy,
+  .post-entry-lede,
+  .post-entry-thesis,
+  .concept-business-value {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .post-entry-hero-copy {
+    width: min(100%, calc(100vw - 82px));
   }
 
   .post-entry-hero h1,
