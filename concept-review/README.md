@@ -13,7 +13,7 @@ Cinematic Entry
 → Post-Entry Home
 → Lens
 → Patterns
-→ Diagnostic Briefing
+→ Diagnostic Deal Briefing
 ```
 
 Education remains a top-level nav item that points to the existing live Education structure. It is intentionally separate from the guided FusionEQ journey because it contains deeper IP, training, and learning paths.
@@ -44,7 +44,7 @@ Screenshots:
 - `concept-review/screenshots/post-entry-home.png`
 - `concept-review/screenshots/concept-lens.png`
 - `concept-review/screenshots/concept-patterns.png`
-- `concept-review/screenshots/diagnostic-briefing.png`
+- `concept-review/screenshots/diagnostic-deal-briefing.png`
 
 ## Strategic Intent
 
@@ -147,7 +147,7 @@ Question for review:
 
 Does this page create the emotional recognition moment FusionEQ needs: “That is exactly what happens in our deals”?
 
-## Page 4: Diagnostic Briefing
+## Page 4: Diagnostic Deal Briefing
 
 Headline:
 
@@ -167,13 +167,13 @@ Content included:
 
 Question for review:
 
-Does Diagnostic Briefing now feel like the correct application/conversion layer, making a separate Apply page unnecessary?
+Does Diagnostic Deal Briefing now feel like the correct application/conversion layer, making a separate Apply page unnecessary?
 
 ## Education
 
 Recommendation:
 
-Keep `Education` as a top-level nav item and preserve the live-site Education structure. Education should function as the deeper learning layer for the ecosystem, while the guided FusionEQ journey remains focused on recognition, Lens interpretation, Patterns, and Diagnostic Briefing.
+Keep `Education` as a top-level nav item and preserve the live-site Education structure. Education should function as the deeper learning layer for the ecosystem, while the guided FusionEQ journey remains focused on recognition, Lens interpretation, Patterns, and Diagnostic Deal Briefing.
 
 ## What I Need Reviewed
 
@@ -194,7 +194,7 @@ Specific questions:
 
 Important clarification:
 
-Diagnostic Briefing should be understood as a guided strategic interpretation engagement. It is not self-serve software access, a free trial, or a generic demo flow. The desired progression is recognition → belief → executive curiosity → guided engagement.
+Diagnostic Deal Briefing should be understood as a guided strategic interpretation engagement. It is not self-serve software access, a free trial, or a generic demo flow. The desired progression is recognition → belief → executive curiosity → guided engagement.
 
 ## Important Constraint
 

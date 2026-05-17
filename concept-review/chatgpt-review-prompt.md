@@ -15,7 +15,7 @@ Cinematic Entry
 → Post-Entry Home
 → Lens
 → Patterns
-→ Diagnostic Briefing
+→ Diagnostic Deal Briefing
 ```
 
 Education remains a top-level nav item and links to the existing live Education structure. It is intentionally separate from the guided FusionEQ journey because it contains deeper IP, training, and learning paths.
@@ -91,7 +91,7 @@ Visible Signal
 → Better Move
 ```
 
-### Diagnostic Briefing
+### Diagnostic Deal Briefing
 
 Headline:
 
@@ -109,9 +109,9 @@ Content included:
 
 Important clarification:
 
-Diagnostic Briefing is not self-serve software access, a free trial, or generic product onboarding. It should feel like a premium, consultative, enterprise-grade strategic interpretation engagement where FusionEQ is applied to live work through guided diagnostic analysis.
+Diagnostic Deal Briefing is not self-serve software access, a free trial, or generic product onboarding. It should feel like a premium, consultative, enterprise-grade strategic interpretation engagement where FusionEQ is applied to live work through guided diagnostic analysis.
 
-Apply has intentionally been removed from the main navigation because Diagnostic Briefing already implies applying the Lens to live work. The strongest Apply content has been moved into the Diagnostic Briefing experience.
+Apply has intentionally been removed from the main navigation because Diagnostic Deal Briefing already implies applying the Lens to live work. The strongest Apply content has been moved into the Diagnostic Deal Briefing experience.
 
 ## Please Review
 
@@ -135,4 +135,4 @@ I can provide screenshots of:
 - Post-Entry Home
 - Lens
 - Patterns
-- Diagnostic Briefing
+- Diagnostic Deal Briefing
