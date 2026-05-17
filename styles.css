@@ -540,16 +540,12 @@
 }
 
 .concept-lens-ambient {
-  width: min(860px, calc(100% - 56px)) !important;
-  padding-top: clamp(30px, 5vh, 60px) !important;
-  padding-bottom: clamp(94px, 12vh, 148px) !important;
-}
-
-.concept-lens-ambient div {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(18px, 4vw, 42px);
+  gap: clamp(16px, 3vw, 34px);
   justify-content: center;
+  width: min(860px, 100%);
+  margin: clamp(18px, 3vw, 34px) auto 0;
 }
 
 .concept-lens-ambient span {
@@ -1591,14 +1587,10 @@
   }
 
   .concept-lens-ambient {
-    padding-top: 30px !important;
-    padding-bottom: 96px !important;
-  }
-
-  .concept-lens-ambient div {
     display: grid;
     gap: 0;
     justify-content: stretch;
+    margin-top: 4px;
   }
 
   .concept-lens-ambient span {
@@ -1910,6 +1902,17 @@
   text-align: right;
 }
 
+.post-entry-layer-close {
+  max-width: 700px;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 2px solid rgba(79, 143, 58, 0.48);
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 1.65vw, 1.58rem);
+  line-height: 1.35;
+}
+
 @media (min-width: 761px) and (max-width: 980px) {
   .post-entry-hero {
     grid-template-columns: 1fr;
@@ -1970,7 +1973,8 @@
   }
 
   .post-entry-pause p,
-  .post-entry-pause-right p {
+  .post-entry-pause-right p,
+  .post-entry-layer-close {
     max-width: 100%;
     font-size: 1.42rem;
     text-align: left;
@@ -12118,8 +12122,7 @@ body.page-how-it-works > main#top.how-page {
   }
 
   .concept-lens-ambient {
-    padding-top: 10px !important;
-    padding-bottom: 70px !important;
+    margin-top: 4px;
   }
 }
 
