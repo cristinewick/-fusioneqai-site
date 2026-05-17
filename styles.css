@@ -1895,6 +1895,13 @@
   gap: clamp(36px, 5vw, 68px);
 }
 
+@media (min-width: 761px) {
+  .post-entry-home .slide:not(.post-entry-hero) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .post-entry-next {
   width: min(1120px, calc(100% - 56px)) !important;
   min-height: 46svh;
@@ -9190,6 +9197,12 @@ h2,
     line-height: 1.08;
     letter-spacing: 0;
     font-weight: 500;
+  }
+
+  .post-entry-hero > h1 {
+    max-width: 1120px;
+    font-size: clamp(2.08rem, 2.72vw, 2.92rem);
+    white-space: nowrap;
   }
 }
 
