@@ -2,6 +2,7 @@
 
 # Local archive and generated deployment bundles
 _archive/
+outputs/
 *.zip
 
 # Book/manuscript working files kept outside the deployable website
