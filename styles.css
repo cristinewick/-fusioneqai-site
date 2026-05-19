@@ -2186,8 +2186,16 @@
     grid-template-columns: 1fr;
   }
 
+  .post-entry-hero > h1,
+  .post-entry-hero-copy {
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
   .post-entry-hero-visual {
-    max-width: 760px;
+    width: min(100%, 760px);
+    max-width: 100%;
   }
 
   .post-entry-layer-map,
@@ -9474,6 +9482,24 @@ h2,
     max-width: 1120px;
     font-size: clamp(2.08rem, 2.72vw, 2.92rem);
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .post-entry-hero > h1 {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .post-entry-hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .post-entry-hero-visual {
+    width: min(100%, 760px);
+    max-width: 100%;
   }
 }
 
