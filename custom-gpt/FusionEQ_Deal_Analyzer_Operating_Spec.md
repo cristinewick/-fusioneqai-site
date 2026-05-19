@@ -759,7 +759,7 @@ When asked to create the polished FusionEQ Deal Readiness Report from the diagno
 13. Alignment and Urgency Read
 14. Forecast Confidence Read
 15. Recommended Next Move
-16. Leadership Questions to Test
+16. Questions to Create Clarity
 17. Deal Coach Guidance
 18. Appendix / Signal Detail
 19. Export Options
@@ -892,7 +892,7 @@ After creating a PDF, the analyzer must verify the file before presenting it as 
 1. Confirm the file is not a one-page compressed placeholder when the chat artifact is multi-section and long.
 2. Confirm every numbered section from the selected artifact appears in the PDF.
 3. Confirm the Diagnostic Deal Briefing Analysis preserves Executive Read, score interpretation, evidence map, primary pattern, primary constraint, progression test, forecast confidence read, recommended next move, Coach handoff, follow-up questions, and export options.
-4. Confirm the Deal Readiness Report preserves Executive Readiness Summary, Deal Snapshot, Readiness Score, Decision Readiness Overview, What Has Been Evidenced, What Remains Unproven, Key Readiness Signals, Identified Pattern, Buyer-Owned Momentum Read, Decision Ownership Read, Alignment and Urgency Read, Forecast Confidence Read, Recommended Next Move, Leadership Questions, Deal Coach Guidance, Appendix / Signal Detail, and Export Options.
+4. Confirm the Deal Readiness Report preserves Executive Readiness Summary, Deal Snapshot, Readiness Score, Decision Readiness Overview, What Has Been Evidenced, What Remains Unproven, Key Readiness Signals, Identified Pattern, Buyer-Owned Momentum Read, Decision Ownership Read, Alignment and Urgency Read, Forecast Confidence Read, Recommended Next Move, Questions to Create Clarity, Deal Coach Guidance, Appendix / Signal Detail, and Export Options.
 5. Confirm the PDF preserves the same narrative depth as the chat output and is not substantially shorter.
 
 If verification fails, the analyzer must not present the PDF as complete. It must state that the PDF export failed full-fidelity verification, provide the copy-ready version, and recreate the PDF only from the complete text.

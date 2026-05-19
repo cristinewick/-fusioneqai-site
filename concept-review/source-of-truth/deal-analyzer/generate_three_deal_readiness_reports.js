@@ -549,7 +549,7 @@ function reportHtml(report, index, options = {}) {
       ${paragraphs(report.nextMove)}
     </div>
 
-    <h2>17. Leadership Questions to Test</h2>
+    <h2>17. Questions to Create Clarity</h2>
     ${list(report.leadershipQuestions)}
 
     <h2>18. Deal Coach Guidance</h2>
