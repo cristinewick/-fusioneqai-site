@@ -9945,6 +9945,88 @@ h2,
   border-bottom: 0;
 }
 
+.page-light-surface.page-course-intro .course-access-section {
+  display: grid;
+  gap: 32px;
+}
+
+.course-access-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.72fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.page-light-surface.page-course-intro .course-access-form {
+  width: 100%;
+  border-color: var(--light-line);
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.page-light-surface.page-course-intro .course-access-form label span {
+  color: var(--light-green);
+}
+
+.page-light-surface.page-course-intro .course-access-form input,
+.page-light-surface.page-course-intro .course-access-form textarea {
+  color: var(--light-ink);
+  border-color: var(--light-line);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.page-light-surface.page-course-intro .course-access-form input::placeholder,
+.page-light-surface.page-course-intro .course-access-form textarea::placeholder {
+  color: rgba(25, 27, 24, 0.42);
+}
+
+.page-light-surface.page-course-intro .course-access-form input:focus,
+.page-light-surface.page-course-intro .course-access-form textarea:focus {
+  border-color: rgba(47, 111, 40, 0.66);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.page-light-surface.page-course-intro .course-access-form button {
+  color: #fff;
+  border-color: rgba(47, 111, 40, 0.76);
+  background: var(--light-green);
+}
+
+.course-password-panel {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  min-height: 100%;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid var(--light-line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(7, 8, 11, 0.96), rgba(18, 20, 18, 0.92)),
+    #07080b;
+}
+
+.course-password-panel[hidden] {
+  display: none;
+}
+
+.course-password-panel h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.course-password-panel p:not(.context) {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.course-password-panel .lead-gate-form {
+  margin-top: 4px;
+}
+
 .page-light-surface.page-learning-module .module-briefing-hero {
   grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr);
 }
@@ -10029,6 +10111,22 @@ h2,
     border-radius: 8px;
   }
 
+  .page-light-surface.page-course-intro .hero {
+    min-height: auto;
+    padding-top: 76px;
+    padding-bottom: 58px;
+  }
+
+  .page-light-surface.page-course-intro h1 {
+    font-size: 2.04rem;
+    line-height: 1.06;
+  }
+
+  .page-light-surface.page-course-intro .subline,
+  .page-light-surface.page-course-intro .hero-close {
+    max-width: 100%;
+  }
+
   .page-light-surface.page-courses .slide {
     width: 100%;
     padding-right: 28px;
@@ -10099,6 +10197,16 @@ h2,
 
   .page-light-surface.page-course-intro .diagnostic-list span {
     padding: 18px 0;
+  }
+
+  .course-access-grid,
+  .page-light-surface.page-course-intro .course-access-form {
+    grid-template-columns: 1fr;
+  }
+
+  .course-password-panel {
+    min-height: auto;
+    padding: 22px;
   }
 
   .page-light-surface.page-learning-module .module-briefing-hero {
@@ -11684,6 +11792,31 @@ h2,
   line-height: 1.55;
 }
 
+.lead-gate-proof {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lead-gate-proof p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.lead-gate-proof span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
 .lead-gate-form {
   margin-top: 24px;
 }
@@ -11744,6 +11877,16 @@ h2,
 
 .lead-gate-card .lead-gate-privacy {
   margin-top: 16px;
+}
+
+.lead-gate-privacy a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.lead-gate-privacy a:hover,
+.lead-gate-privacy a:focus-visible {
+  color: #fff;
 }
 
 .gated-action-page {
