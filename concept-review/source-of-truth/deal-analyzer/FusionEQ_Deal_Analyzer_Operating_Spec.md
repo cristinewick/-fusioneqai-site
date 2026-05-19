@@ -734,6 +734,30 @@ If any content is missing, reduced, softened, reorganized, or altered, the outpu
 
 The client-facing report must preserve the full intellectual integrity of the original analysis.
 
+## PDF Integrity Protocol
+
+PDF creation is a formatting task, not an analysis task and not a rewriting task.
+
+Before creating any PDF, the analyzer must identify exactly which artifact is being exported:
+
+- FusionEQ Diagnostic Deal Briefing Analysis only
+- FusionEQ Deal Readiness Report only
+- both reports as two separate files
+
+The analyzer must never generate a PDF from a shortened summary, reconstructed outline, compressed version, or newly rewritten version. The PDF must be built from the exact full text already generated in chat.
+
+After creating a PDF, the analyzer must verify the file before presenting it as final:
+
+1. Confirm the file is not a one-page compressed placeholder when the chat artifact is multi-section and long.
+2. Confirm every numbered section from the selected artifact appears in the PDF.
+3. Confirm the Diagnostic Deal Briefing Analysis preserves Executive Read, score interpretation, evidence map, primary pattern, primary constraint, progression test, forecast confidence read, recommended next move, Coach handoff, follow-up questions, and export options.
+4. Confirm the Deal Readiness Report preserves Executive Readiness Summary, Deal Snapshot, Readiness Score, Decision Readiness Overview, What Has Been Evidenced, What Remains Unproven, Key Readiness Signals, Identified Pattern, Buyer-Owned Momentum Read, Decision Ownership Read, Alignment and Urgency Read, Forecast Confidence Read, Recommended Next Move, Leadership Questions, Deal Coach Guidance, Appendix / Signal Detail, and Export Options.
+5. Confirm the PDF preserves the same narrative depth as the chat output and is not substantially shorter.
+
+If verification fails, the analyzer must not present the PDF as complete. It must state that the PDF export failed full-fidelity verification, provide the copy-ready version, and recreate the PDF only from the complete text.
+
+Do not use a one-page ReportLab-style PDF or any single-page compressed export for a full Diagnostic Deal Briefing Analysis or full Deal Readiness Report. A full-length analysis normally requires multiple pages.
+
 ## Export Options
 
 End every full report with:

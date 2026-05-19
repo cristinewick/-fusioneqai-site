@@ -49,6 +49,19 @@ The generated report HTML was scanned for older or discouraged language. The fin
 
 The Custom GPT instructions still mention some discouraged terms only inside explicit avoid/negative guardrails.
 
+## PDF Export Finding
+
+A later live export test produced one-page PDFs of approximately 3 KB for both the Diagnostic Deal Briefing Analysis and Deal Readiness Report, even though the chat output contained lengthy multi-section analysis.
+
+This was not acceptable for FusionEQ product delivery. The Custom GPT instructions and operating spec were updated with a PDF Integrity Protocol requiring:
+
+- exact artifact selection before export
+- no shortened summary, reconstructed outline, or compressed rewrite
+- multi-section verification after PDF creation
+- explicit section-presence checks for both report types
+- rejection of one-page compressed placeholder PDFs for full reports
+- copy-ready fallback if PDF verification fails
+
 ## Current Product Logic
 
 The analyzer should always treat the Diagnostic Deal Briefing Analysis and Deal Readiness Report as separate outputs:
