@@ -14,7 +14,7 @@ from reportlab.platypus import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / "custom-gpt" / "FusionEQ_Deal_Analyzer_Operating_Spec.md"
 OUT = ROOT / "custom-gpt" / "FusionEQ_Deal_Analyzer_Operating_Spec.pdf"
 

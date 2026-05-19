@@ -5,6 +5,7 @@ const { chromium } = require("playwright");
 const root = path.resolve(__dirname, "..");
 const outDir = path.join(root, "outputs");
 const logoPath = path.join(root, "assets", "fusioneq-marketing-lockup.png");
+const printLogoPath = path.join(root, "assets", "fusioneq-report-symbol.png");
 const outPdf = path.join(outDir, "FusionEQ_Three_Deal_Readiness_Reports.pdf");
 const outHtml = path.join(outDir, "FusionEQ_Three_Deal_Readiness_Reports.html");
 const previewPng = path.join(outDir, "FusionEQ_Three_Deal_Readiness_Reports_preview.png");
@@ -14,9 +15,26 @@ fs.mkdirSync(outDir, { recursive: true });
 const logoData = fs.existsSync(logoPath)
   ? `data:image/png;base64,${fs.readFileSync(logoPath).toString("base64")}`
   : "";
+const printLogoData = fs.existsSync(printLogoPath)
+  ? `data:image/png;base64,${fs.readFileSync(printLogoPath).toString("base64")}`
+  : "";
 
 const today = "May 19, 2026";
 const tagline = "Decision evidence. Readiness clarity. Better next moves.";
+
+function fusionBrand() {
+  return `
+    <div class="fusion-brand">
+      ${printLogoData ? `
+        <span class="fusion-symbol" aria-hidden="true">
+          <img src="${printLogoData}" alt="">
+        </span>` : ""}
+      <span class="fusion-wordmark" aria-label="FusionEQ">
+        <strong>Fusion</strong><em>EQ</em>
+      </span>
+    </div>
+    <div class="fusion-tagline">${esc(tagline)}</div>`;
+}
 
 const reports = [
   {
@@ -103,6 +121,12 @@ const reports = [
       "The conversation should confirm remaining approval gates, signature timing, implementation readiness dependencies, and any final execution blockers.",
       "The evidence needed is confirmation that the existing buyer-owned plan still reflects the buyer's actual internal approval path and current-quarter execution intent."
     ],
+    actionPath: {
+      evidence: "Confirm each remaining approval gate, owner, and date through signature.",
+      assumption: "The buyer-owned plan still reflects the buyer's actual approval path and execution intent.",
+      involved: "Procurement, legal, and the economic buyer."
+    },
+    readinessImplication: "This deal has strong readiness evidence. The work now is to protect the final approval path and prevent late-stage drift from weakening an otherwise supported forecast.",
     leadershipQuestions: [
       "What final approval gates remain between redlines and signature?",
       "Who owns each remaining gate and date on the buyer side?",
@@ -124,7 +148,7 @@ const reports = [
     id: "Enterprise Team B / TS / 202",
     shortName: "Enterprise Team B",
     stage: "Active evaluation with limited decision evidence",
-    forecast: "Progression assumption should be corrected",
+    forecast: "Progression assumption should be validated",
     belief: "The current team belief is that the deal is progressing because engagement is high: eight meetings, many emails, strong demo feedback, technical questions, and positive champion sentiment.",
     score: { overall: ["31", "Incomplete"], alignment: ["38", "Fragmented"], control: ["24", "Unverified"], momentum: ["33", "Stalled"] },
     pattern: "False Momentum",
@@ -135,12 +159,12 @@ const reports = [
     ],
     summary: [
       "Enterprise Team B shows high activity but limited decision readiness. The deal has meetings, emails, technical interest, and positive demo sentiment, but the evidence does not prove budget ownership, decision authority, procurement involvement, finance alignment, executive sponsorship, approval criteria, or buyer-owned progression.",
-      "The current interpretation should be corrected. Engagement is real, but it is not yet evidence that the organization is moving toward a purchase decision. Additional product deep dives may increase activity while leaving the readiness questions unresolved.",
+      "A more useful read is that engagement is real, but it is not yet evidence that the organization is moving toward a purchase decision. Additional product deep dives may increase activity while leaving the readiness questions unresolved.",
       "The recommended next move is to pause further technical expansion until the champion validates budget ownership, decision control, approval criteria, and the internal step that would convert user interest into decision movement."
     ],
     snapshot: [
       ["Current Stage", "Product evaluation activity"],
-      ["Forecast Read", "Overextended if treated as progressing"],
+      ["Forecast Read", "Needs validation if treated as progressing"],
       ["Current Next Step", "Another product deep dive requested by end users"],
       ["Stakeholder Coverage", "Champion and end users, with authority functions absent"],
       ["Decision Owner", "Unverified"],
@@ -200,12 +224,18 @@ const reports = [
       "Alignment is currently concentrated around product interest rather than organizational commitment. End users may like the platform, but the business case, budget path, and executive priority are not yet evidenced.",
       "Urgency is not buyer-owned. The current next step creates more product knowledge, but it does not create decision evidence."
     ],
-    forecast: "Overextended",
+    forecast: "Requires validation",
     nextMove: [
       "Pause additional technical expansion until the champion validates who owns budget authority, who controls the decision, what business problem is important enough to fund, and what criteria will determine approval.",
       "Require a stakeholder-mapping conversation before continuing deeper product evaluation cycles.",
       "The evidence needed is a named decision owner, validated criteria, and a buyer-owned internal action that moves beyond product interest."
     ],
+    actionPath: {
+      evidence: "Create proof of budget ownership, decision control, approval criteria, and buyer-owned internal movement.",
+      assumption: "High engagement can convert into a funded decision without first validating ownership.",
+      involved: "Champion, budget owner, decision authority, and any stakeholder who can name approval criteria."
+    },
+    readinessImplication: "The team has created real engagement. The next improvement is to convert product interest into decision evidence before adding more technical activity.",
     leadershipQuestions: [
       "What has the buyer done that proves movement toward a decision, not just interest in the product?",
       "Who owns budget authority for this purchase?",
@@ -227,7 +257,7 @@ const reports = [
     id: "Enterprise Team C / AL / 203",
     shortName: "Enterprise Team C",
     stage: "Late-stage activity with incomplete approval readiness",
-    forecast: "Commit-level confidence should be corrected",
+    forecast: "Commit-level confidence should be validated",
     belief: "The current team belief is that the deal will close this month because procurement requested final pricing and vendor forms, the signer is known, and the champion says it is basically done.",
     score: { overall: ["43", "Incomplete"], alignment: ["47", "Partial"], control: ["58", "Partial"], momentum: ["39", "Stalled"] },
     pattern: "Confidence Without Evidence",
@@ -243,7 +273,7 @@ const reports = [
     ],
     snapshot: [
       ["Current Stage", "Late-stage operational activity"],
-      ["Forecast Read", "Overextended if held at Commit"],
+      ["Forecast Read", "Needs validation if held at Commit"],
       ["Current Next Step", "Decision-readiness review"],
       ["Stakeholder Coverage", "Champion, procurement, finance, prior CIO support, signer known"],
       ["Decision Owner", "Partially evidenced through signer visibility"],
@@ -305,12 +335,18 @@ const reports = [
       "Alignment is incomplete. Champion optimism and procurement movement are offset by finance budget reduction, finance delay questions, incomplete risk committee approval, and current CIO absence.",
       "Urgency is not yet buyer-owned at close-ready strength. If finance is asking about next-quarter delay, current-quarter urgency must be revalidated."
     ],
-    forecast: "Overextended",
+    forecast: "Requires validation",
     nextMove: [
       "Secure a direct decision-readiness review involving the champion and executive sponsor.",
       "The review should test risk committee timing, budget commitment status, current-quarter prioritization, legal initiation conditions, and realistic signature timing.",
       "The objective is to validate whether the organization still intends to execute this quarter or is actively shifting the purchase timeline."
     ],
+    actionPath: {
+      evidence: "Validate risk committee timing, budget commitment, legal start conditions, and current-quarter execution intent.",
+      assumption: "Procurement activity and signer visibility are enough to support current-month close confidence.",
+      involved: "Champion, executive sponsor, finance, legal, and the risk committee owner."
+    },
+    readinessImplication: "The deal remains viable. The next improvement is to separate close proximity from approval readiness so the team can protect forecast confidence and timing.",
     leadershipQuestions: [
       "Has risk committee approval been scheduled, completed, or delayed?",
       "Does finance still support current-quarter execution after reducing budget?",
@@ -384,6 +420,27 @@ function scoreInterpretation(report) {
   ];
 }
 
+function actionPathHtml(report, headingLevel = "h2") {
+  const H = headingLevel;
+  return `
+    <${H}>Path to Decision Readiness</${H}>
+    <p class="section-intro">This path translates the readiness read into the next buyer-facing move: the evidence to create, the assumption to validate, and the people who need to be involved.</p>
+    <div class="action-path" aria-label="Path to stronger readiness">
+      <div class="ai-layer">
+        <span>Evidence to Create</span>
+        <p>${esc(report.actionPath.evidence)}</p>
+      </div>
+      <div class="fusion-layer">
+        <span>Assumption to Validate</span>
+        <p>${esc(report.actionPath.assumption)}</p>
+      </div>
+      <div class="human-layer">
+        <span>Who to Involve</span>
+        <p>${esc(report.actionPath.involved)}</p>
+      </div>
+    </div>`;
+}
+
 function executiveReadHtml(report) {
   return `
     <h2>2. Executive Readiness Read</h2>
@@ -416,6 +473,11 @@ function executiveReadHtml(report) {
       </div>
     </div>
 
+    <div class="readiness-implication">
+      <span>What This Means</span>
+      <p>${esc(report.readinessImplication)}</p>
+    </div>
+
     <h2>3. Information Provided / FusionEQ Interpretation</h2>
     <div class="interpretation-split" aria-label="Information provided and FusionEQ interpretation">
       <div>
@@ -437,8 +499,7 @@ function reportCover(report) {
   <section class="cover report-cover">
     <div class="brand">
       <div class="brand-lockup">
-        ${logoData ? `<img src="${logoData}" alt="FusionEQ">` : `<strong>FusionEQ</strong>`}
-        <em>${esc(tagline)}</em>
+        ${fusionBrand()}
       </div>
       <span>Deal Readiness Intelligence</span>
     </div>
@@ -447,6 +508,10 @@ function reportCover(report) {
     <div class="cover-label">Deal Memory ID</div>
     <p class="cover-id">${esc(report.id)}</p>
     <div class="subtitle">What the deal has evidenced, what remains unproven, and the next move most likely to create decision clarity.</div>
+    <div class="cover-readout">
+      <span>Executive Readiness Read</span>
+      <p>${esc(report.readinessImplication)}</p>
+    </div>
     <div class="executive-score">
       <div>
         <span>Overall Deal Readiness</span>
@@ -459,9 +524,19 @@ function reportCover(report) {
         <em>${esc(report.forecast)} forecast read</em>
       </div>
     </div>
+    <div class="cover-dimensions" aria-label="Readiness dimensions">
+      <div><span>Alignment</span><strong>${esc(report.score.alignment[0])}</strong><em>${esc(report.score.alignment[1])}</em></div>
+      <div><span>Control</span><strong>${esc(report.score.control[0])}</strong><em>${esc(report.score.control[1])}</em></div>
+      <div><span>Momentum</span><strong>${esc(report.score.momentum[0])}</strong><em>${esc(report.score.momentum[1])}</em></div>
+    </div>
     <div class="cover-next-move">
       <span>Recommended Next Move</span>
       <p>${esc(report.nextMove[0])}</p>
+    </div>
+    ${actionPathHtml(report, "h2")}
+    <div class="cover-usage-note">
+      <span>How This Helps the Deal Team</span>
+      <p>The score calibrates forecast confidence. The evidence map separates activity from readiness. The next move identifies how to create the decision evidence the deal still needs.</p>
     </div>
     <div class="cover-meta-grid">
       <div><span>Report Type</span><strong>Deal Readiness Report</strong></div>
@@ -469,19 +544,17 @@ function reportCover(report) {
       <div><span>Current Stage</span><strong>${esc(report.stage)}</strong></div>
     </div>
     <div class="cover-note">
-      <strong>Readiness Lens</strong>
+      <strong>FusionEQ Readiness Principle</strong>
       <p>This report separates what was recorded from what has been evidenced. FusionEQ does not replace judgment. It sharpens it.</p>
     </div>
   </section>`;
 }
 
 function reportHtml(report, index, options = {}) {
-  const titlePrefix = options.single ? "FusionEQ Deal Readiness Report" : `FusionEQ Deal Readiness Report ${String(index + 1).padStart(2, "0")}`;
+  const detailPrefix = options.single ? "Report Detail" : `Report Detail ${String(index + 1).padStart(2, "0")}`;
   return `
   <section class="report">
-    <div class="report-kicker">${esc(titlePrefix)}</div>
-    <h1>Deal Readiness Report</h1>
-    <p class="lede">Deal Memory ID: ${esc(report.id)}</p>
+    <div class="report-kicker">${esc(detailPrefix)} · Deal Memory ID: ${esc(report.id)}</div>
     <div class="principle">FusionEQ does not replace judgment. It sharpens it.</div>
 
     <h2>1. Report Identity</h2>
@@ -511,6 +584,8 @@ function reportHtml(report, index, options = {}) {
       <span>Recommended Next Move</span>
       ${paragraphs(report.nextMove)}
     </div>
+
+    ${actionPathHtml(report)}
 
     <h2>7. Decision Readiness Overview</h2>
     ${paragraphs(report.overview)}
@@ -549,7 +624,7 @@ function reportHtml(report, index, options = {}) {
       ${paragraphs(report.nextMove)}
     </div>
 
-    <h2>17. Leadership Questions to Test</h2>
+    <h2>17. Questions to Create Clarity</h2>
     ${list(report.leadershipQuestions)}
 
     <h2>18. Deal Coach Guidance</h2>
@@ -575,18 +650,18 @@ function baseHtml(body, title) {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       color: #15201c;
-      background: #f7f8f4;
-      line-height: 1.38;
+      background: #ffffff;
+      line-height: 1.4;
       font-size: 9.25pt;
     }
     .cover {
-      min-height: 9.85in;
+      min-height: auto;
       padding: 0;
-      page-break-after: always;
+      page-break-after: auto;
       position: relative;
     }
     .report-cover {
-      background: #f7f8f4;
+      background: #ffffff;
     }
     .cover-kicker {
       color: #8a742d;
@@ -600,24 +675,58 @@ function baseHtml(body, title) {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid #d9ddcf;
-      padding-bottom: 0.18in;
-      margin-bottom: 0.38in;
+      border-bottom: 1px solid #d6dcd3;
+      padding-bottom: 0.14in;
+      margin-bottom: 0.34in;
     }
     .brand-lockup {
       display: flex;
       flex-direction: column;
-      gap: 0.07in;
+      gap: 0.045in;
     }
-    .brand img { width: 1.75in; height: auto; }
-    .brand-lockup em {
-      color: #2f3b35;
-      font-size: 8.7pt;
+    .fusion-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.11in;
+      min-height: 0.54in;
+    }
+    .fusion-symbol {
+      width: 0.5in;
+      height: 0.5in;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+    .fusion-symbol img {
+      width: 0.5in;
+      height: auto;
+    }
+    .fusion-wordmark {
+      display: inline-flex;
+      align-items: baseline;
+      font-size: 25pt;
+      line-height: 1;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+    .fusion-wordmark strong {
+      color: #17231d;
+      font-weight: 800;
+    }
+    .fusion-wordmark em {
+      color: #2f7d38;
       font-style: normal;
+      font-weight: 800;
+    }
+    .fusion-tagline {
+      color: #4f5b54;
+      font-size: 8.4pt;
       letter-spacing: 0;
       font-weight: 700;
+      margin-left: 0.61in;
     }
-    .brand span {
+    .brand > span {
       font-size: 8.2pt;
       color: #687169;
       letter-spacing: 0.04em;
@@ -625,7 +734,7 @@ function baseHtml(body, title) {
     }
     .cover h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 20pt;
+      font-size: 24pt;
       line-height: 1.08;
       margin: 0 0 0.04in;
       color: #15201c;
@@ -651,7 +760,33 @@ function baseHtml(body, title) {
       line-height: 1.35;
       color: #3f4943;
       max-width: 6.4in;
-      margin-bottom: 0.24in;
+      margin-bottom: 0.16in;
+    }
+    .cover-readout {
+      border: 1px solid #d6dcd3;
+      border-left: 5px solid #2f7d38;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 0.13in 0.16in;
+      max-width: 6.9in;
+      margin: 0 0 0.18in;
+      page-break-inside: avoid;
+    }
+    .cover-readout span,
+    .cover-usage-note span {
+      display: block;
+      color: #2f7d38;
+      font-size: 7.8pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 0.045in;
+    }
+    .cover-readout p,
+    .cover-usage-note p {
+      margin: 0;
+      color: #24342d;
+      line-height: 1.32;
     }
     .cover-grid {
       display: grid;
@@ -686,19 +821,21 @@ function baseHtml(body, title) {
       color: #59635c;
     }
     .cover-note {
-      background: #15201c;
-      color: white;
+      background: #ffffff;
+      color: #15201c;
+      border: 1px solid #d6dcd3;
+      border-left: 5px solid #2f7d38;
       border-radius: 8px;
-      padding: 0.2in 0.22in;
+      padding: 0.16in 0.2in;
       max-width: 6.7in;
     }
     .cover-note strong {
       display: block;
-      color: #d8bd6a;
+      color: #2f7d38;
       font-size: 12pt;
       margin-bottom: 0.08in;
     }
-    .cover-note p { margin: 0; color: #eef1e9; }
+    .cover-note p { margin: 0; color: #34423b; }
     .executive-score {
       display: grid;
       grid-template-columns: 1fr 1.35fr;
@@ -735,9 +872,53 @@ function baseHtml(body, title) {
       font-style: normal;
       font-size: 9.3pt;
     }
+    .cover-dimensions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.1in;
+      max-width: 6.9in;
+      margin: 0 0 0.18in;
+      page-break-inside: avoid;
+    }
+    .cover-dimensions div {
+      border: 1px solid #d6dcd3;
+      border-top: 3px solid #2167a8;
+      border-radius: 8px;
+      padding: 0.095in 0.12in;
+      background: #ffffff;
+      min-height: 0.62in;
+    }
+    .cover-dimensions div:nth-child(2) {
+      border-top-color: #2f7d38;
+      background: #f8fbf6;
+    }
+    .cover-dimensions div:nth-child(3) {
+      border-top-color: #d8bd6a;
+      background: #fffdf6;
+    }
+    .cover-dimensions span {
+      display: block;
+      color: #687169;
+      font-size: 7.4pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 0.03in;
+    }
+    .cover-dimensions strong {
+      color: #17241f;
+      font-size: 15pt;
+      line-height: 1;
+      margin-right: 0.05in;
+    }
+    .cover-dimensions em {
+      color: #536059;
+      font-style: normal;
+      font-size: 8.5pt;
+    }
     .cover-next-move {
       border: 1px solid #c9b260;
-      background: #fffaf0;
+      background: #fffdf6;
       border-radius: 8px;
       padding: 0.16in 0.2in;
       margin: 0 0 0.18in;
@@ -789,10 +970,10 @@ function baseHtml(body, title) {
     }
     .report {
       background: #fff;
-      border: 1px solid #dfe3d7;
-      padding: 0.3in;
-      border-radius: 8px;
-      page-break-before: always;
+      border: 0;
+      padding: 0;
+      border-radius: 0;
+      page-break-before: auto;
       break-after: page;
     }
     .report:last-child {
@@ -822,7 +1003,7 @@ function baseHtml(body, title) {
     .principle {
       border-left: 4px solid #d8bd6a;
       padding: 0.11in 0.15in;
-      background: #f8f5e8;
+      background: #fffdf6;
       color: #24342d;
       margin: 0.15in 0 0.18in;
       font-weight: 700;
@@ -832,6 +1013,11 @@ function baseHtml(body, title) {
       margin: 0.16in 0 0.055in;
       color: #17241f;
       page-break-after: avoid;
+    }
+    .section-intro {
+      color: #4c5852;
+      max-width: 6.6in;
+      margin-bottom: 0.07in;
     }
     h3 {
       font-size: 9.7pt;
@@ -856,7 +1042,7 @@ function baseHtml(body, title) {
     th {
       width: 31%;
       color: #516058;
-      background: #f4f6ef;
+      background: #f8faf6;
       text-align: left;
       font-weight: 700;
     }
@@ -868,31 +1054,37 @@ function baseHtml(body, title) {
       page-break-inside: avoid;
     }
     .score-card {
-      background: #15201c;
-      color: white;
+      background: #ffffff;
+      color: #15201c;
+      border: 1px solid #d6dcd3;
+      border-top: 3px solid #2167a8;
       border-radius: 7px;
       padding: 0.105in 0.12in;
       min-height: 0.7in;
+    }
+    .score-card:first-child {
+      border-top-color: #2f7d38;
+      background: #fbfdf9;
     }
     .score-card span {
       display: block;
       font-size: 7.2pt;
       text-transform: uppercase;
       letter-spacing: 0.045em;
-      color: #cdd5cb;
+      color: #687169;
       min-height: 0.22in;
     }
     .score-card strong {
       display: block;
       font-size: 18pt;
       line-height: 1;
-      color: #d8bd6a;
+      color: #17241f;
       margin: 0.025in 0;
     }
     .score-card em {
       display: block;
       font-style: normal;
-      color: #f2f5ed;
+      color: #536059;
       font-size: 8.4pt;
     }
     .pattern, .forecast {
@@ -913,10 +1105,18 @@ function baseHtml(body, title) {
       page-break-inside: avoid;
     }
     .readiness-brief div {
-      border-top: 3px solid #d8bd6a;
-      background: #f8f5e8;
+      border-top: 3px solid #2167a8;
+      background: #fffdf6;
       padding: 0.075in 0.095in;
       min-height: 0.5in;
+    }
+    .readiness-brief div:nth-child(2) {
+      border-top-color: #2f7d38;
+      background: #f8fbf6;
+    }
+    .readiness-brief div:nth-child(3) {
+      border-top-color: #d8bd6a;
+      background: #fffdf6;
     }
     .readiness-brief span {
       display: block;
@@ -944,7 +1144,7 @@ function baseHtml(body, title) {
     .interpretation-split div {
       border: 1px solid #dfe3d7;
       border-radius: 8px;
-      background: #fbfcf7;
+      background: #ffffff;
       padding: 0.105in;
     }
     .readiness-triad span,
@@ -962,12 +1162,116 @@ function baseHtml(body, title) {
       margin-bottom: 0.04in;
     }
     .readiness-triad div:nth-child(2) {
-      background: #f4f8f1;
-      border-color: #cbd8ca;
+      background: #f8fbf6;
+      border-color: #b8d0b8;
+      border-top: 3px solid #2f7d38;
     }
     .readiness-triad div:nth-child(3) {
-      background: #fffaf0;
+      background: #fffdf6;
       border-color: #d9c57c;
+      border-top: 3px solid #d8bd6a;
+    }
+    .readiness-triad div:nth-child(1) {
+      border-top: 3px solid #2167a8;
+      background: #f8fbff;
+      border-color: #cbd9e8;
+    }
+    .readiness-implication {
+      border: 1px solid #d6dcd3;
+      border-left: 5px solid #2f7d38;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 0.1in 0.13in;
+      margin: 0 0 0.13in;
+      page-break-inside: avoid;
+    }
+    .readiness-implication span {
+      display: block;
+      color: #2f7d38;
+      font-size: 7.8pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 0.04in;
+    }
+    .readiness-implication p {
+      margin: 0;
+      color: #24342d;
+    }
+    .action-path {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.08in;
+      margin: 0.06in 0 0.14in;
+      page-break-inside: avoid;
+    }
+    .action-path div {
+      border: 1px solid #d6dcd3;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 0.105in 0.12in;
+      min-height: 0.82in;
+    }
+    .action-path div.ai-layer {
+      border-top: 3px solid #2167a8;
+      background: #f8fbff;
+      border-color: #cbd9e8;
+    }
+    .action-path div.fusion-layer {
+      border-top: 3px solid #2f7d38;
+      background: #f8fbf6;
+      border-color: #b8d0b8;
+    }
+    .action-path div.human-layer {
+      border-top: 3px solid #d8bd6a;
+      background: #fffdf6;
+      border-color: #d9c57c;
+    }
+    .action-path span {
+      display: block;
+      color: #687169;
+      font-size: 7.2pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 0.045in;
+    }
+    .action-path p {
+      margin: 0;
+      color: #17241f;
+      line-height: 1.32;
+    }
+    .cover .action-path {
+      max-width: 7.1in;
+      margin-bottom: 0.16in;
+    }
+    .cover .section-intro {
+      font-size: 9pt;
+      margin-bottom: 0.055in;
+    }
+    .cover .action-path div {
+      min-height: 0.74in;
+    }
+    .cover-usage-note {
+      border-top: 1px solid #d6dcd3;
+      border-bottom: 1px solid #d6dcd3;
+      padding: 0.1in 0;
+      max-width: 6.9in;
+      margin: 0 0 0.16in;
+      page-break-inside: avoid;
+    }
+    .cover-usage-note span {
+      color: #8a742d;
+    }
+    .interpretation-split div:first-child {
+      border-top: 3px solid #2167a8;
+      background: #f8fbff;
+      border-color: #cbd9e8;
+    }
+    .interpretation-split div:last-child {
+      border-top: 3px solid #2f7d38;
+      background: #f8fbf6;
+      border-color: #b8d0b8;
     }
     .interpretation-split {
       display: grid;
@@ -980,15 +1284,17 @@ function baseHtml(body, title) {
       color: #17241f;
     }
     .next-move-callout {
-      background: #15201c;
-      color: #fff;
+      background: #fffdf6;
+      color: #15201c;
+      border: 1px solid #d9c57c;
+      border-left: 5px solid #d8bd6a;
       border-radius: 8px;
       padding: 0.16in 0.19in;
       margin: 0.12in 0 0.15in;
       page-break-inside: avoid;
     }
     .next-move-callout p {
-      color: #f2f5ed;
+      color: #17241f;
       font-size: 9.8pt;
       margin-bottom: 0.05in;
     }
@@ -998,7 +1304,7 @@ function baseHtml(body, title) {
     }
     .next-move-section {
       border-left: 5px solid #d8bd6a;
-      background: #fffaf0;
+      background: #fffdf6;
       padding: 0.12in 0.16in;
       margin-bottom: 0.11in;
       page-break-inside: avoid;
@@ -1028,8 +1334,7 @@ const combinedHtml = baseHtml(`
   <section class="cover">
     <div class="brand">
       <div class="brand-lockup">
-        ${logoData ? `<img src="${logoData}" alt="FusionEQ">` : `<strong>FusionEQ</strong>`}
-        <em>${esc(tagline)}</em>
+        ${fusionBrand()}
       </div>
       <span>Deal Readiness Intelligence</span>
     </div>
