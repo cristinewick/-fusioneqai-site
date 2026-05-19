@@ -8683,6 +8683,83 @@ strong .home-v2-green,
   margin-top: -28px;
 }
 
+.report-diagnostic-section {
+  gap: clamp(30px, 4vw, 50px);
+}
+
+.report-diagnostic-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 52px);
+}
+
+.report-diagnostic-columns article {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.report-diagnostic-columns span {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.report-diagnostic-columns article:nth-child(2) span {
+  color: var(--green);
+}
+
+.report-diagnostic-columns h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.32rem, 1.9vw, 1.78rem);
+  line-height: 1.1;
+}
+
+.report-diagnostic-columns p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.report-diagnostic-columns ul {
+  display: grid;
+  gap: 10px;
+  margin: 4px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+  list-style: none;
+}
+
+.report-diagnostic-columns li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.report-diagnostic-columns li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  border-radius: 999px;
+  background: var(--green);
+  transform: translateY(-1px);
+}
+
+.report-diagnostic-read {
+  width: 100%;
+  margin-top: -6px;
+}
+
 .diagnostic-proof-grid {
   gap: clamp(18px, 3vw, 34px);
 }
@@ -8884,6 +8961,10 @@ strong .home-v2-green,
   .briefing-scope-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .report-diagnostic-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -8918,6 +8999,11 @@ strong .home-v2-green,
   .briefing-scope-grid {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .report-diagnostic-columns,
+  .diagnostic-brief-read {
+    grid-template-columns: 1fr;
   }
 
   .briefing-scope-grid > div {
