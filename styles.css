@@ -14080,3 +14080,116 @@ body.page-how-it-works > main#top.how-page {
     padding: 20px;
   }
 }
+
+.fusioneq-commercial-section,
+.fusioneq-faq-section {
+  gap: clamp(28px, 5vw, 52px);
+}
+
+.fusioneq-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  width: min(1120px, 100%);
+}
+
+.fusioneq-audience-grid article {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 290px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(79, 143, 58, 0.045), rgba(102, 123, 155, 0.025)),
+    rgba(255, 255, 255, 0.018);
+}
+
+.fusioneq-audience-grid span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.fusioneq-audience-grid h3 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.05rem, 1.35vw, 1.24rem);
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+.fusioneq-audience-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.fusioneq-audience-grid a {
+  align-self: end;
+  justify-self: start;
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.fusioneq-audience-grid a:hover,
+.fusioneq-audience-grid a:focus-visible {
+  color: var(--white);
+}
+
+.fusioneq-faq-section dl {
+  width: min(1040px, 100%);
+}
+
+.fusioneq-faq-section dl div {
+  padding: 28px 0;
+}
+
+.fusioneq-faq-section dt {
+  color: var(--white);
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+.fusioneq-faq-section dd {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.94rem, 1vw, 1rem);
+  line-height: 1.58;
+}
+
+@media (max-width: 980px) {
+  .fusioneq-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fusioneq-audience-grid article {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 760px) {
+  .fusioneq-audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fusioneq-audience-grid article {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .fusioneq-faq-section dl div {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px 0;
+  }
+}
