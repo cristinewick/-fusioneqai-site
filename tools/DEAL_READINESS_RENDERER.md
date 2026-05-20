@@ -17,7 +17,13 @@ The Deal Analyzer / ChatGPT should create the report content from a **Diagnostic
 1. Duplicate `tools/deal-readiness-client-template.json`.
 2. Rename the duplicate for the client or deal, for example `tools/acme-deal-readiness-report.json`.
 3. Replace every placeholder value with the customer-facing Deal Readiness Report content.
-4. Run:
+4. Validate the JSON:
+
+```bash
+node tools/validate_deal_readiness_json.js tools/acme-deal-readiness-report.json
+```
+
+5. Run:
 
 ```bash
 node tools/render_deal_readiness_report.js tools/acme-deal-readiness-report.json
