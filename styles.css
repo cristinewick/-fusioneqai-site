@@ -14035,3 +14035,48 @@ body.page-how-it-works > main#top.how-page {
     line-height: 1.38;
   }
 }
+
+@media (max-width: 760px) {
+  body.page-contact {
+    overflow-x: hidden;
+  }
+
+  .page-contact .contact-page .slide,
+  .page-contact .contact-hero {
+    width: min(100%, calc(100% - 48px));
+    max-width: calc(100% - 48px);
+  }
+
+  .page-contact .contact-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .page-contact .contact-hero > div,
+  .page-contact .contact-hero > .founder-note,
+  .page-contact .contact-hero > .lead-form {
+    grid-column: auto;
+    grid-row: auto;
+    min-width: 0;
+  }
+
+  .page-contact .contact-hero h1 {
+    max-width: 100%;
+    font-size: 1.86rem;
+    overflow-wrap: break-word;
+  }
+
+  .page-contact .contact-hero .subline,
+  .page-contact .contact-hero .hero-close,
+  .page-contact .contact-hero .founder-note,
+  .page-contact .contact-hero .pricing-note {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .page-contact .lead-form {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+  }
+}
