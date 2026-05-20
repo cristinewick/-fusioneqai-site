@@ -51,7 +51,7 @@
           Start with the live deal, presentation, forecast question, or pipeline pattern you want translated into a FusionEQ Deal Readiness Report. FusionEQ works from the information the sales professional or team shares.
         </p>
         <p class="hero-close">
-          Primary contact: <a href="mailto:fusioneqai@gmail.com">Contact FusionEQ</a>
+          Primary contact: fusioneqai@gmail.com
         </p>
         <p class="founder-note">
           When deals stall, presentations miss the mark, or decisions drift, FusionEQ helps identify what has been evidenced, what remains unproven, and what to test next.
@@ -61,7 +61,8 @@
         </p>
       </div>
 
-      <form class="lead-form" action="mailto:fusioneqai@gmail.com" method="post" enctype="text/plain">
+      <form class="lead-form" name="deal-readiness-request" method="POST" data-netlify="true" action="/thank-you">
+        <input type="hidden" name="form-name" value="deal-readiness-request">
         <label>
           <span>Name</span>
           <input type="text" name="name" autocomplete="name" required>
