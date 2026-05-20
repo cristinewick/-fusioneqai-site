@@ -1830,7 +1830,7 @@
 }
 
 .page-post-entry-concept .post-entry-home {
-  padding-top: clamp(160px, 15vh, 200px);
+  padding-top: clamp(112px, 11vh, 152px);
 }
 
 .post-entry-home .slide {
@@ -1848,7 +1848,7 @@
   gap: clamp(22px, 3vw, 34px) clamp(38px, 5.4vw, 76px);
   align-items: center;
   min-height: 76svh;
-  padding-top: clamp(92px, 10vh, 132px) !important;
+  padding-top: clamp(56px, 7vh, 92px) !important;
 }
 
 .post-entry-hero > .context,
@@ -13450,7 +13450,7 @@ body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-
 
 body.page-home-v2.page-post-entry-concept > main#top.post-entry-home,
 body.page-home-v2.page-concept-patterns > main#top.concept-patterns-page {
-  padding-top: clamp(148px, 15vh, 196px) !important;
+  padding-top: clamp(104px, 11vh, 144px) !important;
 }
 
 body.page-how-it-works > main#top.how-page {
