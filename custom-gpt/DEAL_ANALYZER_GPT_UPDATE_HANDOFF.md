@@ -25,10 +25,10 @@ node tools/render_deal_readiness_report.js tools/<client-report>.json
 ## GPT Builder Update
 
 1. Open the FusionEQ Deal Analyzer GPT in the GPT Builder.
-2. Replace the instruction box with:
+2. Replace the instruction box with the ultra-compact instruction file:
 
 ```text
-custom-gpt/FusionEQ_Deal_Analyzer_Custom_GPT_Instructions.txt
+custom-gpt/FusionEQ_Deal_Analyzer_Instructions_ULTRA_COMPACT_FOR_GPT_BOX.txt
 ```
 
 3. Replace or upload the knowledge file:

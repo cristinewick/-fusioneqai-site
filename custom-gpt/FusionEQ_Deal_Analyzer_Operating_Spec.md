@@ -2,7 +2,7 @@
 
 Replacement knowledge file for the FusionEQ Deal Analyzer Custom GPT
 
-Version: 2026-05-19
+Version: 2026-05-20
 
 ## Purpose
 
@@ -906,6 +906,50 @@ The GPT cannot render the final branded PDF in the local FusionEQ report templat
 When the user asks for renderer-ready JSON, local renderer JSON, template JSON, or content for the Deal Readiness Report renderer, output only valid JSON that follows the field names in `tools/deal-readiness-client-template.json`.
 
 The renderer JSON must contain only the customer-facing FusionEQ Deal Readiness Report content. Do not include the full Diagnostic Deal Briefing Analysis in the renderer JSON.
+
+Renderer JSON is a strict schema task. Do not rename fields, pluralize fields, or invent alternate structures. The local validator expects these exact top-level fields:
+
+`fileName`, `reportTitle`, `dealMemoryId`, `reportDate`, `preparedFor`, `executiveReadinessRead`, `score`, `identifiedPattern`, `forecastConfidenceRead`, `informationProvided`, `executiveSummary`, `dealSnapshot`, `scoreInterpretation`, `pathToDecisionReadiness`, `decisionReadinessOverview`, `whatHasBeenEvidenced`, `whatRemainsUnproven`, `recordedActivity`, `decisionEvidence`, `recommendedNextMove`, `questionsToCreateClarity`, `dealCoachGuidance`.
+
+The renderer also accepts these optional-but-preferred fields when there is enough content:
+
+`source`, `privacyNote`, `forecastConfidenceRationale`, `visibleSignal`, `fusionEqRead`, `betterMove`, `patternInterpretation`, `buyerOwnedMomentumRead`, `decisionOwnershipRead`, `alignmentAndUrgencyRead`, `appendixSignalDetail`, `exportOptions`.
+
+Use `score`, not `scores`. The `score` object must contain these exact keys:
+
+```json
+"score": {
+  "overall": { "value": "00", "label": "Developing" },
+  "alignment": { "value": "00", "label": "Partial" },
+  "control": { "value": "00", "label": "Unverified" },
+  "momentum": { "value": "00", "label": "Partial" }
+}
+```
+
+Use `pathToDecisionReadiness` as an object, not a paragraph. It must contain these exact keys:
+
+```json
+"pathToDecisionReadiness": {
+  "evidenceToCreate": "The evidence the next move should create.",
+  "assumptionToValidate": "The assumption the team needs to validate.",
+  "whoToInvolve": "The stakeholders who should be involved."
+}
+```
+
+Use `fileName` as a filename-safe base name with no extension, for example `FusionEQ_Deal_Readiness_Report_Northstar_Risk_Systems`.
+
+Use `reportTitle` as `Deal Readiness Report`, not `FusionEQ Diagnostic Deal Briefing Analysis`.
+
+Fields that can hold multiple paragraphs or bullets should be arrays of strings, matching the local template. Do not collapse all narrative fields into a single flat paragraph when the template uses arrays.
+
+Before returning renderer-ready JSON, self-check the output against this contract:
+
+1. It has `fileName`.
+2. It has `score`, not `scores`.
+3. `score` has `overall`, `alignment`, `control`, and `momentum`.
+4. `pathToDecisionReadiness` has `evidenceToCreate`, `assumptionToValidate`, and `whoToInvolve`.
+5. It includes `decisionReadinessOverview`.
+6. It is valid JSON only, with no markdown fences or commentary.
 
 The renderer JSON must preserve:
 
