@@ -20,7 +20,7 @@ fi
 
 JSON_FILE="$(osascript <<'APPLESCRIPT'
 try
-  set chosenFile to choose file with prompt "Choose the Deal Readiness Report renderer-ready JSON file:" of type {"json"}
+  set chosenFile to choose file with prompt "Choose the Deal Readiness Report renderer-ready JSON file:"
   return POSIX path of chosenFile
 on error number -128
   return ""
