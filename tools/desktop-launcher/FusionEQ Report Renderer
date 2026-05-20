@@ -1,0 +1,58 @@
+#!/bin/bash
+set -u
+
+PROJECT_DIR="/Users/cristinewick/Documents/-fusioneqai-site"
+NODE="/opt/homebrew/bin/node"
+
+if [ ! -x "$NODE" ]; then
+  NODE="$(command -v node || true)"
+fi
+
+if [ -z "$NODE" ] || [ ! -x "$NODE" ]; then
+  osascript -e 'display dialog "Node.js was not found. Open Codex and ask it to run the renderer for you." buttons {"OK"} default button "OK" with icon caution'
+  exit 1
+fi
+
+JSON_FILE="$(osascript <<'APPLESCRIPT'
+try
+  set chosenFile to choose file with prompt "Choose the Deal Readiness Report renderer-ready JSON file:" of type {"json"}
+  return POSIX path of chosenFile
+on error number -128
+  return ""
+end try
+APPLESCRIPT
+)"
+
+if [ -z "$JSON_FILE" ]; then
+  exit 0
+fi
+
+LOG_FILE="$(mktemp /tmp/fusioneq-renderer-log.XXXXXX)"
+
+cd "$PROJECT_DIR" || exit 1
+
+{
+  echo "Validating JSON..."
+  "$NODE" tools/validate_deal_readiness_json.js "$JSON_FILE"
+  echo
+  echo "Rendering report..."
+  "$NODE" tools/render_deal_readiness_report.js "$JSON_FILE"
+} >"$LOG_FILE" 2>&1
+
+STATUS=$?
+
+if [ "$STATUS" -ne 0 ]; then
+  osascript -e 'display dialog "The report did not render. Ask Codex to check the renderer log." buttons {"OK"} default button "OK" with icon caution' \
+    -e "do shell script \"open -a TextEdit '$LOG_FILE'\""
+  exit "$STATUS"
+fi
+
+PDF_PATH="$("$NODE" -e 'const fs=require("fs"); const path=require("path"); const file=process.argv[1]; const data=JSON.parse(fs.readFileSync(file,"utf8")); const base=data.fileName || path.basename(file, path.extname(file)); process.stdout.write(path.resolve("outputs/client-reports", `${base}.pdf`));' "$JSON_FILE")"
+
+if [ -f "$PDF_PATH" ]; then
+  open "$PDF_PATH"
+  osascript -e 'display dialog "Deal Readiness Report rendered and opened." buttons {"OK"} default button "OK" with icon note'
+else
+  osascript -e 'display dialog "Renderer finished, but the PDF was not found. Ask Codex to check outputs/client-reports." buttons {"OK"} default button "OK" with icon caution' \
+    -e "do shell script \"open -a TextEdit '$LOG_FILE'\""
+fi
