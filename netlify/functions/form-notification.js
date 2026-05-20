@@ -1,5 +1,4 @@
 const DEFAULT_TO = 'fusioneqai@gmail.com';
-const BACKUP_TO = 'cristineannwick@gmail.com';
 
 function escapeHtml(value) {
   return String(value || '')
@@ -74,7 +73,7 @@ exports.handler = async (event) => {
   const { subject, html, text } = buildEmail(payload);
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromAddress = process.env.FUSIONEQ_FORM_FROM || 'FusionEQ Website <onboarding@resend.dev>';
-  const recipients = (process.env.FUSIONEQ_FORM_TO || `${DEFAULT_TO},${BACKUP_TO}`)
+  const recipients = (process.env.FUSIONEQ_FORM_TO || DEFAULT_TO)
     .split(',')
     .map((email) => email.trim())
     .filter(Boolean);
