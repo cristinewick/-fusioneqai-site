@@ -8,19 +8,13 @@ The GPT can:
 
 - Produce the Diagnostic Deal Briefing Analysis.
 - Produce the customer-facing FusionEQ Deal Readiness Report.
-- Convert the Deal Readiness Report into renderer-ready JSON.
 
 The GPT cannot:
 
-- Render the final branded PDF in the local FusionEQ template.
-- Run the laptop renderer.
+- Render the final branded PDF from the local FusionEQ template by itself.
 - Save local client PDF files automatically.
 
-The branded PDF is created manually on the laptop with:
-
-```bash
-node tools/render_deal_readiness_report.js tools/<client-report>.json
-```
+If a branded PDF is needed, bring the GPT's report content back to Codex and ask Codex to render it.
 
 ## GPT Builder Update
 
@@ -44,23 +38,14 @@ custom-gpt/FusionEQ_Deal_Analyzer_Operating_Spec.md
 After the GPT is updated, test it with:
 
 ```text
-Convert only the FusionEQ Deal Readiness Report into renderer-ready JSON.
-Do not include the Diagnostic Deal Briefing Analysis.
-Use the exact field names from tools/deal-readiness-client-template.json.
-Output only valid JSON. Do not include markdown fences or commentary.
+Analyze this deal and produce the full default FusionEQ output:
+1. FusionEQ Diagnostic Deal Briefing Analysis
+2. FusionEQ Deal Readiness Report
+
+Do not merge the diagnostic and the Deal Readiness Report.
 ```
 
-## Local Render Test
+## Render Handoff
 
-Save the GPT output as a file in `tools/`, then run:
-
-```bash
-node tools/render_deal_readiness_report.js tools/<client-report>.json
-```
-
-Expected output:
-
-- `outputs/client-reports/<client-report>.html`
-- `outputs/client-reports/<client-report>.pdf`
-
+Paste the GPT's Deal Readiness Report output into Codex and ask Codex to render it into the branded PDF.
 Review the PDF before sending it to a client.
