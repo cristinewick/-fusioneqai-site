@@ -1,0 +1,108 @@
+{
+  "fileName": "FusionEQ_Deal_Readiness_Report_Client_Name",
+  "reportTitle": "Deal Readiness Report",
+  "dealMemoryId": "CLIENT-INITIALS-001",
+  "reportDate": "May 20, 2026",
+  "preparedFor": "Client Name",
+  "source": "Diagnostic Deal Briefing Analysis generated from information provided by the deal team.",
+  "privacyNote": "Uses only details approved for inclusion in the customer-facing report.",
+  "executiveReadinessRead": [
+    "Replace this with the executive readiness read from the Deal Readiness Report.",
+    "Keep this customer-facing, polished, and focused on what has been evidenced, what remains unproven, and what next move creates decision clarity."
+  ],
+  "score": {
+    "overall": { "value": "00", "label": "Replace" },
+    "alignment": { "value": "00", "label": "Replace" },
+    "control": { "value": "00", "label": "Replace" },
+    "momentum": { "value": "00", "label": "Replace" }
+  },
+  "identifiedPattern": "Replace with identified FusionEQ pattern",
+  "forecastConfidenceRead": "Replace with forecast confidence read",
+  "forecastConfidenceRationale": "Replace with the rationale for the forecast confidence read.",
+  "visibleSignal": "Replace with the visible signal from the deal context.",
+  "fusionEqRead": "Replace with the FusionEQ interpretation.",
+  "betterMove": "Replace with the better move.",
+  "informationProvided": [
+    "Replace with a short summary of what information was provided.",
+    "Replace with any important limits on the source material."
+  ],
+  "executiveSummary": [
+    "Replace with the first executive summary paragraph.",
+    "Replace with the second executive summary paragraph.",
+    "Replace with the third executive summary paragraph."
+  ],
+  "dealSnapshot": {
+    "Opportunity Type": "Replace",
+    "Current Stage": "Replace",
+    "Current Next Step": "Replace",
+    "Decision Owner": "Replace",
+    "Approval Path": "Replace",
+    "Buyer-Owned Movement": "Replace"
+  },
+  "scoreInterpretation": [
+    "Replace with Alignment interpretation.",
+    "Replace with Control interpretation.",
+    "Replace with Momentum interpretation."
+  ],
+  "pathToDecisionReadiness": {
+    "evidenceToCreate": "Replace with the evidence the next move should create.",
+    "assumptionToValidate": "Replace with the assumption the team needs to validate.",
+    "whoToInvolve": "Replace with the stakeholders who should be involved."
+  },
+  "decisionReadinessOverview": [
+    "Replace with decision readiness overview paragraph.",
+    "Replace with second overview paragraph if needed."
+  ],
+  "whatHasBeenEvidenced": [
+    "Replace with evidenced signal 1",
+    "Replace with evidenced signal 2",
+    "Replace with evidenced signal 3"
+  ],
+  "whatRemainsUnproven": [
+    "Replace with unproven item 1",
+    "Replace with unproven item 2",
+    "Replace with unproven item 3"
+  ],
+  "recordedActivity": [
+    "Replace with recorded activity 1",
+    "Replace with recorded activity 2",
+    "Replace with recorded activity 3"
+  ],
+  "decisionEvidence": [
+    "Replace with decision evidence 1",
+    "Replace with decision evidence 2",
+    "Replace with decision evidence 3"
+  ],
+  "patternInterpretation": "Replace with why this pattern matters.",
+  "buyerOwnedMomentumRead": [
+    "Replace with buyer-owned momentum read."
+  ],
+  "decisionOwnershipRead": [
+    "Replace with decision ownership read."
+  ],
+  "alignmentAndUrgencyRead": [
+    "Replace with alignment and urgency read."
+  ],
+  "recommendedNextMove": [
+    "Replace with the primary recommended next move.",
+    "Replace with how to run that move."
+  ],
+  "questionsToCreateClarity": [
+    "Replace with question 1",
+    "Replace with question 2",
+    "Replace with question 3",
+    "Replace with question 4",
+    "Replace with question 5"
+  ],
+  "dealCoachGuidance": [
+    "Replace with Deal Coach guidance."
+  ],
+  "appendixSignalDetail": [
+    "Replace with appendix or signal detail."
+  ],
+  "exportOptions": [
+    "Customer-facing PDF",
+    "HTML preview",
+    "Internal review copy"
+  ]
+}

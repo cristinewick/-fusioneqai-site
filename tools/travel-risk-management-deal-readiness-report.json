@@ -1,0 +1,135 @@
+{
+  "fileName": "FusionEQ_Deal_Readiness_Report_Travel_Risk_Management",
+  "reportTitle": "Deal Readiness Report",
+  "dealMemoryId": "Travel Risk Management / Test / 001",
+  "reportDate": "May 20, 2026",
+  "preparedFor": "Travel Risk Management",
+  "source": "Opportunity summary, stakeholder activity, pricing strategy, timeline updates, and engagement history provided by the deal team.",
+  "privacyNote": "Uses only details approved for inclusion in the customer-facing report.",
+  "executiveReadinessRead": [
+    "The opportunity remains credible and commercially important, but readiness is moderate because the decision structure, procurement weighting, and final ownership are not yet sufficiently evidenced.",
+    "The deal shows meaningful engagement from security stakeholders and a strong solution-fit narrative around integrated travel risk management capabilities, but the current evidence supports a developing readiness state rather than a fully controlled late-stage opportunity."
+  ],
+  "score": {
+    "overall": { "value": "51", "label": "Developing" },
+    "alignment": { "value": "63", "label": "Partial" },
+    "control": { "value": "38", "label": "Unverified" },
+    "momentum": { "value": "52", "label": "Partial" }
+  },
+  "identifiedPattern": "Decision Ownership Gap",
+  "forecastConfidenceRead": "Conditional",
+  "forecastConfidenceRationale": "Forecast confidence should remain conditional until the final decision owner, evaluation weighting, procurement influence, internal recommendation structure, and approval sequencing are validated.",
+  "visibleSignal": "RFP submitted, presentation delivered, demo conducted, security stakeholders engaged, procurement involved, pricing revised, and MSA sent to legal.",
+  "fusionEqRead": "The opportunity is active and credible, but buyer-owned decision movement is not yet sufficiently evidenced.",
+  "betterMove": "Conduct a decision-structure clarification motion with procurement leadership and security leadership.",
+  "informationProvided": [
+    "The information provided included an opportunity summary, RFP activity history, pricing strategy notes, stakeholder engagement updates, meeting history, procurement activity, and internal strategy commentary.",
+    "The source material described a competitive RFP involving an incumbent platform position, an EOL-driven modernization need, stakeholder engagement across security and procurement, pricing refinements, repeated timeline updates, and ongoing clarification around platform and global support capabilities.",
+    "No direct buyer interviews, procurement artifacts, evaluation scorecards, approval-path documentation, or validated decision criteria beyond the provided information were included."
+  ],
+  "executiveSummary": [
+    "The opportunity remains strategically credible and commercially important, with meaningful engagement from security stakeholders and a strong solution-fit narrative around integrated travel risk management capabilities.",
+    "The current level of deal readiness remains moderate rather than fully mature. The available signals show active evaluation activity, positive stakeholder engagement, and operational interest in the proposed solution. At the same time, the decision structure itself remains only partially evidenced.",
+    "Final decision ownership, procurement influence, internal recommendation dynamics, and approval sequencing are not yet fully validated. The opportunity appears viable, but the current evidence supports a developing readiness state rather than a fully controlled late-stage opportunity."
+  ],
+  "dealSnapshot": {
+    "Opportunity Type": "Travel Risk Management / Platform Modernization",
+    "Commercial Motion": "Competitive RFP with incumbent upgrade positioning",
+    "Estimated Revenue Impact": "Approx. $391K annual recurring revenue",
+    "Competitive Context": "Formal evaluation process involving multiple vendors including ISOS",
+    "Current Stage": "Active RFP evaluation with repeated timeline movement",
+    "Current Next Step": "Decision-structure clarification with procurement and security leadership",
+    "Decision Owner": "Not yet verified",
+    "Approval Path": "Not yet sufficiently evidenced"
+  },
+  "scoreInterpretation": [
+    "Alignment is partial because portions of the security organization appear to see value in the unified platform approach, but broader buying-group convergence across procurement, operational stakeholders, executive authority, and commercial approval groups remains incomplete.",
+    "Control is unverified because the process is governed by a formal RFP, procurement is structurally influential, and the final accountable decision owner has not been verified.",
+    "Momentum is partial because the opportunity continues moving operationally through meetings, pricing updates, and clarification exchanges, but much of the movement appears process-driven rather than buyer-owned decision advancement."
+  ],
+  "pathToDecisionReadiness": {
+    "evidenceToCreate": "Create proof of decision ownership, selection weighting, internal recommendation structure, and buyer-owned selection timing.",
+    "assumptionToValidate": "Strong security engagement and incumbent positioning will materially influence the final award outcome.",
+    "whoToInvolve": "Procurement leadership, security leadership, executive sponsor, and the stakeholder who can explain final approval mechanics."
+  },
+  "decisionReadinessOverview": [
+    "The deal is active, but not yet fully decision-ready. The evidence supports continued pursuit, but not high forecast confidence.",
+    "The key readiness constraint is not product fit or stakeholder interest. It is whether the team can prove how the buyer will actually select, approve, and move toward award."
+  ],
+  "whatHasBeenEvidenced": [
+    "Stakeholder participation across security and procurement functions",
+    "Operational interest in integrated traveler safety capabilities",
+    "Continued buyer engagement throughout the RFP process",
+    "Buyer willingness to refine pricing assumptions collaboratively",
+    "Recognition that the current platform environment requires modernization",
+    "Positive engagement during executive and event-based discussions",
+    "Buyer focus on global support capability and response quality"
+  ],
+  "whatRemainsUnproven": [
+    "Final accountable decision owner",
+    "Internal recommendation structure",
+    "Procurement influence weighting",
+    "Executive approval mechanics",
+    "Degree of stakeholder alignment across the broader buying group",
+    "Competitive standing versus ISOS",
+    "Buyer-owned urgency beyond operational acknowledgement",
+    "Whether internal selection momentum is increasing toward award"
+  ],
+  "recordedActivity": [
+    "RFP submitted",
+    "Presentation delivered",
+    "Demo conducted",
+    "Pricing revised multiple times",
+    "Security stakeholders engaged",
+    "Procurement involved",
+    "MSA sent to legal",
+    "Timeline updates requested repeatedly"
+  ],
+  "decisionEvidence": [
+    "Buyer confirmed EOL pressure around the current platform",
+    "Security stakeholders invested significant meeting time",
+    "Buyer clarified traveler counts for pricing accuracy",
+    "Buyer requested price-per-traveler detail",
+    "Stakeholders engaged deeply around functionality and operational fit",
+    "Buyer concerns surfaced specifically around global reach capabilities"
+  ],
+  "patternInterpretation": "This pattern matters because the opportunity can look active and strategically credible while final decision ownership, selection weighting, and approval mechanics remain unclear.",
+  "buyerOwnedMomentumRead": [
+    "Buyer engagement is active, but buyer-owned momentum remains only partially evidenced. Most progression currently appears connected to ongoing process activity, clarification exchanges, and coordinated interactions rather than visible internal buyer advancement toward final selection.",
+    "The opportunity is moving, but not yet with decisively evidenced internal acceleration. The RFP creates real activity, but activity alone does not prove that the buying organization has converged around a preferred decision."
+  ],
+  "decisionOwnershipRead": [
+    "Decision ownership remains insufficiently validated. Multiple stakeholders are involved, but the information provided does not yet confirm who owns final vendor selection, how procurement authority interacts with operational leadership, or how final approval sequencing occurs.",
+    "This materially constrains confidence in the current forecast posture because a competitive RFP can maintain visible activity while leaving final authority and influence weighting opaque."
+  ],
+  "alignmentAndUrgencyRead": [
+    "There is evidence of operational alignment around traveler safety modernization and integrated platform value. Security engagement, EOL pressure, and platform-fit conversations all support the commercial relevance of the opportunity.",
+    "However, broader buying-group alignment remains only partially validated. Procurement dynamics, executive weighting, and competitive evaluation criteria may still materially influence the outcome. Urgency exists operationally due to platform lifecycle pressure, though buyer-owned urgency has not yet clearly translated into accelerated selection behavior."
+  ],
+  "recommendedNextMove": [
+    "Conduct a decision-structure clarification motion with both procurement leadership and security leadership.",
+    "The conversation should focus on award mechanics, evaluation weighting, approval ownership, unresolved capability concerns, and final selection sequencing.",
+    "The objective is to validate how the organization will actually decide, not simply continue product evaluation discussions."
+  ],
+  "questionsToCreateClarity": [
+    "Who ultimately owns the vendor selection decision?",
+    "What weighting does procurement carry versus operational leadership?",
+    "Has the organization internally narrowed toward a preferred provider?",
+    "What unresolved concerns could still alter the outcome?",
+    "What event or condition would accelerate final selection timing?",
+    "What internal business consequence exists if migration timing slips further?"
+  ],
+  "dealCoachGuidance": [
+    "Use FusionEQ Coach next to develop the conversation strategy, buyer-facing language, and follow-up plan for this move.",
+    "Recommended coaching focus: executive alignment strategy, procurement-navigation planning, decision-ownership validation, and forecast calibration discipline."
+  ],
+  "appendixSignalDetail": [
+    "The opportunity history reflects sustained engagement over several months including RFI and RFP progression, proposal revisions, pricing refinement, executive stakeholder meetings, event-based engagement, procurement coordination, and capability clarification activity.",
+    "The evidence currently supports continued active evaluation, though not yet fully evidenced internal decision convergence."
+  ],
+  "exportOptions": [
+    "Customer-facing PDF",
+    "HTML preview",
+    "Internal review copy"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "fileName": "FusionEQ_Deal_Readiness_Report_Sample_Client",
+  "reportTitle": "Deal Readiness Report",
+  "dealMemoryId": "SAMPLE-CLIENT-001",
+  "reportDate": "May 20, 2026",
+  "preparedFor": "Sample Client",
+  "source": "Diagnostic Deal Briefing Analysis generated from information provided by the deal team.",
+  "privacyNote": "Uses only details approved for inclusion in the customer-facing report.",
+  "executiveReadinessRead": [
+    "This deal shows credible engagement, but decision readiness remains developing because the available evidence does not yet prove final decision ownership, approval sequencing, or buyer-owned urgency.",
+    "The opportunity should not be treated as stalled, but forecast confidence should remain conditional until the team validates who owns the decision and what internal step converts interest into commitment."
+  ],
+  "score": {
+    "overall": { "value": "51", "label": "Developing" },
+    "alignment": { "value": "63", "label": "Partial" },
+    "control": { "value": "38", "label": "Unverified" },
+    "momentum": { "value": "52", "label": "Partial" }
+  },
+  "identifiedPattern": "Decision Ownership Gap",
+  "forecastConfidenceRead": "Conditional",
+  "forecastConfidenceRationale": "The deal has meaningful engagement, but the forecast should remain conditional until decision authority, approval path, and buyer-owned next steps are evidenced.",
+  "visibleSignal": "Multiple meetings, positive stakeholder engagement, and continued evaluation activity.",
+  "fusionEqRead": "Activity is real, but it has not yet become decision evidence.",
+  "betterMove": "Run a decision-structure clarification conversation before expanding the evaluation further.",
+  "informationProvided": [
+    "The information provided included meeting activity, stakeholder notes, evaluation history, pricing discussion, next-step commentary, and the deal team's current belief about close likelihood.",
+    "No confirmed approval-path documentation, final decision owner confirmation, or procurement weighting details were included."
+  ],
+  "executiveSummary": [
+    "The opportunity remains viable and commercially relevant, with enough engagement to justify continued focus.",
+    "The current readiness state is not yet strong enough to support high confidence because decision ownership and approval mechanics remain unclear.",
+    "The next move should create evidence about how the buyer will actually decide, not simply produce another product or commercial discussion."
+  ],
+  "dealSnapshot": {
+    "Opportunity Type": "Sample enterprise opportunity",
+    "Current Stage": "Active evaluation",
+    "Current Next Step": "Decision-structure clarification",
+    "Decision Owner": "Not yet verified",
+    "Approval Path": "Not yet evidenced",
+    "Buyer-Owned Movement": "Partially evidenced"
+  },
+  "scoreInterpretation": [
+    "Alignment is partial because stakeholders appear engaged, but the business consequence and approval group alignment are not fully proven.",
+    "Control is unverified because the team does not yet have confirmed decision ownership, procurement influence, or final approval sequencing.",
+    "Momentum is partial because the buyer continues to engage, but buyer-owned internal movement has not yet been clearly evidenced."
+  ],
+  "pathToDecisionReadiness": {
+    "evidenceToCreate": "Proof of final decision ownership, approval sequence, evaluation weighting, and buyer-owned timing.",
+    "assumptionToValidate": "Engagement from the current stakeholders will translate into internal decision movement.",
+    "whoToInvolve": "Champion, decision owner, procurement or finance contact, and the stakeholder who can explain final approval mechanics."
+  },
+  "decisionReadinessOverview": [
+    "The deal is active, but not yet decision-ready. FusionEQ reads the current state as a gap between visible evaluation activity and proven buying structure.",
+    "The team should protect time by validating decision mechanics before adding more product depth."
+  ],
+  "whatHasBeenEvidenced": [
+    "Sustained stakeholder engagement",
+    "Relevant product or solution interest",
+    "Continued evaluation activity",
+    "A credible business problem",
+    "Champion accessibility"
+  ],
+  "whatRemainsUnproven": [
+    "Final accountable decision owner",
+    "Approval sequence",
+    "Procurement or finance influence",
+    "Decision criteria",
+    "Buyer-owned urgency",
+    "Internal recommendation path"
+  ],
+  "recordedActivity": [
+    "Multiple meetings occurred",
+    "Stakeholders responded positively",
+    "The team discussed solution fit",
+    "Follow-up questions continued"
+  ],
+  "decisionEvidence": [
+    "Stakeholder interest is evidenced",
+    "Problem relevance is partially evidenced",
+    "Decision ownership is not evidenced",
+    "Approval path is not evidenced"
+  ],
+  "patternInterpretation": "This pattern matters because a deal can remain visibly active while the actual decision structure remains unowned or unclear.",
+  "buyerOwnedMomentumRead": [
+    "Buyer-owned momentum is only partially evidenced. The buyer is participating, but the buyer has not yet clearly advanced the internal decision path.",
+    "The team should look for buyer actions that move the decision forward, not only for continued engagement."
+  ],
+  "decisionOwnershipRead": [
+    "Decision ownership is the primary constraint. The current evidence does not yet prove who can approve, who can block, or how final selection will be made."
+  ],
+  "alignmentAndUrgencyRead": [
+    "Alignment appears plausible, but not yet proven across the full buying group.",
+    "Urgency should be treated as unverified until the buyer ties timing to an internal business consequence."
+  ],
+  "recommendedNextMove": [
+    "Run a decision-structure clarification conversation with the champion and the stakeholder closest to final approval.",
+    "The purpose of the conversation is to confirm who owns the decision, how the organization will approve it, what criteria matter most, and what buyer-owned action will happen next."
+  ],
+  "questionsToCreateClarity": [
+    "Who ultimately owns the decision?",
+    "What approval steps remain?",
+    "What criteria will decide the outcome?",
+    "Who can block the decision?",
+    "What buyer-owned action will happen next?"
+  ],
+  "dealCoachGuidance": [
+    "Use FusionEQ Coach to prepare the decision-structure clarification conversation.",
+    "Recommended coaching focus: stakeholder language, question sequencing, forecast calibration, and next-step negotiation."
+  ],
+  "appendixSignalDetail": [
+    "This sample exists to show the renderer input shape. Replace all sample fields with the real customer-facing report content before rendering a client PDF."
+  ],
+  "exportOptions": [
+    "Customer-facing PDF",
+    "HTML preview",
+    "Internal review copy"
+  ]
+}
