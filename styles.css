@@ -3999,6 +3999,10 @@ p {
   line-height: 1.48;
 }
 
+.page-thank-you .action p {
+  color: var(--muted);
+}
+
 .module-objective {
   gap: 18px;
 }
