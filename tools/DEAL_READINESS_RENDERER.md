@@ -52,11 +52,13 @@ Do not include the Diagnostic Deal Briefing Analysis.
 Use the same field names as tools/deal-readiness-client-template.json.
 ```
 
-Fastest path:
+Codex clipboard path:
 
 1. Copy the renderer-ready JSON from ChatGPT / Deal Analyzer.
-2. Double-click **FusionEQ Render From Clipboard** on the Desktop.
-3. The app cleans the clipboard JSON, saves a copy under `inputs/client-reports`, validates it, renders the report, and opens the PDF.
+2. Open Codex and say: `render my clipboard`.
+3. Codex cleans the clipboard JSON, saves a copy under `inputs/client-reports`, validates it, renders the report, and opens the PDF.
+
+Note: macOS may block small Desktop launcher apps from reading copied GPT text. Codex can read it reliably in this workspace.
 
 File-picker path:
 
