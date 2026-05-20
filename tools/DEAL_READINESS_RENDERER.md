@@ -7,7 +7,9 @@ The Deal Analyzer / ChatGPT should create the report content from a **Diagnostic
 ## Files
 
 - `tools/render_deal_readiness_report.js` - local renderer
+- `tools/clean_deal_readiness_json.js` - cleans copied GPT JSON and saves a renderer-ready input file
 - `tools/deal-readiness-sample.json` - sample input file to duplicate for a client
+- `inputs/client-reports/` - cleaned renderer-ready JSON inputs
 - `outputs/client-reports/` - generated HTML and PDF reports
 
 `outputs/` is ignored by git, so generated client reports stay local.
@@ -50,7 +52,17 @@ Do not include the Diagnostic Deal Briefing Analysis.
 Use the same field names as tools/deal-readiness-client-template.json.
 ```
 
-Then paste that JSON into your duplicated client file and run the renderer command.
+Fastest path:
+
+1. Copy the renderer-ready JSON from ChatGPT / Deal Analyzer.
+2. Double-click **FusionEQ Render From Clipboard** on the Desktop.
+3. The app cleans the clipboard JSON, saves a copy under `inputs/client-reports`, validates it, renders the report, and opens the PDF.
+
+File-picker path:
+
+1. Save the GPT output as a `.json` or `.txt` file.
+2. Double-click **FusionEQ Report Renderer** on the Desktop.
+3. Choose the saved file. The app cleans common copy/paste issues such as smart quotes before validating and rendering.
 
 ## Chrome Requirement
 

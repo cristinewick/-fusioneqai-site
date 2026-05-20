@@ -3,6 +3,8 @@
 # Local archive and generated deployment bundles
 _archive/
 outputs/
+inputs/client-reports/*
+!inputs/client-reports/.gitkeep
 *.zip
 
 # Book/manuscript working files kept outside the deployable website

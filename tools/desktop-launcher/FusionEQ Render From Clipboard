@@ -2,6 +2,7 @@
 set -u
 
 PROJECT_DIR="/Users/cristinewick/Documents/-fusioneqai-site"
+TOOLS_DIR="$PROJECT_DIR/tools"
 NODE="/Applications/Codex.app/Contents/Resources/node"
 
 if [ ! -x "$NODE" ]; then
@@ -18,41 +19,35 @@ if [ -z "$NODE" ] || [ ! -x "$NODE" ]; then
   exit 1
 fi
 
-JSON_FILE="$(osascript <<'APPLESCRIPT'
-try
-  set chosenFile to choose file with prompt "Choose the Deal Readiness Report renderer-ready JSON file:"
-  return POSIX path of chosenFile
-on error number -128
-  return ""
-end try
-APPLESCRIPT
-)"
+LOG_FILE="$(mktemp /tmp/fusioneq-clipboard-renderer-log.XXXXXX)"
+CLIPBOARD_FILE="$(mktemp /tmp/fusioneq-clipboard-json.XXXXXX.txt)"
 
-if [ -z "$JSON_FILE" ]; then
-  exit 0
+/usr/bin/pbpaste >"$CLIPBOARD_FILE"
+
+if [ ! -s "$CLIPBOARD_FILE" ]; then
+  osascript -e 'display dialog "Your clipboard is empty. Copy the GPT renderer-ready JSON first, then double-click this app again." buttons {"OK"} default button "OK" with icon caution'
+  exit 1
 fi
 
-LOG_FILE="$(mktemp /tmp/fusioneq-renderer-log.XXXXXX)"
-
-cd "$PROJECT_DIR" || exit 1
+cd /tmp || exit 1
 
 {
-  echo "Cleaning selected file..."
-  JSON_FILE="$("$NODE" tools/clean_deal_readiness_json.js "$JSON_FILE")"
+  echo "Cleaning clipboard JSON..."
+  JSON_FILE="$("$NODE" "$TOOLS_DIR/clean_deal_readiness_json.js" "$CLIPBOARD_FILE")"
   echo "Saved cleaned JSON:"
   echo "$JSON_FILE"
   echo
   echo "Validating JSON..."
-  "$NODE" tools/validate_deal_readiness_json.js "$JSON_FILE"
+  "$NODE" "$TOOLS_DIR/validate_deal_readiness_json.js" "$JSON_FILE"
   echo
   echo "Rendering report..."
-  "$NODE" tools/render_deal_readiness_report.js "$JSON_FILE"
+  "$NODE" "$TOOLS_DIR/render_deal_readiness_report.js" "$JSON_FILE"
 } >"$LOG_FILE" 2>&1
 
 STATUS=$?
 
 if [ "$STATUS" -ne 0 ]; then
-  osascript -e 'display dialog "The report did not render. Ask Codex to check the renderer log." buttons {"OK"} default button "OK" with icon caution' \
+  osascript -e 'display dialog "The clipboard report did not render. Ask Codex to check the renderer log." buttons {"OK"} default button "OK" with icon caution' \
     -e "do shell script \"open -a TextEdit '$LOG_FILE'\""
   exit "$STATUS"
 fi
@@ -61,7 +56,7 @@ PDF_PATH="$("$NODE" -e 'const fs=require("fs"); const path=require("path"); cons
 
 if [ -f "$PDF_PATH" ]; then
   open "$PDF_PATH"
-  osascript -e 'display dialog "Deal Readiness Report rendered and opened." buttons {"OK"} default button "OK" with icon note'
+  osascript -e 'display dialog "Deal Readiness Report rendered from clipboard and opened." buttons {"OK"} default button "OK" with icon note'
 else
   osascript -e 'display dialog "Renderer finished, but the PDF was not found. Ask Codex to check outputs/client-reports." buttons {"OK"} default button "OK" with icon caution' \
     -e "do shell script \"open -a TextEdit '$LOG_FILE'\""
