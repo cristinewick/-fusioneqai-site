@@ -1,0 +1,30 @@
+#!/bin/sh
+
+branch="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+
+while read local_ref local_sha remote_ref remote_sha
+do
+  case "$remote_ref" in
+    refs/heads/main)
+      if [ "$branch" != "main" ] && [ "$ALLOW_NON_MAIN_WEBSITE_PUSH" != "1" ]; then
+        cat >&2 <<EOF
+FusionEQ website branch guard
+
+You are pushing to main from branch: $branch
+
+Live website pushes should be made while checked out on main.
+
+Switch to main and push again:
+  git switch main
+  git push origin main
+
+If this is intentional, rerun with:
+  ALLOW_NON_MAIN_WEBSITE_PUSH=1 git push ...
+EOF
+        exit 1
+      fi
+      ;;
+  esac
+done
+
+exit 0

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+branch="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+
+case "$branch" in
+  main|"")
+    exit 0
+    ;;
+esac
+
+changed_website_files="$(git diff --cached --name-only --diff-filter=ACMR | grep -E '(^|/)([^/]+\.html|styles\.css|[^/]+\.css|[^/]+\.js)$|^assets/' || true)"
+
+if [ -n "$changed_website_files" ] && [ "$ALLOW_NON_MAIN_WEBSITE_COMMIT" != "1" ]; then
+  cat >&2 <<EOF
+FusionEQ website branch guard
+
+You are on branch: $branch
+
+Live website edits should be committed from main.
+
+Staged website files:
+$changed_website_files
+
+Switch to main before committing:
+  git switch main
+
+If this is an intentional experiment branch, rerun with:
+  ALLOW_NON_MAIN_WEBSITE_COMMIT=1 git commit ...
+EOF
+  exit 1
+fi
+
+exit 0
