@@ -9007,6 +9007,11 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   gap: clamp(30px, 4vw, 50px);
 }
 
+.page-pilot .report-diagnostic-section .pilot-section-lede,
+.page-pilot .report-diagnostic-section .briefing-scope-cta {
+  margin-top: 0;
+}
+
 .report-diagnostic-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
