@@ -9359,6 +9359,38 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   letter-spacing: -0.035em;
 }
 
+.contact-request-list {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-request-list li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.contact-request-list li::before {
+  position: absolute;
+  top: 0.78em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--green);
+  content: "";
+}
+
+.contact-request-list strong {
+  color: var(--green);
+  font-weight: 700;
+}
+
 .page-contact .lead-form {
   background: rgba(255, 255, 255, 0.015);
   margin-top: 68px;
