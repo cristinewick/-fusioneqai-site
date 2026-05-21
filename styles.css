@@ -2067,6 +2067,69 @@
   gap: clamp(36px, 5vw, 68px);
 }
 
+.post-entry-report-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  width: min(1180px, calc(100% - 56px)) !important;
+  padding-top: clamp(72px, 9vh, 118px) !important;
+  padding-bottom: clamp(82px, 10vh, 132px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.055) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055) !important;
+}
+
+.post-entry-report-copy {
+  display: grid;
+  gap: 18px;
+  justify-items: start;
+}
+
+.post-entry-report-copy h2 {
+  max-width: 620px;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.72rem, 2.45vw, 2.48rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+
+.post-entry-report-copy p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: clamp(1rem, 1.16vw, 1.13rem);
+  line-height: 1.58;
+}
+
+.post-entry-report-visual {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+}
+
+.post-entry-report-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(79, 143, 58, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 28px 88px rgba(0, 0, 0, 0.34);
+}
+
+.post-entry-report-visual figcaption {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
 @media (min-width: 761px) {
   .post-entry-home .slide:not(.post-entry-hero) {
     padding-right: 0;
@@ -2204,6 +2267,31 @@
   margin-top: clamp(16px, 2.4vw, 24px);
 }
 
+.post-entry-foundations-visual {
+  display: grid;
+  gap: 14px;
+  width: min(1040px, 100%);
+  margin: clamp(2px, 1vw, 8px) auto 0;
+}
+
+.post-entry-foundations-visual img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(200, 169, 106, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 30px 94px rgba(0, 0, 0, 0.36);
+}
+
+.post-entry-foundations-visual figcaption {
+  max-width: 760px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
 .post-entry-path-grid a {
   color: var(--white);
   text-decoration: none;
@@ -2233,6 +2321,15 @@
   font-family: var(--serif);
   font-size: clamp(1.34rem, 2.1vw, 2rem);
   line-height: 1.28;
+}
+
+.post-entry-pause .post-entry-bridge-line {
+  max-width: 620px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.18vw, 1.14rem);
+  line-height: 1.55;
 }
 
 .post-entry-pause-right {
@@ -2272,6 +2369,10 @@
     max-width: 100%;
   }
 
+  .post-entry-report-proof {
+    grid-template-columns: 1fr;
+  }
+
   .post-entry-layer-map,
   .post-entry-read-grid,
   .post-entry-path-grid {
@@ -2304,6 +2405,11 @@
   .post-entry-layer-map,
   .post-entry-read-grid {
     grid-template-columns: 1fr;
+  }
+
+  .post-entry-report-proof {
+    grid-template-columns: 1fr;
+    width: min(100%, calc(100% - 32px)) !important;
   }
 
   .post-entry-layer-map article,
@@ -6696,6 +6802,134 @@ strong .home-v2-green,
   color: var(--light-ink);
   border-color: rgba(47, 111, 40, 0.64);
   background: rgba(47, 111, 40, 0.08);
+}
+
+body.page-how-it-works.page-light-surface {
+  background:
+    radial-gradient(circle at 76% 12%, rgba(102, 123, 155, 0.18), transparent 30%),
+    radial-gradient(circle at 18% 34%, rgba(200, 169, 106, 0.12), transparent 28%),
+    linear-gradient(135deg, #030405 0%, #08090c 54%, #050607 100%);
+  color: var(--white);
+}
+
+body.page-how-it-works.page-light-surface .how-page {
+  width: min(1220px, calc(100% - 56px));
+  margin: 42px auto 0;
+  border-color: rgba(255, 255, 255, 0.075);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032), rgba(255, 255, 255, 0.006)),
+    linear-gradient(135deg, rgba(8, 9, 12, 0.98), rgba(3, 4, 5, 0.96));
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+body.page-how-it-works.page-light-surface .how-page::before {
+  background:
+    linear-gradient(90deg, transparent 0 24%, rgba(102, 123, 155, 0.06) 24.1%, transparent 24.2%),
+    linear-gradient(0deg, transparent 0 34%, rgba(200, 169, 106, 0.05) 34.1%, transparent 34.2%),
+    radial-gradient(circle at 78% 18%, rgba(79, 143, 58, 0.08), transparent 24%);
+  opacity: 1;
+}
+
+body.page-how-it-works.page-light-surface .how-page .slide {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.page-how-it-works.page-light-surface .how-hero h1,
+body.page-how-it-works.page-light-surface .how-orientation h2,
+body.page-how-it-works.page-light-surface .how-workflow h2,
+body.page-how-it-works.page-light-surface .how-gap h2,
+body.page-how-it-works.page-light-surface .how-use h2,
+body.page-how-it-works.page-light-surface .how-next h2,
+body.page-how-it-works.page-light-surface .how-card-grid h3,
+body.page-how-it-works.page-light-surface .how-workflow-grid h3,
+body.page-how-it-works.page-light-surface .how-next-grid strong {
+  color: var(--white);
+}
+
+body.page-how-it-works.page-light-surface .context,
+body.page-how-it-works.page-light-surface .home-v2-visual-context,
+body.page-how-it-works.page-light-surface .how-card-grid span,
+body.page-how-it-works.page-light-surface .how-use-list span,
+body.page-how-it-works.page-light-surface .how-next-grid span {
+  color: var(--gold);
+}
+
+body.page-how-it-works.page-light-surface .home-v2-visual-context::before {
+  background: rgba(200, 169, 106, 0.68);
+}
+
+body.page-how-it-works.page-light-surface .how-category-line,
+body.page-how-it-works.page-light-surface .how-workflow-note,
+body.page-how-it-works.page-light-surface .green-emphasis-line,
+body.page-how-it-works.page-light-surface .home-v2-green {
+  color: var(--green);
+}
+
+body.page-how-it-works.page-light-surface .how-hero .subline,
+body.page-how-it-works.page-light-surface .how-card-grid p,
+body.page-how-it-works.page-light-surface .how-workflow-grid p,
+body.page-how-it-works.page-light-surface .how-gap-panel p,
+body.page-how-it-works.page-light-surface .how-use-list p,
+body.page-how-it-works.page-light-surface .how-next-grid p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+body.page-how-it-works.page-light-surface .how-card-grid,
+body.page-how-it-works.page-light-surface .how-workflow-grid,
+body.page-how-it-works.page-light-surface .how-use-list {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.page-how-it-works.page-light-surface .how-card-grid article,
+body.page-how-it-works.page-light-surface .how-workflow-grid article,
+body.page-how-it-works.page-light-surface .how-gap-panel,
+body.page-how-it-works.page-light-surface .how-use-list p,
+body.page-how-it-works.page-light-surface .how-next-grid a {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+body.page-how-it-works.page-light-surface .how-card-grid article,
+body.page-how-it-works.page-light-surface .how-workflow-grid article {
+  background: transparent;
+}
+
+body.page-how-it-works.page-light-surface .how-gap-panel,
+body.page-how-it-works.page-light-surface .how-next-grid a {
+  background: rgba(255, 255, 255, 0.024);
+}
+
+body.page-how-it-works.page-light-surface .how-next-grid a:hover,
+body.page-how-it-works.page-light-surface .how-next-grid a:focus-visible {
+  border-color: rgba(79, 143, 58, 0.5);
+  background: rgba(79, 143, 58, 0.07);
+}
+
+body.page-how-it-works.page-light-surface .cta-row a,
+body.page-how-it-works.page-light-surface .cta-row button {
+  color: rgba(255, 255, 255, 0.86);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+body.page-how-it-works.page-light-surface .cta-row a:first-child,
+body.page-how-it-works.page-light-surface .cta-row button:first-child {
+  color: var(--green);
+  border-color: rgba(79, 143, 58, 0.72);
+}
+
+body.page-how-it-works.page-light-surface .cta-row a:nth-child(2) {
+  color: rgba(255, 255, 255, 0.72);
+  border-color: rgba(102, 123, 155, 0.38);
+}
+
+body.page-how-it-works.page-light-surface .cta-row a:hover,
+body.page-how-it-works.page-light-surface .cta-row a:focus-visible,
+body.page-how-it-works.page-light-surface .cta-row button:hover,
+body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
+  color: var(--white);
+  border-color: rgba(79, 143, 58, 0.68);
+  background: rgba(79, 143, 58, 0.08);
 }
 
 .about-page {
@@ -14192,4 +14426,19 @@ body.page-how-it-works > main#top.how-page {
     gap: 12px;
     padding: 24px 0;
   }
+}
+
+body.page-how-it-works {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 78% 8%, rgba(102, 123, 155, 0.16), transparent 32%),
+    radial-gradient(circle at 14% 28%, rgba(200, 169, 106, 0.1), transparent 28%),
+    linear-gradient(135deg, #030405 0%, #08090c 54%, #050607 100%) !important;
+}
+
+body.page-how-it-works > main#top.how-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 520px),
+    linear-gradient(135deg, rgba(8, 9, 12, 0.98), rgba(3, 4, 5, 0.98)) !important;
 }

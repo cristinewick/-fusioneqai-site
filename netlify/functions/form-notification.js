@@ -1,4 +1,4 @@
-const DEFAULT_TO = 'fusioneqai@gmail.com';
+const DEFAULT_TO = 'fusionEQai@gmail.com';
 
 function escapeHtml(value) {
   return String(value || '')
