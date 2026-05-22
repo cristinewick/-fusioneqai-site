@@ -1,4 +1,4 @@
-/* Temporary preview only: tests the premium gradient image on the home page. */
+/* FusionEQ premium gradient treatment for the live home page. */
 
 body.page-gradient-background-preview {
   min-height: 100vh;
@@ -102,7 +102,7 @@ body.page-gradient-background-preview .cta-row button {
   backdrop-filter: blur(14px);
 }
 
-/* Temporary preview only: tests the premium gradient image on the entry page. */
+/* FusionEQ premium lens-ring treatment for the live entry page. */
 
 html.entry-background-preview-root {
   min-height: 100%;
@@ -451,6 +451,16 @@ body.page-entry-background-preview .concept-entry-lines {
   }
 }
 
+@media (min-width: 761px) and (max-width: 1040px) {
+  body.page-entry-background-preview .concept-entry-equation {
+    width: min(520px, 58vw);
+    gap: 7px;
+    font-size: 0.62rem;
+    letter-spacing: 0.09em;
+    white-space: normal;
+  }
+}
+
 @media (max-width: 760px) {
   body.page-entry-background-preview .front-door-stage {
     background:
@@ -511,7 +521,7 @@ body.page-entry-background-preview .concept-entry-copy h1::after {
   content: none;
 }
 
-/* Temporary preview only: tests the premium gradient image on the Education page. */
+/* FusionEQ premium gradient treatment for the live Education page. */
 
 body.page-education-background-preview {
   min-height: 100vh;
