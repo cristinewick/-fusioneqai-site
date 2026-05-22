@@ -1,0 +1,775 @@
+/* Temporary preview only: tests the premium gradient image on the home page. */
+
+body.page-gradient-background-preview {
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, #020405 0%, #050607 34%, #111313 64%, #252520 100%),
+    #030506 !important;
+}
+
+body.page-gradient-background-preview::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.98) 0%, rgba(4, 6, 7, 0.9) 34%, rgba(14, 16, 16, 0.52) 64%, rgba(42, 39, 31, 0.28) 100%),
+    linear-gradient(90deg, #020405 0%, #050607 34%, #111313 64%, #302d24 100%);
+}
+
+body.page-gradient-background-preview::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.9) 0%, rgba(4, 6, 7, 0.72) 38%, rgba(22, 24, 22, 0.32) 70%, rgba(168, 154, 112, 0.08) 100%),
+    radial-gradient(ellipse at 72% 42%, rgba(216, 203, 163, 0.1), transparent 34%),
+    radial-gradient(ellipse at 72% 58%, rgba(102, 123, 155, 0.06), transparent 34%);
+}
+
+body.page-gradient-background-preview .post-entry-home,
+body.page-gradient-background-preview footer {
+  position: relative;
+  z-index: 0;
+}
+
+body.page-gradient-background-preview .site-header {
+  background:
+    linear-gradient(180deg, rgba(3, 5, 6, 0.92), rgba(3, 5, 6, 0.78));
+  border-bottom: 1px solid rgba(201, 161, 59, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+body.page-gradient-background-preview .post-entry-home {
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.92) 0%, rgba(4, 6, 7, 0.78) 42%, rgba(19, 21, 20, 0.36) 70%, rgba(84, 78, 61, 0.06) 100%),
+    linear-gradient(180deg, rgba(3, 5, 6, 0.02) 0, rgba(3, 5, 6, 0.14) 560px, rgba(3, 5, 6, 0.82) 1120px);
+}
+
+body.page-gradient-background-preview .post-entry-home .slide {
+  border-bottom-color: rgba(247, 247, 242, 0.08);
+}
+
+body.page-gradient-background-preview .post-entry-home .slide:not(.post-entry-hero) {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 6, 0.72) 0%, rgba(9, 11, 12, 0.54) 48%, rgba(34, 35, 32, 0.28) 100%);
+  box-shadow: none;
+}
+
+body.page-gradient-background-preview .post-entry-hero {
+  min-height: 90svh;
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+}
+
+body.page-gradient-background-preview .post-entry-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 22% 4% 18% 44%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 56% 48%, rgba(238, 229, 190, 0.16), transparent 42%),
+    radial-gradient(ellipse at 72% 54%, rgba(102, 123, 155, 0.08), transparent 38%);
+  filter: blur(18px);
+  opacity: 0.68;
+}
+
+body.page-gradient-background-preview .post-entry-hero::after {
+  content: none;
+}
+
+body.page-gradient-background-preview .post-entry-hero-visual img,
+body.page-gradient-background-preview .post-entry-layer-visual img,
+body.page-gradient-background-preview .post-entry-foundations-visual img,
+body.page-gradient-background-preview .post-entry-report-visual img,
+body.page-gradient-background-preview .post-entry-same-deal img {
+  border-color: rgba(201, 161, 59, 0.26);
+  background: rgba(255, 255, 255, 0.028);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+}
+
+body.page-gradient-background-preview .cta-row a,
+body.page-gradient-background-preview .cta-row button {
+  border-color: rgba(72, 176, 44, 0.55);
+  background: rgba(3, 5, 6, 0.58);
+  backdrop-filter: blur(14px);
+}
+
+/* Temporary preview only: tests the premium gradient image on the entry page. */
+
+html.entry-background-preview-root {
+  min-height: 100%;
+  background: #030506;
+}
+
+body.page-entry-background-preview {
+  min-height: 100vh;
+  background: #030506 !important;
+}
+
+body.page-entry-background-preview .front-door {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+body.page-entry-background-preview .front-door::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(3, 5, 6, 0.04), rgba(3, 5, 6, 0.48)),
+    url("assets/fusioneq-premium-gradient-background-preview.png") 68% center / cover no-repeat;
+}
+
+body.page-entry-background-preview .front-door::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 6, 0.7), rgba(3, 5, 6, 0.16) 58%, rgba(3, 5, 6, 0.26)),
+    radial-gradient(circle at 16% 18%, rgba(201, 169, 106, 0.13), transparent 26%),
+    radial-gradient(circle at 74% 46%, rgba(79, 143, 58, 0.08), transparent 32%);
+}
+
+body.page-entry-background-preview .front-door-stage {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 80% 46%, rgba(216, 203, 163, 0.1), transparent 34%),
+    linear-gradient(90deg, rgba(3, 5, 6, 0.95), rgba(3, 5, 6, 0.76) 42%, rgba(3, 5, 6, 0.22) 66%, rgba(3, 5, 6, 0.12)),
+    linear-gradient(180deg, rgba(3, 5, 6, 0.04), rgba(3, 5, 6, 0.22)),
+    url("assets/fusioneq-lens-ring-entry-preview.png"),
+    url("assets/fusioneq-premium-gradient-background-preview.png") !important;
+  background-position:
+    center center,
+    center center,
+    center center,
+    76% center,
+    68% center !important;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat !important;
+  background-size:
+    cover,
+    cover,
+    cover,
+    cover,
+    cover !important;
+}
+
+body.page-entry-background-preview .front-door-stage::before {
+  opacity: 0.58;
+}
+
+body.page-entry-background-preview .front-door-stage::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(3, 5, 6, 0.84) 0%, rgba(3, 5, 6, 0.58) 36%, rgba(3, 5, 6, 0.08) 60%, rgba(3, 5, 6, 0.16) 100%),
+    linear-gradient(180deg, rgba(3, 5, 6, 0.12), transparent 34%, rgba(3, 5, 6, 0.18));
+}
+
+body.page-entry-background-preview .concept-entry-atmosphere,
+body.page-entry-background-preview .concept-entry-map {
+  opacity: 0.68;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack {
+  right: clamp(360px, 32vw, 520px);
+  bottom: clamp(328px, 43vh, 430px);
+  width: min(340px, 26vw);
+  grid-template-columns: 54px minmax(0, 1fr);
+  row-gap: 5px;
+  padding: 10px 12px 10px 0;
+  background: linear-gradient(90deg, transparent, rgba(3, 5, 6, 0.34) 28%, rgba(3, 5, 6, 0.2));
+  border-radius: 3px;
+  color: rgba(244, 217, 143, 0.98);
+  text-shadow:
+    0 0 16px rgba(244, 217, 143, 0.28),
+    0 0 34px rgba(0, 0, 0, 0.72);
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack small {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  max-width: 230px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0;
+  line-height: 1;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack small::before,
+body.page-entry-background-preview .concept-entry-map-label-stack small::after {
+  display: block;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.54rem, 0.62vw, 0.66rem);
+  font-weight: 650;
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack small::before {
+  content: "Deal conversations  /  stakeholder signals";
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack small::after {
+  content: "Meeting notes  /  forecast input";
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack::before {
+  width: 54px;
+  opacity: 0.9;
+  background:
+    linear-gradient(90deg, transparent, rgba(244, 217, 143, 0.86) 72%, rgba(244, 217, 143, 0.28));
+  box-shadow: 0 0 18px rgba(244, 217, 143, 0.28);
+}
+
+body.page-entry-background-preview .concept-entry-map-label-stack::after {
+  content: "";
+  grid-column: 1 / 3;
+  display: block;
+  width: min(270px, 21vw);
+  height: 24px;
+  margin-top: 2px;
+  background:
+    linear-gradient(8deg, transparent 0 44%, rgba(244, 217, 143, 0.34) 45% 46%, transparent 47%),
+    linear-gradient(-6deg, transparent 0 42%, rgba(255, 255, 255, 0.2) 43% 44%, transparent 45%),
+    linear-gradient(2deg, transparent 0 52%, rgba(102, 123, 155, 0.22) 53% 54%, transparent 55%),
+    linear-gradient(-12deg, transparent 0 58%, rgba(120, 188, 54, 0.2) 59% 60%, transparent 61%);
+  opacity: 0.7;
+  filter: drop-shadow(0 0 12px rgba(244, 217, 143, 0.12));
+}
+
+body.page-entry-background-preview .concept-entry-map::before {
+  top: clamp(354px, 48.8vh, 474px);
+  right: auto;
+  left: clamp(560px, 45vw, 704px);
+  width: min(460px, 34vw);
+  height: 12px;
+  background:
+    radial-gradient(ellipse at center, rgba(245, 239, 205, 0.76) 0%, rgba(201, 169, 106, 0.28) 38%, transparent 72%);
+  filter: blur(4px) drop-shadow(0 0 18px rgba(245, 239, 205, 0.24));
+  opacity: 0;
+  transform: translateX(-32%) scaleX(0.18);
+  animation: entrySignalPass 7.8s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+@keyframes entrySignalPass {
+  0% {
+    opacity: 0;
+    transform: translateX(-34%) scaleX(0.12);
+  }
+
+  20% {
+    opacity: 0.26;
+    transform: translateX(-18%) scaleX(0.28);
+  }
+
+  46% {
+    opacity: 0.6;
+    transform: translateX(0%) scaleX(0.42);
+  }
+
+  66% {
+    opacity: 0.5;
+    transform: translateX(16%) scaleX(0.48);
+  }
+
+  86% {
+    opacity: 0.22;
+    transform: translateX(34%) scaleX(0.3);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(48%) scaleX(0.16);
+  }
+}
+
+body.page-entry-background-preview .concept-entry-map::after {
+  content: none;
+}
+
+body.page-entry-background-preview .concept-entry-equation {
+  position: absolute;
+  z-index: 3;
+  left: clamp(760px, 63vw, 980px);
+  right: auto;
+  bottom: clamp(76px, 10vh, 116px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(7px, 0.72vw, 12px);
+  width: min(640px, 45vw);
+  padding: 14px 18px 0;
+  border-top: 1px solid rgba(201, 169, 106, 0.46);
+  font-size: clamp(0.66rem, 0.76vw, 0.84rem);
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  line-height: 1.28;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow:
+    0 0 20px rgba(201, 169, 106, 0.16),
+    0 0 34px rgba(0, 0, 0, 0.72);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+body.page-entry-background-preview .equation-context {
+  color: rgba(244, 217, 143, 0.98);
+}
+
+body.page-entry-background-preview .equation-lens {
+  color: rgba(178, 204, 240, 0.98);
+}
+
+body.page-entry-background-preview .equation-insight {
+  color: rgba(156, 216, 118, 1);
+}
+
+body.page-entry-background-preview .equation-plus,
+body.page-entry-background-preview .equation-equals {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+body.page-entry-background-preview .concept-entry-map-label-lens {
+  display: none;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-lens::before {
+  width: 58px;
+  opacity: 0.62;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-outcome {
+  display: none;
+}
+
+body.page-entry-background-preview .concept-entry-map-label-outcome {
+  top: clamp(292px, 39.2vh, 376px);
+  right: clamp(78px, 6.8vw, 126px);
+}
+
+body.page-entry-background-preview .concept-entry-map-label-outcome::before {
+  opacity: 0.78;
+}
+
+body.page-entry-background-preview .front-door-brand,
+body.page-entry-background-preview .front-door-enter {
+  background: rgba(3, 5, 6, 0.36);
+  border-color: rgba(201, 169, 106, 0.28);
+  backdrop-filter: blur(16px);
+}
+
+body.page-entry-background-preview .front-door-brand {
+  gap: 5px;
+}
+
+body.page-entry-background-preview .front-door-brand img {
+  width: clamp(218px, 18vw, 304px);
+}
+
+body.page-entry-background-preview .front-door-contact {
+  top: 7.8%;
+  right: 4.8%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(201, 169, 106, 0.62);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+body.page-entry-background-preview .concept-entry-copy {
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
+  top: 31%;
+  width: min(520px, 38vw);
+}
+
+body.page-entry-background-preview .concept-entry-copy .context {
+  display: none;
+}
+
+body.page-entry-background-preview .concept-entry-lines {
+  width: min(455px, 100%);
+}
+
+@media (min-width: 1500px) {
+  body.page-entry-background-preview .front-door-brand {
+    left: clamp(72px, 5.6vw, 116px);
+  }
+
+  body.page-entry-background-preview .front-door-brand img {
+    width: clamp(230px, 15vw, 292px);
+  }
+
+  body.page-entry-background-preview .concept-entry-copy {
+    left: clamp(84px, 7vw, 140px);
+    top: clamp(340px, 31vh, 430px);
+    width: min(610px, 34vw);
+  }
+
+  body.page-entry-background-preview .concept-entry-copy h1 {
+    font-size: clamp(2.8rem, 3vw, 3.55rem);
+    line-height: 1.04;
+  }
+
+  body.page-entry-background-preview .concept-entry-lines {
+    width: min(520px, 100%);
+  }
+
+  body.page-entry-background-preview .concept-entry-map-label-stack {
+    right: clamp(470px, 33vw, 650px);
+    bottom: clamp(424px, 43.5vh, 510px);
+  }
+
+  body.page-entry-background-preview .concept-entry-equation {
+    left: clamp(1040px, 63vw, 1280px);
+    bottom: clamp(118px, 10.4vh, 152px);
+  }
+}
+
+@media (max-width: 760px) {
+  body.page-entry-background-preview .front-door-stage {
+    background:
+      linear-gradient(90deg, rgba(3, 5, 6, 0.96) 0%, rgba(3, 5, 6, 0.78) 48%, rgba(3, 5, 6, 0.24) 100%),
+      linear-gradient(180deg, rgba(3, 5, 6, 0.08), rgba(3, 5, 6, 0.18) 54%, rgba(3, 5, 6, 0.82)),
+      url("assets/fusioneq-lens-ring-entry-preview.png") 72% center / auto 100% no-repeat !important;
+  }
+
+  body.page-entry-background-preview .front-door-stage::after {
+    display: none;
+  }
+
+  body.page-entry-background-preview .front-door-brand {
+    width: min(240px, calc(100vw - 94px));
+  }
+
+  body.page-entry-background-preview .front-door-brand img {
+    width: 146px;
+  }
+
+  body.page-entry-background-preview .concept-entry-copy {
+    top: clamp(236px, 29vh, 282px);
+    left: 24px;
+    gap: 12px;
+    width: min(306px, calc(100vw - 48px));
+  }
+
+  body.page-entry-background-preview .concept-entry-copy h1 {
+    font-size: clamp(1.72rem, 8vw, 2.04rem);
+    line-height: 1.05;
+  }
+
+  body.page-entry-background-preview .concept-entry-lines {
+    gap: 9px;
+    width: min(292px, 100%);
+  }
+
+  body.page-entry-background-preview .concept-entry-lines p {
+    padding-top: 9px;
+    font-size: 0.84rem;
+    line-height: 1.34;
+  }
+
+  body.page-entry-background-preview .concept-entry-map,
+  body.page-entry-background-preview .concept-entry-equation {
+    display: none;
+  }
+
+  body.page-entry-background-preview .front-door-enter {
+    bottom: 20px;
+    left: 24px;
+    width: min(292px, calc(100vw - 48px));
+    min-height: 50px;
+  }
+}
+
+body.page-entry-background-preview .concept-entry-copy h1::after {
+  content: none;
+}
+
+/* Temporary preview only: tests the premium gradient image on the Education page. */
+
+body.page-education-background-preview {
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, #020405 0%, #080a0b 36%, #1b1d1c 68%, #39372f 100%),
+    #030506 !important;
+  color: var(--white);
+}
+
+body.page-education-background-preview::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.97) 0%, rgba(5, 7, 8, 0.76) 36%, rgba(31, 33, 32, 0.38) 68%, rgba(68, 64, 52, 0.28) 100%),
+    linear-gradient(90deg, #020405 0%, #080a0b 34%, #1c1e1d 68%, #474236 100%);
+}
+
+body.page-education-background-preview::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.78) 0%, rgba(6, 8, 9, 0.5) 36%, rgba(49, 50, 47, 0.18) 70%, rgba(190, 171, 122, 0.18) 100%),
+    radial-gradient(circle at 82% 24%, rgba(216, 203, 163, 0.14), transparent 34%),
+    radial-gradient(circle at 88% 52%, rgba(102, 123, 155, 0.08), transparent 30%);
+}
+
+body.page-education-background-preview .site-header {
+  background:
+    linear-gradient(180deg, rgba(3, 5, 6, 0.84), rgba(3, 5, 6, 0.62));
+  border-bottom: 1px solid rgba(201, 169, 106, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses > main#top {
+  width: min(1220px, calc(100% - 56px));
+  margin-top: 42px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.84) 0%, rgba(5, 7, 8, 0.54) 38%, rgba(30, 32, 31, 0.18) 68%, rgba(112, 104, 82, 0.16) 100%),
+    linear-gradient(180deg, rgba(3, 5, 6, 0.02) 0, rgba(3, 5, 6, 0.12) 560px, rgba(3, 5, 6, 0.72) 1120px);
+  box-shadow: none;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses > main#top::before {
+  opacity: 0;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .slide {
+  border-bottom-color: rgba(247, 247, 242, 0.1);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .slide:not(.hero) {
+  background:
+    linear-gradient(90deg, rgba(3, 5, 6, 0.68) 0%, rgba(9, 11, 12, 0.52) 48%, rgba(34, 35, 32, 0.28) 100%);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses h1,
+body.page-education-background-preview.page-light-surface.page-courses h2,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-copy h2,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid span + p,
+body.page-education-background-preview.page-light-surface.page-courses .method-list p {
+  color: var(--white);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .subline,
+body.page-education-background-preview.page-light-surface.page-courses .hero-close,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-copy p:not(.context),
+body.page-education-background-preview.page-light-surface.page-courses .insight p,
+body.page-education-background-preview.page-light-surface.page-courses .action p,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid p,
+body.page-education-background-preview.page-light-surface.page-courses .method-list p,
+body.page-education-background-preview .course-decision-row > span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .context,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-card p,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid span,
+body.page-education-background-preview .course-decision-head > span {
+  color: rgba(201, 169, 106, 0.92);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .education-video-section .guided-video-note,
+body.page-education-background-preview.page-light-surface.page-courses .green-emphasis-line,
+body.page-education-background-preview.page-light-surface.page-courses .method-list span,
+body.page-education-background-preview .course-decision-row small {
+  color: rgba(120, 188, 54, 0.88);
+}
+
+body.page-education-background-preview .pilot-grid > div,
+body.page-education-background-preview .guided-video-card {
+  border-color: rgba(201, 169, 106, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+}
+
+body.page-education-background-preview .course-decision-table,
+body.page-education-background-preview .course-decision-row {
+  border-color: rgba(247, 247, 242, 0.1);
+}
+
+body.page-education-background-preview .course-decision-row strong {
+  color: var(--white);
+}
+
+body.page-education-background-preview .course-decision-row a,
+body.page-education-background-preview .cta-row a {
+  border-color: rgba(72, 176, 44, 0.55) !important;
+  background: rgba(3, 5, 6, 0.38) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(14px);
+}
+
+body.page-education-background-preview .cta-row a:first-child,
+body.page-education-background-preview .inline-cta a {
+  border-color: rgba(120, 188, 54, 0.6) !important;
+  color: rgba(190, 224, 168, 0.95) !important;
+}
+
+body.page-education-background-preview .cta-row a:nth-child(2) {
+  border-color: rgba(201, 169, 106, 0.42) !important;
+}
+
+/* Premium-light Education direction: structured, luminous, and less cinematic. */
+
+body.page-education-background-preview {
+  background:
+    linear-gradient(90deg, #d0d2cd 0%, #c3c7c2 40%, #aea995 72%, #96866b 100%) !important;
+  color: #151713;
+}
+
+body.page-education-background-preview::before {
+  background:
+    linear-gradient(90deg, rgba(237, 238, 234, 0.7) 0%, rgba(212, 216, 211, 0.5) 44%, rgba(171, 158, 121, 0.62) 100%),
+    radial-gradient(circle at 84% 18%, rgba(157, 127, 63, 0.34), transparent 34%),
+    radial-gradient(circle at 78% 62%, rgba(102, 123, 155, 0.2), transparent 36%) !important;
+}
+
+body.page-education-background-preview::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 42%, rgba(157, 127, 63, 0.18)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(23, 24, 20, 0.08)) !important;
+}
+
+body.page-education-background-preview .site-header {
+  background:
+    linear-gradient(180deg, rgba(2, 4, 5, 0.96), rgba(3, 5, 6, 0.9)) !important;
+  border: 1px solid rgba(201, 169, 106, 0.18);
+  box-shadow: 0 22px 70px rgba(23, 24, 20, 0.22);
+}
+
+body.page-education-background-preview .home-v2-brand-line,
+body.page-education-background-preview .primary-nav a {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+body.page-education-background-preview .home-v2-header-logo {
+  display: block;
+  width: clamp(180px, 14vw, 220px);
+  height: auto;
+  object-fit: contain;
+}
+
+body.page-education-background-preview .brand::before {
+  content: none;
+}
+
+body.page-education-background-preview .brand::after {
+  content: none;
+}
+
+body.page-education-background-preview .primary-nav a[aria-current="page"] {
+  color: var(--white);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses > main#top {
+  background:
+    linear-gradient(90deg, rgba(239, 241, 236, 0.66) 0%, rgba(218, 222, 216, 0.48) 46%, rgba(176, 163, 126, 0.48) 100%) !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .slide {
+  border-bottom-color: rgba(23, 24, 20, 0.1);
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .slide:not(.hero) {
+  background:
+    linear-gradient(90deg, rgba(241, 243, 238, 0.58), rgba(219, 223, 216, 0.42) 50%, rgba(178, 164, 126, 0.34)) !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses h1,
+body.page-education-background-preview.page-light-surface.page-courses h2,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-copy h2,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid span + p,
+body.page-education-background-preview.page-light-surface.page-courses .method-list p,
+body.page-education-background-preview .course-decision-row strong {
+  color: #151713 !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .subline,
+body.page-education-background-preview.page-light-surface.page-courses .hero-close,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-copy p:not(.context),
+body.page-education-background-preview.page-light-surface.page-courses .insight p,
+body.page-education-background-preview.page-light-surface.page-courses .action p,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid p,
+body.page-education-background-preview.page-light-surface.page-courses .method-list p,
+body.page-education-background-preview .course-decision-row > span {
+  color: rgba(21, 23, 19, 0.68) !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .context,
+body.page-education-background-preview.page-light-surface.page-courses .guided-video-card p,
+body.page-education-background-preview.page-light-surface.page-courses .pilot-grid span,
+body.page-education-background-preview .course-decision-head > span {
+  color: #9d7f3f !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .education-video-section .guided-video-note,
+body.page-education-background-preview.page-light-surface.page-courses .green-emphasis-line,
+body.page-education-background-preview.page-light-surface.page-courses .method-list span,
+body.page-education-background-preview .course-decision-row small {
+  color: #3f7d34 !important;
+}
+
+body.page-education-background-preview .pilot-grid > div,
+body.page-education-background-preview .guided-video-card {
+  border-color: rgba(23, 24, 20, 0.11) !important;
+  background:
+    linear-gradient(135deg, rgba(248, 249, 245, 0.72), rgba(223, 225, 219, 0.52)) !important;
+  box-shadow: 0 22px 60px rgba(23, 24, 20, 0.12) !important;
+}
+
+body.page-education-background-preview .course-decision-table,
+body.page-education-background-preview .course-decision-row {
+  border-color: rgba(23, 24, 20, 0.1) !important;
+}
+
+body.page-education-background-preview .course-decision-row a,
+body.page-education-background-preview .cta-row a {
+  border-color: rgba(63, 125, 52, 0.52) !important;
+  background: rgba(246, 247, 243, 0.58) !important;
+  color: #151713 !important;
+  box-shadow: 0 12px 32px rgba(23, 24, 20, 0.1);
+}
+
+body.page-education-background-preview .cta-row a:first-child,
+body.page-education-background-preview .inline-cta a {
+  border-color: rgba(63, 125, 52, 0.6) !important;
+  color: #2f6f28 !important;
+}
+
+body.page-education-background-preview .cta-row a:nth-child(2) {
+  border-color: rgba(157, 127, 63, 0.45) !important;
+}
