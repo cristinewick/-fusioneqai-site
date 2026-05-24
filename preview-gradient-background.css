@@ -1122,6 +1122,24 @@ body.page-education-background-preview.page-light-surface.page-courses .slide.re
   color: rgba(222, 246, 211, 0.98) !important;
 }
 
+body.page-education-background-preview.page-light-surface.page-courses .slide.hero {
+  width: 100%;
+  padding-right: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  padding-left: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  background:
+    linear-gradient(180deg, rgba(5, 6, 8, 0.96), rgba(5, 6, 8, 0.9)) !important;
+  border-bottom: 0 !important;
+}
+
+body.page-education-background-preview.page-light-surface.page-courses .slide.pilot {
+  width: 100%;
+  padding-right: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  padding-left: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  background:
+    linear-gradient(180deg, rgba(247, 250, 248, 0.99), rgba(238, 245, 242, 0.96)) !important;
+  border-top: 0 !important;
+}
+
 @media (max-width: 760px) {
   body.page-education-background-preview {
     background:

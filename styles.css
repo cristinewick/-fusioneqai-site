@@ -10481,6 +10481,15 @@ h2,
   border-bottom: 1px solid var(--light-line);
 }
 
+.page-light-surface.page-courses .pilot {
+  width: 100%;
+  padding-right: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  padding-left: clamp(36px, calc((100% - 1040px) / 2), 90px);
+  background:
+    linear-gradient(135deg, rgba(252, 253, 250, 0.98), rgba(239, 245, 242, 0.94)),
+    #f7faf7;
+}
+
 .page-light-surface.page-courses .slide:last-child {
   border-bottom: 0;
 }
