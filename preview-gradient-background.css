@@ -1114,3 +1114,171 @@ body.page-education-background-preview.page-light-surface.page-courses .slide.re
   background: rgba(79, 143, 58, 0.18) !important;
   color: rgba(222, 246, 211, 0.98) !important;
 }
+
+@media (max-width: 760px) {
+  body.page-education-background-preview {
+    background:
+      linear-gradient(180deg, #050608 0%, #050608 760px, #e9eeec 760px, #dde6e6 100%) !important;
+  }
+
+  body.page-education-background-preview::before {
+    height: 820px;
+  }
+
+  body.page-education-background-preview::after {
+    height: 860px;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses > main#top {
+    overflow: visible;
+    background:
+      linear-gradient(180deg, rgba(5, 6, 8, 0.96) 0%, rgba(5, 6, 8, 0.9) 760px, rgba(238, 242, 240, 0.97) 761px, rgba(226, 235, 235, 0.95) 100%) !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .hero {
+    min-height: auto;
+    padding-bottom: 54px;
+    background:
+      linear-gradient(180deg, rgba(5, 6, 8, 0.82), rgba(5, 6, 8, 0.68)) !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .hero .cta-row {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .hero .cta-row a,
+  body.page-education-background-preview.page-light-surface.page-courses .slide.report-cta .cta-row a {
+    width: 100%;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-journey {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .pilot-grid > div,
+  body.page-education-background-preview .pilot-grid > div.course-card-premium {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 24px 0;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(17, 23, 22, 0.12) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .pilot-grid > div:last-child {
+    border-bottom: 0 !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-foundations,
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-premium-intro {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-foundations > span,
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-foundations p,
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-foundations .inline-cta,
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-premium-intro > span,
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-premium-intro p {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    max-width: none;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-card-premium > span {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 1.9rem;
+    line-height: 1;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-acronym {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 0 0 18px;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-acronym p {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-acronym strong {
+    width: 34px;
+    height: 34px;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .inline-cta,
+  body.page-education-background-preview.page-light-surface.page-courses .inline-cta a {
+    width: 100%;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-table {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(17, 23, 22, 0.12) !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-head {
+    display: none !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    align-items: start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(17, 23, 22, 0.12) !important;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) > span {
+    display: block;
+    min-width: 0;
+    color: rgba(17, 23, 22, 0.76) !important;
+    line-height: 1.48;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) > span::before {
+    display: block;
+    margin-bottom: 6px;
+    color: #536477;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) > span:nth-child(1)::before {
+    content: "When";
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) > span:nth-child(2)::before {
+    content: "Start here";
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) > span:nth-child(3)::before {
+    content: "Best next step";
+  }
+
+  body.page-education-background-preview.page-light-surface.page-courses .course-decision-row:not(.course-decision-head) a {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
