@@ -968,25 +968,32 @@ body.page-education-background-preview::after {
 }
 
 body.page-education-background-preview .site-header {
-  background:
-    linear-gradient(180deg, rgba(5, 6, 8, 0.92), rgba(5, 6, 8, 0.76)) !important;
+  background: rgba(10, 10, 15, 0.96) !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28) !important;
 }
 
+body.page-education-background-preview .primary-nav {
+  background: transparent !important;
+}
+
 body.page-education-background-preview .home-v2-brand-line,
 body.page-education-background-preview .primary-nav a {
-  color: rgba(255, 255, 255, 0.72) !important;
+  color: rgba(255, 255, 255, 0.86) !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 body.page-education-background-preview .primary-nav a[aria-current="page"] {
   color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  background: rgba(255, 255, 255, 0.055) !important;
 }
 
 body.page-education-background-preview .home-v2-header-cta {
-  border-color: rgba(79, 143, 58, 0.62) !important;
-  color: rgba(218, 242, 206, 0.96) !important;
-  background: rgba(79, 143, 58, 0.12) !important;
+  border-color: rgba(79, 143, 58, 0.78) !important;
+  color: #ffffff !important;
+  background: rgba(79, 143, 58, 0.2) !important;
 }
 
 body.page-education-background-preview.mobile-menu-ready .mobile-menu-toggle {
