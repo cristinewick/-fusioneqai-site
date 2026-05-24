@@ -6,7 +6,7 @@
   <title>Thank You | FusionEQ</title>
   <meta
     name="description"
-    content="Thank you for contacting FusionEQ."
+    content="Thank you for contacting FusionEQ. Explore the FusionEQ education path, Deal Readiness Report, and book while your request is reviewed."
   >
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
@@ -14,31 +14,31 @@
 <body class="page-home-v2 page-light-surface page-thank-you">
   <header class="site-header home-v2-shell-header">
     <div class="home-v2-brand-block">
-      <a aria-label='FusionEQ home' class='brand' href='/home#top'>
-        <img class="brand-logo home-v2-header-logo" src="assets/header-fusioneqai-logo.png" alt="FusionEQ AI">
+      <a aria-label='FusionEQ home' class='brand' href='home.html#top'>
+        <img class="brand-logo home-v2-header-logo" src="assets/fusioneq-logo-dark-no-ai.png" alt="FusionEQ">
       </a>
       <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
     </div>
     <nav class="primary-nav" aria-label="Primary navigation">
       <div class="nav-group">
-        <a href='/'>Entry</a>
+        <a href='index.html'>Entry</a>
       </div>
       <div class="nav-group">
-        <a href='/home'>Home</a>
+        <a href='home.html'>Home</a>
       </div>
       <div class="nav-group">
-        <a href="/how-it-works">How It Works</a>
+        <a href="how-it-works.html">How It Works</a>
       </div>
       <div class="nav-group">
-        <a href='/book'>Book</a>
+        <a href='book.html'>Book</a>
       </div>
       <div class="nav-group">
-        <a href='/courses'>Education</a>
+        <a href='courses.html'>Education</a>
       </div>
       <div class="nav-group">
-        <a href='/contact#top'>Contact</a>
+        <a href='contact.html#top'>Contact</a>
       </div>
-      <a class='home-v2-header-cta' href='/pilot'>Request Deal Readiness Report</a>
+      <a class='home-v2-header-cta' href='pilot.html'>Request Deal Readiness Report</a>
     </nav>
   </header>
 
@@ -47,33 +47,78 @@
       <p class="context">Request Received</p>
       <h1 id="thank-you-title">Thank you. FusionEQ received your request.</h1>
       <p class="subline">
-        Your request has been submitted. FusionEQ will review the context and follow up with the appropriate next step.
+        Your request has been submitted. FusionEQ will review the context and follow up with the appropriate next step across the Deal Readiness Report, Foundations, LENS, READ, CLEAR, or the book.
+      </p>
+      <p class="request-path-note thank-you-path-note" data-thank-you-path-note hidden></p>
+      <p>
+        While your request is being reviewed, these are the best next places to continue learning how FusionEQ builds Deal Readiness Intelligence.
       </p>
       <div class="cta-row" aria-label="Thank you actions">
-        <a href='/home'>Return Home</a>
-        <a href='/sample-deal-read'>View Sample Deal Readiness Report</a>
+        <a href='courses.html'>Explore Education</a>
+        <a href='sample-deal-read.html'>View Sample Report</a>
+      </div>
+    </section>
+
+    <section class="slide methodology" aria-labelledby="thank-you-next-title">
+      <p class="context">Continue Exploring</p>
+      <h2 id="thank-you-next-title">Choose the next view based on what you want to understand.</h2>
+      <div class="method-list" aria-label="FusionEQ next steps after request">
+        <p><span>Foundations</span> Start with the complimentary web course for the shared language of activity, evidence, assumptions, and readiness.</p>
+        <p><span>LENS</span> Learn the language for seeing the decision behind the deal: Language, Evidence, Narrative, Signals.</p>
+        <p><span>READ</span> See how sellers turn the deal read into a buyer-owned next move.</p>
+        <p><span>CLEAR</span> See how managers turn the report into better coaching and supportable revenue reads.</p>
+        <p><span>Deal Readiness Report</span> Review how FusionEQ applies the read directly to a live opportunity when the team needs clarity now.</p>
+        <p><span>The Book</span> Explore <em>The Deal Behind the Deal</em> and the broader category FusionEQ is building.</p>
+      </div>
+      <div class="cta-row" aria-label="FusionEQ next step links">
+        <a href='intro-fusioneq-ai.html'>Start Foundations</a>
+        <a href='lens-course.html'>View LENS</a>
+        <a href='read-the-deal.html'>View READ</a>
+        <a href='clear-review.html'>View CLEAR</a>
+        <a href='pilot.html'>Request Report</a>
+        <a href='book.html'>View Book</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div>
-      <img class="brand-logo footer-logo" src="assets/fusioneq-marketing-lockup.png" alt="FusionEQ">
+      <img class="brand-logo footer-logo" src="assets/fusioneq-logo-dark-no-ai.png" alt="FusionEQ">
       <span>Decision readiness for revenue teams</span>
       <small>© 2026. All rights reserved. FusionEQ AI™ is a trademark of Cristine Wick.</small>
     </div>
     <nav aria-label="Footer navigation">
-      <a href='/'>Entry</a>
-      <a href='/home'>Home</a>
-      <a href='/lens'>Lens</a>
-      <a href='/patterns'>Patterns</a>
-      <a href='/courses'>Education</a>
-      <a href='/book'>Book</a>
-      <a href='/pilot'>Request Deal Readiness Report</a>
-      <a href='/contact#top'>Contact</a>
-      <a href='/privacy'>Privacy</a>
+      <a href='index.html'>Entry</a>
+      <a href='home.html'>Home</a>
+      <a href='lens.html'>Lens</a>
+      <a href='patterns.html'>Patterns</a>
+      <a href='courses.html'>Education</a>
+      <a href='book.html'>Book</a>
+      <a href='pilot.html'>Request Deal Readiness Report</a>
+      <a href='contact.html#top'>Contact</a>
+      <a href='privacy.html'>Privacy</a>
     </nav>
   </footer>
   <script src="mobile-menu.js"></script>
+  <script>
+    (function () {
+      const noteMap = {
+        LENS: 'You asked about LENS. The education path can still be routed across Foundations, READ, CLEAR, or the Deal Readiness Report if another next step fits better.',
+        READ: 'You asked about READ. The education path can still be routed across Foundations, LENS, CLEAR, or the Deal Readiness Report if another next step fits better.',
+        CLEAR: 'You asked about CLEAR. The education path can still be routed across Foundations, LENS, READ, or the Deal Readiness Report if another next step fits better.',
+        'premium-courses': 'You asked about the premium course path. FusionEQ can help confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the best next step.',
+        report: 'You asked about the Deal Readiness Report. FusionEQ can read the opportunity now and also help your team build the discipline through Foundations, LENS, READ, and CLEAR.',
+        book: 'You asked about book updates. The education path and Deal Readiness Report show how the ideas become practical for revenue teams.',
+        brief: 'You asked about an executive brief. FusionEQ can help route the conversation into the Report, Foundations, LENS, READ, or CLEAR.'
+      };
+      const note = noteMap[new URLSearchParams(window.location.search).get('request')];
+      const noteEl = document.querySelector('[data-thank-you-path-note]');
+
+      if (noteEl && note) {
+        noteEl.textContent = note;
+        noteEl.hidden = false;
+      }
+    })();
+  </script>
 </body>
 </html>

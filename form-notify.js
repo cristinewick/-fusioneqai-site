@@ -1,4 +1,38 @@
 (function () {
+  const requestTypeMap = {
+    LENS: 'LENS premium course',
+    READ: 'READ premium course',
+    CLEAR: 'CLEAR premium course',
+    'premium-courses': 'Not sure yet',
+    report: 'Deal Readiness Report',
+    book: 'Book updates',
+    brief: 'Executive brief'
+  };
+  const requestNoteMap = {
+    LENS: "You're exploring LENS for your team. We'll help you confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the right next step.",
+    READ: "You're exploring READ for sellers. We'll help you confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the right next step.",
+    CLEAR: "You're exploring CLEAR for managers. We'll help you confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the right next step.",
+    'premium-courses': "You're exploring the premium course path. We'll help you confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the right next step.",
+    report: "You're requesting a Deal Readiness Report. We'll help you confirm whether the report, Foundations, LENS, READ, or CLEAR is the right next step.",
+    book: "You're joining the book update list. We'll help you confirm whether Foundations, LENS, READ, CLEAR, or the Deal Readiness Report is also relevant.",
+    brief: "You're exploring an executive brief. We'll help you confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the right next step."
+  };
+
+  const requestParam = new URLSearchParams(window.location.search).get('request');
+  const requestValue = requestTypeMap[requestParam];
+  const requestNote = requestNoteMap[requestParam];
+  const requestSelect = document.querySelector('select[name="request_type"]');
+  const requestNoteEl = document.querySelector('[data-request-path-note]');
+
+  if (requestSelect && requestValue) {
+    requestSelect.value = requestValue;
+  }
+
+  if (requestNoteEl && requestNote) {
+    requestNoteEl.textContent = requestNote;
+    requestNoteEl.hidden = false;
+  }
+
   const enhancedForms = document.querySelectorAll('form[data-fusioneq-notify="true"]');
 
   enhancedForms.forEach((form) => {
@@ -17,6 +51,20 @@
       const payload = Object.fromEntries(formData.entries());
       payload.formName = payload['form-name'] || form.getAttribute('name') || 'FusionEQ form';
       payload.page = window.location.href;
+      const thankYouRequestMap = {
+        'Deal Readiness Report': 'report',
+        'LENS premium course': 'LENS',
+        'READ premium course': 'READ',
+        'CLEAR premium course': 'CLEAR',
+        'Book updates': 'book',
+        'Executive brief': 'brief',
+        'Not sure yet': 'premium-courses'
+      };
+      const thankYouRequest = thankYouRequestMap[payload.request_type];
+
+      if (thankYouRequest) {
+        form.action = `thank-you.html?request=${encodeURIComponent(thankYouRequest)}`;
+      }
 
       try {
         await fetch('/.netlify/functions/form-notification', {

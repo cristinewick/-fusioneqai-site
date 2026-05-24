@@ -11,6 +11,7 @@
 /contact /contact.html 200
 /thank-you /thank-you.html 200
 /courses /courses.html 200
+/lens-course /lens-course.html 200
 /intro-fusioneq-ai /intro-fusioneq-ai.html 200
 /intro-module-1 /intro-module-1.html 200
 /intro-module-2 /intro-module-2.html 200
@@ -23,4 +24,6 @@
 /book /book.html 200
 /deal-coach /deal-coach.html 200
 /presentation-coach /presentation-coach.html 200
+/sample-deal-read /sample-deal-read.html 200
+/sample-presentation-read /sample-presentation-read.html 200
 /privacy /privacy.html 200
