@@ -686,6 +686,27 @@
       body {
         padding: 36px 40px 44px;
       }
+      .report-return {
+        position: fixed;
+        top: 18px;
+        left: 18px;
+        z-index: 10;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid rgba(47, 125, 56, 0.32);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.94);
+        color: #2f7d38;
+        box-shadow: 0 12px 28px rgba(21, 32, 28, 0.12);
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
       .cover,
       .report {
         max-width: 8.2in;
@@ -693,9 +714,15 @@
         margin-right: auto;
       }
     }
+    @media print {
+      .report-return {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
+  <a class="report-return" href="../../../home.html#top">Back to FusionEQ</a>
 
     
   <section class="cover report-cover">
