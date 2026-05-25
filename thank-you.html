@@ -47,7 +47,7 @@
       <p class="context">Request Received</p>
       <h1 id="thank-you-title">Thank you. FusionEQ received your request.</h1>
       <p class="subline">
-        Your request has been submitted. FusionEQ will review the context and follow up with the appropriate next step across the Deal Readiness Report, Foundations, LENS, READ, CLEAR, or the book.
+        Your request has been submitted. FusionEQ will review the context and follow up with the appropriate next step across the Deal Readiness Report, Foundations, FusionEQ Lens™, FusionEQ READ™, FusionEQ CLEAR™, or the book.
       </p>
       <p class="request-path-note thank-you-path-note" data-thank-you-path-note hidden></p>
       <p>
@@ -64,17 +64,17 @@
       <h2 id="thank-you-next-title">Choose the next view based on what you want to understand.</h2>
       <div class="method-list" aria-label="FusionEQ next steps after request">
         <p><span>Foundations</span> Start with the complimentary web course for the shared language of activity, evidence, assumptions, and readiness.</p>
-        <p><span>LENS</span> Learn the language for seeing the decision behind the deal: Language, Evidence, Narrative, Signals.</p>
-        <p><span>READ</span> See how sellers turn the deal read into a buyer-owned next move.</p>
-        <p><span>CLEAR</span> See how managers turn the report into better coaching and supportable revenue reads.</p>
-        <p><span>Deal Readiness Report</span> Review how FusionEQ applies the read directly to a live opportunity when the team needs clarity now.</p>
+        <p><span>FusionEQ Lens™</span> Learn the language for seeing the decision behind the deal: Language, Evidence, Narrative, Signals.</p>
+        <p><span>FusionEQ READ™</span> See how sellers turn deal interpretation into a buyer-owned next move.</p>
+        <p><span>FusionEQ CLEAR™</span> See how managers turn the report into better coaching and supportable revenue interpretation.</p>
+        <p><span>Deal Readiness Report</span> Review how FusionEQ applies interpretation directly to a live deal opportunity when the team needs clarity now.</p>
         <p><span>The Book</span> Explore <em>The Deal Behind the Deal</em> and the broader category FusionEQ is building.</p>
       </div>
       <div class="cta-row" aria-label="FusionEQ next step links">
         <a href='intro-fusioneq-ai.html'>Start Foundations</a>
-        <a href='lens-course.html'>View LENS</a>
-        <a href='read-the-deal.html'>View READ</a>
-        <a href='clear-review.html'>View CLEAR</a>
+        <a href='lens-course.html'>View FusionEQ Lens™</a>
+        <a href='read-the-deal.html'>View FusionEQ READ™</a>
+        <a href='clear-review.html'>View FusionEQ CLEAR™</a>
         <a href='pilot.html'>Request Report</a>
         <a href='book.html'>View Book</a>
       </div>
@@ -90,7 +90,7 @@
     <nav aria-label="Footer navigation">
       <a href='index.html'>Entry</a>
       <a href='home.html'>Home</a>
-      <a href='lens.html'>Lens</a>
+      <a href='lens.html'>Interpretation Layer</a>
       <a href='patterns.html'>Patterns</a>
       <a href='courses.html'>Education</a>
       <a href='book.html'>Book</a>
@@ -103,13 +103,13 @@
   <script>
     (function () {
       const noteMap = {
-        LENS: 'You asked about LENS. The education path can still be routed across Foundations, READ, CLEAR, or the Deal Readiness Report if another next step fits better.',
-        READ: 'You asked about READ. The education path can still be routed across Foundations, LENS, CLEAR, or the Deal Readiness Report if another next step fits better.',
-        CLEAR: 'You asked about CLEAR. The education path can still be routed across Foundations, LENS, READ, or the Deal Readiness Report if another next step fits better.',
-        'premium-courses': 'You asked about the premium course path. FusionEQ can help confirm whether LENS, READ, CLEAR, Foundations, or the Deal Readiness Report is the best next step.',
-        report: 'You asked about the Deal Readiness Report. FusionEQ can read the opportunity now and also help your team build the discipline through Foundations, LENS, READ, and CLEAR.',
+        LENS: 'You asked about FusionEQ Lens™. The education path can still be routed across Foundations, FusionEQ READ™, FusionEQ CLEAR™, or the Deal Readiness Report if another next step fits better.',
+        READ: 'You asked about FusionEQ READ™. The education path can still be routed across Foundations, FusionEQ Lens™, FusionEQ CLEAR™, or the Deal Readiness Report if another next step fits better.',
+        CLEAR: 'You asked about FusionEQ CLEAR™. The education path can still be routed across Foundations, FusionEQ Lens™, FusionEQ READ™, or the Deal Readiness Report if another next step fits better.',
+        'premium-courses': 'You asked about the premium course path. FusionEQ can help confirm whether FusionEQ Lens™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or the Deal Readiness Report is the best next step.',
+        report: 'You asked about the Deal Readiness Report. FusionEQ can interpret the opportunity now and also help your team build the discipline through Foundations, FusionEQ Lens™, FusionEQ READ™, and FusionEQ CLEAR™.',
         book: 'You asked about book updates. The education path and Deal Readiness Report show how the ideas become practical for revenue teams.',
-        brief: 'You asked about an executive brief. FusionEQ can help route the conversation into the Report, Foundations, LENS, READ, or CLEAR.'
+        brief: 'You asked about an executive brief. FusionEQ can help route the conversation into the Report, Foundations, FusionEQ Lens™, FusionEQ READ™, or FusionEQ CLEAR™.'
       };
       const note = noteMap[new URLSearchParams(window.location.search).get('request')];
       const noteEl = document.querySelector('[data-thank-you-path-note]');
