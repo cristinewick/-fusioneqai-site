@@ -5,6 +5,25 @@ node_modules
 _archive/
 outputs/
 *.zip
+FusionEQ-Presentation-System-Approved-V3/
+
+# Local report/course generation inputs and scripts
+inputs/
+scripts/
+tools/make-book-cover-*.swift
+
+# Local/generated book cover variants not used by the live site
+assets/archive/
+assets/the-deal-behind-the-deal-cover-final.png
+assets/the-deal-behind-the-deal-cover-no-subtitle.png
+assets/the-deal-behind-the-deal-fusioneq-ai-logo-mock.png
+assets/the-deal-behind-the-deal-fusioneq-tagline-mock.png
+assets/the-deal-behind-the-deal-logo-tagline-mock.png
+assets/the-deal-behind-the-deal-v2.png
+
+# Internal/unreferenced brand working files
+FusionEQ-Visual-Style-Guide.md
+assets/fusioneq-academy-lockup.svg
 
 # Book/manuscript working files kept outside the deployable website
 book-chapters/
