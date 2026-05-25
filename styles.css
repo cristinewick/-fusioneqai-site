@@ -2026,18 +2026,28 @@
   margin-top: 10px;
 }
 
-.post-entry-actions a:first-child {
-  min-height: 52px;
-  padding: 14px 22px;
+.post-entry-visual-cta {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  margin-top: 4px;
+  padding: 15px 28px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
   color: #08110d;
   background: var(--green);
-  border-color: var(--green);
   box-shadow: 0 18px 42px rgba(79, 143, 58, 0.22);
+  font-size: 1rem;
   font-weight: 750;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
 }
 
-.post-entry-actions a:first-child:hover,
-.post-entry-actions a:first-child:focus-visible {
+.post-entry-visual-cta:hover,
+.post-entry-visual-cta:focus-visible {
   color: #08110d;
   background: #67a94d;
   border-color: #67a94d;
@@ -2118,6 +2128,30 @@
   color: rgba(255, 255, 255, 0.74);
   font-size: clamp(1rem, 1.16vw, 1.13rem);
   line-height: 1.58;
+}
+
+.post-entry-report-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 2px;
+  padding: 12px 18px;
+  border: 1px solid rgba(79, 143, 58, 0.7);
+  border-radius: 8px;
+  color: rgba(222, 246, 211, 0.98);
+  background: rgba(79, 143, 58, 0.12);
+  font-size: 0.94rem;
+  font-weight: 750;
+  line-height: 1.15;
+  text-align: center;
+  text-decoration: none;
+}
+
+.post-entry-report-cta:hover,
+.post-entry-report-cta:focus-visible {
+  border-color: var(--green);
+  background: rgba(79, 143, 58, 0.2);
 }
 
 .post-entry-depth-note {
@@ -14562,7 +14596,7 @@ body.page-how-it-works > main#top.how-page {
     justify-content: center;
   }
 
-  .post-entry-actions a:first-child {
+  .post-entry-visual-cta {
     width: min(100%, 312px);
     min-height: 54px;
     font-size: 0.96rem;
