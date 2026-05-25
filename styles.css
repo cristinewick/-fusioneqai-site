@@ -9757,6 +9757,22 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   font-weight: 700;
 }
 
+.contact-request-list .contact-course-path {
+  margin-left: 22px;
+  padding-left: 18px;
+}
+
+.contact-request-list .contact-course-path::before {
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  opacity: 0.85;
+}
+
+.contact-request-list .contact-course-path strong {
+  color: var(--gold);
+}
+
 .page-contact .lead-form {
   background: rgba(255, 255, 255, 0.015);
   margin-top: 68px;
