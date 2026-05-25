@@ -1,4 +1,5 @@
 .DS_Store
+node_modules
 
 # Local archive and generated deployment bundles
 _archive/
@@ -14,6 +15,10 @@ book-proposal-summary.md
 chapter-review-checklist.md
 chapter-review-checklist.txt
 The Deal Behind the Deal - Manuscript.pdf
+FusionEQ_Book_*.md
+The_Deal_Behind_The_Deal_*.md
+The_Deal_Behind_The_Deal_*.docx
+Website_Book_*.md
 
 # Local scratch/preview pages
 hero-lens-preview.html
