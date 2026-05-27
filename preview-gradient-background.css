@@ -147,8 +147,8 @@ body.page-entry-background-preview .front-door::after {
 body.page-entry-background-preview .front-door-stage {
   position: relative;
   background:
-    radial-gradient(ellipse at 80% 46%, rgba(216, 203, 163, 0.1), transparent 34%),
-    linear-gradient(90deg, rgba(3, 5, 6, 0.95), rgba(3, 5, 6, 0.76) 42%, rgba(3, 5, 6, 0.22) 66%, rgba(3, 5, 6, 0.12)),
+    radial-gradient(ellipse at 80% 46%, rgba(216, 203, 163, 0.075), transparent 35%),
+    linear-gradient(90deg, rgba(3, 5, 6, 0.95), rgba(3, 5, 6, 0.79) 42%, rgba(3, 5, 6, 0.26) 66%, rgba(3, 5, 6, 0.15)),
     linear-gradient(180deg, rgba(3, 5, 6, 0.04), rgba(3, 5, 6, 0.22)),
     url("assets/fusioneq-lens-ring-entry-preview.png"),
     url("assets/fusioneq-premium-gradient-background-preview.png") !important;
@@ -173,7 +173,7 @@ body.page-entry-background-preview .front-door-stage {
 }
 
 body.page-entry-background-preview .front-door-stage::before {
-  opacity: 0.58;
+  opacity: 0.5;
 }
 
 body.page-entry-background-preview .front-door-stage::after {
@@ -183,7 +183,7 @@ body.page-entry-background-preview .front-door-stage::after {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(3, 5, 6, 0.84) 0%, rgba(3, 5, 6, 0.58) 36%, rgba(3, 5, 6, 0.08) 60%, rgba(3, 5, 6, 0.16) 100%),
+    linear-gradient(90deg, rgba(3, 5, 6, 0.84) 0%, rgba(3, 5, 6, 0.6) 36%, rgba(3, 5, 6, 0.13) 60%, rgba(3, 5, 6, 0.18) 100%),
     linear-gradient(180deg, rgba(3, 5, 6, 0.12), transparent 34%, rgba(3, 5, 6, 0.18));
 }
 
@@ -404,16 +404,146 @@ body.page-entry-background-preview .front-door-contact {
 
 body.page-entry-background-preview .concept-entry-copy {
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
-  top: 31%;
-  width: min(520px, 38vw);
+  top: 24.5%;
+  width: min(610px, 42vw);
 }
 
 body.page-entry-background-preview .concept-entry-copy .context {
   display: none;
 }
 
+body.page-entry-background-preview .concept-entry-copy h1 {
+  display: grid;
+  gap: 0.16em;
+  max-width: 610px;
+  font-size: clamp(1.44rem, 1.88vw, 2.12rem);
+  line-height: 1.08;
+}
+
 body.page-entry-background-preview .concept-entry-lines {
-  width: min(455px, 100%);
+  gap: 10px;
+  width: min(610px, 100%);
+}
+
+body.page-entry-background-preview .concept-entry-lines p {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
+  line-height: 1.36;
+}
+
+body.page-entry-background-preview .concept-entry-lines p::before {
+  content: none;
+}
+
+body.page-entry-background-preview .concept-entry-lines .concept-entry-summary {
+  padding-top: 0;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+body.page-entry-background-preview .concept-entry-stack {
+  display: grid;
+  gap: 0;
+  margin-top: 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.page-entry-background-preview .concept-entry-step {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.page-entry-background-preview .concept-entry-step-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
+  color: var(--gold);
+  font-size: 1.26rem;
+  line-height: 1;
+}
+
+body.page-entry-background-preview .concept-entry-step-icon-ring,
+body.page-entry-background-preview .concept-entry-step-icon-report {
+  position: relative;
+  border: 1px solid rgba(111, 180, 72, 0.72);
+  border-radius: 50%;
+  box-shadow: inset 0 0 22px rgba(111, 180, 72, 0.1);
+}
+
+body.page-entry-background-preview .concept-entry-step-icon-ring::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(111, 180, 72, 0.78);
+  border-radius: 50%;
+}
+
+body.page-entry-background-preview .concept-entry-step-icon-report {
+  border-color: rgba(111, 180, 72, 0.58);
+  border-radius: 2px;
+}
+
+body.page-entry-background-preview .concept-entry-step-icon-report::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  top: 9px;
+  height: 1px;
+  background: rgba(111, 180, 72, 0.64);
+  box-shadow: 0 6px 0 rgba(111, 180, 72, 0.42);
+}
+
+body.page-entry-background-preview .concept-entry-step-copy {
+  display: grid;
+  gap: 4px;
+}
+
+body.page-entry-background-preview .concept-entry-step-copy strong {
+  color: rgba(255, 255, 255, 0.94);
+  font-family: var(--serif);
+  font-size: clamp(0.88rem, 0.94vw, 1rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+body.page-entry-background-preview .concept-entry-step-copy span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.78rem, 0.82vw, 0.9rem);
+  line-height: 1.32;
+}
+
+body.page-entry-background-preview .concept-entry-lines .concept-entry-principle {
+  position: relative;
+  margin-top: 2px;
+  padding: 0 0 0 16px;
+  color: var(--green);
+  font-weight: 700;
+}
+
+body.page-entry-background-preview .concept-entry-lines .concept-entry-principle::before {
+  content: "";
+  position: absolute;
+  top: 0.24em;
+  bottom: 0.24em;
+  left: 0;
+  width: 2px;
+  background: rgba(79, 143, 58, 0.72);
+}
+
+body.page-entry-background-preview .front-door-enter {
+  position: static;
+  transform: none;
+  justify-self: start;
+  width: min(300px, 100%);
+  min-width: 0;
+  margin-top: 2px;
 }
 
 @media (min-width: 1500px) {
@@ -427,17 +557,17 @@ body.page-entry-background-preview .concept-entry-lines {
 
   body.page-entry-background-preview .concept-entry-copy {
     left: clamp(84px, 7vw, 140px);
-    top: clamp(340px, 31vh, 430px);
-    width: min(610px, 34vw);
+    top: clamp(268px, 24.5vh, 338px);
+    width: min(620px, 35vw);
   }
 
   body.page-entry-background-preview .concept-entry-copy h1 {
-    font-size: clamp(2.8rem, 3vw, 3.55rem);
-    line-height: 1.04;
+    font-size: clamp(1.92rem, 1.98vw, 2.42rem);
+    line-height: 1.08;
   }
 
   body.page-entry-background-preview .concept-entry-lines {
-    width: min(520px, 100%);
+    width: min(610px, 100%);
   }
 
   body.page-entry-background-preview .concept-entry-map-label-stack {
@@ -482,15 +612,15 @@ body.page-entry-background-preview .concept-entry-lines {
   }
 
   body.page-entry-background-preview .concept-entry-copy {
-    top: clamp(236px, 29vh, 282px);
+    top: clamp(206px, 26vh, 250px);
     left: 24px;
     gap: 12px;
     width: min(306px, calc(100vw - 48px));
   }
 
   body.page-entry-background-preview .concept-entry-copy h1 {
-    font-size: clamp(1.72rem, 8vw, 2.04rem);
-    line-height: 1.05;
+    font-size: clamp(1.46rem, 7vw, 1.78rem);
+    line-height: 1.08;
   }
 
   body.page-entry-background-preview .concept-entry-lines {
@@ -504,14 +634,25 @@ body.page-entry-background-preview .concept-entry-lines {
     line-height: 1.34;
   }
 
+  body.page-entry-background-preview .concept-entry-step {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 11px;
+    padding: 10px 0;
+  }
+
+  body.page-entry-background-preview .concept-entry-step-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1.05rem;
+  }
+
   body.page-entry-background-preview .concept-entry-map,
   body.page-entry-background-preview .concept-entry-equation {
     display: none;
   }
 
   body.page-entry-background-preview .front-door-enter {
-    bottom: 20px;
-    left: 24px;
+    position: static;
     width: min(292px, calc(100vw - 48px));
     min-height: 50px;
   }
