@@ -652,9 +652,19 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .front-door-enter {
-    position: static;
-    width: min(292px, calc(100vw - 48px));
-    min-height: 50px;
+    position: fixed;
+    z-index: 8;
+    top: 136px;
+    right: 18px;
+    left: auto;
+    bottom: auto;
+    width: min(168px, calc(100vw - 214px));
+    min-height: 42px;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-size: 0.54rem;
+    background: rgba(3, 5, 7, 0.78);
+    backdrop-filter: blur(10px);
   }
 }
 

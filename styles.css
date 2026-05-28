@@ -15333,3 +15333,51 @@ body.page-how-it-works > main#top.how-page {
 .page-thank-you .method-list span {
   color: #2f7d38;
 }
+
+.has-dropdown > a::after {
+  content: "▾";
+  margin-left: 0.34em;
+  color: rgba(201, 169, 106, 0.78);
+  font-size: 0.7em;
+  line-height: 1;
+}
+
+.nav-menu a[aria-current="page"] {
+  color: var(--white);
+  background: rgba(79, 143, 58, 0.13);
+}
+
+@media (max-width: 760px) {
+  .mobile-menu-ready.mobile-menu-open .primary-nav .has-dropdown {
+    display: grid;
+    gap: 4px;
+  }
+
+  .mobile-menu-ready.mobile-menu-open .primary-nav .has-dropdown > a {
+    width: 100%;
+  }
+
+  .mobile-menu-ready.mobile-menu-open .primary-nav .nav-menu,
+  .mobile-menu-ready.mobile-menu-open.page-home-v2 .primary-nav .nav-menu {
+    position: static;
+    display: grid !important;
+    min-width: 0;
+    width: 100%;
+    padding: 4px 0 6px 12px;
+    border: 0;
+    border-left: 1px solid rgba(201, 169, 106, 0.32);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .mobile-menu-ready.mobile-menu-open .primary-nav .nav-menu::before {
+    content: none;
+  }
+
+  .mobile-menu-ready.mobile-menu-open .primary-nav .nav-menu a {
+    width: 100%;
+    padding: 8px 10px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.86rem;
+  }
+}

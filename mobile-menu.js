@@ -14,6 +14,40 @@
   button.innerHTML = "<span></span><span></span><span></span><em>Menu</em>";
 
   nav.id = nav.id || "primary-navigation";
+
+  const educationLink = Array.from(nav.querySelectorAll(".nav-group > a")).find((link) => {
+    return link.textContent.trim().toLowerCase() === "education" && link.getAttribute("href")?.includes("courses.html");
+  });
+
+  if (educationLink && !educationLink.parentElement.querySelector(".nav-menu")) {
+    const group = educationLink.parentElement;
+    const menu = document.createElement("div");
+    const educationItems = [
+      ["Foundations", "intro-fusioneq-ai.html"],
+      ["FusionEQ LENS™", "lens-course.html"],
+      ["FusionEQ READ™", "read-the-deal.html"],
+      ["FusionEQ CLEAR™", "clear-review.html"],
+      ["Executive Brief", "brief.html"]
+    ];
+
+    group.classList.add("has-dropdown");
+    educationLink.setAttribute("aria-haspopup", "true");
+    menu.className = "nav-menu";
+    menu.setAttribute("aria-label", "Education navigation");
+
+    educationItems.forEach(([label, href]) => {
+      const item = document.createElement("a");
+      item.href = href;
+      item.textContent = label;
+      if (window.location.pathname.endsWith(`/${href}`) || window.location.pathname.endsWith(href)) {
+        item.setAttribute("aria-current", "page");
+      }
+      menu.appendChild(item);
+    });
+
+    group.appendChild(menu);
+  }
+
   header.insertBefore(button, nav);
   document.body.classList.add("mobile-menu-ready");
 
