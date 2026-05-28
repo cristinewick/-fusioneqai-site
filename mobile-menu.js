@@ -16,7 +16,8 @@
   nav.id = nav.id || "primary-navigation";
 
   const educationLink = Array.from(nav.querySelectorAll(".nav-group > a")).find((link) => {
-    return link.textContent.trim().toLowerCase() === "education" && link.getAttribute("href")?.includes("courses.html");
+    const href = link.getAttribute("href") || "";
+    return link.textContent.trim().toLowerCase() === "education" && href.includes("courses");
   });
 
   if (educationLink && !educationLink.parentElement.querySelector(".nav-menu")) {
