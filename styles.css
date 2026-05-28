@@ -6821,6 +6821,36 @@ strong .home-v2-green,
   margin-top: 10px;
 }
 
+.how-layer-visual-section {
+  gap: 24px;
+}
+
+.how-layer-visual-section h2 {
+  max-width: 860px;
+  font-size: clamp(1.74rem, 2.15vw, 2.3rem);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.how-layer-visual {
+  margin: 8px 0 0;
+  width: 100%;
+}
+
+.how-layer-visual img {
+  width: 100%;
+  border: 1px solid rgba(120, 188, 54, 0.22);
+  border-radius: 12px;
+}
+
+.how-layer-visual figcaption {
+  max-width: 880px;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .how-gap-panel {
   display: grid;
   gap: 18px;
@@ -7143,6 +7173,7 @@ body.page-how-it-works.page-light-surface .how-page .slide {
 body.page-how-it-works.page-light-surface .how-hero h1,
 body.page-how-it-works.page-light-surface .how-orientation h2,
 body.page-how-it-works.page-light-surface .how-workflow h2,
+body.page-how-it-works.page-light-surface .how-layer-visual-section h2,
 body.page-how-it-works.page-light-surface .how-gap h2,
 body.page-how-it-works.page-light-surface .how-use h2,
 body.page-how-it-works.page-light-surface .how-next h2,
@@ -7174,6 +7205,7 @@ body.page-how-it-works.page-light-surface .home-v2-green {
 body.page-how-it-works.page-light-surface .how-hero .subline,
 body.page-how-it-works.page-light-surface .how-card-grid p,
 body.page-how-it-works.page-light-surface .how-workflow-grid p,
+body.page-how-it-works.page-light-surface .how-layer-visual figcaption,
 body.page-how-it-works.page-light-surface .how-gap-panel p,
 body.page-how-it-works.page-light-surface .how-use-list p,
 body.page-how-it-works.page-light-surface .how-next-grid p {
@@ -7203,6 +7235,11 @@ body.page-how-it-works.page-light-surface .how-workflow-grid article {
 body.page-how-it-works.page-light-surface .how-gap-panel,
 body.page-how-it-works.page-light-surface .how-next-grid a {
   background: rgba(255, 255, 255, 0.024);
+}
+
+body.page-how-it-works.page-light-surface .how-layer-visual img {
+  border-color: rgba(120, 188, 54, 0.24);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
 }
 
 body.page-how-it-works.page-light-surface .how-next-grid a:hover,
@@ -7691,6 +7728,7 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   .how-hero h1,
   .how-orientation h2,
   .how-workflow h2,
+  .how-layer-visual-section h2,
   .how-gap h2,
   .how-use h2,
   .how-next h2 {
