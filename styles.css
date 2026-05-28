@@ -3310,6 +3310,12 @@ a {
   scroll-margin-top: 150px;
 }
 
+#premium-access,
+#course-access,
+#modules {
+  scroll-margin-top: 150px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
