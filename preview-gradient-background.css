@@ -546,11 +546,6 @@ body.page-entry-background-preview .front-door-enter {
   margin-top: 2px;
 }
 
-body.page-entry-background-preview .concept-entry-secondary {
-  justify-self: start;
-  margin-top: -4px;
-}
-
 @media (min-width: 1500px) {
   body.page-entry-background-preview .front-door-brand {
     left: clamp(72px, 5.6vw, 116px);

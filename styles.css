@@ -3479,23 +3479,6 @@ a {
   transform: translateX(-50%) translateY(-1px);
 }
 
-.concept-entry-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(252, 252, 252, 0.78);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.concept-entry-secondary:hover,
-.concept-entry-secondary:focus-visible {
-  color: rgba(200, 169, 106, 0.95);
-}
-
 .page-concept-entry .front-door-stage {
   background-image: url("assets/fusioneq-entry-layered-lens-clean.jpeg");
   background-position: 87% center;
