@@ -14,7 +14,7 @@
     READ: "You're exploring FusionEQ READ™ for sellers. We'll help you confirm whether FusionEQ READ™, Foundations, FusionEQ LENS™, FusionEQ CLEAR™, or a readiness report is the right next step.",
     CLEAR: "You're exploring FusionEQ CLEAR™ for managers. We'll help you confirm whether FusionEQ CLEAR™, Foundations, FusionEQ LENS™, FusionEQ READ™, or a readiness report is the right next step.",
     'premium-courses': "You're exploring the premium course path. We'll help you confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the right next step.",
-    report: "You're requesting a Deal Readiness Report. We'll help you confirm the opportunity context, readiness question, evidence available, and right next step.",
+    report: "You're requesting a complimentary Deal Readiness Read. We'll help you confirm the opportunity context, readiness question, evidence available, and whether a full Deal Readiness Report is useful.",
     presentation: "You're requesting a Presentation Readiness Report. We'll help you confirm the audience, message goal, decision context, and right next step.",
     book: "You're joining the book update list. We'll share updates on The Deal Behind the Deal and help you decide whether a readiness report or education path is also relevant.",
     brief: "You're exploring an executive brief. We'll help you confirm whether a readiness report, Foundations, FusionEQ LENS™, FusionEQ READ™, or FusionEQ CLEAR™ is the right next step."
@@ -55,6 +55,7 @@
       payload.page = window.location.href;
       const thankYouRequestMap = {
         'Deal Readiness Report': 'report',
+        'Sample report review': 'report',
         'Presentation Readiness Report': 'presentation',
         'LENS premium course': 'LENS',
         'READ premium course': 'READ',

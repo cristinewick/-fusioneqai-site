@@ -3479,6 +3479,23 @@ a {
   transform: translateX(-50%) translateY(-1px);
 }
 
+.concept-entry-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(252, 252, 252, 0.78);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.concept-entry-secondary:hover,
+.concept-entry-secondary:focus-visible {
+  color: rgba(200, 169, 106, 0.95);
+}
+
 .page-concept-entry .front-door-stage {
   background-image: url("assets/fusioneq-entry-layered-lens-clean.jpeg");
   background-position: 87% center;
@@ -9815,6 +9832,24 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
 
 .contact-request-list .contact-course-path strong {
   color: var(--gold);
+}
+
+.contact-email-note {
+  margin: 2px 0 0;
+  color: rgba(252, 252, 252, 0.68);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.contact-email-note a {
+  color: rgba(200, 169, 106, 0.95);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact-email-note a:hover,
+.contact-email-note a:focus-visible {
+  text-decoration: underline;
 }
 
 .page-contact .lead-form {

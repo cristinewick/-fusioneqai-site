@@ -1,4 +1,5 @@
-const DEFAULT_TO = 'fusionEQai@gmail.com';
+const DEFAULT_TO = 'cristine@fusioneqai.com';
+const NOTION_VERSION = '2022-06-28';
 
 function escapeHtml(value) {
   return String(value || '')
@@ -58,6 +59,133 @@ function buildEmail(payload) {
   };
 }
 
+function truncate(value, maxLength = 1900) {
+  const text = String(value || '').trim();
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+}
+
+function richText(content) {
+  const text = truncate(content);
+  return text ? [{ text: { content: text } }] : [];
+}
+
+function titleText(content) {
+  return [{ text: { content: truncate(content || 'Website Inquiry', 200) } }];
+}
+
+function opportunityTypesForRequest(requestType) {
+  const request = String(requestType || '').toLowerCase();
+
+  if (request.includes('deal readiness') || request.includes('sample report')) {
+    return [{ name: 'Customer Deal' }];
+  }
+
+  if (
+    request.includes('lens') ||
+    request.includes('read') ||
+    request.includes('clear') ||
+    request.includes('course') ||
+    request.includes('brief')
+  ) {
+    return [{ name: 'Revenue Team Pilot' }];
+  }
+
+  return [{ name: 'Other' }];
+}
+
+function buildNotionProperties(payload) {
+  const name = payload.name || payload.email || 'Website Inquiry';
+  const requestType = payload.request_type || 'Website request';
+  const challenge = payload.pipeline_challenge || '';
+  const notes = [
+    `Form: ${payload.formName || payload['form-name'] || 'FusionEQ form'}`,
+    `Request type: ${requestType}`,
+    payload.page ? `Page: ${payload.page}` : '',
+    challenge ? `Submitted note: ${challenge}` : ''
+  ]
+    .filter(Boolean)
+    .join('\n\n');
+
+  return {
+    Name: {
+      title: titleText(name)
+    },
+    Company: {
+      rich_text: richText(payload.company)
+    },
+    Email: {
+      email: payload.email || null
+    },
+    Source: {
+      select: { name: 'Website CTA' }
+    },
+    Status: {
+      select: { name: 'New Inquiry' }
+    },
+    'Opportunity Type': {
+      multi_select: opportunityTypesForRequest(requestType)
+    },
+    'Trigger Moment': {
+      rich_text: richText(requestType)
+    },
+    'Decision Question': {
+      rich_text: richText(challenge)
+    },
+    'Complimentary Snapshot': {
+      select: { name: 'Not Offered' }
+    },
+    'Paid Report': {
+      select: { name: 'Not Proposed' }
+    },
+    'Next Action': {
+      rich_text: richText('Reply and offer a complimentary Deal Readiness Read if there is a live opportunity to pressure-test.')
+    },
+    'Website Email Logged': {
+      checkbox: true
+    },
+    'Proof / Testimonial Permission': {
+      select: { name: 'Not Asked' }
+    },
+    Notes: {
+      rich_text: richText(notes)
+    }
+  };
+}
+
+async function createNotionTrackerRecord(payload) {
+  const notionToken = process.env.NOTION_TOKEN;
+  const databaseId = process.env.NOTION_GTM_DATABASE_ID;
+
+  if (!notionToken || !databaseId) {
+    return { configured: false };
+  }
+
+  let response;
+  try {
+    response = await fetch('https://api.notion.com/v1/pages', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${notionToken}`,
+        'Content-Type': 'application/json',
+        'Notion-Version': NOTION_VERSION
+      },
+      body: JSON.stringify({
+        parent: { database_id: databaseId },
+        properties: buildNotionProperties(payload)
+      })
+    });
+  } catch (error) {
+    return { configured: true, ok: false, error: error.message };
+  }
+
+  if (!response.ok) {
+    const details = await response.text();
+    return { configured: true, ok: false, error: details };
+  }
+
+  return { configured: true, ok: true };
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
@@ -71,6 +199,7 @@ exports.handler = async (event) => {
   }
 
   const { subject, html, text } = buildEmail(payload);
+  const notionResult = await createNotionTrackerRecord(payload);
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromAddress = process.env.FUSIONEQ_FORM_FROM || 'FusionEQ Website <onboarding@resend.dev>';
   const recipients = (process.env.FUSIONEQ_FORM_TO || DEFAULT_TO)
@@ -84,6 +213,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         ok: true,
         delivery: 'not-configured',
+        notion: notionResult,
         message: 'Form notification function received the submission. Add RESEND_API_KEY in Netlify to enable direct email delivery.'
       })
     };
@@ -115,6 +245,6 @@ exports.handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ ok: true })
+    body: JSON.stringify({ ok: true, notion: notionResult })
   };
 };
