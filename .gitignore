@@ -41,3 +41,12 @@ Website_Book_*.md
 
 # Local scratch/preview pages
 hero-lens-preview.html
+
+# Local/generated proof artifacts and scratch files
+/*.pdf
+__pycache__/
+*.pyc
+thumbs_*/
+/make_fox_owl*.py
+/fix_fox_owl_hands_v3.py
+/icu-first-call-assets/
