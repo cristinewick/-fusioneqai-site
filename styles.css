@@ -8778,6 +8778,14 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   line-height: 1.5;
 }
 
+.book-hero-thesis {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.book-hero-thesis span {
+  color: rgba(200, 169, 106, 0.82);
+}
+
 .book-hero-signals {
   display: flex;
   flex-wrap: wrap;
