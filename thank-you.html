@@ -6,7 +6,7 @@
   <title>Thank You | FusionEQ</title>
   <meta
     name="description"
-    content="Thank you for requesting a FusionEQ Deal Readiness Read. Review the sample report while your request is reviewed."
+    content="Thank you for requesting a FusionEQ Deal Read. Review the sample report while your request is reviewed."
   >
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css?v=thank-you-readability-20260524">
@@ -38,7 +38,7 @@
       <div class="nav-group">
         <a href='contact.html#top'>Contact</a>
       </div>
-      <a class='home-v2-header-cta' href='contact.html?request=report#top'>Request a Deal Readiness Read</a>
+      <a class='home-v2-header-cta' href='contact.html?request=report#top'>Request a FusionEQ Deal Read</a>
     </nav>
   </header>
 
@@ -47,7 +47,7 @@
       <p class="context">Request Received</p>
       <h1 id="thank-you-title">Thank you. FusionEQ received your request.</h1>
       <p class="subline">
-        FusionEQ will review the context and follow up with the right next step for your Deal Readiness Read: clarifying the opportunity, identifying the readiness question, and confirming whether a full Deal Readiness Report would create useful decision clarity.
+        FusionEQ will review the context and follow up with the right next step for your FusionEQ Deal Read: clarifying the opportunity, identifying the readiness question, and preparing the Deal Readiness Report around the evidence available.
       </p>
       <p class="request-path-note thank-you-path-note" data-thank-you-path-note hidden></p>
       <p>
@@ -65,7 +65,7 @@
       <div class="method-list" aria-label="FusionEQ next steps after request">
         <p><span>Review</span> FusionEQ reviews the context, decision question, and any notes you chose to share.</p>
         <p><span>Clarify</span> The follow-up confirms whether the visible activity has enough evidence for a useful Deal Readiness Report.</p>
-        <p><span>Scope</span> If the report is the right move, it is scoped around evidence, assumptions, buyer ownership, readiness pattern, and Recommended Next Move.</p>
+        <p><span>Report</span> The Deal Readiness Report is scoped around evidence, assumptions, buyer ownership, readiness pattern, and Recommended Next Move.</p>
       </div>
       <div class="cta-row" aria-label="FusionEQ next step links">
         <a href='sample-deal-read.html'>View Sample Report</a>
@@ -87,7 +87,7 @@
       <a href='patterns.html'>Patterns</a>
       <a href='courses.html'>Education</a>
       <a href='book.html'>Book</a>
-      <a href='contact.html?request=report#top'>Request a Deal Readiness Read</a>
+      <a href='contact.html?request=report#top'>Request a FusionEQ Deal Read</a>
       <a href='contact.html#top'>Contact</a>
       <a href='privacy.html'>Privacy</a>
     </nav>
@@ -100,10 +100,8 @@
         READ: 'You asked about FusionEQ READ™. The education path can still be routed across Foundations, FusionEQ LENS™, FusionEQ CLEAR™, or a readiness report if another next step fits better.',
         CLEAR: 'You asked about FusionEQ CLEAR™. The education path can still be routed across Foundations, FusionEQ LENS™, FusionEQ READ™, or a readiness report if another next step fits better.',
         'premium-courses': 'You asked about the premium course path. FusionEQ can help confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the best next step.',
-        report: 'You asked about a Deal Readiness Read. FusionEQ will review the opportunity context and confirm whether a full Deal Readiness Report would create useful clarity.',
-        presentation: 'You asked about the Presentation Readiness Report. FusionEQ can interpret the presentation from the audience perspective and clarify what should change before the next decision conversation.',
-        book: 'You asked about book updates. The education path and readiness reports show how the ideas become practical for revenue teams.',
-        brief: 'You asked about an executive brief. FusionEQ can help route the conversation into a readiness report, Foundations, FusionEQ LENS™, FusionEQ READ™, or FusionEQ CLEAR™.'
+        report: 'You asked about introductory access to a FusionEQ Deal Read. FusionEQ will review the opportunity context and follow up on the Deal Readiness Report next steps.',
+        presentation: 'You asked about the Presentation Readiness Report. FusionEQ can interpret the presentation from the audience perspective and clarify what should change before the next decision conversation.'
       };
       const note = noteMap[new URLSearchParams(window.location.search).get('request')];
       const noteEl = document.querySelector('[data-thank-you-path-note]');
