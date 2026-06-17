@@ -404,7 +404,7 @@ body.page-entry-background-preview .front-door-contact {
 
 body.page-entry-background-preview .concept-entry-copy {
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
-  top: clamp(232px, 29vh, 320px);
+  top: clamp(206px, 25.5vh, 286px);
   width: min(610px, 42vw);
 }
 
@@ -414,7 +414,7 @@ body.page-entry-background-preview .concept-entry-copy .context {
 
 body.page-entry-background-preview .concept-entry-copy h1 {
   display: grid;
-  gap: 0.16em;
+  gap: 0.34em;
   max-width: 610px;
   font-size: clamp(1.44rem, 1.88vw, 2.12rem);
   line-height: 1.08;
@@ -557,7 +557,7 @@ body.page-entry-background-preview .front-door-enter {
 
   body.page-entry-background-preview .concept-entry-copy {
     left: clamp(84px, 7vw, 140px);
-    top: clamp(308px, 29vh, 374px);
+    top: clamp(282px, 26.5vh, 352px);
     width: min(620px, 35vw);
   }
 
@@ -612,7 +612,7 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .concept-entry-copy {
-    top: clamp(226px, 30vh, 286px);
+    top: clamp(206px, 27vh, 260px);
     left: 24px;
     gap: 12px;
     width: min(306px, calc(100vw - 48px));
