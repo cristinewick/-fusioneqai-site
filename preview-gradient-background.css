@@ -404,7 +404,7 @@ body.page-entry-background-preview .front-door-contact {
 
 body.page-entry-background-preview .concept-entry-copy {
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
-  top: 24.5%;
+  top: clamp(232px, 29vh, 320px);
   width: min(610px, 42vw);
 }
 
@@ -557,7 +557,7 @@ body.page-entry-background-preview .front-door-enter {
 
   body.page-entry-background-preview .concept-entry-copy {
     left: clamp(84px, 7vw, 140px);
-    top: clamp(268px, 24.5vh, 338px);
+    top: clamp(308px, 29vh, 374px);
     width: min(620px, 35vw);
   }
 
@@ -612,7 +612,7 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .concept-entry-copy {
-    top: clamp(206px, 26vh, 250px);
+    top: clamp(226px, 30vh, 286px);
     left: 24px;
     gap: 12px;
     width: min(306px, calc(100vw - 48px));
