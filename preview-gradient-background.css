@@ -385,16 +385,29 @@ body.page-entry-background-preview .front-door-enter {
 }
 
 body.page-entry-background-preview .front-door-brand {
-  gap: 5px;
+  top: clamp(42px, 5.3vh, 64px);
+  left: clamp(88px, 7vw, 142px);
+  gap: 14px;
 }
 
 body.page-entry-background-preview .front-door-brand img {
-  width: clamp(218px, 18vw, 304px);
+  width: clamp(206px, 17vw, 282px);
+  height: auto;
+}
+
+body.page-entry-background-preview .front-door-brand span {
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.54);
+  font-size: clamp(0.68rem, 0.66vw, 0.78rem);
+  letter-spacing: 0.02em;
 }
 
 body.page-entry-background-preview .front-door-contact {
-  top: 7.8%;
-  right: 4.8%;
+  top: clamp(64px, 8vh, 92px);
+  right: clamp(92px, 7vw, 138px);
+  color: rgba(216, 203, 155, 0.78);
+  font-size: clamp(0.64rem, 0.66vw, 0.78rem);
+  letter-spacing: 0.22em;
   background: transparent;
   border: 0;
   border-bottom: 1px solid rgba(201, 169, 106, 0.62);
@@ -404,32 +417,81 @@ body.page-entry-background-preview .front-door-contact {
 
 body.page-entry-background-preview .concept-entry-copy {
   text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72);
-  top: clamp(206px, 25.5vh, 286px);
-  width: min(610px, 42vw);
+  top: clamp(208px, 25vh, 286px);
+  gap: clamp(17px, 1.75vw, 26px);
+  width: min(760px, 46vw);
 }
 
 body.page-entry-background-preview .concept-entry-copy .context {
-  display: none;
+  display: block;
+  margin: 0 0 2px;
+  padding-top: 0;
+  border: 0;
+  color: rgba(216, 203, 155, 0.76);
+  font-size: clamp(0.56rem, 0.52vw, 0.64rem);
+  font-weight: 750;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+body.page-entry-background-preview .concept-entry-copy .context::before,
+body.page-entry-background-preview .concept-entry-copy .context::after,
+body.page-entry-background-preview .concept-entry-copy .home-v2-visual-context::before,
+body.page-entry-background-preview .concept-entry-copy .home-v2-visual-context::after {
+  content: none !important;
+  display: none !important;
 }
 
 body.page-entry-background-preview .concept-entry-copy h1 {
   display: grid;
-  gap: 0.34em;
-  max-width: 610px;
-  font-size: clamp(1.44rem, 1.88vw, 2.12rem);
-  line-height: 1.08;
+  max-width: 730px;
+  color: #F6F1E7;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: clamp(1.34rem, 1.4vw, 1.82rem);
+  font-weight: 520;
+  line-height: 1.2;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-wrap: balance;
+  text-shadow:
+    0 2px 26px rgba(0, 0, 0, 0.72),
+    0 0 34px rgba(246, 241, 231, 0.04);
+}
+
+body.page-entry-background-preview .hero-opening {
+  display: block;
+  max-width: 680px;
+  color: rgba(246, 241, 231, 0.62);
+  font-size: clamp(0.9rem, 0.9vw, 1.08rem);
+  font-weight: 520;
+  line-height: 1.35;
+}
+
+body.page-entry-background-preview .concept-entry-copy h1 .hero-claim {
+  display: block;
+  max-width: 760px;
+  color: inherit;
+}
+
+body.page-entry-background-preview .concept-entry-copy h1 .hero-claim + .hero-claim {
+  margin-top: 0.06em;
 }
 
 body.page-entry-background-preview .concept-entry-lines {
   gap: 10px;
-  width: min(610px, 100%);
+  width: min(560px, 100%);
+  margin-top: 2px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(178, 204, 240, 0.16);
 }
 
 body.page-entry-background-preview .concept-entry-lines p {
   padding-top: 8px;
   color: rgba(255, 255, 255, 0.76);
-  font-size: clamp(0.82rem, 0.88vw, 0.94rem);
-  line-height: 1.36;
+  font-size: clamp(0.73rem, 0.7vw, 0.82rem);
+  line-height: 1.58;
 }
 
 body.page-entry-background-preview .concept-entry-lines p::before {
@@ -437,8 +499,15 @@ body.page-entry-background-preview .concept-entry-lines p::before {
 }
 
 body.page-entry-background-preview .concept-entry-lines .concept-entry-summary {
-  padding-top: 0;
-  color: rgba(255, 255, 255, 0.84);
+  display: none;
+}
+
+body.page-entry-background-preview .hero-next-move {
+  color: rgba(79, 143, 58, 0.96);
+  font-weight: 680;
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.72),
+    0 0 18px rgba(79, 143, 58, 0.16);
 }
 
 body.page-entry-background-preview .concept-entry-stack {
@@ -523,8 +592,8 @@ body.page-entry-background-preview .concept-entry-lines .concept-entry-principle
   position: relative;
   margin-top: 2px;
   padding: 0 0 0 16px;
-  color: var(--green);
-  font-weight: 700;
+  color: rgba(178, 204, 240, 0.86);
+  font-weight: 680;
 }
 
 body.page-entry-background-preview .concept-entry-lines .concept-entry-principle::before {
@@ -534,16 +603,23 @@ body.page-entry-background-preview .concept-entry-lines .concept-entry-principle
   bottom: 0.24em;
   left: 0;
   width: 2px;
-  background: rgba(79, 143, 58, 0.72);
+  background: rgba(178, 204, 240, 0.58);
+  box-shadow: 0 0 18px rgba(178, 204, 240, 0.14);
 }
 
 body.page-entry-background-preview .front-door-enter {
   position: static;
   transform: none;
   justify-self: start;
-  width: min(300px, 100%);
+  width: min(292px, 100%);
   min-width: 0;
-  margin-top: 2px;
+  min-height: 58px;
+  margin-top: 4px;
+  border-color: rgba(216, 203, 155, 0.34);
+  background: rgba(3, 5, 6, 0.34);
+  color: rgba(246, 242, 232, 0.96);
+  letter-spacing: 0.11em;
+  white-space: nowrap;
 }
 
 @media (min-width: 1500px) {
@@ -552,22 +628,29 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .front-door-brand img {
-    width: clamp(230px, 15vw, 292px);
+    width: clamp(206px, 17vw, 282px);
   }
 
   body.page-entry-background-preview .concept-entry-copy {
     left: clamp(84px, 7vw, 140px);
-    top: clamp(282px, 26.5vh, 352px);
-    width: min(620px, 35vw);
+    top: clamp(244px, 24.8vh, 336px);
+    width: min(760px, 40vw);
   }
 
   body.page-entry-background-preview .concept-entry-copy h1 {
-    font-size: clamp(1.92rem, 1.98vw, 2.42rem);
-    line-height: 1.08;
+    font-size: clamp(1.44rem, 1.38vw, 1.88rem);
+  }
+
+  body.page-entry-background-preview .hero-opening {
+    font-size: clamp(0.98rem, 0.96vw, 1.18rem);
+  }
+
+  body.page-entry-background-preview .concept-entry-copy h1 .hero-claim {
+    max-width: 780px;
   }
 
   body.page-entry-background-preview .concept-entry-lines {
-    width: min(610px, 100%);
+    width: min(560px, 100%);
   }
 
   body.page-entry-background-preview .concept-entry-map-label-stack {
@@ -604,28 +687,46 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .front-door-brand {
+    top: clamp(26px, 4vh, 42px);
+    left: clamp(22px, 6vw, 34px);
     width: min(240px, calc(100vw - 94px));
   }
 
   body.page-entry-background-preview .front-door-brand img {
-    width: 146px;
+    width: clamp(176px, 58vw, 232px);
+  }
+
+  body.page-entry-background-preview .front-door-brand span,
+  body.page-entry-background-preview .front-door-contact {
+    display: none;
   }
 
   body.page-entry-background-preview .concept-entry-copy {
-    top: clamp(206px, 27vh, 260px);
+    top: clamp(154px, 20vh, 196px);
     left: 24px;
-    gap: 12px;
-    width: min(306px, calc(100vw - 48px));
+    gap: 13px;
+    width: min(350px, calc(100vw - 38px));
   }
 
   body.page-entry-background-preview .concept-entry-copy h1 {
-    font-size: clamp(1.46rem, 7vw, 1.78rem);
-    line-height: 1.08;
+    max-width: 100%;
+    font-size: clamp(1.08rem, 5.1vw, 1.34rem);
+    line-height: 1.22;
+  }
+
+  body.page-entry-background-preview .hero-opening {
+    font-size: clamp(0.86rem, 3.75vw, 1rem);
+    line-height: 1.32;
+  }
+
+  body.page-entry-background-preview .concept-entry-copy h1 .hero-claim {
+    max-width: 100%;
   }
 
   body.page-entry-background-preview .concept-entry-lines {
     gap: 9px;
     width: min(292px, 100%);
+    padding-top: 12px;
   }
 
   body.page-entry-background-preview .concept-entry-lines p {
@@ -652,14 +753,14 @@ body.page-entry-background-preview .front-door-enter {
   }
 
   body.page-entry-background-preview .front-door-enter {
-    position: fixed;
+    position: static;
     z-index: 8;
-    top: 136px;
-    right: 18px;
+    top: auto;
+    right: auto;
     left: auto;
     bottom: auto;
-    width: min(168px, calc(100vw - 214px));
-    min-height: 42px;
+    width: min(274px, 100%);
+    min-height: 54px;
     padding: 10px 14px;
     border-radius: 20px;
     font-size: 0.54rem;
