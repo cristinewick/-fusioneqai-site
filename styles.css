@@ -11038,6 +11038,7 @@ h2,
 
 .facilitator-copy h2 {
   max-width: 620px;
+  margin-bottom: 8px;
   font-size: clamp(1.58rem, 2vw, 2.05rem);
   line-height: 1.14;
 }
@@ -11054,6 +11055,7 @@ h2,
 
 .facilitator-lede {
   max-width: 660px;
+  margin-bottom: 22px;
   font-size: clamp(1.02rem, 1.15vw, 1.14rem);
   line-height: 1.48;
 }
