@@ -24,6 +24,7 @@
     const group = educationLink.parentElement;
     const menu = document.createElement("div");
     const educationItems = [
+      ["Education Overview", "courses.html"],
       ["Foundations", "intro-fusioneq-ai.html"],
       ["FusionEQ LENS™", "lens-course.html"],
       ["FusionEQ READ™", "read-the-deal.html"],
