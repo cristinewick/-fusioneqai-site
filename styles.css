@@ -11062,7 +11062,7 @@ h2,
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  margin: clamp(24px, 4vw, 34px) 0;
+  margin: clamp(34px, 5vw, 48px) 0 clamp(24px, 4vw, 34px);
   border-top: 1px solid var(--light-line);
   border-bottom: 1px solid var(--light-line);
 }
