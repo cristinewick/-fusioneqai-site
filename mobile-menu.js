@@ -15,40 +15,73 @@
 
   nav.id = nav.id || "primary-navigation";
 
-  const educationLink = Array.from(nav.querySelectorAll(".nav-group > a")).find((link) => {
-    const href = link.getAttribute("href") || "";
-    return link.textContent.trim().toLowerCase() === "education" && href.includes("courses");
-  });
+  const navLinks = Array.from(nav.querySelectorAll(".nav-group > a"));
+  const normalizePath = (href) => href.split("#")[0];
 
-  if (educationLink && !educationLink.parentElement.querySelector(".nav-menu")) {
-    const group = educationLink.parentElement;
+  const addDropdown = ({ label, hrefIncludes, ariaLabel, items }) => {
+    const trigger = navLinks.find((link) => {
+      const href = link.getAttribute("href") || "";
+      return link.textContent.trim().toLowerCase() === label.toLowerCase() && href.includes(hrefIncludes);
+    });
+
+    if (!trigger || trigger.parentElement.querySelector(".nav-menu")) {
+      return;
+    }
+
+    const group = trigger.parentElement;
     const menu = document.createElement("div");
-    const educationItems = [
-      ["Education Overview", "courses.html"],
-      ["Foundations", "intro-fusioneq-ai.html"],
-      ["FusionEQ LENS™", "lens-course.html"],
-      ["FusionEQ READ™", "read-the-deal.html"],
-      ["FusionEQ CLEAR™", "clear-review.html"],
-      ["Executive Brief", "brief.html"]
-    ];
 
     group.classList.add("has-dropdown");
-    educationLink.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-haspopup", "true");
     menu.className = "nav-menu";
-    menu.setAttribute("aria-label", "Education navigation");
+    menu.setAttribute("aria-label", ariaLabel);
 
-    educationItems.forEach(([label, href]) => {
+    items.forEach(([itemLabel, itemHref]) => {
       const item = document.createElement("a");
-      item.href = href;
-      item.textContent = label;
-      if (window.location.pathname.endsWith(`/${href}`) || window.location.pathname.endsWith(href)) {
+      const itemPath = normalizePath(itemHref);
+      const itemHash = itemHref.includes("#") ? `#${itemHref.split("#")[1]}` : "";
+      const currentPath = window.location.pathname;
+      const currentHash = window.location.hash;
+      item.href = itemHref;
+      item.textContent = itemLabel;
+      const pathMatches = currentPath.endsWith(`/${itemPath}`) || currentPath.endsWith(itemPath);
+      const hashMatches = itemHash ? currentHash === itemHash : currentHash === "";
+      if (pathMatches && hashMatches) {
         item.setAttribute("aria-current", "page");
       }
       menu.appendChild(item);
     });
 
     group.appendChild(menu);
-  }
+  };
+
+  addDropdown({
+    label: "About",
+    hrefIncludes: "about",
+    ariaLabel: "About navigation",
+    items: [
+      ["About FusionEQ AI", "about.html"],
+      ["Why FusionEQ Exists", "about.html#story"],
+      ["Operating Shift", "about.html#shift"],
+      ["Meet the Team", "about.html#team"],
+      ["Founder", "about.html#founder"],
+      ["Course Facilitator", "about.html#facilitator"]
+    ]
+  });
+
+  addDropdown({
+    label: "Education",
+    hrefIncludes: "courses",
+    ariaLabel: "Education navigation",
+    items: [
+      ["Education Overview", "courses.html"],
+      ["Foundations", "intro-fusioneq-ai.html"],
+      ["FusionEQ LENS™", "lens-course.html"],
+      ["FusionEQ READ™", "read-the-deal.html"],
+      ["FusionEQ CLEAR™", "clear-review.html"],
+      ["Executive Brief", "brief.html"]
+    ]
+  });
 
   header.insertBefore(button, nav);
   document.body.classList.add("mobile-menu-ready");
