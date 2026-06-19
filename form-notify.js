@@ -11,7 +11,7 @@
     READ: "You're exploring FusionEQ READ™ for sellers. We'll help you confirm whether FusionEQ READ™, Foundations, FusionEQ LENS™, FusionEQ CLEAR™, or a readiness report is the right next step.",
     CLEAR: "You're exploring FusionEQ CLEAR™ for managers. We'll help you confirm whether FusionEQ CLEAR™, Foundations, FusionEQ LENS™, FusionEQ READ™, or a readiness report is the right next step.",
     'premium-courses': "You're exploring the premium course path. We'll help you confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the right next step.",
-    report: "You're requesting introductory access to a FusionEQ Deal Read. We'll help you confirm the opportunity context, readiness question, evidence available, and the Deal Readiness Report next steps."
+    report: "You're requesting a FusionEQ Deal Readiness Report. We'll help you confirm the opportunity context, readiness question, evidence available, and the right next steps."
   };
 
   const requestParam = new URLSearchParams(window.location.search).get('request');
