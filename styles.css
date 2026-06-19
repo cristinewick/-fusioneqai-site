@@ -8917,24 +8917,60 @@ body.page-how-it-works.page-light-surface .cta-row button:focus-visible {
   gap: 26px;
 }
 
+.book-excerpt h1 {
+  max-width: 680px;
+  font-size: clamp(1.74rem, 2.35vw, 2.28rem);
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+}
+
+.book-excerpt-source {
+  margin: -12px 0 -8px;
+  color: rgba(200, 169, 106, 0.86);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .book-excerpt-copy {
   display: grid;
   gap: 10px;
-  width: min(760px, 100%);
-  padding-left: 24px;
-  border-left: 1px solid rgba(216, 168, 91, 0.58);
+  width: min(640px, 100%);
+  margin-top: 12px;
+  padding: clamp(28px, 4.4vw, 46px) clamp(28px, 4.8vw, 56px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), transparent 34%),
+    #f3efe6;
+  border: 1px solid rgba(24, 20, 14, 0.16);
+  border-radius: 3px;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
 .book-excerpt-copy p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(1rem, 1.3vw, 1.16rem);
-  line-height: 1.45;
+  color: rgba(21, 18, 14, 0.88);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(0.98rem, 1.04vw, 1.06rem);
+  font-weight: 400;
+  line-height: 1.64;
 }
 
 .book-excerpt-copy p:nth-child(2),
 .book-excerpt-copy p:nth-last-child(1) {
-  color: var(--white);
+  color: rgba(21, 18, 14, 0.94);
+}
+
+.book-excerpt-copy .book-excerpt-emphasis {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(21, 18, 14, 0.9);
+  font-size: clamp(0.98rem, 1.04vw, 1.06rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.64;
 }
 
 .book-thesis-line {
@@ -10616,6 +10652,20 @@ h2,
     font-size: 2rem;
     line-height: 1.08;
     letter-spacing: -0.018em;
+  }
+
+  .book-excerpt h1 {
+    font-size: 1.58rem;
+    line-height: 1.12;
+  }
+
+  .book-excerpt-source {
+    margin: -6px 0 -4px;
+    font-size: 0.96rem;
+  }
+
+  .book-excerpt-copy {
+    padding: 26px 22px;
   }
 
   h2,
