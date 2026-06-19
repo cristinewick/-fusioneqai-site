@@ -2739,3 +2739,57 @@ body.page-education-baseline-preview.page-light-surface.page-courses .course-car
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+    box-sizing: border-box;
+    width: calc(100vw - 18px);
+    max-width: calc(100vw - 18px);
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide,
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero,
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses h1,
+  body.page-education-baseline-preview.page-light-surface.page-courses h2,
+  body.page-education-baseline-preview.page-light-surface.page-courses h3,
+  body.page-education-baseline-preview.page-light-surface.page-courses p,
+  body.page-education-baseline-preview.page-light-surface.page-courses li,
+  body.page-education-baseline-preview.page-light-surface.page-courses .subline,
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero-close,
+  body.page-education-baseline-preview.page-light-surface.page-courses .method-intro {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .cta-row,
+  body.page-education-baseline-preview.page-light-surface.page-courses .inline-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .cta-row a,
+  body.page-education-baseline-preview.page-light-surface.page-courses .inline-cta a {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+}
