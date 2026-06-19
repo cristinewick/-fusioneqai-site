@@ -1559,3 +1559,1183 @@ body.page-education-background-preview.page-light-surface.page-courses .slide.pi
     justify-self: stretch;
   }
 }
+
+/* Refined Education visual system */
+body.page-education-refined-preview {
+  background:
+    radial-gradient(circle at 15% 12%, rgba(79, 143, 58, 0.12), transparent 30%),
+    radial-gradient(circle at 88% 22%, rgba(201, 169, 106, 0.1), transparent 28%),
+    linear-gradient(90deg, #050707 0%, #080a0a 44%, #101312 100%) !important;
+}
+
+body.page-education-refined-preview::before {
+  background:
+    linear-gradient(90deg, rgba(2, 4, 5, 0.92), rgba(6, 8, 8, 0.72) 48%, rgba(13, 17, 15, 0.82)),
+    linear-gradient(180deg, rgba(12, 15, 14, 0.28), rgba(2, 4, 5, 0.74)) !important;
+}
+
+body.page-education-refined-preview::after {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(201, 169, 106, 0.08), transparent 34%),
+    radial-gradient(circle at 12% 48%, rgba(79, 143, 58, 0.08), transparent 32%) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses > main#top {
+  width: min(1180px, calc(100% - 36px));
+  margin-top: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 10, 10, 0.7), rgba(6, 8, 8, 0.92)),
+    rgba(5, 7, 7, 0.86);
+  box-shadow: none;
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .slide {
+  border-bottom-color: rgba(255, 255, 255, 0.09);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .slide:not(.hero) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0.012)),
+    rgba(255, 255, 255, 0.012);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .pilot {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.046), rgba(255, 255, 255, 0.018)),
+    rgba(255, 255, 255, 0.016);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .hero {
+  min-height: 49svh;
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses h1,
+body.page-education-refined-preview.page-light-surface.page-courses h2,
+body.page-education-refined-preview.page-light-surface.page-courses .guided-video-copy h2,
+body.page-education-refined-preview.page-light-surface.page-courses .pilot-grid span + p,
+body.page-education-refined-preview.page-light-surface.page-courses .method-list p {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .subline,
+body.page-education-refined-preview.page-light-surface.page-courses .hero-close,
+body.page-education-refined-preview.page-light-surface.page-courses .guided-video-copy p:not(.context),
+body.page-education-refined-preview.page-light-surface.page-courses .insight p,
+body.page-education-refined-preview.page-light-surface.page-courses .action p,
+body.page-education-refined-preview.page-light-surface.page-courses .pilot-grid p,
+body.page-education-refined-preview.page-light-surface.page-courses .method-list p,
+body.page-education-refined-preview .course-decision-row > span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .context,
+body.page-education-refined-preview.page-light-surface.page-courses .guided-video-card p,
+body.page-education-refined-preview.page-light-surface.page-courses .pilot-grid span,
+body.page-education-refined-preview .course-decision-head > span {
+  color: rgba(201, 169, 106, 0.9);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .green-emphasis-line,
+body.page-education-refined-preview.page-light-surface.page-courses .method-list span,
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-premium span {
+  color: rgba(126, 181, 105, 0.95);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-foundations {
+  opacity: 1;
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-foundations > span,
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-premium-intro > span {
+  color: rgba(201, 169, 106, 0.92);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-premium {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0.01));
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-card-premium::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin-bottom: 18px;
+  background: rgba(79, 143, 58, 0.75);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-journey,
+body.page-education-refined-preview.page-light-surface.page-courses .method-list,
+body.page-education-refined-preview .course-decision-table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .pilot-grid > div,
+body.page-education-refined-preview.page-light-surface.page-courses .method-list p,
+body.page-education-refined-preview .course-decision-row {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .method-list p {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018), transparent 42%);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .inline-cta a,
+body.page-education-refined-preview.page-light-surface.page-courses .cta-row a,
+body.page-education-refined-preview .course-decision-row a {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .cta-row a:first-child,
+body.page-education-refined-preview.page-light-surface.page-courses .inline-cta a:first-child,
+body.page-education-refined-preview .course-decision-row a {
+  color: rgba(226, 247, 218, 0.96);
+  border-color: rgba(79, 143, 58, 0.68);
+  background: rgba(79, 143, 58, 0.1);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-acronym p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .course-acronym strong {
+  border-color: rgba(126, 181, 105, 0.34);
+  color: rgba(126, 181, 105, 0.95);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .guided-video-card {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .guided-video-card video {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .facilitator-photo img {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.page-education-refined-preview.page-light-surface.page-courses .facilitator-photo figcaption strong,
+body.page-education-refined-preview.page-light-surface.page-courses .facilitator-lede,
+body.page-education-refined-preview.page-light-surface.page-courses .facilitator-close {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .series-overview-visual img,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-video-card,
+body.page-education-refined-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual,
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form {
+  border-color: rgba(255, 255, 255, 0.11);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.018)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: none;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-shell,
+body.page-education-refined-preview.page-light-surface.page-course-intro .diagnostic-list,
+body.page-education-refined-preview.page-light-surface.page-learning-module .comparison-grid,
+body.page-education-refined-preview.page-light-surface.page-learning-module .case-outcome {
+  border-color: rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0.012));
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .lens-framework-section {
+  background:
+    linear-gradient(180deg, rgba(5, 7, 7, 0.94), rgba(4, 6, 6, 0.98)) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .lens-framework-section h2 {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-shell {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background:
+    linear-gradient(180deg, rgba(12, 16, 15, 0.98), rgba(7, 10, 9, 0.98)) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid {
+  border-top-color: rgba(255, 255, 255, 0.11) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid article,
+body.page-education-refined-preview.page-light-surface.page-course-intro .diagnostic-list span,
+body.page-education-refined-preview.page-light-surface.page-learning-module .comparison-grid > div {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: transparent;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid article {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0.006)) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid h3,
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-close,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-video-heading strong,
+body.page-education-refined-preview.page-light-surface.page-learning-module .case-outcome,
+body.page-education-refined-preview.page-light-surface.page-learning-module .comparison-grid p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .series-overview-visual p:not(.context),
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid p,
+body.page-education-refined-preview.page-light-surface.page-learning-module .method-intro,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-briefing-mode,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-video-heading p,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-objective p:not(.context),
+body.page-education-refined-preview.page-light-surface.page-learning-module .decision p,
+body.page-education-refined-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual figcaption {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid p {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .home-v2-framework-grid span,
+body.page-education-refined-preview.page-light-surface.page-course-intro .diagnostic-list span,
+body.page-education-refined-preview.page-light-surface.page-learning-module .comparison-grid span,
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-video-heading span {
+  color: rgba(126, 181, 105, 0.95) !important;
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form label span {
+  color: rgba(201, 169, 106, 0.9);
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form input,
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form textarea {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.13);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form input::placeholder,
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .course-access-form button {
+  color: rgba(226, 247, 218, 0.96);
+  border-color: rgba(79, 143, 58, 0.68);
+  background: rgba(79, 143, 58, 0.12);
+}
+
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-video-card video {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+body.page-education-refined-preview.page-light-surface.page-learning-module .module-briefing-hero {
+  gap: clamp(26px, 4vw, 52px);
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .series-overview-visual {
+  width: min(1120px, calc(100% - 44px));
+  padding-top: clamp(54px, 7vw, 84px);
+  padding-bottom: clamp(54px, 7vw, 84px);
+}
+
+body.page-education-refined-preview.page-light-surface.page-course-intro .series-overview-visual img {
+  width: 100%;
+  max-height: none;
+  padding: 0;
+  object-fit: contain;
+  border-color: rgba(255, 255, 255, 0.13);
+  background: #050707;
+  box-shadow: 0 26px 74px rgba(0, 0, 0, 0.32);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+  width: min(1160px, calc(100% - 44px));
+  margin-top: 34px;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  background:
+    linear-gradient(180deg, rgba(9, 12, 12, 0.96), rgba(5, 8, 8, 0.98)) !important;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+  width: 100%;
+  padding: clamp(58px, 7vw, 88px) clamp(42px, 7vw, 88px);
+  background: transparent !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) {
+  border-bottom-color: rgba(255, 255, 255, 0.075);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0.01)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero {
+  min-height: 0;
+  padding-top: clamp(72px, 9vw, 118px);
+  padding-bottom: clamp(64px, 8vw, 104px);
+  background:
+    radial-gradient(circle at 78% 28%, rgba(79, 143, 58, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.026), transparent 56%) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses h1 {
+  max-width: 920px;
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-size: clamp(2.18rem, 3.7vw, 3.85rem);
+  line-height: 1.03;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro h1 {
+  max-width: 860px;
+  font-size: clamp(2.08rem, 3.45vw, 3.55rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses h2 {
+  max-width: 860px;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: clamp(1.42rem, 2.25vw, 2.28rem);
+  line-height: 1.12;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero-close,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .insight p,
+body.page-education-baseline-preview.page-light-surface.page-courses .action p,
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot > p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .context {
+  color: rgba(201, 169, 106, 0.92) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .cta-row {
+  gap: 12px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .cta-row a {
+  min-height: 46px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .cta-row a:first-child {
+  color: rgba(226, 247, 218, 0.98);
+  border-color: rgba(79, 143, 58, 0.72);
+  background: rgba(79, 143, 58, 0.13);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-table,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-shell,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-grid {
+  margin-top: clamp(12px, 2vw, 22px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-password-panel {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.012)) !important;
+  box-shadow: none;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid span,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium span,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid span {
+  color: rgba(126, 181, 105, 0.96) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid p,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list p,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row > span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid p {
+  color: rgba(255, 255, 255, 0.68) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid strong,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list p,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid h3,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-close {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium {
+  border: 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual {
+  width: 100%;
+  gap: 22px;
+  padding-top: clamp(58px, 7vw, 92px);
+  padding-bottom: clamp(58px, 7vw, 92px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual img {
+  width: min(1060px, 100%);
+  justify-self: center;
+  border-radius: 6px;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual p:not(.context) {
+  max-width: 720px;
+  justify-self: center;
+  text-align: center;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .lens-framework-section {
+  padding-top: clamp(64px, 8vw, 98px);
+  padding-bottom: clamp(64px, 8vw, 98px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-shell {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid article {
+  min-height: 190px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 760px) {
+  body.page-education-refined-preview.page-light-surface.page-courses > main#top {
+    width: min(100%, calc(100% - 20px));
+    margin-top: 18px;
+  }
+
+  body.page-education-refined-preview.page-light-surface.page-course-intro .series-overview-visual {
+    width: min(100%, calc(100% - 22px));
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+    width: min(100%, calc(100% - 18px));
+    margin-top: 16px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses h1 {
+    font-size: clamp(1.95rem, 10vw, 2.65rem);
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses h2 {
+    font-size: clamp(1.35rem, 7vw, 1.86rem);
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Executive Education baseline: restrained, site-aligned preview */
+body.page-education-baseline-preview {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(79, 143, 58, 0.1), transparent 28%),
+    linear-gradient(90deg, #050707 0%, #0a0d0d 48%, #101312 100%) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+  width: min(1160px, calc(100% - 44px));
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background:
+    linear-gradient(180deg, rgba(6, 8, 9, 0.96) 0%, rgba(6, 8, 9, 0.92) 430px, rgba(241, 245, 242, 0.98) 431px, rgba(233, 240, 238, 0.97) 100%) !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+  width: 100%;
+  padding: clamp(50px, 6.4vw, 78px) clamp(38px, 6.4vw, 82px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero {
+  min-height: 0;
+  padding-top: clamp(64px, 8vw, 96px);
+  padding-bottom: clamp(60px, 7vw, 88px);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(79, 143, 58, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.006)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) {
+  background:
+    linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52)) !important;
+  border-bottom-color: rgba(23, 28, 27, 0.1) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h2 {
+  max-width: 820px;
+  color: #ffffff !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses h1 {
+  font-size: clamp(2.08rem, 3.2vw, 3.42rem);
+  line-height: 1.06;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro h1 {
+  font-size: clamp(2rem, 3vw, 3.15rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) h2 {
+  max-width: 820px;
+  color: #141a19 !important;
+  font-size: clamp(1.46rem, 2.15vw, 2.34rem);
+  line-height: 1.14;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .context {
+  color: rgba(201, 169, 106, 0.9) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .context {
+  color: #586777 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .hero-close {
+  max-width: 740px;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .hero-close,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .method-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row > span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid p {
+  color: rgba(31, 38, 36, 0.76) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .green-emphasis-line,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .method-list span,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .pilot-grid span,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-card-premium span {
+  color: #2f6f28 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .pilot-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-card-foundations,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-card-premium-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-card-premium,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .slide:not(.hero) .course-password-panel {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.34)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-journey,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .method-list,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-table {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .method-list p,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-decision-row,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .pilot-grid > div {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .method-list p,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .pilot-grid strong,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .course-decision-row strong {
+  color: #151b1a !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h3,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) strong,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel h3 {
+  color: #151b1a !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel .context {
+  color: rgba(31, 38, 36, 0.72) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel .context {
+  color: #586777 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .cta-row a {
+  border-radius: 6px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .cta-row a {
+  color: #27312f !important;
+  border-color: rgba(25, 33, 31, 0.16) !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) .cta-row a:first-child {
+  color: #1f501b !important;
+  border-color: rgba(47, 111, 40, 0.48) !important;
+  background: rgba(79, 143, 58, 0.09) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual {
+  gap: 22px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual img {
+  width: min(1040px, 100%);
+  padding: 0 !important;
+  border-color: rgba(20, 26, 25, 0.16) !important;
+  background: #07090a !important;
+  box-shadow: 0 22px 60px rgba(17, 25, 23, 0.18);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual p:not(.context) {
+  max-width: 720px;
+  color: rgba(31, 38, 36, 0.72) !important;
+  text-align: left;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .lens-framework-section {
+  background:
+    linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .lens-framework-section h2 {
+  color: #141a19 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-shell {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.28)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid article {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid h3,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-close {
+  color: #151b1a !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid p {
+  color: rgba(31, 38, 36, 0.76) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 10, 0.96), rgba(5, 8, 8, 0.98)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta h2 {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+    width: min(100%, calc(100% - 18px));
+    background:
+      linear-gradient(180deg, rgba(6, 8, 9, 0.96) 0%, rgba(6, 8, 9, 0.92) 360px, rgba(241, 245, 242, 0.98) 361px, rgba(233, 240, 238, 0.97) 100%) !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+    padding: 44px 24px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses h1,
+  body.page-education-baseline-preview.page-light-surface.page-course-intro h1 {
+    font-size: clamp(1.86rem, 9vw, 2.45rem);
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) h2 {
+    font-size: clamp(1.34rem, 6.6vw, 1.78rem);
+  }
+}
+
+/* Final Education contrast guardrails */
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h2,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h3,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h4,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) strong,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel h3 {
+  color: #151b1a !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) li,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) small,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .method-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-password-panel p:not(.context) {
+  color: rgba(31, 38, 36, 0.76) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .context,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-head > span,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-password-panel .context {
+  color: #586777 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .green-emphasis-line,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .method-list span,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .pilot-grid span,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-card-premium span,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .course-acronym strong {
+  color: #2f6f28 !important;
+}
+
+/* Baseline Education migration: premium course and module surfaces */
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-briefing-hero {
+  grid-template-columns: minmax(0, 0.94fr) minmax(300px, 0.74fr);
+  gap: clamp(26px, 4vw, 52px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-card,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual {
+  border-color: rgba(25, 33, 31, 0.14) !important;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(9, 12, 12, 0.96), rgba(5, 8, 8, 0.98)) !important;
+  box-shadow: 0 22px 60px rgba(17, 25, 23, 0.2);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-heading span,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-briefing .context {
+  color: rgba(201, 169, 106, 0.92) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-heading strong {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-heading p,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual figcaption {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-card video,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual img {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(0, 0, 0, 0.26) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .case-outcome,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list span {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list span {
+  color: #2f6f28 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .case-outcome {
+  border-left-color: rgba(47, 111, 40, 0.62) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form label span {
+  color: #2f6f28 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form input,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form textarea {
+  color: #151b1a !important;
+  border-color: rgba(25, 33, 31, 0.16) !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form input::placeholder,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form textarea::placeholder {
+  color: rgba(31, 38, 36, 0.44) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form button {
+  color: #ffffff !important;
+  border-color: rgba(47, 111, 40, 0.76) !important;
+  background: #2f6f28 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta p,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta li,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta .hero-close {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta strong,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta span {
+  color: rgba(222, 246, 211, 0.96) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-learning-module .module-briefing-hero {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form {
+    padding: 22px;
+  }
+}
+
+/* Education baseline pass: stable executive surfaces */
+body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+  background:
+    linear-gradient(135deg, rgba(249, 251, 249, 0.98), rgba(232, 239, 237, 0.96)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(79, 143, 58, 0.15), transparent 30%),
+    linear-gradient(180deg, rgba(8, 10, 10, 0.98), rgba(5, 8, 8, 0.98)) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) {
+  background:
+    linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h2,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h3,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero strong {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .hero-close,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .module-briefing-mode {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .context {
+  color: rgba(201, 169, 106, 0.92) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h2,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h3,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) h4,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) strong {
+  color: #151b1a !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) li,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .method-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .hero-close,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .guided-video-note {
+  color: rgba(31, 38, 36, 0.76) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero):not(.report-cta) .context {
+  color: #586777 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium,
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-password-panel,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .case-outcome,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.38)) !important;
+  box-shadow: none !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-table,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list p,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list span {
+  border-color: rgba(25, 33, 31, 0.12) !important;
+  background: transparent !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list span,
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid span,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium span,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-acronym strong,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .diagnostic-list span,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-form label span {
+  color: #2f6f28 !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .guided-video-card,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-card,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual {
+  border-color: rgba(25, 33, 31, 0.14) !important;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(79, 143, 58, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(9, 12, 12, 0.96), rgba(5, 8, 8, 0.98)) !important;
+  box-shadow: 0 22px 60px rgba(17, 25, 23, 0.2) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .guided-video-card p,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-heading strong {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-heading p,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual figcaption {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta {
+  background:
+    radial-gradient(circle at 82% 12%, rgba(79, 143, 58, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(7, 10, 10, 0.96), rgba(5, 8, 8, 0.98)) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta h1,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta h2,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta h3,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta strong {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta li {
+  color: rgba(255, 255, 255, 0.74) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta .context,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta span {
+  color: rgba(201, 169, 106, 0.92) !important;
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+    background:
+      linear-gradient(135deg, rgba(249, 251, 249, 0.98), rgba(232, 239, 237, 0.96)) !important;
+  }
+}
+
+/* Education baseline pass: executive rhythm and proportion */
+body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+  width: min(1120px, calc(100% - 48px));
+  overflow: hidden;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+  padding: clamp(48px, 5.8vw, 72px) clamp(40px, 6vw, 76px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero {
+  padding-top: clamp(58px, 7vw, 88px);
+  padding-bottom: clamp(56px, 6.4vw, 78px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses h1 {
+  max-width: 840px;
+  font-size: clamp(2rem, 3vw, 3.05rem);
+  letter-spacing: 0;
+  line-height: 1.07;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .slide:not(.hero) h2,
+body.page-education-baseline-preview.page-light-surface.page-courses .report-cta h2 {
+  max-width: 800px;
+  font-size: clamp(1.38rem, 2vw, 2.05rem);
+  line-height: 1.16;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero-close,
+body.page-education-baseline-preview.page-light-surface.page-courses .method-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .slide > p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual p:not(.context) {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.28vw, 1.16rem);
+  line-height: 1.6;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .context {
+  margin-bottom: 18px;
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium,
+body.page-education-baseline-preview.page-light-surface.page-courses .pilot-grid > div,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-password-panel {
+  padding: clamp(22px, 2.6vw, 30px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations p,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro p,
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list {
+  display: grid;
+  gap: 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .method-list p {
+  padding: 20px 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row {
+  min-height: 0;
+  padding: 18px 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-access-grid {
+  gap: 22px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual {
+  padding-top: clamp(46px, 5.8vw, 72px);
+  padding-bottom: clamp(46px, 5.8vw, 72px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .series-overview-visual img {
+  width: min(980px, 100%);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid article {
+  min-height: 0;
+  padding: 22px 18px;
+  grid-template-rows: auto auto 1fr;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid span {
+  font-size: clamp(2rem, 2.6vw, 2.55rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-course-intro .home-v2-framework-grid h3 {
+  min-height: 0;
+  font-size: 0.98rem;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-briefing-hero {
+  align-items: start;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .module-video-card,
+body.page-education-baseline-preview.page-light-surface.page-learning-module .fusioneq-briefing-visual {
+  padding: clamp(18px, 2.4vw, 26px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-learning-module .comparison-grid > div {
+  padding: 22px 20px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations {
+  grid-column: span 1;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro {
+  grid-column: span 2;
+}
+
+@media (max-width: 980px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-card-foundations,
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-card-premium-intro {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 900px) {
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .course-access-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses > main#top {
+    width: min(100%, calc(100% - 18px));
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .slide {
+    padding: 42px 24px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero {
+    padding-top: 48px;
+    padding-bottom: 44px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-journey {
+    grid-template-columns: 1fr;
+  }
+}
