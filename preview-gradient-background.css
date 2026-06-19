@@ -2792,4 +2792,23 @@ body.page-education-baseline-preview.page-light-surface.page-courses .course-car
     justify-content: center;
     white-space: normal;
   }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-table,
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row > span,
+  body.page-education-baseline-preview.page-light-surface.page-courses .course-decision-row a {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
 }

@@ -16466,6 +16466,7 @@ body.page-how-it-works > main#top.how-page {
 @media (max-width: 760px) {
   body.page-how-it-works,
   body.page-how-it-works .how-page {
+    width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
   }
@@ -16509,6 +16510,46 @@ body.page-how-it-works > main#top.how-page {
   }
 }
 
+@media (max-width: 760px) {
+  body.page-how-it-works > main#top.how-page {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding-top: 0;
+  }
+
+  body.page-how-it-works .how-page .slide {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  body.page-how-it-works .how-hero h1,
+  body.page-how-it-works .how-orientation h2,
+  body.page-how-it-works .how-workflow h2,
+  body.page-how-it-works .how-layer-visual-section h2,
+  body.page-how-it-works .how-gap h2,
+  body.page-how-it-works .how-use h2,
+  body.page-how-it-works .how-next h2,
+  body.page-how-it-works .how-hero .subline,
+  body.page-how-it-works .how-category-line,
+  body.page-how-it-works .how-workflow-note {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.page-how-it-works .how-card-grid,
+  body.page-how-it-works .how-workflow-grid,
+  body.page-how-it-works .how-use-list,
+  body.page-how-it-works .how-page .how-next-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
 /* Global hero headline polish: reduce single-word widows across custom page systems. */
 .hero h1,
 .home-v2-hero h1,
@@ -16531,4 +16572,40 @@ body.page-how-it-works > main#top.how-page {
 .team-profile h2,
 .team-why h2 {
   text-wrap: balance;
+}
+
+@media (max-width: 760px) {
+  body.page-how-it-works .how-hero h1,
+  body.page-how-it-works .how-orientation h2,
+  body.page-how-it-works .how-workflow h2,
+  body.page-how-it-works .how-layer-visual-section h2,
+  body.page-how-it-works .how-gap h2,
+  body.page-how-it-works .how-use h2,
+  body.page-how-it-works .how-next h2 {
+    font-size: clamp(1.78rem, 8vw, 2rem);
+    line-height: 1.12;
+    text-wrap: auto;
+    overflow-wrap: anywhere;
+  }
+
+  body.page-how-it-works .how-hero .subline,
+  body.page-how-it-works .how-category-line,
+  body.page-how-it-works .how-card-grid p,
+  body.page-how-it-works .how-workflow-grid p,
+  body.page-how-it-works .how-workflow-note,
+  body.page-how-it-works .how-layer-visual figcaption,
+  body.page-how-it-works .how-gap-panel p,
+  body.page-how-it-works .how-use-list p,
+  body.page-how-it-works .how-next-grid p {
+    text-wrap: auto;
+    overflow-wrap: anywhere;
+  }
+
+  body.page-how-it-works .how-card-grid article,
+  body.page-how-it-works .how-workflow-grid article,
+  body.page-how-it-works .how-gap-panel,
+  body.page-how-it-works .how-use-list p,
+  body.page-how-it-works .how-next-grid a {
+    min-width: 0;
+  }
 }
