@@ -1,10 +1,10 @@
 (function () {
   const requestTypeMap = {
-    LENS: 'LENS premium course',
-    READ: 'READ premium course',
-    CLEAR: 'CLEAR premium course',
-    'premium-courses': 'Not sure yet',
-    report: 'Deal Readiness Report'
+    LENS: 'Discuss FusionEQ education or training',
+    READ: 'Discuss FusionEQ education or training',
+    CLEAR: 'Discuss FusionEQ education or training',
+    'premium-courses': 'Discuss FusionEQ education or training',
+    report: 'Request a Deal Readiness Report'
   };
   const requestNoteMap = {
     LENS: "You're exploring FusionEQ LENS™ for your team. We'll help you confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the right next step.",
@@ -48,12 +48,9 @@
       payload.formName = payload['form-name'] || form.getAttribute('name') || 'FusionEQ form';
       payload.page = window.location.href;
       const thankYouRequestMap = {
-        'Deal Readiness Report': 'report',
-        'Sample report walkthrough': 'report',
-        'LENS premium course': 'LENS',
-        'READ premium course': 'READ',
-        'CLEAR premium course': 'CLEAR',
-        'Not sure yet': 'premium-courses'
+        'Request a Deal Readiness Report': 'report',
+        'Discuss FusionEQ education or training': 'premium-courses',
+        'General question': 'contact'
       };
       const thankYouRequest = thankYouRequestMap[payload.request_type];
 
