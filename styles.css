@@ -16778,3 +16778,599 @@ body.page-how-it-works > main#top.how-page {
     min-width: 0;
   }
 }
+
+/* Global elegance pass: align the core site with the calmer Education visual system. */
+.site-header,
+.page-home-v2 .site-header,
+.page-light-surface .site-header {
+  width: min(1180px, calc(100% - 64px));
+  padding-top: 12px;
+  padding-bottom: 11px;
+  border-bottom-color: rgba(200, 169, 106, 0.12);
+  background: rgba(8, 9, 12, 0.92);
+  box-shadow: none;
+}
+
+.home-v2-brand-block,
+.page-home-v2 .home-v2-brand-block {
+  gap: 8px;
+}
+
+.home-v2-header-logo,
+.page-home-v2 .home-v2-header-logo {
+  width: min(194px, 22vw);
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.home-v2-brand-line,
+.page-home-v2 .home-v2-brand-line,
+.page-light-surface .home-v2-brand-line {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: clamp(0.7rem, 0.74vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.primary-nav,
+.page-home-v2 .primary-nav,
+.page-light-surface .primary-nav {
+  gap: clamp(14px, 1.55vw, 22px);
+}
+
+.nav-group > a,
+.primary-nav > a:not(.home-v2-header-cta),
+.page-home-v2 .nav-group > a,
+.page-home-v2 .primary-nav > a:not(.home-v2-header-cta),
+.page-light-surface .primary-nav > a:not(.home-v2-header-cta) {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.86rem;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.nav-group > a:hover,
+.nav-group > a:focus-visible,
+.primary-nav > a:not(.home-v2-header-cta):hover,
+.primary-nav > a:not(.home-v2-header-cta):focus-visible {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.primary-nav a[aria-current="page"],
+.primary-nav > a[aria-current="page"],
+.page-light-surface .primary-nav > a[aria-current="page"] {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.home-v2-header-cta,
+.primary-nav > a.home-v2-header-cta,
+.cta-row a,
+.cta-row button,
+.lead-form button {
+  min-height: 42px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border-color: rgba(79, 143, 58, 0.56);
+  background: rgba(79, 143, 58, 0.045);
+  color: rgba(235, 246, 230, 0.94);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.cta-row a:nth-child(2),
+.page-light-surface .cta-row a:nth-child(2) {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.012);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.home-v2-header-cta:hover,
+.home-v2-header-cta:focus-visible,
+.cta-row a:hover,
+.cta-row a:focus-visible,
+.cta-row button:hover,
+.cta-row button:focus-visible,
+.lead-form button:hover,
+.lead-form button:focus-visible {
+  border-color: rgba(95, 174, 68, 0.76);
+  background: rgba(79, 143, 58, 0.085);
+  transform: translateY(-1px);
+}
+
+.about-founder-card,
+.page-book .book-cover-wrap,
+.lead-form,
+.home-v2-journey-grid a,
+.post-entry-path-grid a,
+.how-card-grid article,
+.how-workflow-grid article,
+.home-v2-cta-card,
+.book-outcome-grid article,
+.about-thesis-grid article,
+.about-belief-grid span,
+.method-list p {
+  border-color: rgba(255, 255, 255, 0.085);
+  background: rgba(255, 255, 255, 0.014);
+  box-shadow: none;
+}
+
+.green-emphasis-line,
+.home-v2-hero-support,
+.home-v2-hero-supporting,
+.how-category-line,
+.book-hero .book-kicker-line,
+.about-page strong,
+.book-page strong {
+  color: rgba(200, 169, 106, 0.92);
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .page-home-v2 .site-header,
+  .page-light-surface .site-header {
+    width: min(100%, calc(100% - 28px));
+    padding: 9px 0;
+  }
+
+  .home-v2-header-logo,
+  .page-home-v2 .home-v2-header-logo,
+  .page-light-surface .home-v2-header-logo {
+    width: min(148px, 50vw);
+    max-height: 60px;
+  }
+
+  .home-v2-brand-line,
+  .page-home-v2 .home-v2-brand-line,
+  .page-light-surface .home-v2-brand-line {
+    font-size: 0.66rem;
+    line-height: 1.22;
+  }
+
+  .mobile-menu-ready .mobile-menu-toggle {
+    min-width: 44px;
+    padding: 7px 8px;
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.012);
+  }
+
+  .home-v2-hero,
+  .about-hero,
+  .how-hero,
+  .page-book .book-hero,
+  .page-contact .contact-hero {
+    padding-top: clamp(70px, 12vw, 88px);
+  }
+
+  h1,
+  .home-v2-hero h1,
+  .about-hero h1,
+  .how-hero h1,
+  .page-book .book-hero h1,
+  .page-contact .contact-hero h1 {
+    font-size: clamp(1.86rem, 7.5vw, 2.16rem);
+    line-height: 1.1;
+  }
+
+  .cta-row a,
+  .cta-row button,
+  .lead-form button {
+    min-height: 44px;
+  }
+}
+
+/* Executive elegance pass v2: make the refinement visible without changing content. */
+body.page-home-v2,
+body.page-about,
+body.page-book,
+body.page-contact,
+body.page-how-it-works {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(200, 169, 106, 0.075), transparent 30rem),
+    radial-gradient(circle at 90% 12%, rgba(79, 143, 58, 0.06), transparent 30rem),
+    #050607;
+}
+
+.homepage-v2 .home-v2-hero,
+.about-hero,
+.how-hero,
+.page-book .book-hero,
+.page-contact .contact-hero {
+  border-bottom: 1px solid rgba(200, 169, 106, 0.12);
+}
+
+.homepage-primary .home-v2-hero h1,
+.about-hero h1,
+.how-hero h1,
+.page-book .book-hero h1,
+.page-contact .contact-hero h1 {
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+.homepage-primary .home-v2-hero h1 {
+  font-size: clamp(1.7rem, 2.2vw, 2.18rem);
+  line-height: 1.16;
+}
+
+.about-hero h1,
+.page-book .book-hero h1,
+.page-contact .contact-hero h1 {
+  font-size: clamp(2.35rem, 3.75vw, 3.45rem);
+  line-height: 1.06;
+}
+
+.how-hero h1 {
+  font-size: clamp(2.18rem, 3.45vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.home-v2-lens-preview,
+.home-v2-coach-bridge,
+.home-v2-book-feature,
+.home-v2-outcomes,
+.homepage-primary .home-v2-evaluation-lanes,
+.about-thesis,
+.about-lens,
+.about-beliefs,
+.about-brand-panel,
+.about-team-section,
+.book-outcomes,
+.book-excerpt,
+.book-close,
+.how-orientation,
+.how-workflow,
+.how-gap,
+.how-use,
+.how-next,
+.page-contact .contact-hero {
+  position: relative;
+}
+
+.home-v2-lens-preview::before,
+.home-v2-coach-bridge::before,
+.home-v2-book-feature::before,
+.about-thesis::before,
+.about-lens::before,
+.about-brand-panel::before,
+.book-excerpt::before,
+.how-workflow::before,
+.how-gap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1040px, calc(100% - 48px));
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 106, 0.22), transparent);
+  transform: translateX(-50%);
+}
+
+.homepage-primary .home-v2-hero-side,
+.home-v2-lens-preview-image,
+.home-v2-workflow-cards a,
+.homepage-primary .home-v2-outcome-grid article,
+.homepage-primary .home-v2-evaluation-lane,
+.about-founder-card,
+.about-thesis-grid article,
+.about-belief-grid span,
+.about-proof-list,
+.page-book .book-cover-wrap,
+.book-outcome-grid article,
+.book-page-card,
+.lead-form,
+.how-card-grid article,
+.how-workflow-grid article,
+.how-gap-panel,
+.how-next-grid a {
+  border-color: rgba(200, 169, 106, 0.13);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+    rgba(5, 7, 8, 0.46);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+}
+
+.about-thesis h2,
+.about-lens h2,
+.about-beliefs h2,
+.about-close h2,
+.home-v2-lens-preview-copy h2,
+.home-v2-book-copy h2,
+.home-v2-coach-copy h2,
+.homepage-primary .home-v2-outcomes h2,
+.book-page h2,
+.how-page h2 {
+  font-size: clamp(1.78rem, 2.7vw, 2.55rem);
+  line-height: 1.12;
+  letter-spacing: -0.024em;
+  text-wrap: balance;
+}
+
+.about-lede,
+.about-thesis-grid p,
+.about-copy p,
+.about-proof-list p,
+.about-close p,
+.book-page p,
+.how-page p,
+.homepage-v2 p {
+  text-wrap: pretty;
+}
+
+.cta-row,
+.home-v2-hero-actions,
+.home-v2-lens-preview-actions,
+.home-v2-book-copy .cta-row,
+.home-v2-coach-copy .cta-row {
+  gap: 12px;
+}
+
+.home-v2-header-cta,
+.primary-nav > a.home-v2-header-cta,
+.cta-row a,
+.cta-row button,
+.lead-form button,
+.inline-cta a,
+.sample-action,
+.fusion-action,
+.consult-action {
+  border-radius: 7px;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+@media (max-width: 760px) {
+  body.page-home-v2,
+  body.page-about,
+  body.page-book,
+  body.page-contact,
+  body.page-how-it-works {
+    background:
+      radial-gradient(circle at 20% 0%, rgba(200, 169, 106, 0.06), transparent 20rem),
+      #050607;
+  }
+
+  .homepage-primary .home-v2-hero h1,
+  .about-hero h1,
+  .how-hero h1,
+  .page-book .book-hero h1,
+  .page-contact .contact-hero h1 {
+    font-size: clamp(1.82rem, 7vw, 2.08rem);
+    letter-spacing: -0.012em;
+  }
+
+  .about-thesis h2,
+  .about-lens h2,
+  .about-beliefs h2,
+  .about-close h2,
+  .home-v2-lens-preview-copy h2,
+  .home-v2-book-copy h2,
+  .home-v2-coach-copy h2,
+  .homepage-primary .home-v2-outcomes h2,
+  .book-page h2,
+  .how-page h2 {
+    font-size: clamp(1.46rem, 6vw, 1.82rem);
+  }
+
+  .home-v2-lens-preview::before,
+  .home-v2-coach-bridge::before,
+  .home-v2-book-feature::before,
+  .about-thesis::before,
+  .about-lens::before,
+  .about-brand-panel::before,
+  .book-excerpt::before,
+  .how-workflow::before,
+  .how-gap::before {
+    width: min(100%, calc(100% - 28px));
+  }
+}
+
+/* Home recognition band: compact enterprise insight, not a theatrical pause. */
+.post-entry-pause.post-entry-recognition {
+  width: min(980px, calc(100% - 64px)) !important;
+  min-height: 0;
+  gap: 12px;
+  padding-top: clamp(44px, 6vh, 70px) !important;
+  padding-bottom: clamp(48px, 6vh, 74px) !important;
+}
+
+.post-entry-recognition .post-entry-recognition-kicker {
+  max-width: 620px;
+  color: rgba(200, 169, 106, 0.92);
+  font-size: clamp(0.78rem, 0.86vw, 0.88rem);
+  letter-spacing: 0.12em;
+}
+
+.post-entry-recognition .post-entry-recognition-headline {
+  max-width: 720px;
+  font-family: var(--sans);
+  font-size: clamp(1.52rem, 2.05vw, 2.15rem);
+  font-weight: 720;
+  line-height: 1.16;
+  letter-spacing: -0.018em;
+}
+
+.post-entry-recognition .post-entry-recognition-lines {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
+  line-height: 1.58;
+}
+
+.post-entry-recognition .post-entry-recognition-close {
+  max-width: 740px;
+  color: rgba(222, 246, 211, 0.86);
+  font-size: clamp(0.94rem, 1vw, 1.02rem);
+  line-height: 1.52;
+}
+
+@media (max-width: 760px) {
+  .post-entry-pause.post-entry-recognition {
+    width: min(100%, calc(100% - 32px)) !important;
+    gap: 10px;
+    padding-top: 42px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .post-entry-recognition .post-entry-recognition-headline {
+    font-size: clamp(1.42rem, 6.2vw, 1.78rem);
+    line-height: 1.16;
+  }
+
+  .post-entry-recognition .post-entry-recognition-lines,
+  .post-entry-recognition .post-entry-recognition-close {
+    font-size: 0.96rem;
+    line-height: 1.52;
+  }
+}
+
+/* Home page excellence pass: quieter executive rhythm after the hero. */
+.post-entry-home .post-entry-section-copy {
+  max-width: 760px;
+}
+
+.post-entry-home section[id] {
+  scroll-margin-top: 150px;
+}
+
+.post-entry-report-proof {
+  padding-top: clamp(58px, 7vh, 88px) !important;
+  padding-bottom: clamp(62px, 8vh, 96px) !important;
+  border-top-color: rgba(200, 169, 106, 0.12) !important;
+  border-bottom-color: rgba(200, 169, 106, 0.1) !important;
+}
+
+.post-entry-report-copy h2,
+.post-entry-section-copy h2 {
+  max-width: 760px;
+  text-wrap: balance;
+}
+
+.post-entry-question-panel {
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top-color: rgba(200, 169, 106, 0.2);
+}
+
+.post-entry-question-panel ul {
+  gap: 7px;
+}
+
+.post-entry-question-panel li {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.post-entry-report-visual img,
+.post-entry-same-deal img {
+  border-color: rgba(200, 169, 106, 0.14);
+  box-shadow: 0 24px 78px rgba(0, 0, 0, 0.3);
+}
+
+.post-entry-next,
+.fusioneq-commercial-section,
+.post-entry-layer,
+.post-entry-lens-read {
+  padding-top: clamp(58px, 7vh, 88px) !important;
+  padding-bottom: clamp(64px, 8vh, 98px) !important;
+}
+
+.post-entry-path-grid {
+  gap: clamp(14px, 1.6vw, 18px);
+  margin-top: 0;
+}
+
+.post-entry-path-grid a {
+  min-height: 212px;
+  padding: clamp(20px, 2.1vw, 26px);
+  border-color: rgba(200, 169, 106, 0.14);
+  border-top-color: rgba(79, 143, 58, 0.28);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.012)),
+    rgba(7, 10, 9, 0.44);
+}
+
+.post-entry-path-grid strong {
+  font-size: clamp(1.04rem, 1.18vw, 1.16rem);
+  line-height: 1.24;
+}
+
+.post-entry-path-grid p {
+  font-size: 0.92rem;
+  line-height: 1.52;
+}
+
+.post-entry-sample-report {
+  width: min(760px, 100%);
+  gap: 6px;
+  margin-top: 2px;
+  padding-top: 14px;
+}
+
+.fusioneq-audience-grid {
+  gap: 16px;
+}
+
+.fusioneq-audience-grid article {
+  min-height: 260px;
+  padding: 22px;
+  border-color: rgba(200, 169, 106, 0.12);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.026), rgba(255, 255, 255, 0.01)),
+    rgba(7, 10, 9, 0.4);
+}
+
+.fusioneq-audience-grid h3 {
+  font-size: clamp(1.02rem, 1.18vw, 1.14rem);
+  line-height: 1.24;
+}
+
+.fusioneq-audience-grid p {
+  font-size: 0.91rem;
+  line-height: 1.52;
+}
+
+.post-entry-read-shift {
+  color: rgba(200, 169, 106, 0.95);
+  font-family: var(--sans);
+  font-size: clamp(1.08rem, 1.42vw, 1.34rem);
+  font-weight: 720;
+}
+
+.post-entry-layer-map article,
+.post-entry-read-grid article {
+  padding-top: clamp(18px, 2vw, 24px);
+}
+
+@media (max-width: 980px) {
+  .fusioneq-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .post-entry-report-proof,
+  .post-entry-next,
+  .fusioneq-commercial-section,
+  .post-entry-layer,
+  .post-entry-lens-read {
+    padding-top: 54px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .post-entry-path-grid a,
+  .fusioneq-audience-grid article {
+    min-height: 0;
+    padding: 20px 0 22px;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .fusioneq-audience-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
