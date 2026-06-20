@@ -2339,11 +2339,11 @@ body {
 
 .post-entry-next {
   width: min(1120px, calc(100% - 56px)) !important;
-  min-height: 46svh;
+  min-height: 0;
   align-content: center;
   justify-items: start;
-  padding-top: clamp(80px, 10vh, 122px) !important;
-  padding-bottom: clamp(88px, 11vh, 132px) !important;
+  padding-top: clamp(68px, 8vh, 102px) !important;
+  padding-bottom: clamp(76px, 9vh, 112px) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.055) !important;
 }
 
@@ -2463,20 +2463,20 @@ body {
 .post-entry-path-grid {
   display: grid;
   width: 100%;
-  gap: clamp(18px, 3vw, 34px);
-  margin-top: clamp(16px, 2.4vw, 24px);
+  gap: clamp(16px, 2vw, 22px);
+  margin-top: clamp(10px, 1.8vw, 18px);
 }
 
-.post-entry-path-grid .post-entry-path-primary {
-  grid-column: span 2;
-  padding: clamp(24px, 3vw, 34px);
+.post-entry-path-grid a {
+  min-height: 236px;
+  padding: clamp(22px, 2.5vw, 30px);
   border: 1px solid rgba(79, 143, 58, 0.28);
-  border-top: 1px solid rgba(79, 143, 58, 0.5);
+  border-top-color: rgba(79, 143, 58, 0.42);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(79, 143, 58, 0.11), rgba(200, 169, 106, 0.045)),
-    rgba(255, 255, 255, 0.035);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+    linear-gradient(135deg, rgba(79, 143, 58, 0.09), rgba(200, 169, 106, 0.032)),
+    rgba(255, 255, 255, 0.028);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.18);
 }
 
 .post-entry-foundations-visual {
@@ -2507,19 +2507,44 @@ body {
 .post-entry-path-grid a {
   color: var(--white);
   text-decoration: none;
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .post-entry-path-grid a:hover,
 .post-entry-path-grid a:focus-visible {
   transform: translateY(-2px);
-  border-top-color: rgba(79, 143, 58, 0.52);
+  border-color: rgba(79, 143, 58, 0.52);
+  background:
+    linear-gradient(135deg, rgba(79, 143, 58, 0.13), rgba(200, 169, 106, 0.045)),
+    rgba(255, 255, 255, 0.04);
   outline: none;
 }
 
-.post-entry-path-grid .post-entry-path-primary:hover,
-.post-entry-path-grid .post-entry-path-primary:focus-visible {
-  border-color: rgba(79, 143, 58, 0.52);
+.post-entry-sample-report {
+  display: grid;
+  gap: 8px;
+  margin-top: clamp(4px, 1vw, 10px);
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+.post-entry-sample-report p {
+  margin: 0;
+}
+
+.post-entry-sample-report a {
+  color: rgba(222, 246, 211, 0.98);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.post-entry-sample-report a:hover,
+.post-entry-sample-report a:focus-visible {
+  color: var(--green);
+  text-decoration: underline;
 }
 
 .post-entry-pause {
@@ -15625,6 +15650,81 @@ body.page-how-it-works > main#top.how-page {
   line-height: 1.58;
 }
 
+.how-faq-section {
+  width: min(1120px, calc(100% - 56px)) !important;
+}
+
+.how-faq-section .post-entry-section-copy h2 {
+  max-width: 760px;
+  font-size: clamp(1.58rem, 2.35vw, 2.18rem);
+  line-height: 1.14;
+}
+
+.how-faq-section .post-entry-section-copy p {
+  max-width: 760px;
+  font-size: clamp(0.98rem, 1.05vw, 1.06rem);
+  line-height: 1.58;
+}
+
+.how-faq-section dt {
+  font-size: clamp(0.96rem, 1.08vw, 1.08rem);
+  line-height: 1.32;
+}
+
+.how-faq-section dd {
+  font-size: clamp(0.92rem, 0.96vw, 0.98rem);
+  line-height: 1.58;
+}
+
+.enterprise-faq-accordion {
+  display: grid;
+  width: min(980px, 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.enterprise-faq-accordion details {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.enterprise-faq-accordion summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  list-style: none;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.98rem, 1.08vw, 1.1rem);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.enterprise-faq-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.enterprise-faq-accordion summary::after {
+  content: "+";
+  color: var(--green);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.enterprise-faq-accordion details[open] summary::after {
+  content: "-";
+}
+
+.enterprise-faq-accordion p {
+  max-width: 720px;
+  margin: 0;
+  padding: 0 56px 22px 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(0.92rem, 0.96vw, 0.98rem);
+  line-height: 1.58;
+}
+
 @media (max-width: 980px) {
   .fusioneq-audience-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -15649,6 +15749,18 @@ body.page-how-it-works > main#top.how-page {
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 24px 0;
+  }
+
+  .how-faq-section {
+    width: min(100%, calc(100% - 34px)) !important;
+  }
+
+  .enterprise-faq-accordion summary {
+    padding: 18px 0;
+  }
+
+  .enterprise-faq-accordion p {
+    padding-right: 0;
   }
 }
 
