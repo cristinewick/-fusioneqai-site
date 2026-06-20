@@ -18065,3 +18065,23 @@ body.page-how-it-works .how-hero {
     font-size: 0.72rem;
   }
 }
+
+/* How It Works header clearance: keep the eyebrow visible below the nav. */
+body.page-how-it-works .how-hero {
+  padding-top: clamp(90px, 9vh, 108px) !important;
+}
+
+body.page-how-it-works .how-hero .home-v2-visual-context {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 760px) {
+  body.page-how-it-works .how-hero {
+    padding-top: 58px !important;
+  }
+
+  body.page-how-it-works .how-hero .home-v2-visual-context {
+    margin-bottom: 16px;
+  }
+}
