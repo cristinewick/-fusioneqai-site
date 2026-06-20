@@ -2812,3 +2812,55 @@ body.page-education-baseline-preview.page-light-surface.page-courses .course-car
     overflow-wrap: break-word;
   }
 }
+
+/* Final Education hero scale: align learning pages with the Book editorial tier. */
+body.page-education-baseline-preview.page-light-surface.page-courses .hero h1,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .hero h1 {
+  max-width: 860px;
+  font-size: clamp(2.18rem, 2.65vw, 2.375rem) !important;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .subline,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .hero .subline,
+body.page-education-baseline-preview.page-light-surface.page-courses .hero-close {
+  font-size: clamp(1rem, 1.12vw, 1.1rem);
+  line-height: 1.56;
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero h1,
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .hero h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.14;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero .subline,
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .hero .subline,
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero-close {
+    font-size: 1rem;
+    line-height: 1.54;
+  }
+}
+
+/* Final Education hero spacing: keep the premium scale but reduce vertical mass. */
+body.page-education-baseline-preview.page-light-surface.page-courses .hero,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .hero {
+  padding-top: clamp(50px, 6vh, 78px) !important;
+  padding-bottom: clamp(48px, 5.5vh, 70px) !important;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-courses .hero .cta-row,
+body.page-education-baseline-preview.page-light-surface.page-course-intro .hero .cta-row {
+  margin-top: clamp(24px, 3vw, 34px);
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-courses .hero,
+  body.page-education-baseline-preview.page-light-surface.page-course-intro .hero {
+    padding-top: 38px !important;
+    padding-bottom: 40px !important;
+  }
+}
