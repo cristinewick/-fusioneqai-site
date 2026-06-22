@@ -14979,7 +14979,7 @@ h2,
   padding-top: 176px;
 }
 
-body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
+body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses):not(.sample-report-page) > main#top:not(.homepage-v2) {
   padding-top: 52px;
 }
 
@@ -14996,7 +14996,7 @@ body.page-how-it-works > main#top.how-page {
   .about-page,
   .page-book .book-page,
   .page-pilot .pilot-page,
-  body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses) > main#top:not(.homepage-v2) {
+  body.page-home-v2:not(.page-courses):not(.page-about):not(.page-book):not(.page-pilot):not(.page-lens):not(.page-brief):not(.page-deal-coach):not(.page-presentation-coach):not(.page-contact):not(.page-sample-analyses):not(.sample-report-page) > main#top:not(.homepage-v2) {
     padding-top: 0;
   }
 

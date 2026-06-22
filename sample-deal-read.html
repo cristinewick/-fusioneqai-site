@@ -11,8 +11,8 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .sample-report-page {
-      background: #f6f7f3;
+    body.sample-report-page {
+      background: #f6f7f3 !important;
       color: #15201c;
     }
 
@@ -20,6 +20,7 @@
       padding: clamp(132px, 14vh, 180px) clamp(24px, 6vw, 72px) clamp(32px, 5vw, 56px);
       max-width: 1180px;
       margin: 0 auto;
+      background: #f6f7f3;
     }
 
     .sample-report-intro-grid {
@@ -136,11 +137,9 @@
     .sample-report-frame {
       display: block;
       width: 100%;
-      height: 960px;
+      height: 100%;
       border: 0;
       background: #ffffff;
-      pointer-events: none;
-      user-select: none;
     }
 
     .sample-report-preview-window::after {
@@ -268,15 +267,15 @@
       <div class="sample-report-frame-shell">
         <div class="sample-report-toolbar">
           <strong>Sample report preview</strong>
-          <a href="concept-review/source-of-truth/deal-analyzer/FusionEQ_Deal_Readiness_Report_Enterprise_Team_B.html?from=fusioneq-site">Open full report</a>
+          <a href="assets/sample-fusioneq-deal-readiness-report-protected.pdf">Open full report</a>
         </div>
         <div class="sample-report-preview-window" aria-label="Preview of the FusionEQ Deal Readiness Report">
           <iframe
             class="sample-report-frame"
             title="Sample FusionEQ Deal Readiness Report"
-            src="concept-review/source-of-truth/deal-analyzer/FusionEQ_Deal_Readiness_Report_Enterprise_Team_B.html?v=sample-preview"
+            src="assets/sample-fusioneq-deal-readiness-report-protected.pdf#toolbar=0&navpanes=0&view=FitH"
           ></iframe>
-          <a class="sample-report-preview-overlay" href="concept-review/source-of-truth/deal-analyzer/FusionEQ_Deal_Readiness_Report_Enterprise_Team_B.html?from=fusioneq-site">Open full report</a>
+          <a class="sample-report-preview-overlay" href="assets/sample-fusioneq-deal-readiness-report-protected.pdf">Open full report</a>
         </div>
         <div class="sample-report-preview-hint">
           <strong>Preview only.</strong> Open the full report to review the complete customer-facing Deal Readiness Report structure.
