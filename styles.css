@@ -18150,6 +18150,14 @@ body.page-how-it-works .how-hero .home-v2-visual-context {
   margin-bottom: 22px;
 }
 
+.how-resource-note {
+  color: rgba(213, 185, 106, 0.9);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 2rem 0 -1.2rem;
+}
+
 @media (max-width: 760px) {
   body.page-how-it-works .how-hero {
     padding-top: 58px !important;
@@ -18157,6 +18165,10 @@ body.page-how-it-works .how-hero .home-v2-visual-context {
 
   body.page-how-it-works .how-hero .home-v2-visual-context {
     margin-bottom: 16px;
+  }
+
+  .how-resource-note {
+    margin: 1.65rem 0 -0.85rem;
   }
 }
 
