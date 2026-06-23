@@ -15396,8 +15396,17 @@ body.page-how-it-works > main#top.how-page {
     page: brief;
   }
 
+  body.page-brief > main#top,
   body.page-brief .brief-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
     padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: none;
+    overflow: visible;
   }
 
   body.page-brief .brief-memo {
@@ -15430,7 +15439,7 @@ body.page-how-it-works > main#top.how-page {
 
   body.page-brief .brief-executive-card {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 0;
     width: 6.85in;
     max-width: 6.85in;
@@ -15443,14 +15452,20 @@ body.page-how-it-works > main#top.how-page {
   }
 
   body.page-brief .brief-executive-card > div {
+    display: grid;
+    grid-template-columns: 1.55in 2.15in 1fr;
+    gap: 0.14in;
+    align-items: start;
     min-height: 0;
-    padding: 10px 12px;
-    border-right: 1px solid #d8d8d8;
+    padding: 8px 10px;
+    border-right: 0;
+    border-bottom: 1px solid #d8d8d8;
     background: #ffffff;
+    box-shadow: none;
   }
 
   body.page-brief .brief-executive-card > div:last-child {
-    border-right: 0;
+    border-bottom: 0;
   }
 
   body.page-brief .brief-executive-card span,
@@ -15462,10 +15477,12 @@ body.page-how-it-works > main#top.how-page {
 
   body.page-brief .brief-executive-card strong {
     color: #000000;
-    font-size: 10pt;
+    font-size: 9.5pt;
+    line-height: 1.16;
   }
 
   body.page-brief .brief-executive-card p {
+    margin: 0;
     color: #333333;
     font-size: 8pt;
     line-height: 1.28;
@@ -15486,6 +15503,14 @@ body.page-how-it-works > main#top.how-page {
     line-height: 1.36;
   }
 
+  body.page-brief .brief-opening-read {
+    max-width: 6.85in;
+    margin: 0;
+    color: #222222;
+    font-size: 10pt;
+    line-height: 1.34;
+  }
+
   body.page-brief .context {
     margin: 0;
     color: #315f49;
@@ -15493,18 +15518,115 @@ body.page-how-it-works > main#top.how-page {
     letter-spacing: 0.12em;
   }
 
+  body.page-brief .brief-takeaway,
+  body.page-brief .brief-summary-panel,
+  body.page-brief .brief-operating-model,
+  body.page-brief .brief-output-section,
+  body.page-brief .brief-capability-panel,
   body.page-brief .brief-lens-bridge,
   body.page-brief .brief-grid section {
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
+  body.page-brief .brief-takeaway,
+  body.page-brief .brief-summary-panel,
+  body.page-brief .brief-operating-model,
+  body.page-brief .brief-output-section,
+  body.page-brief .brief-capability-panel {
+    display: grid;
+    grid-template-columns: 2.35in 1fr;
+    gap: 0.28in;
+    width: 6.85in;
+    max-width: 6.85in;
+    margin: 0;
+    padding: 12px 0 14px;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  body.page-brief .brief-takeaway {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 12px 0;
+    border-left: 0;
+    border-bottom-color: #aebcae;
+  }
+
+  body.page-brief .brief-takeaway h2,
+  body.page-brief .brief-summary-panel h2,
+  body.page-brief .brief-output-copy h2,
+  body.page-brief .brief-capability-panel h2,
+  body.page-brief .brief-operating-model h2 {
+    max-width: 6.85in;
+    margin: 0;
+    color: #000000;
+    font-size: 13.5pt;
+    line-height: 1.16;
+  }
+
+  body.page-brief .brief-takeaway p:not(.context),
+  body.page-brief .brief-summary-copy p,
+  body.page-brief .brief-output-copy p,
+  body.page-brief .brief-output-list p,
+  body.page-brief .brief-capability-panel p,
+  body.page-brief .brief-operating-steps p {
+    margin: 0;
+    color: #333333;
+    font-size: 9pt;
+    line-height: 1.34;
+  }
+
+  body.page-brief .brief-summary-copy,
+  body.page-brief .brief-output-list,
+  body.page-brief .brief-capability-grid,
+  body.page-brief .brief-operating-steps {
+    display: grid;
+    gap: 7px;
+  }
+
+  body.page-brief .brief-output-list p,
+  body.page-brief .brief-capability-grid article,
+  body.page-brief .brief-operating-steps article {
+    padding: 0 0 7px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  body.page-brief .brief-output-list p:last-child,
+  body.page-brief .brief-capability-grid article:last-child,
+  body.page-brief .brief-operating-steps article:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  body.page-brief .brief-output-list span,
+  body.page-brief .brief-capability-grid span,
+  body.page-brief .brief-operating-steps span {
+    display: block;
+    margin-bottom: 2px;
+    color: #315f49;
+    font-size: 7pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  body.page-brief .brief-capability-grid strong,
+  body.page-brief .brief-operating-steps strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #000000;
+    font-size: 9.5pt;
+  }
+
   body.page-brief .brief-lens-bridge {
     gap: 10px;
     margin-top: 8px;
     padding: 12px 0 14px;
-    break-after: page;
-    page-break-after: always;
+    border-bottom: 1px solid #d8d8d8;
   }
 
   body.page-brief .brief-lens-copy {
@@ -15558,7 +15680,9 @@ body.page-how-it-works > main#top.how-page {
   }
 
   body.page-brief .brief-grid {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.1in 0.22in;
     margin-top: 0;
     border-top: 0;
   }
@@ -15567,7 +15691,7 @@ body.page-how-it-works > main#top.how-page {
     display: block;
     min-height: auto;
     margin: 0;
-    padding: 13px 0 14px;
+    padding: 9px 0 10px;
     background: transparent;
     border-top: 0;
     border-right: 0;
@@ -15579,17 +15703,17 @@ body.page-how-it-works > main#top.how-page {
   }
 
   body.page-brief .brief-grid section h2 {
-    margin: 5px 0 7px;
-    max-width: 6.8in;
-    font-size: 14pt;
+    margin: 4px 0 5px;
+    max-width: 3.2in;
+    font-size: 11.5pt;
     line-height: 1.18;
   }
 
   body.page-brief .brief-grid section p {
-    max-width: 6.8in;
+    max-width: 3.2in;
     margin: 0;
-    font-size: 9.5pt;
-    line-height: 1.38;
+    font-size: 8.5pt;
+    line-height: 1.32;
   }
 }
 
@@ -18356,5 +18480,387 @@ body.page-thank-you .cta-row a:focus-visible {
   body.page-thank-you .cta-row a {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Executive Brief light surface: shared education background, executive memo treatment. */
+body.page-education-baseline-preview.page-light-surface.page-brief {
+  color: #151b1a;
+  overflow-x: hidden;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief > main#top {
+  box-sizing: border-box;
+  width: min(1160px, calc(100% - 44px));
+  margin: clamp(104px, 9vw, 128px) auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(25, 33, 31, 0.12);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(249, 251, 249, 0.98), rgba(232, 239, 237, 0.96));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.18);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-memo {
+  box-sizing: border-box;
+  width: 100%;
+  gap: 18px;
+  min-height: 0;
+  padding: clamp(32px, 4.2vw, 50px) clamp(32px, 5.4vw, 64px);
+  border-bottom: 0;
+  background:
+    radial-gradient(circle at 84% 8%, rgba(79, 143, 58, 0.12), transparent 28%),
+    linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52));
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading {
+  gap: 9px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading h1 {
+  max-width: 740px;
+  font-size: clamp(1.46rem, 1.82vw, 1.94rem);
+  line-height: 1.12;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading h1,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card strong,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-core strong {
+  color: #151b1a;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-opening-read {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(21, 27, 26, 0.86);
+  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
+  line-height: 1.42;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-subtitle {
+  max-width: 740px;
+  font-size: clamp(0.9rem, 0.96vw, 0.98rem);
+  line-height: 1.5;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card {
+  box-sizing: border-box;
+  width: min(100%, 980px);
+  margin: 10px 0 4px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div {
+  min-height: 116px;
+  padding: clamp(14px, 1.8vw, 20px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card strong {
+  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card p {
+  font-size: 0.86rem;
+  line-height: 1.42;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-subtitle,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-copy p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy p:not(.context),
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-core small {
+  color: rgba(31, 38, 36, 0.76);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .context,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack-visible span {
+  color: #8c6f2e;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-core span {
+  color: #586777;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack-actual span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-line strong,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div:nth-child(2) span {
+  color: #2f6f28;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-bridge,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-section,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid section {
+  border-color: rgba(25, 33, 31, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.38));
+  box-shadow: none;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway {
+  box-sizing: border-box;
+  width: min(1040px, 100%);
+  padding: clamp(18px, 2.7vw, 26px) clamp(20px, 3.2vw, 30px);
+  border: 1px solid rgba(47, 111, 40, 0.2);
+  border-left: 4px solid rgba(47, 111, 40, 0.72);
+  border-radius: 8px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway h2 {
+  max-width: 830px;
+  margin: 0;
+  font-size: clamp(1.12rem, 1.42vw, 1.44rem);
+  line-height: 1.2;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway p:not(.context) {
+  max-width: 860px;
+  margin: 10px 0 0;
+  font-size: clamp(0.9rem, 0.96vw, 0.98rem);
+  line-height: 1.5;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-bridge {
+  gap: 18px;
+  padding: clamp(20px, 3.2vw, 30px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy {
+  gap: 8px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy h2 {
+  max-width: 720px;
+  font-size: clamp(1.18rem, 1.65vw, 1.72rem);
+  line-height: 1.18;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy p:not(.context) {
+  font-size: clamp(0.9rem, 0.98vw, 1rem);
+  line-height: 1.48;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-diagram {
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.72fr) minmax(0, 1fr);
+  gap: clamp(12px, 2.2vw, 24px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack {
+  gap: 7px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack p {
+  padding: 10px 12px;
+  font-size: 0.86rem;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-section,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(18px, 3.2vw, 42px);
+  width: min(1040px, 100%);
+  padding: clamp(20px, 3.2vw, 30px);
+  border: 1px solid rgba(25, 33, 31, 0.12);
+  border-radius: 8px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model h2 {
+  max-width: 500px;
+  font-size: clamp(1.16rem, 1.5vw, 1.55rem);
+  line-height: 1.18;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-copy,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps {
+  display: grid;
+  gap: 12px;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-copy p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel > div > p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps p {
+  margin: 0;
+  font-size: clamp(0.9rem, 0.96vw, 0.98rem);
+  line-height: 1.5;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list p,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid article,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps article {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(25, 33, 31, 0.12);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list p:last-child,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid article:last-child,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps article:last-child {
+  border-bottom: 0;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid span,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #151b1a;
+  font-size: 0.95rem;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-steps strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #151b1a;
+  font-size: 0.95rem;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div {
+  border-right-color: rgba(25, 33, 31, 0.12);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div:nth-child(2),
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack-actual p {
+  background: rgba(79, 143, 58, 0.07);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack p {
+  color: rgba(31, 38, 36, 0.78);
+  border-color: rgba(25, 33, 31, 0.12);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-stack-actual p {
+  color: #151b1a;
+  border-color: rgba(47, 111, 40, 0.22);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-core {
+  border-color: rgba(47, 111, 40, 0.24);
+  min-height: 176px;
+  padding: 20px 14px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.72), transparent 34%),
+    radial-gradient(circle at 50% 76%, rgba(79, 143, 58, 0.12), transparent 38%),
+    rgba(255, 255, 255, 0.46);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-line {
+  color: #151b1a;
+  border-left-color: rgba(47, 111, 40, 0.56);
+  background: rgba(255, 255, 255, 0.42);
+  padding: 14px 16px;
+  font-size: clamp(0.98rem, 1.22vw, 1.15rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions a,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions button {
+  color: #151b1a;
+  border-color: rgba(25, 33, 31, 0.2);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions a:first-child {
+  color: #2f6f28;
+  border-color: rgba(47, 111, 40, 0.66);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions a:hover,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions a:focus-visible,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions button:hover,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions button:focus-visible {
+  color: #151b1a;
+  border-color: rgba(47, 111, 40, 0.64);
+  background: rgba(47, 111, 40, 0.08);
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-brief > main#top {
+    width: min(100%, calc(100% - 22px));
+    margin-top: 18px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-memo {
+    padding: 36px 20px;
+    overflow: hidden;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading h1,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-copy h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid h2,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card strong,
+  body.page-education-baseline-preview.page-light-surface.page-brief p,
+  body.page-education-baseline-preview.page-light-surface.page-brief a,
+  body.page-education-baseline-preview.page-light-surface.page-brief button {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-section,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model {
+    grid-template-columns: 1fr;
+    padding: 22px;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-diagram {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-diagram > * {
+    min-width: 0;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div {
+    border-right: 0;
+    border-bottom-color: rgba(25, 33, 31, 0.12);
   }
 }
