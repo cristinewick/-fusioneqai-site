@@ -1742,7 +1742,7 @@ body {
   }
 }
 
-@media (max-width: 760px) {
+@media screen and (max-width: 760px) {
   .concept-lens-page,
   .concept-patterns-page,
   .concept-application-page {
@@ -18832,15 +18832,41 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-action
   background: rgba(47, 111, 40, 0.08);
 }
 
-@media (max-width: 760px) {
+@media screen and (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-brief {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   body.page-education-baseline-preview.page-light-surface.page-brief > main#top {
+    box-sizing: border-box;
     width: min(100%, calc(100% - 22px));
+    max-width: calc(100vw - 22px);
     margin-top: 18px;
+    overflow: hidden;
   }
 
   body.page-education-baseline-preview.page-light-surface.page-brief .brief-memo {
+    width: 100%;
+    max-width: 100%;
     padding: 36px 20px;
     overflow: hidden;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-section,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-bridge,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading h1,
@@ -18867,6 +18893,11 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-action
     padding: 22px;
   }
 
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid {
+    grid-template-columns: 1fr;
+  }
+
   body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-diagram {
     grid-template-columns: 1fr;
     max-width: 100%;
@@ -18878,7 +18909,73 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-action
   }
 
   body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div {
+    min-width: 0;
     border-right: 0;
     border-bottom-color: rgba(25, 33, 31, 0.12);
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.3in 0.36in;
+  }
+
+  html,
+  body.page-education-baseline-preview.page-light-surface.page-brief {
+    background: #ffffff !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief {
+    color: #151b1a !important;
+    page: brief;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .site-header,
+  body.page-education-baseline-preview.page-light-surface.page-brief footer,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions {
+    display: none !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief > main#top {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+      linear-gradient(135deg, rgba(249, 251, 249, 0.98), rgba(232, 239, 237, 0.96)) !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-memo {
+    padding: 0.3in 0.38in 0.12in !important;
+    background:
+      radial-gradient(circle at 84% 8%, rgba(79, 143, 58, 0.12), transparent 28%),
+      linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52)) !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-print-logo {
+    display: block !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-cover-image {
+    display: none !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-heading,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-takeaway,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-section,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-bridge,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-grid section,
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-proprietary-note {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
