@@ -15382,7 +15382,7 @@ body.page-how-it-works > main#top.how-page {
 
 @media print {
   @page brief {
-    margin: 0.58in 0.62in;
+    margin: 0.5in 0.56in;
   }
 
   body.page-brief .site-header,
@@ -15718,12 +15718,12 @@ body.page-how-it-works > main#top.how-page {
 
   body.page-brief .brief-proprietary-note {
     max-width: 6.85in;
-    margin: 10px 0 0;
-    padding-top: 8px;
+    margin: 6px 0 0;
+    padding-top: 5px;
     color: #555555;
     border-top: 1px solid #d8d8d8;
-    font-size: 7.2pt;
-    line-height: 1.28;
+    font-size: 6.8pt;
+    line-height: 1.22;
   }
 }
 
