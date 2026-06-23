@@ -2864,3 +2864,29 @@ body.page-education-baseline-preview.page-light-surface.page-course-intro .hero 
     padding-bottom: 40px !important;
   }
 }
+
+@media print {
+  html,
+  body.page-education-baseline-preview.page-light-surface.page-brief {
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief::before,
+  body.page-education-baseline-preview.page-light-surface.page-brief::after {
+    display: none !important;
+    background: transparent !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief > main#top {
+    background:
+      linear-gradient(135deg, rgba(249, 251, 249, 0.98), rgba(232, 239, 237, 0.96)) !important;
+    box-shadow: none !important;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-memo {
+    background:
+      radial-gradient(circle at 84% 8%, rgba(79, 143, 58, 0.12), transparent 28%),
+      linear-gradient(135deg, rgba(249, 251, 249, 0.78), rgba(230, 238, 236, 0.52)) !important;
+  }
+}
