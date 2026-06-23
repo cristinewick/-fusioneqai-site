@@ -15715,6 +15715,16 @@ body.page-how-it-works > main#top.how-page {
     font-size: 8.5pt;
     line-height: 1.32;
   }
+
+  body.page-brief .brief-proprietary-note {
+    max-width: 6.85in;
+    margin: 10px 0 0;
+    padding-top: 8px;
+    color: #555555;
+    border-top: 1px solid #d8d8d8;
+    font-size: 7.2pt;
+    line-height: 1.28;
+  }
 }
 
 @media (max-width: 760px) {
@@ -18791,6 +18801,14 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-lens-l
   background: rgba(255, 255, 255, 0.42);
   padding: 14px 16px;
   font-size: clamp(0.98rem, 1.22vw, 1.15rem);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-proprietary-note {
+  max-width: 920px;
+  margin: 4px 0 0;
+  color: rgba(31, 38, 36, 0.58);
+  font-size: 0.74rem;
+  line-height: 1.45;
 }
 
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-actions a,
