@@ -396,10 +396,11 @@ body.page-entry-background-preview .front-door-brand img {
 }
 
 body.page-entry-background-preview .front-door-brand span {
-  max-width: 440px;
+  max-width: 560px;
   color: rgba(255, 255, 255, 0.54);
   font-size: clamp(0.68rem, 0.66vw, 0.78rem);
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 body.page-entry-background-preview .front-door-contact {
