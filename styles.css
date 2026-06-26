@@ -130,6 +130,10 @@ body.page-document-viewer {
   overflow: hidden;
 }
 
+.document-viewer-stage-letter {
+  width: min(860px, calc(100vw - 28px));
+}
+
 .document-viewer-pages {
   display: grid;
   gap: 18px;
@@ -145,6 +149,11 @@ body.page-document-viewer {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 14px 42px rgba(27, 36, 48, 0.12);
+}
+
+.document-viewer-pages-letter img {
+  width: min(100%, 816px);
+  margin: 0 auto;
 }
 
 .document-viewer-fallback {
