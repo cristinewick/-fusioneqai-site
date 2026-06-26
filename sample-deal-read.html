@@ -14,6 +14,43 @@
     body.sample-report-page {
       background: #f6f7f3 !important;
       color: #15201c;
+      overflow-x: hidden;
+    }
+
+    body.sample-report-page .site-header {
+      color: #171814 !important;
+      border: 1px solid rgba(23, 24, 20, 0.12) !important;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(239, 235, 227, 0.82)),
+        rgba(246, 243, 238, 0.92) !important;
+      box-shadow: 0 18px 48px rgba(23, 24, 20, 0.1) !important;
+    }
+
+    body.sample-report-page .home-v2-brand-line {
+      color: rgba(35, 37, 33, 0.64) !important;
+    }
+
+    body.sample-report-page .home-v2-header-logo {
+      width: clamp(190px, 18vw, 260px) !important;
+      mix-blend-mode: multiply;
+    }
+
+    body.sample-report-page .nav-group > a,
+    body.sample-report-page .primary-nav > a {
+      color: rgba(23, 24, 20, 0.78) !important;
+    }
+
+    body.sample-report-page .nav-group > a:hover,
+    body.sample-report-page .nav-group > a:focus-visible,
+    body.sample-report-page .primary-nav > a:hover,
+    body.sample-report-page .primary-nav > a:focus-visible {
+      color: #171814 !important;
+    }
+
+    body.sample-report-page .home-v2-header-cta {
+      color: #ffffff !important;
+      background: rgba(47, 125, 56, 0.94) !important;
+      border-color: rgba(47, 125, 56, 0.38) !important;
     }
 
     .sample-report-intro {
@@ -212,7 +249,7 @@
     .sample-report-frame {
       display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
       border: 0;
       background: #ffffff;
     }
@@ -258,21 +295,54 @@
     }
 
     @media (max-width: 760px) {
+      body.sample-report-page .site-header {
+        width: calc(100% - 28px) !important;
+      }
+
       .sample-report-intro {
-        padding-top: 112px;
+        width: 100%;
+        padding: 112px 24px 32px;
+        overflow: hidden;
       }
 
       .sample-report-intro-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        max-width: min(318px, calc(100vw - 64px));
+      }
+
+      .sample-report-intro h1 {
+        max-width: min(318px, calc(100vw - 64px));
+        font-size: clamp(2rem, 9vw, 2.7rem);
+        line-height: 1.08;
+        text-wrap: auto;
+        overflow-wrap: normal;
+      }
+
+      .sample-report-intro .subline,
+      .sample-report-preview-copy,
+      .sample-report-note {
+        max-width: min(318px, calc(100vw - 64px));
+      }
+
+      .sample-report-preview-copy,
+      .sample-report-frame-section,
+      .sample-report-resource {
+        width: 100%;
+        padding-right: 22px;
+        padding-left: 22px;
+        overflow: hidden;
+      }
+
+      .sample-report-note,
+      .sample-report-frame-shell,
+      .sample-report-resource-card {
+        max-width: 100%;
       }
 
       .sample-report-toolbar {
         align-items: flex-start;
         flex-direction: column;
-      }
-
-      .sample-report-frame {
-        height: 900px;
       }
 
       .sample-report-preview-window {
@@ -286,11 +356,11 @@
     }
   </style>
 </head>
-<body class="page-home-v2 sample-report-page">
+<body class="page-home-v2 page-light-surface sample-report-page">
   <header class="site-header home-v2-shell-header">
     <div class="home-v2-brand-block">
       <a aria-label='FusionEQ home' class='brand' href='home.html#top'>
-        <img class="brand-logo home-v2-header-logo" src="assets/fusioneqai-official-logo.png" alt="FusionEQAI">
+        <img class="brand-logo home-v2-header-logo" src="assets/fusioneqai-logo-light.png" alt="FusionEQAI">
       </a>
       <p class="home-v2-brand-line">Fusion: Where Emotional Intelligence meets Artificial Intelligence</p>
     </div>
