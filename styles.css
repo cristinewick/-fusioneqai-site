@@ -6395,6 +6395,10 @@ footer nav {
   color: var(--green);
 }
 
+.home-v2-blue {
+  color: var(--blue);
+}
+
 h1 .home-v2-green,
 h2 .home-v2-green,
 h3 .home-v2-green,
@@ -6403,6 +6407,21 @@ strong .home-v2-green,
 .how-workflow-grid .home-v2-green,
 .home-v2-journey-grid .home-v2-green {
   color: var(--green) !important;
+  font-size: inherit !important;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  vertical-align: baseline;
+}
+
+h1 .home-v2-blue,
+h2 .home-v2-blue,
+h3 .home-v2-blue,
+strong .home-v2-blue,
+.how-card-grid .home-v2-blue,
+.how-workflow-grid .home-v2-blue,
+.home-v2-journey-grid .home-v2-blue {
+  color: var(--blue) !important;
   font-size: inherit !important;
   font-weight: inherit;
   letter-spacing: inherit;
