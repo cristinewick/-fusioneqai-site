@@ -5924,6 +5924,21 @@ p {
   overflow: hidden;
 }
 
+.brief-forecast-bridge {
+  max-width: 980px;
+  margin: 4px 0 10px;
+  padding: 18px 20px;
+  border-left: 3px solid rgba(79, 143, 58, 0.72);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(1.05rem, 1.3vw, 1.24rem);
+  line-height: 1.5;
+  background: rgba(79, 143, 58, 0.055);
+}
+
+.brief-forecast-bridge strong {
+  color: rgba(222, 246, 211, 0.96);
+}
+
 .brief-executive-card > div {
   display: grid;
   align-content: start;
@@ -18922,6 +18937,15 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-subtit
   line-height: 1.5;
 }
 
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-forecast-bridge {
+  color: rgba(31, 38, 36, 0.88);
+  background: rgba(79, 143, 58, 0.1);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-forecast-bridge strong {
+  color: #1f4f27;
+}
+
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card {
   box-sizing: border-box;
   width: min(100%, 980px);
@@ -19071,6 +19095,16 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-operat
   line-height: 1.18;
 }
 
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel > div:first-child h2,
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model > div:first-child h2 {
+  margin-bottom: 20px;
+}
+
+body.page-brief footer > div > span {
+  margin-bottom: 6px;
+}
+
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-summary-copy,
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-list,
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-grid,
@@ -19125,6 +19159,75 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-operat
   margin-bottom: 4px;
   color: #151b1a;
   font-size: 0.95rem;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-privacy-note {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  padding: 14px 16px;
+  border-left: 3px solid #4f8f3a;
+  background: rgba(79, 143, 58, 0.08);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-privacy-note strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #151b1a;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-privacy-note p {
+  margin: 0;
+  color: rgba(31, 38, 36, 0.8);
+  font-size: clamp(0.84rem, 0.92vw, 0.94rem);
+  line-height: 1.48;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: min(1040px, 100%);
+  border: 1px solid rgba(25, 33, 31, 0.12);
+  border-radius: 8px;
+  background: rgba(79, 143, 58, 0.06);
+  overflow: hidden;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band > div {
+  padding: clamp(18px, 2.4vw, 28px);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band > div + div {
+  border-left: 1px solid rgba(25, 33, 31, 0.12);
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band h2 {
+  margin: 0 0 10px;
+  color: #151b1a;
+  font-size: clamp(1.08rem, 1.35vw, 1.35rem);
+  line-height: 1.2;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band p:not(.context) {
+  margin: 0 0 8px;
+  color: rgba(31, 38, 36, 0.8);
+  font-size: clamp(0.86rem, 0.94vw, 0.96rem);
+  line-height: 1.48;
+}
+
+body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-education-baseline-preview.page-light-surface.page-brief .brief-origin-band > div + div {
+    border-top: 1px solid rgba(25, 33, 31, 0.12);
+    border-left: 0;
+  }
 }
 
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-executive-card > div {
