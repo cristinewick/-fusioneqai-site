@@ -3,13 +3,15 @@
     LENS: 'Discuss FusionEQ education or training',
     READ: 'Discuss FusionEQ education or training',
     CLEAR: 'Discuss FusionEQ education or training',
+    foundations: 'Request complimentary Foundations access',
     'premium-courses': 'Discuss FusionEQ education or training',
-    report: 'Request a Deal Readiness Report'
+    report: 'Request Deal Readiness Report'
   };
   const requestNoteMap = {
     LENS: "You're exploring FusionEQ LENS™ for your team. We'll help you confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the right next step.",
     READ: "You're exploring FusionEQ READ™ for sellers. We'll help you confirm whether FusionEQ READ™, Foundations, FusionEQ LENS™, FusionEQ CLEAR™, or a readiness report is the right next step.",
     CLEAR: "You're exploring FusionEQ CLEAR™ for managers. We'll help you confirm whether FusionEQ CLEAR™, Foundations, FusionEQ LENS™, FusionEQ READ™, or a readiness report is the right next step.",
+    foundations: "You're requesting complimentary FusionEQ Foundations access. We'll help confirm the right access path and whether Foundations, LENS™, READ™, CLEAR™, or a readiness report is the best next step.",
     'premium-courses': "You're exploring the premium course path. We'll help you confirm whether FusionEQ LENS™, FusionEQ READ™, FusionEQ CLEAR™, Foundations, or a readiness report is the right next step.",
     report: "You're requesting a FusionEQ Deal Readiness Report. We'll help you confirm the opportunity context, readiness question, evidence available, and the right next steps."
   };
@@ -48,7 +50,8 @@
       payload.formName = payload['form-name'] || form.getAttribute('name') || 'FusionEQ form';
       payload.page = window.location.href;
       const thankYouRequestMap = {
-        'Request a Deal Readiness Report': 'report',
+        'Request Deal Readiness Report': 'report',
+        'Request complimentary Foundations access': 'foundations',
         'Discuss FusionEQ education or training': 'premium-courses',
         'General question': 'contact'
       };
