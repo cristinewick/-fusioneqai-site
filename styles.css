@@ -19142,6 +19142,12 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-action
   }
 }
 
+@media (min-width: 901px) {
+  .page-contact .contact-hero {
+    padding-top: clamp(150px, 14vh, 172px) !important;
+  }
+}
+
 @media print {
   @page {
     margin: 0.3in 0.36in;
