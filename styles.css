@@ -12756,11 +12756,29 @@ h2,
   max-width: 980px;
 }
 
+.fusioneq-intelligence-section h2,
 .fusioneq-not-section h2,
 .fusioneq-signals-section h2,
 .fusioneq-ai-eq-section h2,
 .fusioneq-next-section h2 {
   max-width: 900px;
+}
+
+.fusioneq-intelligence-section {
+  border-top: 1px solid rgba(200, 169, 106, 0.14);
+  border-bottom: 1px solid rgba(79, 143, 58, 0.14);
+  background:
+    radial-gradient(circle at 76% 20%, rgba(79, 143, 58, 0.07), transparent 34%),
+    rgba(255, 255, 255, 0.008);
+}
+
+.fusioneq-intelligence-section .home-v2-insight-note {
+  max-width: 900px;
+}
+
+.fusioneq-intelligence-close {
+  color: var(--green);
+  font-weight: 700;
 }
 
 .fusioneq-future-line {
@@ -17697,11 +17715,53 @@ body.page-how-it-works {
   line-height: 1.58;
 }
 
+.post-entry-recognition .post-entry-recognition-scenario {
+  max-width: 800px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.02rem, 1.18vw, 1.16rem);
+  font-weight: 650;
+  line-height: 1.56;
+}
+
 .post-entry-recognition .post-entry-recognition-close {
   max-width: 740px;
   color: rgba(222, 246, 211, 0.86);
   font-size: clamp(0.94rem, 1vw, 1.02rem);
   line-height: 1.52;
+}
+
+.post-entry-proof-bridge {
+  width: min(1120px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: clamp(28px, 4vw, 46px) clamp(24px, 4vw, 48px);
+  border-top: 1px solid rgba(200, 169, 106, 0.2);
+  border-bottom: 1px solid rgba(200, 169, 106, 0.14);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.018), rgba(79, 143, 58, 0.055), rgba(255, 255, 255, 0.018));
+}
+
+.post-entry-proof-bridge p {
+  display: grid;
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.35vw, 1.28rem);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.post-entry-proof-bridge strong {
+  display: block;
+}
+
+.post-entry-proof-bridge strong {
+  margin-top: 4px;
+  color: rgba(222, 246, 211, 0.94);
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 650;
+  line-height: 1.28;
 }
 
 @media (max-width: 760px) {
@@ -17718,9 +17778,19 @@ body.page-how-it-works {
   }
 
   .post-entry-recognition .post-entry-recognition-lines,
+  .post-entry-recognition .post-entry-recognition-scenario,
   .post-entry-recognition .post-entry-recognition-close {
     font-size: 0.96rem;
     line-height: 1.52;
+  }
+
+  .post-entry-proof-bridge {
+    width: min(100%, calc(100% - 32px));
+    padding: 28px 18px;
+  }
+
+  .post-entry-proof-bridge p {
+    text-align: left;
   }
 }
 
