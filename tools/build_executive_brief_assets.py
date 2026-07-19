@@ -104,6 +104,10 @@ styles.add(ParagraphStyle(
     textColor=INK, spaceAfter=11,
 ))
 styles.add(ParagraphStyle(
+    name="CapabilityTitle", fontName=REGULAR, fontSize=18, leading=21,
+    textColor=INK, spaceAfter=9,
+))
+styles.add(ParagraphStyle(
     name="SectionHeading", fontName=BOLD, fontSize=15, leading=18,
     textColor=INK, spaceAfter=7,
 ))
@@ -327,7 +331,7 @@ def build_story() -> list:
 
     # Page 5 - Capability building and executive decision
     story += [Spacer(1, 0.2 * inch), P("CAPABILITY BUILDING", "Kicker"),
-              P(text("//*[@id='brief-capability-title']"), "PageTitle"),
+              P(text("//*[@id='brief-capability-title']"), "CapabilityTitle"),
               P(text("//section[contains(@class,'brief-capability-panel')]/div[1]/p[last()]"), "BodyCustom")]
     capabilities = []
     for item in DOC.xpath("//div[contains(@class,'brief-capability-grid')]/article"):

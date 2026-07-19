@@ -19098,6 +19098,7 @@ body.page-education-baseline-preview.page-light-surface.page-brief .brief-operat
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-output-copy h2,
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-capability-panel > div:first-child h2,
 body.page-education-baseline-preview.page-light-surface.page-brief .brief-operating-model > div:first-child h2 {
+  margin-top: 18px;
   margin-bottom: 20px;
 }
 
